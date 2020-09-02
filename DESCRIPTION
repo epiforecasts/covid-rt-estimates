@@ -24,7 +24,8 @@ Imports:
   here,
   lubridate,
   optparse,
-  R6 (>= 2.4)
+  R6 (>= 2.4),
+  rlang (>= 0.4.7)
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata
