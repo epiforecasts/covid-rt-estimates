@@ -67,7 +67,7 @@ rru_process_locations <- function(regions, args, excludes, includes) {
                                      rlang::cnd_muffle(w)
                                    },
                                    error = function(e) {
-                                     futile.logger::flog.error(capture.output(trace_back()))
+                                     futile.logger::flog.error(capture.output(rlang::trace_back()))
                                    }),
                error = function(e) {
                  futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
@@ -90,7 +90,7 @@ if (sys.nframe() == 0) {
                                  rlang::cnd_muffle(w)
                                },
                                error = function(e) {
-                                 futile.logger::flog.error(capture.output(trace_back()))
+                                 futile.logger::flog.error(capture.output(rlang::trace_back()))
                                }),
            error = function(e) {
              futile.logger::flog.error(e)
