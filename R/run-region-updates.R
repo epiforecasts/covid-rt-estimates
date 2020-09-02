@@ -69,6 +69,7 @@ rru_process_locations <- function(regions, args, excludes, includes) {
                                    }),
                error = function(e) {
                  futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
+                 futile.logger::flog.error(capture.output(trace_back()))
                }
       )
     }else {
@@ -89,5 +90,6 @@ if (sys.nframe() == 0) {
                                }),
            error = function(e) {
              futile.logger::flog.error(e)
+             futile.logger::flog.error(capture.output(trace_back()))
            })
 }
