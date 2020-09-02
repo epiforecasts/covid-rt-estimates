@@ -5,7 +5,6 @@
 #'
 # Packages
 library(optparse, quietly = TRUE) # bring this in ready for setting up a proper CLI
-library(rlang, quietly = TRUE) # error handling
 
 # Pull in the definition of the regions
 source(here::here("R", "region-list.R"))
