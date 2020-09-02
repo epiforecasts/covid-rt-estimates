@@ -65,7 +65,7 @@ rru_process_locations <- function(regions, args, excludes, includes) {
                                    },
                                    warning = function(w) {
                                      futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
-                                     cnd_muffle(w)
+                                     rlang::cnd_muffle(w)
                                    },
                                    error = function(e) {
                                      futile.logger::flog.error(capture.output(trace_back()))
@@ -88,7 +88,7 @@ if (sys.nframe() == 0) {
   tryCatch(withCallingHandlers(run_regional_updates(regions = regions, args = args),
                                warning = function(w) {
                                  futile.logger::flog.warn(w)
-                                 cnd_muffle(w)
+                                 rlang::cnd_muffle(w)
                                },
                                error = function(e) {
                                  futile.logger::flog.error(capture.output(trace_back()))
