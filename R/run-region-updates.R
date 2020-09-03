@@ -5,7 +5,6 @@
 #'
 # Packages
 library(optparse, quietly = TRUE) # bring this in ready for setting up a proper CLI
-library(rlang, quietly = TRUE) # error handling
 
 # Pull in the definition of the regions
 source(here::here("R", "region-list.R"))
@@ -65,11 +64,13 @@ rru_process_locations <- function(regions, args, excludes, includes) {
                                    },
                                    warning = function(w) {
                                      futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
-                                     cnd_muffle(w)
+                                     rlang::cnd_muffle(w)
+                                   },
+                                   error = function(e) {
+                                     futile.logger::flog.error(capture.output(rlang::trace_back()))
                                    }),
                error = function(e) {
                  futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
-                 futile.logger::flog.error(capture.output(trace_back()))
                }
       )
     }else {
@@ -86,10 +87,12 @@ if (sys.nframe() == 0) {
   tryCatch(withCallingHandlers(run_regional_updates(regions = regions, args = args),
                                warning = function(w) {
                                  futile.logger::flog.warn(w)
-                                 cnd_muffle(w)
+                                 rlang::cnd_muffle(w)
+                               },
+                               error = function(e) {
+                                 futile.logger::flog.error(capture.output(rlang::trace_back()))
                                }),
            error = function(e) {
              futile.logger::flog.error(e)
-             futile.logger::flog.error(capture.output(trace_back()))
            })
 }
