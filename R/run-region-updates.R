@@ -38,7 +38,8 @@ rru_cli_interface <- function() {
     make_option(c("-e", "--exclude"), default = "", type = "character", help = "List of locations to exclude. See include for more details."),
     make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\""),
     make_option(c("-u", "--unstable"), action = "store_true", default = FALSE, help = "Include unstable locations"),
-    make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run")
+    make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
+    make_option(c("-t", "--timeout"), type = "integer", action = "store_true", default = NA, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time.")
   )
 
   args <- parse_args(OptionParser(option_list = option_list))
@@ -61,7 +62,8 @@ rru_process_locations <- function(regions, args, excludes, includes) {
                                      update_regional(location,
                                                      excludes[region == location$name],
                                                      includes[region == location$name],
-                                                     args$force)
+                                                     args$force,
+                                                     args$timeout)
                                    },
                                    warning = function(w) {
                                      futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))

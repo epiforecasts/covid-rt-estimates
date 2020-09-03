@@ -16,7 +16,8 @@ source(here::here("R", "utils.R"))
 #' @param location Location object containing information about region
 #' @param excludes Dataframe containing regions to exclude
 #' @param includes Dataframe containing the only regions to include
-update_regional <- function(location, excludes, includes, force) {
+#' @param max_execution_time Integer specifying the timeout in seconds
+update_regional <- function(location, excludes, includes, force, max_execution_time) {
 
   futile.logger::flog.info("Processing regional dataset for %s", location$name)
 
@@ -78,7 +79,8 @@ update_regional <- function(location, excludes, includes, force) {
                                   no_cores = no_cores,
                                   target_dir = paste0("subnational/", location$name, "/cases/national"),
                                   summary_dir = paste0("subnational/", location$name, "/cases/summary"),
-                                  region_scale = location$region_scale)
+                                  region_scale = location$region_scale,
+                                  max_execution_time = max_execution_time)
   } else if (cases[, .N] == 0) {
     futile.logger::flog.warning("no cases left for region so not processing!")
   }

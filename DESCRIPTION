@@ -15,7 +15,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-  EpiNow2,
+  EpiNow2 (>= 1.2.0),
   covidregionaldata,
   data.table,
   dplyr (>= 1.0.0),
