@@ -48,7 +48,6 @@ regional_deaths <- clean_regional_data(regional_deaths)
 
 if (check_for_update(deaths, last_run = here::here("last-update", "deaths.rds"))) {
 
-
   # Run Rt estimation -------------------------------------------------------
   national_epinow <- function(cases, target, summary, scale,
                               no_cores) {
