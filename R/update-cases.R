@@ -49,7 +49,8 @@ regional_cases <- clean_regional_data(regional_cases)
 if (check_for_update(cases, last_run = here::here("last-update", "cases.rds"))) {
 
   # Run Rt estimation -------------------------------------------------------
-  national_epinow <- function(cases, target, scale) {
+  national_epinow <- function(cases, target, summary, scale,
+                              no_cores) {
     regional_epinow_with_settings(reported_cases = cases,
                                   generation_time = generation_time,
                                   delays = list(incubation_period, reporting_delay),
@@ -64,19 +65,19 @@ if (check_for_update(cases, last_run = here::here("last-update", "cases.rds"))) 
   ## Run UN and global estimate
   no_cores <- setup_future(length(unique(regional_cases$region)))
   
-  national_epinow(data = regional_cases,
+  national_epinow(cases = regional_cases,
                   target = "region/cases/region",
                   summary = "region/cases/summary",
-                  scale = "Region")
+                  scale = "Region",
+                  no_cores = no_cores)
   
   ## Run national estimates
   no_cores <- setup_future(length(unique(cases$region)))
   
-  
-  national_epinow(data = cases,
+  national_epinow(cases = cases,
                   target = "national/cases/national",
                   summary = "national/cases/summary",
-                  scale = "Country")
+                  scale = "Country",
+                  no_cores = no_cores)
 
-  future::plan("sequential")
 }
