@@ -95,7 +95,7 @@ regional_epinow_with_settings <- function(reported_cases, generation_time, delay
                   target_folder = target_dir,
                   summary_dir = summary_dir,
                   region_scale = region_scale,
-                  all_region_summary = region_summary,
+                  all_regions = region_summary,
                   return_estimates = FALSE, verbose = FALSE)
   futile.logger::flog.debug("resetting future plan to sequential")
   future::plan("sequential")
