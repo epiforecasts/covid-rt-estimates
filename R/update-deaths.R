@@ -65,15 +65,16 @@ if (check_for_update(deaths, last_run = here::here("last-update", "deaths.rds"))
   ## Run UN and global estimate
   no_cores <- setup_future(length(unique(regional_deaths$region)))
   
-  national_epinow(data = regional_deaths,
+  national_epinow(cases = regional_deaths,
                   target = "region/deaths/region",
                   summary = "region/deaths/summary",
-                  scale = "Region")
+                  scale = "Region",
+                  no_cores = no_cores)
   
   ## Run national estimates
   no_cores <- setup_future(length(unique(deaths$region)))
   
-  national_epinow(data = deaths,
+  national_epinow(cases = deaths,
                   target = "national/deaths/national",
                   summary = "national/deaths/summary",
                   scale = "Country")
