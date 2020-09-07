@@ -53,7 +53,8 @@ Region <- R6Class("Region",
                                                       cases_subregion_source = "region_level_1",
                                                       region_scale = "Region",
                                                       stable = TRUE,
-                                                      folder_name = NA) {
+                                                      folder_name = NA,
+                                                      dataset_folder_name = "cases") {
                                   self$name <- name
                                   self$covid_regional_data_identifier <- covid_regional_data_identifier
                                   self$case_modifier <- case_modifier
@@ -64,7 +65,7 @@ Region <- R6Class("Region",
                                   self$region_scale <- region_scale
                                   self$stable <- stable
                                   middle_folder <- ifelse(is.na(folder_name), name, folder_name)
-                                  self$target_folder <- paste0("subnational/", middle_folder, "/cases/national")
-                                  self$summary_dir <- paste0("subnational/", middle_folder, "/cases/summary")
+                                  self$target_folder <- paste0("subnational/", middle_folder, "/", dataset_folder_name, "/national")
+                                  self$summary_dir <- paste0("subnational/", middle_folder, "/", dataset_folder_name, "/summary")
                                 }))
 
