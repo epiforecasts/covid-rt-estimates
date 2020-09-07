@@ -5,6 +5,7 @@
 #'
 # Packages
 library(optparse, quietly = TRUE) # bring this in ready for setting up a proper CLI
+library(rlang, quietly = TRUE) # error handling
 
 # Pull in the definition of the datasets
 source(here::here("R", "dataset-list.R"))
@@ -56,17 +57,19 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
       next()
     }
     if (location$stable || (exists("unstable", args) && args$unstable == TRUE)) {
-      tryCatch({
-                 update_regional(location,
-                                 excludes[region == location$name],
-                                 includes[region == location$name],
-                                 args$force)
-               },
-               warning = function(w) {
-                 futile.logger::flog.warn(w)
-               },
+      tryCatch(withCallingHandlers({
+                                     update_regional(location,
+                                                     excludes[region == location$name],
+                                                     includes[region == location$name],
+                                                     args$force)
+                                   },
+                                   warning = function(w) {
+                                     futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
+                                     cnd_muffle(w)
+                                   }),
                error = function(e) {
-                 futile.logger::flog.error(e)
+                 futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
+                 futile.logger::flog.error(capture.output(trace_back()))
                }
       )
     }else {
@@ -80,11 +83,13 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
 if (sys.nframe() == 0) {
   args <- rru_cli_interface()
   setup_log_from_args(args)
-  tryCatch(run_regional_updates(datasets = datasets, args = args),
-           warning = function(w) {
-             futile.logger::flog.warn(w)
-           },
+  tryCatch(withCallingHandlers(run_regional_updates(datasets = datasets, args = args),
+                               warning = function(w) {
+                                 futile.logger::flog.warn(w)
+                                 cnd_muffle(w)
+                               }),
            error = function(e) {
              futile.logger::flog.error(e)
+             futile.logger::flog.error(capture.output(trace_back()))
            })
 }

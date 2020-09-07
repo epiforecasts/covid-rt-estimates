@@ -45,9 +45,7 @@ update_regional <- function(location, excludes, includes, force) {
     futile.logger::flog.info("Getting regional data")
     cases <- data.table::setDT(covidregionaldata::get_regional_data(country = location$covid_regional_data_identifier,
                                                                     localise_regions = FALSE))
-  }
-
-  else if ("SuperRegion" %in% class(location)) {
+  }else if ("SuperRegion" %in% class(location)) {
     futile.logger::flog.info("Getting national data", location$name)
     cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier))
   }
@@ -60,7 +58,7 @@ update_regional <- function(location, excludes, includes, force) {
 
   # Rename columns -------------------------------------------------------------
 
-  if (exists("cases_subregion_source", location) && !is.na(location$cases_subregion_source)) {
+  if (!is.na(location$cases_subregion_source)) {
     if (!location$cases_subregion_source %in% colnames(cases)) {
       futile.logger::flog.error("invalid source column name %s - only the following are valid", location$cases_subregion_source)
       futile.logger::flog.error(colnames(cases))
@@ -88,7 +86,6 @@ update_regional <- function(location, excludes, includes, force) {
 
   # Check to see if there is data and if the data has been updated  ------------------------------
   if (cases[, .N] > 0 && (force || check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds"))))) {
-
     # Set up cores -----------------------------------------------------
     no_cores <- setup_future(length(unique(cases$region)))
     # Run Rt estimation -------------------------------------------------------
