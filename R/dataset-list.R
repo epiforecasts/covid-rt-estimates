@@ -32,11 +32,20 @@ datasets <- c(
   SuperRegion$new(name = "deaths",
                   case_modifier = function(deaths) {
                     deaths <- deaths[country != "Cases_on_an_international_conveyance_Japan"]
-                    deaths <- deaths[, .(region = country, date = as.Date(date), confirm = deaths_new)]
-                    deaths <- deaths[date <= Sys.Date()]
-                    deaths <- deaths[, .SD[date <= (max(date) - lubridate::days(3))], by = region]
-                    deaths <- deaths[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
-                    data.table::setorder(deaths, date)
-                    return(cases)
+                    deaths <- deaths[, cases_new := deaths_new]
+                    deaths <- deaths[, region := country]
+                  }),
+  SuperRegion$new(name = "regional-deaths",
+                  region_scale = "Region",
+                  folder_name = "deaths",
+                  case_modifier = function(deaths) {
+                    deaths <- deaths[country != "Cases_on_an_international_conveyance_Japan"]
+                    deaths <- deaths[, cases_new := deaths_new]
+                    regional_deaths <- data.table::copy(deaths)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
+                                                                  by = c("date", "un_region")][, region := un_region]
+                    global_deaths <- data.table::copy(regional_deaths)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
+                                                                         by = c("date")][, region := "Global"]
+                    regional_deaths <- data.table::rbindlist(list(regional_deaths, global_deaths),
+                                                             fill = TRUE, use.names = TRUE)
                   })
 )
