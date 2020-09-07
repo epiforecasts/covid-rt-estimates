@@ -27,6 +27,7 @@ datasets <- c(
                     cases <- cases[, .SD[date <= (max(date) - lubridate::days(3))], by = region]
                     cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
                     data.table::setorder(cases, date)
+                    return(cases)
                   }),
   SuperRegion$new(name = "deaths",
                   case_modifier = function(deaths) {
@@ -36,5 +37,6 @@ datasets <- c(
                     deaths <- deaths[, .SD[date <= (max(date) - lubridate::days(3))], by = region]
                     deaths <- deaths[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
                     data.table::setorder(deaths, date)
+                    return(cases)
                   })
 )
