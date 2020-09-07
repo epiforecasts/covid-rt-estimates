@@ -58,7 +58,7 @@ update_regional <- function(location, excludes, includes, force) {
 
   # Rename columns -------------------------------------------------------------
 
-  if (!is.na(location$cases_subregion_source)) {
+  if (exists("cases_subregion_source", location) && !is.na(location$cases_subregion_source)) {
     if (!location$cases_subregion_source %in% colnames(cases)) {
       futile.logger::flog.error("invalid source column name %s - only the following are valid", location$cases_subregion_source)
       futile.logger::flog.error(colnames(cases))
