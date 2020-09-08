@@ -100,7 +100,9 @@ update_regional <- function(location, excludes, includes, force) {
                     target_folder = location$target_folder,
                     summary_dir = location$summary_dir,
                     region_scale = location$region_scale,
-                    return_estimates = FALSE, verbose = FALSE)
+                    return_estimates = FALSE,
+                    verbose = FALSE,
+                    all_regions = "Region" %in% class(location))
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
   } else if (cases[, .N] == 0) {
