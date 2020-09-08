@@ -72,10 +72,10 @@ rru_process_locations <- function(regions, args, excludes, includes) {
                                                                  futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
                                                                  rlang::cnd_muffle(w)
                                                                },
-                                           error = function(e) {
-                                             futile.logger::flog.error(capture.output(rlang::trace_back()))
-                                   }),
-               error = function(e) {futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
+                                                               error = function(e) {
+                                                                 futile.logger::flog.error(capture.output(rlang::trace_back()))
+                                                               }),
+                                           error = function(e) { futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
 
                                            }
       )
@@ -94,7 +94,25 @@ rru_log_outcome <- function(outcome) {
   #          subregion : time / inf / null (good, timed out, failed)
   filename <- "runtimes.csv"
   if (file.exists(filename)) {
-    stats <- read.csv(file = filename)
+    stats <- read.csv(file = filename,
+                      colClasses = c("dataset" = "character",
+                                     "region" = "character",
+                                     "subregion" = "character",
+                                     "completion_date" = "character",
+                                     "runtime" = "integer",
+                                     "completion_date_1" = "character",
+                                     "runtime_1" = "integer",
+                                     "completion_date_2" = "character",
+                                     "runtime_2" = "integer",
+                                     "completion_date_3" = "character",
+                                     "runtime_3" = "integer",
+                                     "completion_date_4" = "character",
+                                     "runtime_4" = "integer"))
+    stats$completion_date <- strptime(stats$completion_date, "%Y-%m-%d %H:%M:%OS")
+    stats$completion_date_1 <- strptime(stats$completion_date_1, "%Y-%m-%d %H:%M:%OS")
+    stats$completion_date_2 <- strptime(stats$completion_date_2, "%Y-%m-%d %H:%M:%OS")
+    stats$completion_date_3 <- strptime(stats$completion_date_3, "%Y-%m-%d %H:%M:%OS")
+    stats$completion_date_4 <- strptime(stats$completion_date_4, "%Y-%m-%d %H:%M:%OS")
   } else {
     stats <- data.frame()
   }
@@ -106,7 +124,13 @@ rru_log_outcome <- function(outcome) {
       completion_date = POSIXct(),
       runtime = integer(),
       completion_date_1 = POSIXct(),
-      runtime_1 = integer()
+      runtime_1 = integer(),
+      completion_date_2 = POSIXct(),
+      runtime_2 = integer(),
+      completion_date_3 = POSIXct(),
+      runtime_3 = integer(),
+      completion_date_4 = POSIXct(),
+      runtime_4 = integer()
     )
   }
 
@@ -126,16 +150,31 @@ rru_log_outcome <- function(outcome) {
               region = region,
               subregion = subregion,
               completion_date = Sys.time(),
-              runtime = ifelse(is.null(outcome[[dataset]][[region]][[subregion]]), -1, outcome[[dataset]][[region]][[subregion]]$timings)
+              runtime = ifelse(is.null(outcome[[dataset]][[region]][[subregion]]),
+                               -1,
+                               ifelse(is.finite(outcome[[dataset]][[region]][[subregion]]$timings),
+                                      outcome[[dataset]][[region]][[subregion]]$timings,
+                                      999999)
+              )
             ),
             by = c("dataset", "region", "subregion")
           )
         } else {
+          existing$runtime_4 <- existing$runtime_3
+          existing$completion_date_4 <- existing$completion_date_3
+          existing$runtime_3 <- existing$runtime_2
+          existing$completion_date_3 <- existing$completion_date_2
+          existing$runtime_2 <- existing$runtime_1
+          existing$completion_date_2 <- existing$completion_date_1
           existing$runtime_1 <- existing$runtime
           existing$completion_date_1 <- existing$completion_date
           existing$completion_date <- Sys.time()
-          existing$runtime <-
-            ifelse(is.null(outcome[[dataset]][[region]][[subregion]]), -1, outcome[[dataset]][[region]][[subregion]]$timings)
+          existing$runtime <- ifelse(is.null(outcome[[dataset]][[region]][[subregion]]),
+                                     -1,
+                                     ifelse(is.finite(outcome[[dataset]][[region]][[subregion]]$timings),
+                                            outcome[[dataset]][[region]][[subregion]]$timings,
+                                            999999)
+          )
           stats <-
             dplyr::rows_upsert(stats, existing, by = c("dataset", "region", "subregion"))
         }
