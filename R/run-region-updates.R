@@ -142,7 +142,6 @@ rru_log_outcome <- function(outcome) {
           stats,
           data.frame(
             dataset = dataset,
-            region = region,
             subregion = subregion,
             completion_date = Sys.time(),
             runtime = ifelse(is.null(outcome[[dataset]][[subregion]]),
