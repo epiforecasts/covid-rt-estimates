@@ -133,46 +133,45 @@ rru_log_outcome <- function(outcome) {
 
 
   for (dataset in names(outcome)) {
-      for (subregion in names(outcome[[dataset]][[region]])) {
-        existing <-
-          stats[stats$dataset == dataset &
-                  stats$subregion == subregion,]
-        if (nrow(existing) == 0) {
-          stats <- dplyr::rows_insert(
-            stats,
-            data.frame(
-              dataset = dataset,
-              region = region,
-              subregion = subregion,
-              completion_date = Sys.time(),
-              runtime = ifelse(is.null(outcome[[dataset]][[subregion]]),
-                               -1,
-                               ifelse(is.finite(outcome[[dataset]][[subregion]]$timings),
-                                      outcome[[dataset]][[subregion]]$timings,
-                                      999999)
-              )
-            ),
-            by = c("dataset", "subregion")
-          )
-        } else {
-          existing$runtime_4 <- existing$runtime_3
-          existing$completion_date_4 <- existing$completion_date_3
-          existing$runtime_3 <- existing$runtime_2
-          existing$completion_date_3 <- existing$completion_date_2
-          existing$runtime_2 <- existing$runtime_1
-          existing$completion_date_2 <- existing$completion_date_1
-          existing$runtime_1 <- existing$runtime
-          existing$completion_date_1 <- existing$completion_date
-          existing$completion_date <- Sys.time()
-          existing$runtime <- ifelse(is.null(outcome[[dataset]][[subregion]]),
-                                     -1,
-                                     ifelse(is.finite(outcome[[dataset]][[subregion]]$timings),
-                                            outcome[[dataset]][[subregion]]$timings,
-                                            999999)
-          )
-          stats <-
-            dplyr::rows_upsert(stats, existing, by = c("dataset", "subregion"))
-        }
+    for (subregion in names(outcome[[dataset]][[region]])) {
+      existing <-
+        stats[stats$dataset == dataset &
+                stats$subregion == subregion,]
+      if (nrow(existing) == 0) {
+        stats <- dplyr::rows_insert(
+          stats,
+          data.frame(
+            dataset = dataset,
+            region = region,
+            subregion = subregion,
+            completion_date = Sys.time(),
+            runtime = ifelse(is.null(outcome[[dataset]][[subregion]]),
+                             -1,
+                             ifelse(is.finite(outcome[[dataset]][[subregion]]$timings),
+                                    outcome[[dataset]][[subregion]]$timings,
+                                    999999)
+            )
+          ),
+          by = c("dataset", "subregion")
+        )
+      } else {
+        existing$runtime_4 <- existing$runtime_3
+        existing$completion_date_4 <- existing$completion_date_3
+        existing$runtime_3 <- existing$runtime_2
+        existing$completion_date_3 <- existing$completion_date_2
+        existing$runtime_2 <- existing$runtime_1
+        existing$completion_date_2 <- existing$completion_date_1
+        existing$runtime_1 <- existing$runtime
+        existing$completion_date_1 <- existing$completion_date
+        existing$completion_date <- Sys.time()
+        existing$runtime <- ifelse(is.null(outcome[[dataset]][[subregion]]),
+                                   -1,
+                                   ifelse(is.finite(outcome[[dataset]][[subregion]]$timings),
+                                          outcome[[dataset]][[subregion]]$timings,
+                                          999999)
+        )
+        stats <-
+          dplyr::rows_upsert(stats, existing, by = c("dataset", "subregion"))
       }
     }
   }
