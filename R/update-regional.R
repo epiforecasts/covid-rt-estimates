@@ -50,8 +50,7 @@ update_regional <- function(location, excludes, includes, force) {
     cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier))
   }
 
-  if (!is.na(location$case_modifier) &&
-    typeof(location$case_modifier) == "closure") {
+  if (typeof(location$case_modifier) == "closure") {
     futile.logger::flog.trace("Modifying data")
     cases <- location$case_modifier(cases)
   }
