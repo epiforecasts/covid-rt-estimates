@@ -25,7 +25,8 @@ run_regional_updates <- function(regions, args) {
   includes <- parse_cludes(args$include)
 
   # now really do something
-  rru_process_locations(regions, args, excludes, includes)
+  outcome <- rru_process_locations(regions, args, excludes, includes)
+
 }
 
 rru_cli_interface <- function() {
@@ -48,6 +49,7 @@ rru_cli_interface <- function() {
 
 
 rru_process_locations <- function(regions, args, excludes, includes) {
+  outcome <- list()
   for (location in regions) {
     if (excludes[region == location$name & subregion == "*", .N] > 0) {
       futile.logger::flog.debug("skipping location %s as it is in the exclude/* list", location$name)
@@ -58,27 +60,31 @@ rru_process_locations <- function(regions, args, excludes, includes) {
       next()
     }
     if (location$stable || (exists("unstable", args) && args$unstable == TRUE)) {
-      tryCatch(withCallingHandlers({
-                                     update_regional(location,
-                                                     excludes[region == location$name],
-                                                     includes[region == location$name],
-                                                     args$force,
-                                                     args$timeout)
-                                   },
-                                   warning = function(w) {
-                                     futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
-                                     cnd_muffle(w)
-                                   }),
-               error = function(e) {
-                 futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
-                 futile.logger::flog.error(capture.output(trace_back()))
-               }
+      outcome[[location$name]] <- tryCatch(withCallingHandlers({
+                                                                 update_regional(location,
+                                                                                 excludes[region == location$name],
+                                                                                 includes[region == location$name],
+                                                                                 args$force,
+                                                                                 args$timeout)
+                                                               },
+                                                               warning = function(w) {
+                                                                 futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
+                                                                 cnd_muffle(w)
+                                                               }),
+                                           error = function(e) {
+                                             futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
+                                             futile.logger::flog.error(capture.output(trace_back()))
+                                           }
       )
     }else {
       futile.logger::flog.debug("skipping location %s as unstable", location$name)
     }
   }
+
+  return(outcome)
 }
+
+
 
 # only execute if this is the root, passing in regions from region-list.R and the args from the cli interface
 # this bit handles the outer logging wrapping and top level error handling
