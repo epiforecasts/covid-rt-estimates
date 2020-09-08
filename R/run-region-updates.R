@@ -93,7 +93,11 @@ rru_log_outcome <- function(outcome) {
   #   region name:
   #          subregion : time / inf / null (good, timed out, failed)
   filename <- "runtimes.csv"
-  stats <- read.csv(file = filename)
+  if (file.exists(filename)) {
+    stats <- read.csv(file = filename)
+  } else {
+    stats <- data.frame()
+  }
   if (nrow(stats) == 0) {
     stats <- data.frame(
       dataset = character(),
