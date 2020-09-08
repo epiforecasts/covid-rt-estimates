@@ -133,7 +133,7 @@ rru_log_outcome <- function(outcome) {
 
 
   for (dataset in names(outcome)) {
-    for (subregion in names(outcome[[dataset]][[region]])) {
+    for (subregion in names(outcome[[dataset]])) {
       existing <-
         stats[stats$dataset == dataset &
                 stats$subregion == subregion,]
