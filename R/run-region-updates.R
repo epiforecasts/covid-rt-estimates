@@ -92,6 +92,8 @@ rru_log_outcome <- function(outcome) {
   # outcome:
   #   region name:
   #          subregion : time / inf / null (good, timed out, failed)
+  print(outcome)
+  saveRDS(outcome, "outcome.rds")
   filename <- "runtimes.csv"
   if (file.exists(filename)) {
     stats <- read.csv(file = filename,
@@ -114,9 +116,6 @@ rru_log_outcome <- function(outcome) {
     stats$completion_date_3 <- strptime(stats$completion_date_3, "%Y-%m-%d %H:%M:%OS")
     stats$completion_date_4 <- strptime(stats$completion_date_4, "%Y-%m-%d %H:%M:%OS")
   } else {
-    stats <- data.frame()
-  }
-  if (nrow(stats) == 0) {
     stats <- data.frame(
       dataset = character(),
       region = character(),
