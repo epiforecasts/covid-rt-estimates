@@ -27,6 +27,8 @@ run_regional_updates <- function(regions, args) {
   # now really do something
   outcome <- rru_process_locations(regions, args, excludes, includes)
 
+  # analysis of outcome
+  rru_log_outcome(outcome)
 }
 
 rru_cli_interface <- function() {
@@ -84,7 +86,59 @@ rru_process_locations <- function(regions, args, excludes, includes) {
   return(outcome)
 }
 
+rru_log_outcome <- function(outcome) {
+  # outcome should be:
+  # outcome:
+  #   region name:
+  #          subregion : time / inf / null (good, timed out, failed)
+  filename <- "runtimes.csv"
+  stats <- read.csv(file = filename)
+  if (nrow(stats) == 0) {
+    stats <- data.frame(
+      dataset = character(),
+      region = character(),
+      subregion = character(),
+      completion_date = POSIXct(),
+      runtime = integer(),
+      completion_date_1 = POSIXct(),
+      runtime_1 = integer()
+    )
+  }
 
+
+  for (dataset in names(outcome)) {
+    for (region in names(outcome[[dataset]])) {
+      for (subregion in names(outcome[[dataset]][[region]])) {
+        existing <-
+          stats[stats$dataset == dataset &
+                  stats$region == region &
+                  stats$subregion == subregion,]
+        if (nrow(existing) == 0) {
+          stats <- dplyr::rows_insert(
+            stats,
+            data.frame(
+              dataset = dataset,
+              region = region,
+              subregion = subregion,
+              completion_date = Sys.time(),
+              runtime = ifelse(is.null(outcome[[dataset]][[region]][[subregion]]), -1, outcome[[dataset]][[region]][[subregion]]$timings)
+            ),
+            by = c("dataset", "region", "subregion")
+          )
+        } else {
+          existing$runtime_1 <- existing$runtime
+          existing$completion_date_1 <- existing$completion_date
+          existing$completion_date <- Sys.time()
+          existing$runtime <-
+            ifelse(is.null(outcome[[dataset]][[region]][[subregion]]), -1, outcome[[dataset]][[region]][[subregion]]$timings)
+          stats <-
+            dplyr::rows_upsert(stats, existing, by = c("dataset", "region", "subregion"))
+        }
+      }
+    }
+  }
+  write.csv(stats, file = filename)
+}
 
 # only execute if this is the root, passing in regions from region-list.R and the args from the cli interface
 # this bit handles the outer logging wrapping and top level error handling
