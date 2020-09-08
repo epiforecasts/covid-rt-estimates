@@ -93,8 +93,6 @@ rru_log_outcome <- function(outcome) {
   # outcome:
   #   region name:
   #          subregion : time / inf / null (good, timed out, failed)
-  print(outcome)
-  # saveRDS(outcome, "outcome.rds")
   filename <- "runtimes.csv"
   if (file.exists(filename)) {
     stats <- read.csv(file = filename,
