@@ -73,7 +73,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     # Set up cores -----------------------------------------------------
     no_cores <- setup_future(length(unique(cases$region)))
     # Run Rt estimation -------------------------------------------------------
-    regional_epinow_with_settings(reported_cases = cases,
+    out <- regional_epinow_with_settings(reported_cases = cases,
                                   generation_time = location$generation_time,
                                   delays = list(location$incubation_period, location$reporting_delay),
                                   no_cores = no_cores,
@@ -83,5 +83,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                                   max_execution_time = max_execution_time)
   } else if (cases[, .N] == 0) {
     futile.logger::flog.warning("no cases left for region so not processing!")
+    out <- list()
   }
+  return(out)
 }
