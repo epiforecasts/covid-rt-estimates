@@ -5,6 +5,7 @@
 #'
 # Packages
 library(optparse, quietly = TRUE) # bring this in ready for setting up a proper CLI
+library(lubridate, quietly = TRUE) # pull in lubridate for the date handling in the summary
 
 # Pull in the definition of the regions
 source(here::here("R", "region-list.R"))
@@ -93,7 +94,7 @@ rru_log_outcome <- function(outcome) {
   #   region name:
   #          subregion : time / inf / null (good, timed out, failed)
   print(outcome)
-  saveRDS(outcome, "outcome.rds")
+  # saveRDS(outcome, "outcome.rds")
   filename <- "runtimes.csv"
   if (file.exists(filename)) {
     stats <- read.csv(file = filename,
@@ -146,8 +147,8 @@ rru_log_outcome <- function(outcome) {
             completion_date = Sys.time(),
             runtime = ifelse(is.null(outcome[[dataset]][[subregion]]),
                              -1,
-                             ifelse(is.finite(outcome[[dataset]][[subregion]]$timings),
-                                    outcome[[dataset]][[subregion]]$timings,
+                             ifelse(is.finite(outcome[[dataset]][[subregion]]),
+                                    outcome[[dataset]][[subregion]],
                                     999999)
             )
           ),
@@ -165,8 +166,8 @@ rru_log_outcome <- function(outcome) {
         existing$completion_date <- Sys.time()
         existing$runtime <- ifelse(is.null(outcome[[dataset]][[subregion]]),
                                    -1,
-                                   ifelse(is.finite(outcome[[dataset]][[subregion]]$timings),
-                                          outcome[[dataset]][[subregion]]$timings,
+                                   ifelse(is.finite(outcome[[dataset]][[subregion]]),
+                                          outcome[[dataset]][[subregion]],
                                           999999)
         )
         stats <-
