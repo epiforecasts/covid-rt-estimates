@@ -7,6 +7,12 @@ Authors@R: c(
          role = c("aut", "cre"),
          email = "sam.abbott@lshtm.ac.uk",
          comment = c(ORCID = "0000-0001-8057-8037")),
+  person("Joe", "Hickson",
+         email = "joseph.hickson@metoffice.gov.uk",
+         role = c("aut")),   
+  person("Jamie", "Allen",
+         email = "jamie.allen@metoffice.gov.uk",
+         role = c("aut")),   
   person("Sebastian", "Funk", 
          email = "sebastian.funk@lshtm.ac.uk", 
          role = c("aut")))

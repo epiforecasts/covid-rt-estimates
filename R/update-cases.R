@@ -27,36 +27,57 @@ futile.logger::flog.info("Processing national dataset for: cases")
 
 cases <- data.table::setDT(covidregionaldata::get_national_data(source = "ecdc"))
 
-cases <- cases[, .(region = country, date = as.Date(date), confirm = cases_new)]
-cases <- cases[date <= Sys.Date()]
-cases <- cases[, .SD[date <= (max(date) - lubridate::days(3))], by = region]
-cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
-data.table::setorder(cases, date)
 
+# Make regional case dataset ----------------------------------------------
+
+regional_cases <- data.table::copy(cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
+                                                   by = c("date", "un_region")][, region := un_region]
+global_cases <- data.table::copy(regional_cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
+                                                 by = c("date")][, region := "Global"]
+regional_cases <- data.table::rbindlist(list(regional_cases, global_cases), 
+                                        fill = TRUE, use.names = TRUE)
+
+# Process cases -----------------------------------------------------------
+
+cases <- cases[, region := country]
+cases <- clean_regional_data(cases)
+
+regional_cases <- clean_regional_data(regional_cases)
 
 # Check to see if the data has been updated  ------------------------------
 
 if (check_for_update(cases, last_run = here::here("last-update", "cases.rds"))) {
 
-  # # Set up cores -----------------------------------------------------
-
-  no_cores <- setup_future(length(unique(cases$region)))
-
   # Run Rt estimation -------------------------------------------------------
+  national_epinow <- function(cases, target, summary, scale,
+                              no_cores) {
+    regional_epinow_with_settings(reported_cases = cases,
+                                  generation_time = generation_time,
+                                  delays = list(incubation_period, reporting_delay),
+                                  no_cores = no_cores,
+                                  target_dir = target,
+                                  summary_dir = summary,
+                                  region_summary = FALSE,
+                                  region_scale = scale)
+    
+  }
 
-  regional_epinow(reported_cases = cases,
-                  generation_time = generation_time,
-                  delays = list(incubation_period, reporting_delay),
-                  horizon = 14, burn_in = 14,
-                  non_zero_points = 14,
-                  samples = 2000, warmup = 500,
-                  fixed_future_rt = TRUE,
-                  cores = no_cores, chains = 2,
-                  target_folder = "national/cases/national",
-                  summary_dir = "national/cases/summary",
-                  all_regions_summary = FALSE,
-                  region_scale = "Country",
-                  return_estimates = FALSE, verbose = FALSE)
+  ## Run UN and global estimate
+  no_cores <- setup_future(length(unique(regional_cases$region)))
+  
+  national_epinow(cases = regional_cases,
+                  target = "region/cases/region",
+                  summary = "region/cases/summary",
+                  scale = "Region",
+                  no_cores = no_cores)
+  
+  ## Run national estimates
+  no_cores <- setup_future(length(unique(cases$region)))
+  
+  national_epinow(cases = cases,
+                  target = "national/cases/national",
+                  summary = "national/cases/summary",
+                  scale = "Country",
+                  no_cores = no_cores)
 
-  future::plan("sequential")
 }
