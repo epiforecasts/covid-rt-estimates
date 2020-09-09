@@ -28,7 +28,7 @@ update_regional <- function(location, excludes, includes, force) {
     location$incubation_period <- readRDS(here::here("data", "incubation_period.rds"))
   }
   if (is.na(location$reporting_delay)) {
-    if (location$name == "deaths") {
+    if (location$name %in% c("deaths", "regional-deaths")) {
       location$reporting_delay <- readRDS(here::here("data", "onset_to_death_delay.rds"))
     }
     else {
