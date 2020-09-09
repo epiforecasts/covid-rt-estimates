@@ -77,11 +77,9 @@ update_regional <- function(location, excludes, includes, force) {
     futile.logger::flog.trace("Filtering out not included regions")
     cases <- cases[region %in_ci% includes$subregion]
   }
-  futile.logger::flog.trace("Cleaning regional data")
 
-  if ("Region" %in% class(location)) {
-    cases <- clean_regional_data(cases)
-  }
+  cases <- clean_regional_data(cases)
+
 
   # Check to see if there is data and if the data has been updated  ------------------------------
   if (cases[, .N] > 0 && (force || check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds"))))) {

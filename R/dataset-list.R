@@ -22,12 +22,7 @@ datasets <- c(
              region_scale = "State"),
   SuperRegion$new(name = "cases",
                   case_modifier = function(cases) {
-                    cases <- cases[, .(region = country, date = as.Date(date), confirm = cases_new)]
-                    cases <- cases[date <= Sys.Date()]
-                    cases <- cases[, .SD[date <= (max(date) - lubridate::days(3))], by = region]
-                    cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
-                    data.table::setorder(cases, date)
-                    return(cases)
+                    cases <- cases[, region := country]
                   }),
   SuperRegion$new(name = "deaths",
                   case_modifier = function(deaths) {
@@ -38,11 +33,11 @@ datasets <- c(
   SuperRegion$new(name = "regional-deaths",
                   region_scale = "Region",
                   folder_name = "deaths",
-                  case_modifier = function(deaths) {
-                    deaths <- deaths[country != "Cases_on_an_international_conveyance_Japan"]
-                    deaths <- deaths[, cases_new := deaths_new]
-                    regional_deaths <- data.table::copy(deaths)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
-                                                                  by = c("date", "un_region")][, region := un_region]
+                  case_modifier = function(regional_deaths) {
+                    regional_deaths <- regional_deaths[country != "Cases_on_an_international_conveyance_Japan"]
+                    regional_deaths <- regional_deaths[, cases_new := deaths_new]
+                    regional_deaths <- regional_deaths[, .(cases_new = sum(cases_new, na.rm = TRUE)),
+                                                         by = c("date", "un_region")][, region := un_region]
                     global_deaths <- data.table::copy(regional_deaths)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
                                                                          by = c("date")][, region := "Global"]
                     regional_deaths <- data.table::rbindlist(list(regional_deaths, global_deaths),
