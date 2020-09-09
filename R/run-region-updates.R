@@ -62,6 +62,7 @@ rru_process_locations <- function(regions, args, excludes, includes) {
       next()
     }
     if (location$stable || (exists("unstable", args) && args$unstable == TRUE)) {
+      start <- Sys.time()
       outcome[[location$name]] <- tryCatch(withCallingHandlers({
                                                                  update_regional(location,
                                                                                  excludes[region == location$name],
@@ -76,10 +77,11 @@ rru_process_locations <- function(regions, args, excludes, includes) {
                                                                error = function(e) {
                                                                  futile.logger::flog.error(capture.output(rlang::trace_back()))
                                                                }),
-                                           error = function(e) { futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
-
+                                           error = function(e) { 
+                                             futile.logger::flog.error("%s: %s - %s", location$name, e$message, toString(e$call))
                                            }
       )
+      outcome[[location$name]]$start <- start
     }else {
       futile.logger::flog.debug("skipping location %s as unstable", location$name)
     }
@@ -90,42 +92,42 @@ rru_process_locations <- function(regions, args, excludes, includes) {
 
 rru_log_outcome <- function(outcome) {
   # outcome should be:
-  # outcome:
-  #   region name:
-  #          subregion : time / inf / null (good, timed out, failed)
+  # dataset:
+  #     subregion : time / inf / null (good, timed out, failed)
+  saveRDS(outcome, "outcome.rds")
   filename <- "runtimes.csv"
   if (file.exists(filename)) {
     stats <- read.csv(file = filename,
                       colClasses = c("dataset" = "character",
                                      "subregion" = "character",
-                                     "completion_date" = "character",
+                                     "start_date" = "character",
                                      "runtime" = "integer",
-                                     "completion_date_1" = "character",
+                                     "start_date_1" = "character",
                                      "runtime_1" = "integer",
-                                     "completion_date_2" = "character",
+                                     "start_date_2" = "character",
                                      "runtime_2" = "integer",
-                                     "completion_date_3" = "character",
+                                     "start_date_3" = "character",
                                      "runtime_3" = "integer",
-                                     "completion_date_4" = "character",
+                                     "start_date_4" = "character",
                                      "runtime_4" = "integer"))
-    stats$completion_date <- strptime(stats$completion_date, "%Y-%m-%d %H:%M:%OS")
-    stats$completion_date_1 <- strptime(stats$completion_date_1, "%Y-%m-%d %H:%M:%OS")
-    stats$completion_date_2 <- strptime(stats$completion_date_2, "%Y-%m-%d %H:%M:%OS")
-    stats$completion_date_3 <- strptime(stats$completion_date_3, "%Y-%m-%d %H:%M:%OS")
-    stats$completion_date_4 <- strptime(stats$completion_date_4, "%Y-%m-%d %H:%M:%OS")
+    stats$start_date <- strptime(stats$start_date, "%Y-%m-%d %H:%M:%OS")
+    stats$start_date_1 <- strptime(stats$start_date_1, "%Y-%m-%d %H:%M:%OS")
+    stats$start_date_2 <- strptime(stats$start_date_2, "%Y-%m-%d %H:%M:%OS")
+    stats$start_date_3 <- strptime(stats$start_date_3, "%Y-%m-%d %H:%M:%OS")
+    stats$start_date_4 <- strptime(stats$start_date_4, "%Y-%m-%d %H:%M:%OS")
   } else {
     stats <- data.frame(
       dataset = character(),
       subregion = character(),
-      completion_date = POSIXct(),
+      start_date = POSIXct(),
       runtime = integer(),
-      completion_date_1 = POSIXct(),
+      start_date_1 = POSIXct(),
       runtime_1 = integer(),
-      completion_date_2 = POSIXct(),
+      start_date_2 = POSIXct(),
       runtime_2 = integer(),
-      completion_date_3 = POSIXct(),
+      start_date_3 = POSIXct(),
       runtime_3 = integer(),
-      completion_date_4 = POSIXct(),
+      start_date_4 = POSIXct(),
       runtime_4 = integer()
     )
   }
@@ -133,6 +135,9 @@ rru_log_outcome <- function(outcome) {
 
   for (dataset in names(outcome)) {
     for (subregion in names(outcome[[dataset]])) {
+      if(subregion == "start") {
+        next
+      }
       existing <-
         stats[stats$dataset == dataset &
                 stats$subregion == subregion,]
@@ -142,7 +147,7 @@ rru_log_outcome <- function(outcome) {
           data.frame(
             dataset = dataset,
             subregion = subregion,
-            completion_date = Sys.time(),
+            start_date = outcome[[dataset]]$start,
             runtime = ifelse(is.null(outcome[[dataset]][[subregion]]),
                              -1,
                              ifelse(is.finite(outcome[[dataset]][[subregion]]),
@@ -154,14 +159,14 @@ rru_log_outcome <- function(outcome) {
         )
       } else {
         existing$runtime_4 <- existing$runtime_3
-        existing$completion_date_4 <- existing$completion_date_3
+        existing$start_date_4 <- existing$start_date_3
         existing$runtime_3 <- existing$runtime_2
-        existing$completion_date_3 <- existing$completion_date_2
+        existing$start_date_3 <- existing$start_date_2
         existing$runtime_2 <- existing$runtime_1
-        existing$completion_date_2 <- existing$completion_date_1
+        existing$start_date_2 <- existing$start_date_1
         existing$runtime_1 <- existing$runtime
-        existing$completion_date_1 <- existing$completion_date
-        existing$completion_date <- Sys.time()
+        existing$start_date_1 <- existing$start_date
+        existing$start_date <- outcome[[dataset]]$start
         existing$runtime <- ifelse(is.null(outcome[[dataset]][[subregion]]),
                                    -1,
                                    ifelse(is.finite(outcome[[dataset]][[subregion]]),
