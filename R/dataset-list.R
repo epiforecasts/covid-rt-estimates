@@ -30,6 +30,17 @@ datasets <- c(
                     deaths <- deaths[, cases_new := deaths_new]
                     deaths <- deaths[, region := country]
                   }),
+  SuperRegion$new(name = "regional-cases",
+                  region_scale = "Region",
+                  folder_name = "cases",
+                  case_modifier = function(regional_cases) {
+                    regional_cases <- regional_cases[, .(cases_new = sum(cases_new, na.rm = TRUE)),
+                                                       by = c("date", "un_region")][, region := un_region]
+                    global_cases <- data.table::copy(regional_cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
+                                                                       by = c("date")][, region := "Global"]
+                    regional_cases <- data.table::rbindlist(list(regional_cases, global_cases),
+                                                            fill = TRUE, use.names = TRUE)
+                  }),
   SuperRegion$new(name = "regional-deaths",
                   region_scale = "Region",
                   folder_name = "deaths",
