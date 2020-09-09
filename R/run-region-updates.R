@@ -138,7 +138,7 @@ rru_log_outcome <- function(outcome) {
 
   for (dataset_name in names(outcome)) {
     futile.logger::flog.trace("processing results for %s", dataset_name)
-    for (subregion in names(outcome[[dataset]])) {
+    for (subregion in names(outcome[[dataset_name]])) {
       if (subregion == "start") {
         next
       }
@@ -152,11 +152,11 @@ rru_log_outcome <- function(outcome) {
           data.frame(
             dataset = dataset_name,
             subregion = subregion,
-            start_date = outcome[[dataset]]$start,
-            runtime = ifelse(is.null(outcome[[dataset]][[subregion]]),
+            start_date = outcome[[dataset_name]]$start,
+            runtime = ifelse(is.null(outcome[[dataset_name]][[subregion]]),
                              -1,
-                             ifelse(is.finite(outcome[[dataset]][[subregion]]),
-                                    outcome[[dataset]][[subregion]],
+                             ifelse(is.finite(outcome[[dataset_name]][[subregion]]),
+                                    outcome[[dataset_name]][[subregion]],
                                     999999)
             )
           ),
@@ -172,11 +172,11 @@ rru_log_outcome <- function(outcome) {
         existing$start_date_2 <- existing$start_date_1
         existing$runtime_1 <- existing$runtime
         existing$start_date_1 <- existing$start_date
-        existing$start_date <- outcome[[dataset]]$start
-        existing$runtime <- ifelse(is.null(outcome[[dataset]][[subregion]]),
+        existing$start_date <- outcome[[dataset_name]]$start
+        existing$runtime <- ifelse(is.null(outcome[[dataset_name]][[subregion]]),
                                    -1,
-                                   ifelse(is.finite(outcome[[dataset]][[subregion]]),
-                                          outcome[[dataset]][[subregion]],
+                                   ifelse(is.finite(outcome[[dataset_name]][[subregion]]),
+                                          outcome[[dataset_name]][[subregion]],
                                           999999)
         )
         stats <-
