@@ -93,7 +93,7 @@ update_regional <- function(location, excludes, includes, force) {
                     non_zero_points = 14, horizon = 14,
                     burn_in = 14, samples = 2000,
                     warmup = 500, fixed_future_rt = TRUE, cores = no_cores,
-                    chains = ifelse(no_cores <= 2 || location$name == "cases", 2, no_cores),
+                    chains = ifelse(no_cores <= 2, 2, no_cores),
                     target_folder = location$target_folder,
                     summary_dir = location$summary_dir,
                     region_scale = location$region_scale,
