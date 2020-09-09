@@ -143,7 +143,7 @@ rru_log_outcome <- function(outcome) {
         next
       }
       existing <-
-        stats[stats$dataset == dataset &
+        stats[stats$dataset == dataset_name &
                 stats$subregion == subregion,]
       if (nrow(existing) == 0) {
         futile.logger::flog.trace("no record exists for %s / %s so create a new one", dataset_name, subregion)
