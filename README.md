@@ -91,7 +91,7 @@ Rscript R/update-deaths.R
    
    Note: Currently regions are all country level but the region/subregion pattern could be reused on any level of parent/child geographic dataset.
    
-   A timing log will be output and updated in runtimes.csv
+   A timing log will be output and updated in runtimes.csv. Times of -1 = error and 999999 = killed by timeout
 
 ## Development environment
 
