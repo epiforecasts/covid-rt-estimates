@@ -95,7 +95,9 @@ rru_log_outcome <- function(outcome) {
   # dataset:
   #     subregion : time / inf / null (good, timed out, failed)
   filename <- "runtimes.csv"
+  futile.logger::flog.info("processing outcome log")
   if (file.exists(filename)) {
+    futile.logger::flog.trace("loading the existing file")
     stats <- read.csv(file = filename,
                       colClasses = c("dataset" = "character",
                                      "subregion" = "character",
@@ -109,12 +111,14 @@ rru_log_outcome <- function(outcome) {
                                      "runtime_3" = "integer",
                                      "start_date_4" = "character",
                                      "runtime_4" = "integer"))
+    futile.logger::flog.trace("reformatting the dates back to being dates")
     stats$start_date <- strptime(stats$start_date, "%Y-%m-%d %H:%M:%OS")
     stats$start_date_1 <- strptime(stats$start_date_1, "%Y-%m-%d %H:%M:%OS")
     stats$start_date_2 <- strptime(stats$start_date_2, "%Y-%m-%d %H:%M:%OS")
     stats$start_date_3 <- strptime(stats$start_date_3, "%Y-%m-%d %H:%M:%OS")
     stats$start_date_4 <- strptime(stats$start_date_4, "%Y-%m-%d %H:%M:%OS")
   } else {
+    futile.logger::flog.trace("no existing file, creating a blank table")
     stats <- data.frame(
       dataset = character(),
       subregion = character(),
@@ -132,19 +136,21 @@ rru_log_outcome <- function(outcome) {
   }
 
 
-  for (dataset in names(outcome)) {
+  for (dataset_name in names(outcome)) {
+    futile.logger::flog.trace("processing results for %s", dataset_name)
     for (subregion in names(outcome[[dataset]])) {
-      if(subregion == "start") {
+      if (subregion == "start") {
         next
       }
       existing <-
         stats[stats$dataset == dataset &
                 stats$subregion == subregion,]
       if (nrow(existing) == 0) {
+        futile.logger::flog.trace("no record exists for %s / %s so create a new one", dataset_name, subregion)
         stats <- dplyr::rows_insert(
           stats,
           data.frame(
-            dataset = dataset,
+            dataset = dataset_name,
             subregion = subregion,
             start_date = outcome[[dataset]]$start,
             runtime = ifelse(is.null(outcome[[dataset]][[subregion]]),
@@ -157,6 +163,7 @@ rru_log_outcome <- function(outcome) {
           by = c("dataset", "subregion")
         )
       } else {
+        futile.logger::flog.trace("record exists for %s / %s so advance prior counters and update", dataset_name, subregion)
         existing$runtime_4 <- existing$runtime_3
         existing$start_date_4 <- existing$start_date_3
         existing$runtime_3 <- existing$runtime_2
@@ -177,6 +184,7 @@ rru_log_outcome <- function(outcome) {
       }
     }
   }
+  futile.logger::flog.trace("writing file")
   write.csv(stats, file = filename, row.names = FALSE)
 }
 
