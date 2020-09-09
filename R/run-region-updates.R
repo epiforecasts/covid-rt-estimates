@@ -178,7 +178,7 @@ rru_log_outcome <- function(outcome) {
       }
     }
   }
-  write.csv(stats, file = filename)
+  write.csv(stats, file = filename, row.names = FALSE)
 }
 
 # only execute if this is the root, passing in regions from region-list.R and the args from the cli interface
