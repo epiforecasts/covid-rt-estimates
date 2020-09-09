@@ -87,9 +87,11 @@ Rscript R/update-deaths.R
 
 4. Run `Rscript R/run-region-updates.R`. 
 
-   Adding `--help` will show documentation and the command options. This can run all or some regions and subregions, control logging and exclude unstable regions. 
+   Adding `--help` will show documentation and the command options. This can run all or some regions and subregions, control logging, exclude unstable regions and set the maximum execution time for each set of analysis.
    
    Note: Currently regions are all country level but the region/subregion pattern could be reused on any level of parent/child geographic dataset.
+   
+   A timing log will be output and updated in runtimes.csv
 
 ## Development environment
 
