@@ -88,24 +88,26 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     # Run Rt estimation -------------------------------------------------------
     futile.logger::flog.trace("calling regional_epinow")
     out <- regional_epinow(reported_cases = cases,
-                    generation_time = location$generation_time,
-                    delays = list(location$incubation_period, location$reporting_delay),
-                    non_zero_points = 14, horizon = 14,
-                    burn_in = 14, samples = 2000,
-                    warmup = 500, fixed_future_rt = TRUE, cores = no_cores,
-                    chains = ifelse(no_cores <= 2, 2, no_cores),
-                    target_folder = location$target_folder,
-                    summary_dir = location$summary_dir,
-                    region_scale = location$region_scale,
-                    return_estimates = FALSE,
-                    verbose = FALSE,
-                    all_regions = "Region" %in% class(location),
-                    max_execution_time = max_execution_time)
+                           generation_time = location$generation_time,
+                           delays = list(location$incubation_period, location$reporting_delay),
+                           non_zero_points = 14, horizon = 14,
+                           burn_in = 14, samples = 2000,
+                           warmup = 500, fixed_future_rt = TRUE, cores = no_cores,
+                           chains = ifelse(no_cores <= 2, 2, no_cores),
+                           target_folder = location$target_folder,
+                           summary_dir = location$summary_dir,
+                           region_scale = location$region_scale,
+                           return_estimates = FALSE,
+                           verbose = FALSE,
+                           all_regions = "Region" %in% class(location),
+                           max_execution_time = max_execution_time)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
-  } else if (cases[, .N] == 0) {
-    futile.logger::flog.warning("no cases left for region so not processing!")
+  } else {
     out <- list()
+  }
+  if (cases[, .N] == 0) {
+    futile.logger::flog.warning("no cases left for region so not processing!")
   }
   return(out)
 }
