@@ -82,7 +82,7 @@ clean_regional_data <- function(cases) {
 
 #' Regional EpiNow with settings
 regional_epinow_with_settings <- function(reported_cases, generation_time, delays,
-                                          target_dir, summary_dir, no_cores, max_execution_time,
+                                          target_dir, summary_dir, no_cores, max_execution_time = Inf,
                                           region_scale = "Region", region_summary = TRUE) {
   futile.logger::flog.trace("calling regional_epinow")
   out <- regional_epinow(reported_cases = reported_cases,
