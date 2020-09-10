@@ -16,7 +16,8 @@ source(here::here("R", "utils.R"))
 #' @param location Location object containing information about region
 #' @param excludes Dataframe containing regions to exclude
 #' @param includes Dataframe containing the only regions to include
-update_regional <- function(location, excludes, includes, force) {
+#' @param max_execution_time Integer specifying the timeout in seconds
+update_regional <- function(location, excludes, includes, force, max_execution_time) {
 
   futile.logger::flog.info("Processing dataset for %s", location$name)
 
@@ -80,14 +81,13 @@ update_regional <- function(location, excludes, includes, force) {
 
   cases <- clean_regional_data(cases)
 
-
   # Check to see if there is data and if the data has been updated  ------------------------------
   if (cases[, .N] > 0 && (force || check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds"))))) {
     # Set up cores -----------------------------------------------------
     no_cores <- setup_future(length(unique(cases$region)))
     # Run Rt estimation -------------------------------------------------------
     futile.logger::flog.trace("calling regional_epinow")
-    regional_epinow(reported_cases = cases,
+    out <- regional_epinow(reported_cases = cases,
                     generation_time = location$generation_time,
                     delays = list(location$incubation_period, location$reporting_delay),
                     non_zero_points = 14, horizon = 14,
@@ -99,10 +99,13 @@ update_regional <- function(location, excludes, includes, force) {
                     region_scale = location$region_scale,
                     return_estimates = FALSE,
                     verbose = FALSE,
-                    all_regions = "Region" %in% class(location))
+                    all_regions = "Region" %in% class(location),
+                    max_execution_time = max_execution_time)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
   } else if (cases[, .N] == 0) {
     futile.logger::flog.warning("no cases left for region so not processing!")
+    out <- list()
   }
+  return(out)
 }

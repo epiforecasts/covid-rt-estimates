@@ -82,10 +82,10 @@ clean_regional_data <- function(cases) {
 
 #' Regional EpiNow with settings
 regional_epinow_with_settings <- function(reported_cases, generation_time, delays,
-                                          target_dir, summary_dir, no_cores,
+                                          target_dir, summary_dir, no_cores, max_execution_time,
                                           region_scale = "Region", region_summary = TRUE) {
   futile.logger::flog.trace("calling regional_epinow")
-  regional_epinow(reported_cases = reported_cases,
+  out <- regional_epinow(reported_cases = reported_cases,
                   generation_time = generation_time,
                   delays = delays, non_zero_points = 14,
                   horizon = 14, burn_in = 14,
@@ -96,10 +96,10 @@ regional_epinow_with_settings <- function(reported_cases, generation_time, delay
                   summary_dir = summary_dir,
                   region_scale = region_scale,
                   all_regions = region_summary,
-                  return_estimates = FALSE, verbose = FALSE)
+                  return_estimates = FALSE, verbose = FALSE, max_execution_time = max_execution_time, return_timings = TRUE)
   futile.logger::flog.debug("resetting future plan to sequential")
   future::plan("sequential")
-  return(invisible(NULL))
+  return(invisible(out))
 }
 #' trim
 #' remove leading and trailing whitespace

@@ -1,7 +1,7 @@
 Package: covidrtestimates
 Type: Package
 Title: Forecasting and nowcasting Covid-19 related metrics Globally and Subnationally.
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
   person(given = "Sam Abbott",
          role = c("aut", "cre"),
@@ -21,7 +21,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-  EpiNow2,
+  EpiNow2 (>= 1.2.0),
   covidregionaldata,
   data.table,
   dplyr (>= 1.0.0),

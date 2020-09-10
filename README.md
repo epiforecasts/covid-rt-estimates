@@ -80,9 +80,11 @@ devtools::install_dev_deps()
 
 3.  Run `Rscript R/run-region-updates.R`. 
 
-   Adding `--help` will show documentation and the command options. This can run all or some regions and subregions, control logging and exclude unstable regions. 
+   Adding `--help` will show documentation and the command options. This can run all or some regions and subregions, control logging, exclude unstable regions and set the maximum execution time for each set of analysis.
    
    Note: Currently regions are either global or country level but the region/subregion pattern could be reused on any level of parent/child geographic dataset.
+   
+   A timing log will be output and updated in runtimes.csv. Times of -1 = error and 999999 = killed by timeout
 
 ## Development environment
 
