@@ -2,7 +2,7 @@
 
 ## Quickstart - adding a new location
 1. The data for the location needs to be available via epiforecasts/covidregionaldata - check the [system maintenance guide](https://github.com/epiforecasts/covidregionaldata/blob/master/inst/smg/SMG.md) for more information
-2. Add your location to the list in R/region-list.R (in alphabetical order), setting `stable=FALSE` until testing is complete
+2. Add your location to the list in R/dataset-list.R (in alphabetical order), setting `stable=FALSE` until testing is complete
    ```
    Region$new(name = "middle-earth", stable=FALSE),
    ```

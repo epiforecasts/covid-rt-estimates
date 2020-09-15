@@ -4,19 +4,7 @@
 # Remove last update flag
 rm last-update/update-complete
 
-# Array of all targets to update
-declare -a targets=(
-  "R/update-cases.R"
-  "R/update-deaths.R"
-)
-
-# Run each estimat in turn
-for target in ${targets[@]}; do
-  printf "\tRunning update for: %s \n" $target
-  Rscript  $target
-done
-
-# Run all stable countries
+# Run all stable countries and global datasets
 printf "Run for all regional locations"
 Rscript R/run-region-updates.R
 
