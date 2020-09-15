@@ -10,6 +10,7 @@ setup_log <- function(threshold = "INFO", file = "info.log") {
 setup_log_from_args <- function(args) {
   file <- ifelse(exists("log", args), args$log, "info.log")
   futile.logger::flog.appender(futile.logger::appender.tee(file))
+  futile.logger::flog.layout(futile.logger::layout.format("~t ~l [~n.~f] ~m"))
   if (args$quiet) {
     futile.logger::flog.threshold(futile.logger::WARN)
   }else if (args$werbose) {
