@@ -2,10 +2,15 @@ source(here::here("R", "entities.R"))
 
 # This list is processed in order when doing a full run.
 # Order is defined as follows:
-# 1st: Scale (Most broad -> most fine grained) - Currently Regional, National, Subnational
-# 2nd: Alphabetic order
+# 1. Priority
+# 2. ABC
 
 datasets <- c(
+  Region$new(name = "united-kingdom",
+             covid_regional_data_identifier = "UK"),
+  Region$new(name = "united-states",
+             covid_regional_data_identifier = "USA",
+             region_scale = "State"),
   SuperRegion$new(name = "regional-cases",
                   region_scale = "Region",
                   folder_name = "cases",
@@ -53,10 +58,5 @@ datasets <- c(
   Region$new(name = "germany"),
   Region$new(name = "india"),
   Region$new(name = "italy"),
-  Region$new(name = "russia"),
-  Region$new(name = "united-kingdom",
-             covid_regional_data_identifier = "UK"),
-  Region$new(name = "united-states",
-             covid_regional_data_identifier = "USA",
-             region_scale = "State")
+  Region$new(name = "russia")
 )
