@@ -1,4 +1,5 @@
 region,point,lower,upper,mid_lower,mid_upper,central_lower,central_upper,metric,Expected change in daily cases
+England,2834,208,6208,595,3145,1124,2074,New confirmed cases by infection date,Unsure
 North West,1552,475,3103,824,1790,1084,1442,New confirmed cases by infection date,Unsure
 Scotland,537,355,722,459,586,508,551,New confirmed cases by infection date,Increasing
 Wales,495,77,1100,253,617,300,428,New confirmed cases by infection date,Likely increasing
@@ -6,8 +7,8 @@ Yorkshire and The Humber,469,88,952,232,557,363,481,New confirmed cases by infec
 London,308,108,618,131,343,202,274,New confirmed cases by infection date,Unsure
 North East,308,49,629,157,376,198,274,New confirmed cases by infection date,Unsure
 Northern Ireland,273,30,633,85,318,134,215,New confirmed cases by infection date,Unsure
+West Midlands,232,3,692,23,246,41,118,New confirmed cases by infection date,Likely decreasing
 South West,96,20,171,49,119,92,119,New confirmed cases by infection date,Unsure
-East of England,80,23,160,41,92,56,74,New confirmed cases by infection date,Likely decreasing
 South East,66,4,154,20,78,28,50,New confirmed cases by infection date,Decreasing
 Wales,1.26,0.74,1.74,1.08,1.46,1.17,1.31,Effective reproduction no.,Likely increasing
 Scotland,1.19,1.08,1.28,1.17,1.21,1.18,1.2,Effective reproduction no.,Increasing
@@ -17,5 +18,6 @@ North East,0.94,0.52,1.36,0.79,1.12,0.79,0.92,Effective reproduction no.,Unsure
 South West,0.94,0.63,1.15,0.92,1.11,0.97,1.04,Effective reproduction no.,Unsure
 London,0.91,0.63,1.14,0.9,1.12,0.93,1.02,Effective reproduction no.,Unsure
 Yorkshire and The Humber,0.89,0.51,1.28,0.72,1.04,0.8,0.92,Effective reproduction no.,Unsure
-East of England,0.78,0.47,1.08,0.67,0.91,0.75,0.84,Effective reproduction no.,Likely decreasing
+England,0.83,0.36,1.24,0.74,1.15,0.78,0.94,Effective reproduction no.,Unsure
 South East,0.64,0.27,0.98,0.51,0.8,0.62,0.73,Effective reproduction no.,Decreasing
+West Midlands,0.64,0.16,1.12,0.35,0.79,0.59,0.76,Effective reproduction no.,Likely decreasing
