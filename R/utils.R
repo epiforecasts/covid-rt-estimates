@@ -35,8 +35,10 @@ setup_future <- function(jobs, min_cores_per_worker = 1) {
 
   futile.logger::flog.info("Using %s workers with %s cores per worker",
                            workers, cores_per_worker)
-  future::plan("multiprocess", workers = workers,
-               gc = TRUE, earlySignal = TRUE)
+  
+
+  future::plan(list(future::tweak(future::multiprocess, workers = workers, gc = TRUE, earlySignal = TRUE), 
+                    future::tweak(future::multiprocess, workers = cores_per_worker)))
   futile.logger::flog.debug("Checking the cores available - %s cores and %s jobs. Using %s workers",
                             future::availableCores(),
                             jobs,
