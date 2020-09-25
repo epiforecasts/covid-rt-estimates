@@ -100,11 +100,11 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                            non_zero_points = 14, horizon = 14,
                            burn_in = 14, samples = 4000,
                            warmup = 500, fixed_future_rt = TRUE, cores = no_cores,
-                           chains = ifelse(no_cores <= 2, 2, no_cores),
+                           chains = ifelse(no_cores <= 4, 4, no_cores),
                            target_folder = location$target_folder,
-                           return_estimates = FALSE, summary = FALSE,
+                           return_estimates = FALSE, summary = TRUE,
                            verbose = FALSE, return_timings = TRUE,
-                           max_execution_time = max_execution_time)
+                           future = TRUE, max_execution_time = max_execution_time)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
     
