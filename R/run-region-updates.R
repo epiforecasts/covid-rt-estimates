@@ -105,7 +105,7 @@ rru_log_outcome <- function(outcome) {
   futile.logger::flog.info("processing outcome log")
   stats <- loadStatsFile(stats_filename)
   status <- loadStatusFile(status_filename)
-  saveRDS(outcome, "outcome.rds")
+  # saveRDS(outcome, "outcome.rds")
 
 
   for (dataset_name in names(outcome)) {
@@ -193,8 +193,8 @@ rru_log_outcome <- function(outcome) {
           dataset = dataset_name,
           last_attempt = outcome[[dataset_name]]$start,
           last_attempt_status = dataset_status,
-          latest_results = ifelse(dataset_processed, outcome[[dataset_name]]$start, NULL),
-          latest_results_data_up_to = ifelse(dataset_processed, outcome[[dataset_name]]$max_data_date, NULL),
+          latest_results = dplyr::if_else(dataset_processed, outcome[[dataset_name]]$start, NULL),
+          latest_results_data_up_to = dplyr::if_else(dataset_processed, outcome[[dataset_name]]$max_data_date, NULL),
           latest_results_successful_regions = ifelse(dataset_processed, dataset_counts$successes, 0),
           latest_results_timing_out_regions = ifelse(dataset_processed, dataset_counts$timeouts, 0),
           latest_results_failing_regions = ifelse(dataset_processed, dataset_counts$failures, 0),
@@ -204,16 +204,16 @@ rru_log_outcome <- function(outcome) {
       )
     } else {
       futile.logger::flog.trace("status record exists for %s", dataset_name)
-      existing$dataset <- dataset_name
-      existing$last_attempt <- outcome[[dataset_name]]$start
-      existing$last_attempt_status <- dataset_status
-      existing$latest_results <- ifelse(dataset_processed, outcome[[dataset_name]]$start, existing$latest_results)
-      existing$latest_results_data_up_to <- ifelse(dataset_processed, outcome[[dataset_name]]$max_data_date, existing$latest_results_data_up_to)
-      existing$latest_results_successful_regions <- ifelse(dataset_processed, dataset_counts$successes, existing$latest_results_successful_regions)
-      existing$latest_results_timing_out_regions <- ifelse(dataset_processed, dataset_counts$timeouts, existing$latest_results_timing_out_regions)
-      existing$latest_results_failing_regions <- ifelse(dataset_processed, dataset_counts$failures, existing$latest_results_failing_regions)
-      existing$oldest_region_results <- outcome[[dataset_name]]$oldest_results
-      stats <- dplyr::rows_upsert(stats, existing, by = c("dataset"))
+      status_row$dataset <- dataset_name
+      status_row$last_attempt <- outcome[[dataset_name]]$start
+      status_row$last_attempt_status <- dataset_status
+      status_row$latest_results <- dplyr::if_else(dataset_processed, outcome[[dataset_name]]$start, status_row$latest_results)
+      status_row$latest_results_data_up_to <- dplyr::if_else(dataset_processed, outcome[[dataset_name]]$max_data_date, status_row$latest_results_data_up_to)
+      status_row$latest_results_successful_regions <- ifelse(dataset_processed, dataset_counts$successes, status_row$latest_results_successful_regions)
+      status_row$latest_results_timing_out_regions <- ifelse(dataset_processed, dataset_counts$timeouts, status_row$latest_results_timing_out_regions)
+      status_row$latest_results_failing_regions <- ifelse(dataset_processed, dataset_counts$failures, status_row$latest_results_failing_regions)
+      status_row$oldest_region_results <- outcome[[dataset_name]]$oldest_results
+      status <- dplyr::rows_upsert(status, status_row, by = c("dataset"))
     }
   }
   futile.logger::flog.trace("writing file")
@@ -275,12 +275,12 @@ loadStatusFile <- function(filename) {
                                       "latest_results_successful_regions" = "integer",
                                       "latest_results_timing_out_regions" = "integer",
                                       "latest_results_failing_regions" = "integer",
-                                      "oldest_region_results" = "character",
+                                      "oldest_region_results" = "character"
                        ))
     futile.logger::flog.trace("reformatting the dates back to being dates")
-    status$last_attempt <- strptime(status$last_attempt, "%Y-%m-%d %H:%M:%OS")
-    status$latest_results <- strptime(status$latest_results, "%Y-%m-%d %H:%M:%OS")
-    status$oldest_region_results <- strptime(status$oldest_region_results, "%Y-%m-%d %H:%M:%OS")
+    status$last_attempt <- as.POSIXct(strptime(status$last_attempt, "%Y-%m-%d %H:%M:%OS"))
+    status$latest_results <- as.POSIXct(strptime(status$latest_results, "%Y-%m-%d %H:%M:%OS"))
+    status$oldest_region_results <- as.POSIXct(strptime(status$oldest_region_results, "%Y-%m-%d %H:%M:%OS"))
     status$latest_results_data_up_to <- as.Date(status$latest_results_data_up_to, format = "%Y-%m-%d")
   } else {
     futile.logger::flog.trace("no existing status file, creating a blank table")
