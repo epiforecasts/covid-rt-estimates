@@ -184,9 +184,8 @@ rru_log_outcome <- function(outcome) {
       futile.logger::flog.trace("dataset %s had an error", dataset_name)
       dataset_status <- "Error"
     }
-
     if (nrow(status_row) == 0) {
-      futile.logger::flog.trace("no status record exists for %s so create a new one", dataset_name,)
+      futile.logger::flog.trace("no status record exists for %s so create a new one", dataset_name)
       status <- dplyr::rows_insert(
         status,
         data.frame(
