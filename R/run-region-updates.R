@@ -105,6 +105,7 @@ rru_log_outcome <- function(outcome) {
   futile.logger::flog.info("processing outcome log")
   stats <- loadStatsFile(stats_filename)
   status <- loadStatusFile(status_filename)
+  saveRDS(outcome, "outcome.rds")
 
 
   for (dataset_name in names(outcome)) {
