@@ -165,7 +165,7 @@ rru_log_outcome <- function(outcome) {
     dataset_processed <- FALSE
     if (dataset_counts$failures == 0 &&
       dataset_counts$timeouts == 0 &&
-      dataset_counts$successes = 0) {
+      dataset_counts$successes == 0) {
       futile.logger::flog.trace("dataset %s had no data to process", dataset_name)
       dataset_status <- "No Data To Process"
     }else if (dataset_counts$failures == 0 && dataset_counts$timeouts == 0) {
