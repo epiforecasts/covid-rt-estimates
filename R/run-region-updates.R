@@ -30,6 +30,10 @@ run_regional_updates <- function(datasets, args) {
   # now really do something
   outcome <- rru_process_locations(datasets, args, excludes, includes)
 
+  if ("united-kingdom-admissions" %in% includes) {
+    collate_estimates(name = "united-kingdom", target = "rt")
+  }
+
   # analysis of outcome
   rru_log_outcome(outcome)
 }
@@ -47,7 +51,7 @@ rru_cli_interface <- function() {
     make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
     make_option(c("-t", "--timeout"), type = "integer", default = Inf, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
     make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed.")
-    )
+  )
 
   args <- parse_args(OptionParser(option_list = option_list))
   return(args)
@@ -69,12 +73,12 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
       start <- Sys.time()
       # tryCatch(withCallingHandlers({
       outcome[[location$name]] <-
-                                                                 safe_update(location,
-                                                                                 excludes[region == location$name],
-                                                                                 includes[region == location$name],
-                                                                                 args$force,
-                                                                                 args$timeout,
-                                                                                 refresh =  args$refresh)[[1]]
+        safe_update(location,
+                    excludes[region == location$name],
+                    includes[region == location$name],
+                    args$force,
+                    args$timeout,
+                    refresh = args$refresh)[[1]]
       #                                                          },
       #                                                          warning = function(w) {
       #                                                            futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
@@ -200,16 +204,16 @@ if (sys.nframe() == 0) {
   args <- rru_cli_interface()
   setup_log_from_args(args)
   # tryCatch(withCallingHandlers(
-    run_regional_updates(datasets = datasets, args = args)
-    # ,
-    #                            warning = function(w) {
-    #                              futile.logger::flog.warn(w)
-    #                              rlang::cnd_muffle(w)
-    #                            },
-    #                            error = function(e) {
-    #                              futile.logger::flog.error(capture.output(rlang::trace_back()))
-    #                            }),
-    #        error = function(e) {
-    #          futile.logger::flog.error(e)
-    #        })
+  run_regional_updates(datasets = datasets, args = args)
+  # ,
+  #                            warning = function(w) {
+  #                              futile.logger::flog.warn(w)
+  #                              rlang::cnd_muffle(w)
+  #                            },
+  #                            error = function(e) {
+  #                              futile.logger::flog.error(capture.output(rlang::trace_back()))
+  #                            }),
+  #        error = function(e) {
+  #          futile.logger::flog.error(e)
+  #        })
 }
