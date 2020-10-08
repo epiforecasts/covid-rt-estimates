@@ -9,6 +9,7 @@ AbstractDataset <- R6Class("AbstractDataset", list(
   incubation_period = NA,
   reporting_delay = NA,
   region_scale = NA,
+  truncation = NA,
   stable = TRUE,
   target_folder = NA,
   summary_dir = NA
@@ -24,6 +25,7 @@ SuperRegion <- R6Class("SuperRegion",
                                                            incubation_period = NA,
                                                            reporting_delay = NA,
                                                            region_scale = "Country",
+                                                           truncation = 3,
                                                            stable = TRUE,
                                                            folder_name = NA) {
                                        self$name <- name
@@ -34,6 +36,7 @@ SuperRegion <- R6Class("SuperRegion",
                                        self$reporting_delay <- reporting_delay
                                        self$region_scale <- region_scale
                                        self$stable <- stable
+                                       self$truncation <- truncation
                                        highest_folder <- ifelse(region_scale == "Country", "national/", "region/")
                                        middle_folder <- ifelse(is.na(folder_name), name, folder_name)
                                        tail_target_folder <- ifelse(region_scale == "Country", "/national", "/region")
@@ -55,12 +58,14 @@ Region <- R6Class("Region",
                                                       cases_subregion_source = "region_level_1",
                                                       data_args = NULL,
                                                       region_scale = "Region",
+                                                      truncation = 3,
                                                       stable = TRUE,
                                                       folder_name = NA,
                                                       dataset_folder_name = "cases") {
                                   self$name <- name
                                   self$covid_regional_data_identifier <- covid_regional_data_identifier
                                   self$data_args <- data_args
+                                  self$truncation <- truncation
                                   self$case_modifier <- case_modifier
                                   self$generation_time <- generation_time
                                   self$incubation_period <- incubation_period
