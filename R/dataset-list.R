@@ -28,7 +28,7 @@ datasets <- c(
              dataset_folder_name = "admissions",
              case_modifier = function(admissions) {
                admissions <- admissions[, cases_new := hosp_new_blend]
-               admissions <- add_uk(admissions)
+               admissions <- add_uk(admissions, min_uk = "01-08-2020")
                return(admissions)},
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-states",
