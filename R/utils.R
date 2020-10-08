@@ -152,7 +152,7 @@ collate_estimates <- function(name, target = "rt"){
   
   # Check a collated file exists
   if(!dir.exists(here::here("subnational", name, "collated", target))){
-    dir.create(here::here("subnational", name, "collated", target))
+    dir.create(here::here("subnational", name, "collated", target), recursive = TRUE)
   }
   
   # Save back to main UK folder
