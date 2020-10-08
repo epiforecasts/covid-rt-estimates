@@ -194,6 +194,7 @@ rru_log_outcome <- function(outcome) {
           last_attempt = outcome[[dataset_name]]$start,
           last_attempt_status = dataset_status,
           latest_results = dplyr::if_else(dataset_processed, outcome[[dataset_name]]$start, NULL),
+          latest_results_status = ifelse(dataset_processed, dataset_status, NULL),
           latest_results_data_up_to = dplyr::if_else(dataset_processed, outcome[[dataset_name]]$max_data_date, NULL),
           latest_results_successful_regions = ifelse(dataset_processed, dataset_counts$successes, 0),
           latest_results_timing_out_regions = ifelse(dataset_processed, dataset_counts$timeouts, 0),
@@ -208,6 +209,7 @@ rru_log_outcome <- function(outcome) {
       status_row$last_attempt <- outcome[[dataset_name]]$start
       status_row$last_attempt_status <- dataset_status
       status_row$latest_results <- dplyr::if_else(dataset_processed, outcome[[dataset_name]]$start, status_row$latest_results)
+      status_row$latest_results_status <- ifelse(dataset_processed, dataset_status, status_row$latest_results_status)
       status_row$latest_results_data_up_to <- dplyr::if_else(dataset_processed, outcome[[dataset_name]]$max_data_date, status_row$latest_results_data_up_to)
       status_row$latest_results_successful_regions <- ifelse(dataset_processed, dataset_counts$successes, status_row$latest_results_successful_regions)
       status_row$latest_results_timing_out_regions <- ifelse(dataset_processed, dataset_counts$timeouts, status_row$latest_results_timing_out_regions)
@@ -238,11 +240,11 @@ loadStatsFile <- function(filename) {
                                      "start_date_4" = "character",
                                      "runtime_4" = "double"))
     futile.logger::flog.trace("reformatting the dates back to being dates")
-    stats$start_date <- strptime(stats$start_date, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_1 <- strptime(stats$start_date_1, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_2 <- strptime(stats$start_date_2, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_3 <- strptime(stats$start_date_3, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_4 <- strptime(stats$start_date_4, "%Y-%m-%d %H:%M:%OS")
+    stats$start_date <- as.POSIXct(strptime(stats$start_date, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_1 <- as.POSIXct(strptime(stats$start_date_1, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_2 <- as.POSIXct(strptime(stats$start_date_2, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_3 <- as.POSIXct(strptime(stats$start_date_3, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_4 <- as.POSIXct(strptime(stats$start_date_4, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
   } else {
     futile.logger::flog.trace("no existing file, creating a blank table")
     stats <- data.frame(
