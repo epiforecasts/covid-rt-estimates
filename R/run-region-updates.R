@@ -278,9 +278,9 @@ loadStatusFile <- function(filename) {
                                       "oldest_region_results" = "character"
                        ))
     futile.logger::flog.trace("reformatting the dates back to being dates")
-    status$last_attempt <- as.POSIXct(strptime(status$last_attempt, "%Y-%m-%d %H:%M:%OS"))
-    status$latest_results <- as.POSIXct(strptime(status$latest_results, "%Y-%m-%d %H:%M:%OS"))
-    status$oldest_region_results <- as.POSIXct(strptime(status$oldest_region_results, "%Y-%m-%d %H:%M:%OS"))
+    status$last_attempt <- as.POSIXct(strptime(status$last_attempt, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    status$latest_results <- as.POSIXct(strptime(status$latest_results, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    status$oldest_region_results <- strptime(status$oldest_region_results, "%Y-%m-%d %H:%M:%OS")
     status$latest_results_data_up_to <- as.Date(status$latest_results_data_up_to, format = "%Y-%m-%d")
   } else {
     futile.logger::flog.trace("no existing status file, creating a blank table")
