@@ -7,10 +7,13 @@ source(here::here("R", "entities.R"))
 
 datasets <- c(
   Region$new(name = "united-kingdom", # leaving this as the default UK for historic purposes
+             publication_metadata = PublicationMetadata$new(
+               title = "United Kingdom R Rate Estimates Based on Positive Tests",
+               description = "Calculations based on the Government postive cases for an x week rolling window"),
              covid_regional_data_identifier = "UK",
              case_modifier = function(cases) {
                cases <- add_uk(cases)
-               return(cases)},
+               return(cases) },
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-kingdom-deaths",
              covid_regional_data_identifier = "UK",
@@ -20,7 +23,7 @@ datasets <- c(
              case_modifier = function(deaths) {
                deaths <- deaths[, cases_new := deaths_new]
                deaths <- add_uk(deaths)
-               return(deaths)},
+               return(deaths) },
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-kingdom-admissions",
              covid_regional_data_identifier = "UK",
@@ -28,7 +31,7 @@ datasets <- c(
              dataset_folder_name = "admissions",
              case_modifier = function(admissions) {
                admissions <- admissions[, cases_new := hosp_new_blend]
-               return(admissions)},
+               return(admissions) },
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-states",
              covid_regional_data_identifier = "USA",

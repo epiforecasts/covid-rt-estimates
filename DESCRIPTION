@@ -32,6 +32,10 @@ Imports:
   optparse,
   R6 (>= 2.4),
   rlang (>= 0.4.7)
+Enhances:
+  dataverse (>= 0.2.0),
+  desc,
+  rjson
 Remotes:
   epiforecasts/EpiNow2,
   epiforecasts/covidregionaldata

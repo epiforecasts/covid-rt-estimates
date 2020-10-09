@@ -16,6 +16,10 @@ safe_update <- purrr::safely(update_regional)
 
 # load utils
 source(here::here("R", "utils.R"))
+# load config
+source(here::here("data/runtime", "config.R"))
+# load utils
+source(here::here("R", "publish.R"))
 
 #' Run Regional Updates
 #'
@@ -93,6 +97,7 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
       #                                      }
       # )
       outcome[[location$name]]$start <- start
+      publish_data(location)
     }else {
       futile.logger::flog.debug("skipping location %s as unstable", location$name)
     }

@@ -11,13 +11,15 @@ AbstractDataset <- R6Class("AbstractDataset", list(
   region_scale = NA,
   stable = TRUE,
   target_folder = NA,
-  summary_dir = NA
+  summary_dir = NA,
+  publication_metadata = NA
 ))
 # This seemed a better name than global...
 SuperRegion <- R6Class("SuperRegion",
                        inherit = AbstractDataset,
                        public = list(covid_national_data_identifier = "ecdc",
                                      initialize = function(name,
+                                                           publication_metadata,
                                                            covid_national_data_identifier = "ecdc",
                                                            case_modifier = NA,
                                                            generation_time = NA,
@@ -27,6 +29,7 @@ SuperRegion <- R6Class("SuperRegion",
                                                            stable = TRUE,
                                                            folder_name = NA) {
                                        self$name <- name
+                                       self$publication_metadata <- publication_metadata
                                        self$covid_national_data_identifier <- covid_national_data_identifier
                                        self$case_modifier <- case_modifier
                                        self$generation_time <- generation_time
@@ -47,6 +50,7 @@ Region <- R6Class("Region",
                                 cases_subregion_source = "region_level_1",
                                 data_args = NULL,
                                 initialize = function(name,
+                                                      publication_metadata,
                                                       covid_regional_data_identifier = NA,
                                                       case_modifier = NA,
                                                       generation_time = NA,
@@ -57,8 +61,10 @@ Region <- R6Class("Region",
                                                       region_scale = "Region",
                                                       stable = TRUE,
                                                       folder_name = NA,
-                                                      dataset_folder_name = "cases") {
+                                                      dataset_folder_name = "cases",
+                                                      publication_metadata) {
                                   self$name <- name
+                                  self$publication_metadata <- publication_metadata
                                   self$covid_regional_data_identifier <- covid_regional_data_identifier
                                   self$data_args <- data_args
                                   self$case_modifier <- case_modifier
@@ -73,3 +79,13 @@ Region <- R6Class("Region",
                                   self$summary_dir <- paste0("subnational/", middle_folder, "/", dataset_folder_name, "/summary")
                                 }))
 
+PublicationMeta <- R6Class("PublicationMeta",
+                           public = list(
+                             title = "",
+                             description = "",
+                             initialize = function(title, subtitle, description){
+                               self$title <- title
+                               self$subtitle <- subtitle
+                               self$description <- description
+                             }
+                           ))
