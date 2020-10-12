@@ -155,8 +155,10 @@ collate_estimates <- function(name, target = "rt"){
     dir.create(here::here("subnational", name, "collated", target), recursive = TRUE)
   }
   
-  # Save back to main UK folder
+  # Save back to main folder
   data.table::fwrite(df, here::here("subnational", name, "collated", target, paste0('summary_',Sys.Date(), ".csv")))
+  data.table::fwrite(df, here::here("subnational", name, "collated", target, 'summary_latest.csv'))
+  
   return(invisible(NULL))
 
 }
