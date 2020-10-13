@@ -24,7 +24,7 @@ setup_log_from_args <- function(args) {
 }
 
 #' Set up parallel processing on all available cores
-setup_future <- function(jobs, min_cores_per_worker = 1) {
+setup_future <- function(jobs, min_cores_per_worker = 4) {
   if (!interactive()) {
     ## If running as a script enable this
     options(future.fork.enable = TRUE)
@@ -134,3 +134,47 @@ parse_cludes <- function(cludes) {
 `%in_ci%` <- function(x, y) {
   tolower(x) == tolower(y)
 }
+
+#' Collate estimates from different estimates in same sub-regional folder 
+
+collate_estimates <- function(name, target = "rt"){
+  
+  # Get locations of summary csv
+  sources <- as.list(paste0(list.files(here::here("subnational", name), full.names = TRUE),
+                            "/summary/", target, ".csv"))
+  names(sources) <- list.files(here::here("subnational", name))
+  
+  # Read and bind
+  sources <- sources[!grepl("collated", names(sources))]
+  df <- lapply(sources, data.table::fread)
+  df <- data.table::rbindlist(df, idcol = "source")
+  df <- df[type %in% "estimate"][, type := NULL]
+  
+  # Check a collated file exists
+  if(!dir.exists(here::here("subnational", name, "collated", target))){
+    dir.create(here::here("subnational", name, "collated", target), recursive = TRUE)
+  }
+
+  # Save back to main folder
+  data.table::fwrite(df, here::here("subnational", name, "collated", target, paste0('summary_',Sys.Date(), ".csv")))
+  data.table::fwrite(df, here::here("subnational", name, "collated", target, 'summary_latest.csv'))
+
+  return(invisible(NULL))
+
+}
+
+#' Adds a UK case count to a dataset usng national level data
+add_uk <- function(cases, min_uk){
+  national_cases <- cases[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
+  uk_cases <- data.table::copy(national_cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)), by = c("date")]
+  uk_cases <- uk_cases[, region_level_1 := "United Kingdom"]
+
+  if (!missing(min_uk)) {
+    uk_cases <- uk_cases[date >= as.Date(min_uk)]
+    }
+
+  cases <- data.table::rbindlist(list(cases, uk_cases), fill = TRUE, use.names = TRUE)
+  return(cases)
+  }
+
+

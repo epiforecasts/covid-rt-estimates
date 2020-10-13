@@ -9,11 +9,8 @@ datasets <- c(
   Region$new(name = "united-kingdom", # leaving this as the default UK for historic purposes
              covid_regional_data_identifier = "UK",
              case_modifier = function(cases) {
-               national_cases <- cases[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
-               uk_cases <- data.table::copy(national_cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
-                                                              by = c("date")][, region_level_1 := "United Kingdom"]
-               cases <- data.table::rbindlist(list(cases, uk_cases),
-                                               fill = TRUE, use.names = TRUE)},
+               cases <- add_uk(cases)
+               return(cases)},
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-kingdom-deaths",
              covid_regional_data_identifier = "UK",
@@ -22,11 +19,8 @@ datasets <- c(
              reporting_delay = readRDS(here::here("data", "cocin_onset_to_death_delay.rds")),
              case_modifier = function(deaths) {
                deaths <- deaths[, cases_new := deaths_new]
-               national_deaths <- deaths[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
-               uk_deaths <- data.table::copy(national_deaths)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
-                                                              by = c("date")][, region_level_1 := "United Kingdom"]
-               deaths <- data.table::rbindlist(list(deaths, uk_deaths),
-                                                   fill = TRUE, use.names = TRUE)},
+               deaths <- add_uk(deaths)
+               return(deaths)},
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-kingdom-admissions",
              covid_regional_data_identifier = "UK",
@@ -34,11 +28,7 @@ datasets <- c(
              dataset_folder_name = "admissions",
              case_modifier = function(admissions) {
                admissions <- admissions[, cases_new := hosp_new_blend]
-               national_admissions <- admissions[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
-               uk_admissions <- data.table::copy(national_admissions)[, .(cases_new = sum(cases_new, na.rm = TRUE)),
-                                                                by = c("date")][, region_level_1 := "United Kingdom"]
-               admissions <- data.table::rbindlist(list(admissions, uk_admissions),
-                                                       fill = TRUE, use.names = TRUE)},
+               return(admissions)},
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-states",
              covid_regional_data_identifier = "USA",

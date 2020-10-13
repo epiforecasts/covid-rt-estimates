@@ -30,6 +30,11 @@ run_regional_updates <- function(datasets, args) {
   # now really do something
   outcome <- rru_process_locations(datasets, args, excludes, includes)
 
+  if ("united-kingdom-admissions" %in% includes) {
+    futile.logger::flog.debug("calling collate estimates for UK")
+    collate_estimates(name = "united-kingdom", target = "rt")
+  }
+
   # analysis of outcome
   rru_log_outcome(outcome)
 }
