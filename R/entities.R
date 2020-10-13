@@ -61,8 +61,7 @@ Region <- R6Class("Region",
                                                       region_scale = "Region",
                                                       stable = TRUE,
                                                       folder_name = NA,
-                                                      dataset_folder_name = "cases",
-                                                      publication_metadata) {
+                                                      dataset_folder_name = "cases") {
                                   self$name <- name
                                   self$publication_metadata <- publication_metadata
                                   self$covid_regional_data_identifier <- covid_regional_data_identifier
@@ -79,13 +78,15 @@ Region <- R6Class("Region",
                                   self$summary_dir <- paste0("subnational/", middle_folder, "/", dataset_folder_name, "/summary")
                                 }))
 
-PublicationMeta <- R6Class("PublicationMeta",
-                           public = list(
-                             title = "",
-                             description = "",
-                             initialize = function(title, subtitle, description){
-                               self$title <- title
-                               self$subtitle <- subtitle
-                               self$description <- description
-                             }
-                           ))
+PublicationMetadata <- R6Class("PublicationMetadata",
+                               public = list(
+                                 title = "",
+                                 description = "",
+                                 # subtitle="", disabling as excessive for now
+                                 initialize = function(title,
+                                                       description, subtitle = NULL) {
+                                   self$title <- title
+                                   # self$subtitle <- subtitle
+                                   self$description <- description
+                                 }
+                               ))

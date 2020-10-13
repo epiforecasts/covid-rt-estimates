@@ -8,14 +8,17 @@ source(here::here("R", "entities.R"))
 datasets <- c(
   Region$new(name = "united-kingdom", # leaving this as the default UK for historic purposes
              publication_metadata = PublicationMetadata$new(
-               title = "United Kingdom R Rate Estimates Based on Positive Tests",
-               description = "Calculations based on the Government postive cases for an x week rolling window"),
+               title = "United Kingdom R Rate Estimates Based on Reported Test Results",
+               description = "Calculations based on the Government postive cases for an x week rolling window. Note this is impacted by test availability."),
              covid_regional_data_identifier = "UK",
              case_modifier = function(cases) {
                cases <- add_uk(cases)
                return(cases) },
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-kingdom-deaths",
+             publication_metadata = PublicationMetadata$new(
+               title = "United Kingdom R Rate Estimates Based on Reported Deaths",
+               description = "Calculations based on the Government reported deaths within 28 days of a positive test"),
              covid_regional_data_identifier = "UK",
              folder_name = "united-kingdom",
              dataset_folder_name = "deaths",
@@ -26,6 +29,9 @@ datasets <- c(
                return(deaths) },
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-kingdom-admissions",
+             publication_metadata = PublicationMetadata$new(
+               title = "United Kingdom R Rate Estimates Based on Hospital Admissions",
+               description = "Calculations based on the NHS covid admissions"),
              covid_regional_data_identifier = "UK",
              folder_name = "united-kingdom",
              dataset_folder_name = "admissions",
@@ -34,9 +40,15 @@ datasets <- c(
                return(admissions) },
              data_args = list(nhsregions = TRUE)),
   Region$new(name = "united-states",
+             publication_metadata = PublicationMetadata$new(
+               title = "United States R Rate Estimates Based on Positive Tests",
+               description = "..."),
              covid_regional_data_identifier = "USA",
              region_scale = "State"),
   SuperRegion$new(name = "regional-cases",
+                  publication_metadata = PublicationMetadata$new(
+                    title = "Continent Summary R Rate Based on Reported Cases",
+                    description = "..."),
                   region_scale = "Region",
                   folder_name = "cases",
                   case_modifier = function(regional_cases) {
@@ -48,6 +60,9 @@ datasets <- c(
                                                             fill = TRUE, use.names = TRUE)
                   }),
   SuperRegion$new(name = "regional-deaths",
+                  publication_metadata = PublicationMetadata$new(
+                    title = "Continent Summary R Rate Based on Reported Deaths",
+                    description = "Calculations based on the Government postive cases for an x week rolling window"),
                   region_scale = "Region",
                   folder_name = "deaths",
                   case_modifier = function(regional_deaths) {
@@ -61,27 +76,60 @@ datasets <- c(
                                                              fill = TRUE, use.names = TRUE)
                   }),
   SuperRegion$new(name = "cases",
+                  publication_metadata = PublicationMetadata$new(
+                    title = "Conticases R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window"),
                   case_modifier = function(cases) {
                     cases <- cases[, region := country]
                   }),
   SuperRegion$new(name = "deaths",
+                  publication_metadata = PublicationMetadata$new(
+                    title = "Contideaths R Rate Based on Reported Deaths",
+                    description = "Calculations based on the Government postive cases for an x week rolling window"),
                   case_modifier = function(deaths) {
                     deaths <- deaths[country != "Cases_on_an_international_conveyance_Japan"]
                     deaths <- deaths[, cases_new := deaths_new]
                     deaths <- deaths[, region := country]
                   }),
   Region$new(name = "afghanistan",
+             publication_metadata = PublicationMetadata$new(
+                    title = "afghanistan R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window"),
              case_modifier = function(cases) {
                cases <- cases[!is.na(iso_3166_2)]
                return(cases)
              },
              stable = FALSE),
-  Region$new(name = "belgium"),
-  Region$new(name = "brazil"),
-  Region$new(name = "canada"),
-  Region$new(name = "colombia"),
-  Region$new(name = "germany"),
-  Region$new(name = "india"),
-  Region$new(name = "italy"),
-  Region$new(name = "russia")
+  Region$new(name = "belgium",
+             publication_metadata = PublicationMetadata$new(
+                    title = "belgium R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window")),
+  Region$new(name = "brazil",
+             publication_metadata = PublicationMetadata$new(
+                    title = "brazil R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window")),
+  Region$new(name = "canada",
+             publication_metadata = PublicationMetadata$new(
+                    title = "canada R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window")),
+  Region$new(name = "colombia",
+             publication_metadata = PublicationMetadata$new(
+                    title = "colombia R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window")),
+  Region$new(name = "germany",
+             publication_metadata = PublicationMetadata$new(
+                    title = "germany R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window")),
+  Region$new(name = "india",
+             publication_metadata = PublicationMetadata$new(
+                    title = "india R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window")),
+  Region$new(name = "italy",
+             publication_metadata = PublicationMetadata$new(
+                    title = "italy R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window")),
+  Region$new(name = "russia",
+             publication_metadata = PublicationMetadata$new(
+                    title = "russia R Rate Based on Reported Cases",
+                    description = "Calculations based on the Government postive cases for an x week rolling window"))
 )
