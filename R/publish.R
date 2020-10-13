@@ -6,10 +6,10 @@ publish_data <- function(dataset) {
       library(desc) # this is used to get the author data from the DESCRIPTION file
       full_dataset <- check_for_existing_id(dataset$name)
       if (is.list(full_dataset)) {
-        futile.logger::flog.debug("$s: dataverse exists so just update", dataset$name)
+        futile.logger::flog.debug("%s: dataverse exists so just update", dataset$name)
         dataset_id <- full_dataset$datasetId
         updated_metadata <- generate_new_dataset_metadata(dataset)$datasetVersion
-        ds <- update_dataset(dataset = dataset_id, body = updated_metadata)
+        update_dataset(dataset = dataset_id, body = updated_metadata)
         # loop  through the summary dir adding all the files
         existing_files <- full_dataset$files
         for (file in dir(dataset$summary_dir)) {
@@ -18,13 +18,14 @@ publish_data <- function(dataset) {
           existing_file_id <- existing_file_ids[!is.na(existing_file_ids)]
           if (length(existing_file_id) > 0) {
             # allow silent failures - it rejects non-changing updates.
-            try(update_dataset_file(file = file_full_path, dataset = dataset_id, id=existing_file_id), silent = TRUE)
+            futile.logger::flog.debug("submitting file %s", file_full_path)
+            try(update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id), silent = TRUE)
           }else {
             add_dataset_file(file = file_full_path, dataset = dataset_id)
           }
         }
       }else {
-        futile.logger::flog.info("$s: dataverse does not exist so creating a new one", dataset$name)
+        futile.logger::flog.info("%s: dataverse does not exist so creating a new one", dataset$name)
         metadata <- generate_new_dataset_metadata(dataset)
         ds <- create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
         dataset_id <- ds$data$id
@@ -53,11 +54,11 @@ check_for_existing_id <- function(dataset_name) {
     # for them from the data returned in the contents. Best I can find is they just 404 when you
     # load them. :(
     full_dataset <- tryCatch(get_dataset(existing_dataset$id),
-             error = function(c){
-               NA
-             }
+                             error = function(c) {
+                               NA
+                             }
     )
-    if(!is.list(full_dataset)){
+    if (!is.list(full_dataset)) {
       break
     }
     # for some reason the metadata keywords are inside the citation block... go figure
@@ -87,52 +88,11 @@ generate_new_dataset_metadata <- function(dataset) {
       metadataBlocks = list(
         citation = list(
           displayName = "Citation Metadata",
-          fields = list(
-            list(
-              typeName = "title",
-              multiple = FALSE,
-              typeClass = "primitive",
-              value = dataset$publication_metadata$title
-            ),
-            list(
-              typeName = "alternativeURL",
-              multiple = FALSE,
-              typeClass = "primitive",
-              value = "http://epiforecasts.io"
-            ),
-            list(
-              typeName = "author",
-              multiple = TRUE,
-              typeClass = "compound",
-              value = get_author_list(desc_file)
-            ),
-            get_dataset_contact(),
-            get_dataset_description(dataset$publication_metadata),
-            list(
-              typeName = "subject",
-              multiple = TRUE,
-              typeClass = "controlledVocabulary",
-              value = list(
-                "Medicine, Health and Life Sciences"
-              )
-            ),
-            list(
-              typeName = "keyword",
-              multiple = TRUE,
-              typeClass = "compound",
-              value = list(
-                list(
-                  keywordValue = list(
-                    typeName = "keywordValue",
-                    multiple = FALSE,
-                    typeClass = "primitive",
-                    value = dataset$name
-                  )
-                )
-              )
-            ),
-            get_software(desc_file)
-          )
+          fields = get_fields_list(dataset, desc_file)
+        ),
+        geospatial = list(
+          displayName = "Geospatial Metadata",
+          fields = get_geographic_metadata_list(dataset)
         )
       )
     )
@@ -140,13 +100,141 @@ generate_new_dataset_metadata <- function(dataset) {
 
   return(dataset_meta)
 }
+get_fields_list <- function(dataset, desc_file) {
+  fields_list <- list(
+    list(
+      typeName = "title",
+      multiple = FALSE,
+      typeClass = "primitive",
+      value = dataset$publication_metadata$title
+    ),
+    list(
+      typeName = "keyword",
+      multiple = TRUE,
+      typeClass = "compound",
+      value = list(
+        list(
+          keywordValue = list(
+            typeName = "keywordValue",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = dataset$name
+          )
+        )
+      )
+    ),
+    list(
+      typeName = "alternativeURL",
+      multiple = FALSE,
+      typeClass = "primitive",
+      value = "http://epiforecasts.io"
+    ),
+    list(
+      typeName = "subject",
+      multiple = TRUE,
+      typeClass = "controlledVocabulary",
+      value = list(
+        "Medicine, Health and Life Sciences"
+      )
+    ),
+    get_author_list(desc_file),
+    get_dataset_contact_list(),
+    get_dataset_description_list(dataset$publication_metadata),
+    get_software_list(desc_file)
+  )
+  return(fields_list)
+}
 
+get_geographic_metadata_list <- function(dataset) {
+  meta <- list()
+  locations <- list()
+  summary_table <- read.csv(paste(dataset$summary_dir, "summary_table.csv", sep = "/"))
+  if ("Region" %in% class(dataset)) {
+    locations <- append(locations,
+                        list(
+                          list(
+                            country = get_country_list(dataset$publication_metadata$country)
+                          )
+                        )
+    )
+  }
+  if (dataset$publication_metadata$breakdown_unit == "state") {
+    for (region in unique(summary_table$State)) {
+      locations <- append(locations,
+                          list(
+                            list(
+                              country = get_country_list(dataset$publication_metadata$country),
+                              state = list(
+                                typeName = "state",
+                                multiple = FALSE,
+                                typeClass = "primitive",
+                                value = region
+                              )
+                            )
+                          )
+      )
+    }
+  }else if (dataset$publication_metadata$breakdown_unit == "region") {
+    for (region in unique(summary_table$Region)) {
+      locations <- append(locations,
+                          list(
+                            list(
+                              country = get_country_list(dataset$publication_metadata$country),
+                              otherGeographicCoverage = list(
+                                typeName = "otherGeographicCoverage",
+                                multiple = FALSE,
+                                typeClass = "primitive",
+                                value = region
+                              )
+                            )
+                          )
+      )
+    }
+  }else if (dataset$publication_metadata$breakdown_unit == "country") {
+    #for (country in unique(summary_table$Country)) {
+    #  if (country %in% DATAVERSE_COUNTRIES) {
+    #    locations <- append(locations,
+    #                        list(
+    #                          list(
+    #                            country = get_country_list(country)
+    #                          )
+    #                        )
+    #    )
+    #  }
+    #}
+  }
+  if (length(locations) > 0) {
+    meta <- append(meta,
+                   list(
+                     list(
+                       typeName = "geographicCoverage",
+                       multiple = TRUE,
+                       typeClass = "compound",
+                       value = locations
+                     )
+                   )
+    )
+  }
+  meta <- append(meta,
+                 list(
+                   list(
+                     typeName = "geographicUnit",
+                     multiple = TRUE,
+                     typeClass = "primitive",
+                     value = list(
+                       dataset$publication_metadata$breakdown_unit
+                     )
+                   )
+                 )
+  )
+  return(meta)
+}
 get_author_list <- function(desc_file) {
   # load affiliations
   source(here::here("data/runtime", "known-author-affiliations.R"))
   authors <- list()
   for (desc_author in desc_file$get_authors()) {
-    author = list(
+    author <- list(
       authorName = list(
         typeName = "authorName",
         multiple = FALSE,
@@ -179,10 +267,15 @@ get_author_list <- function(desc_file) {
 
     authors <- c(authors, list(author))
   }
-  return(authors)
+  return(list(
+    typeName = "author",
+    multiple = TRUE,
+    typeClass = "compound",
+    value = authors
+  ))
 }
 
-get_dataset_contact <- function() {
+get_dataset_contact_list <- function() {
   return(
     list(
       typeName = "datasetContact",
@@ -208,7 +301,7 @@ get_dataset_contact <- function() {
   )
 }
 
-get_dataset_description <- function(publication_meta) {
+get_dataset_description_list <- function(publication_meta) {
   return(
     list(
       typeName = "dsDescription",
@@ -228,43 +321,52 @@ get_dataset_description <- function(publication_meta) {
   )
 }
 
-get_software <- function (desc_file){
-  epinow2_version <- tryCatch(packageVersion("EpiNow2"), error = function(c){NA})
+get_software_list <- function(desc_file) {
+  epinow2_version <- tryCatch(packageVersion("EpiNow2"), error = function(c) { NA })
   return(
-          list(
-            typeName = "software",
-            multiple = TRUE,
-            typeClass = "compound",
-            value = list(
-              list(
-                softwareName = list(
-                  typeName = "softwareName",
-                  multiple = FALSE,
-                  typeClass = "primitive",
-                  value = "covidrtestimates"
-                ),
-                softwareVersion = list(
-                  typeName = "softwareVersion",
-                  multiple = FALSE,
-                  typeClass = "primitive",
-                  value = paste0(desc_file$get_version(),":",system("git rev-parse HEAD", intern=TRUE))
-                )
-              ),
-              list(
-                softwareName = list(
-                  typeName = "softwareName",
-                  multiple = FALSE,
-                  typeClass = "primitive",
-                  value = "EpiNow2"
-                ),
-                softwareVersion = list(
-                  typeName = "softwareVersion",
-                  multiple = FALSE,
-                  typeClass = "primitive",
-                  value = ifelse(is.na(epinow2_version), "unknown", epinow2_version)
-                )
-              )
-            )
+    list(
+      typeName = "software",
+      multiple = TRUE,
+      typeClass = "compound",
+      value = list(
+        list(
+          softwareName = list(
+            typeName = "softwareName",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = "covidrtestimates"
+          ),
+          softwareVersion = list(
+            typeName = "softwareVersion",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = paste0(desc_file$get_version(), ":", system("git rev-parse HEAD", intern = TRUE))
           )
+        ),
+        list(
+          softwareName = list(
+            typeName = "softwareName",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = "EpiNow2"
+          ),
+          softwareVersion = list(
+            typeName = "softwareVersion",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = ifelse(is.na(epinow2_version), "unknown", epinow2_version)
+          )
+        )
+      )
+    )
   )
+}
+
+get_country_list <- function(country) {
+  return(list(
+    typeName = "country",
+    multiple = FALSE,
+    typeClass = "controlledVocabulary",
+    value = country
+  ))
 }
