@@ -1,3 +1,3 @@
 # used by the publication script to link author email to affiliation
-affiliations <- list(lshtm.ac.uk = "The Centre for Mathematical Modelling of Infectious Diseases at London School of Hygene and Tropical Medicine",
-                     metoffice.gov.uk = "Met Office")
+affiliations <- list(lshtm.ac.uk = "Centre for the Mathematical Modelling of Infectious Diseases, Department of Infectious Disease Epidemiology, London School of Hygiene & Tropical Medicine, London, UK",
+                     metoffice.gov.uk = "Met Office, Exeter, UK")
