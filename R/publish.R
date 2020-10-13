@@ -79,7 +79,7 @@ check_for_existing_id <- function(dataset_name) {
 
 generate_new_dataset_metadata <- function(dataset) {
 
-  desc_file <- description$new()
+  desc_file <- desc::description$new()
   dataset_meta <- list(
     datasetVersion = list(
       license = "CC0",
@@ -130,7 +130,8 @@ generate_new_dataset_metadata <- function(dataset) {
                   )
                 )
               )
-            )
+            ),
+            get_software(desc_file)
           )
         )
       )
@@ -224,5 +225,46 @@ get_dataset_description <- function(publication_meta) {
         )
       )
     )
+  )
+}
+
+get_software <- function (desc_file){
+  epinow2_version <- tryCatch(packageVersion("EpiNow2"), error = function(c){NA})
+  return(
+          list(
+            typeName = "software",
+            multiple = TRUE,
+            typeClass = "compound",
+            value = list(
+              list(
+                softwareName = list(
+                  typeName = "softwareName",
+                  multiple = FALSE,
+                  typeClass = "primitive",
+                  value = "covidrtestimates"
+                ),
+                softwareVersion = list(
+                  typeName = "softwareVersion",
+                  multiple = FALSE,
+                  typeClass = "primitive",
+                  value = paste0(desc_file$get_version(),":",system("git rev-parse HEAD", intern=TRUE))
+                )
+              ),
+              list(
+                softwareName = list(
+                  typeName = "softwareName",
+                  multiple = FALSE,
+                  typeClass = "primitive",
+                  value = "EpiNow2"
+                ),
+                softwareVersion = list(
+                  typeName = "softwareVersion",
+                  multiple = FALSE,
+                  typeClass = "primitive",
+                  value = ifelse(is.na(epinow2_version), "unknown", epinow2_version)
+                )
+              )
+            )
+          )
   )
 }
