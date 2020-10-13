@@ -21,7 +21,7 @@ publish_data <- function(dataset) {
             futile.logger::flog.debug("submitting file %s", file_full_path)
             try(update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id), silent = TRUE)
           }else {
-            futile.logger::ftry(add_dataset_file(file = file_full_path, dataset = dataset_id))
+            try(futile.logger::ftry(add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
           }
         }
       }else {
@@ -31,7 +31,7 @@ publish_data <- function(dataset) {
         dataset_id <- ds$data$id
         # loop  through the summary dir adding all the files
         for (file in dir(dataset$summary_dir)) {
-          futile.logger::ftry(add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id))
+          try(futile.logger::ftry(add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)), silent = TRUE)
         }
       }
       publish_dataset(dataset_id, minor = FALSE)
