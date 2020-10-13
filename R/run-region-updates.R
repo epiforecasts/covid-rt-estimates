@@ -97,7 +97,7 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
       #                                      }
       # )
       outcome[[location$name]]$start <- start
-      publish_data(location)
+      futile.logger::ftry(publish_data(location))
     }else {
       futile.logger::flog.debug("skipping location %s as unstable", location$name)
     }
