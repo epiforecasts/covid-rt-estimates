@@ -3,50 +3,81 @@ publish_data <- function(dataset) {
     Sys.setenv("DATAVERSE_SERVER" = DATAVERSE_SERVER)
     Sys.setenv("DATAVERSE_KEY" = DATAVERSE_KEY)
     if (require(dataverse)) {
-      library(rjson) # this is needed to handle the templating of json
       library(desc) # this is used to get the author data from the DESCRIPTION file
-      existing_id <- check_for_existing_id(dataset$name)
-      if (is.na(existing_id)) {
-        existing_id <- create_new_dataset(dataset)
+      full_dataset <- check_for_existing_id(dataset$name)
+      if (is.list(full_dataset)) {
+        futile.logger::flog.debug("$s: dataverse exists so just update", dataset$name)
+        dataset_id <- full_dataset$datasetId
+        updated_metadata <- generate_new_dataset_metadata(dataset)$datasetVersion
+        ds <- update_dataset(dataset = dataset_id, body = updated_metadata)
+        # loop  through the summary dir adding all the files
+        existing_files <- full_dataset$files
+        for (file in dir(dataset$summary_dir)) {
+          file_full_path <- paste0(dataset$summary_dir, "/", file)
+          existing_file_ids <- unique(existing_files[existing_files$filename == file | existing_files$originalFileName == file, "id"])
+          existing_file_id <- existing_file_ids[!is.na(existing_file_ids)]
+          if (length(existing_file_id) > 0) {
+            # allow silent failures - it rejects non-changing updates.
+            try(update_dataset_file(file = file_full_path, dataset = dataset_id, id=existing_file_id), silent = TRUE)
+          }else {
+            add_dataset_file(file = file_full_path, dataset = dataset_id)
+          }
+        }
+      }else {
+        futile.logger::flog.info("$s: dataverse does not exist so creating a new one", dataset$name)
+        metadata <- generate_new_dataset_metadata(dataset)
+        ds <- create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
+        dataset_id <- ds$data$id
+        # loop  through the summary dir adding all the files
+        for (file in dir(dataset$summary_dir)) {
+          add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)
+        }
       }
-      # loop  through the summary dir adding all the files
-      for (file in dir(dataset$summary_dir)) {
-        add_dataset_file(file, existing_id)
-      }
-      publish_dataset(existing_id)
+      publish_dataset(dataset_id, minor = FALSE)
     }else {
       futile.logger::flog.debug("Dataverse not enabled, no attempt to publish")
     }
   }else {
     futile.logger::flog.debug("No dataverse credentials loaded, no attempt to publish")
   }
+  return()
 }
 
 check_for_existing_id <- function(dataset_name) {
   # load existing
-  datasets <-
+  existing_datasets <-
     dataverse_contents(DATAVERSE_VERSEID, key = DATAVERSE_KEY, server = DATAVERSE_SERVER)
-  existing_id <- NA
-  for (dataset in datasets) {
-    full_dataset <- get_dataset(dataset$id)
+  existing <- NA
+  for (existing_dataset in existing_datasets) {
+    # deaccessed datasets are not accessible anymore - they can be skipped over but you can't test
+    # for them from the data returned in the contents. Best I can find is they just 404 when you
+    # load them. :(
+    full_dataset <- tryCatch(get_dataset(existing_dataset$id),
+             error = function(c){
+               NA
+             }
+    )
+    if(!is.list(full_dataset)){
+      break
+    }
     # for some reason the metadata keywords are inside the citation block... go figure
     # loop over them looking for the keyword value and then check if it's the name of the dataset.
     for (metadata in full_dataset$metadataBlocks$citation$fields$value) {
       if (is.data.frame(metadata) &&
         "keywordValue" %in% names(metadata) &&
-        metadata$keywordValue$value == dataset$name) {
-        existing_id <- dataset$id
+        metadata$keywordValue$value == dataset_name) {
+        existing <- full_dataset
         break
       }
     }
-    if (!is.na(existing_id)) {
+    if (is.list(existing)) {
       break
     }
   }
-  return(existing_id)
+  return(existing)
 }
 
-create_new_dataset <- function(dataset) {
+generate_new_dataset_metadata <- function(dataset) {
 
   desc_file <- description$new()
   dataset_meta <- list(
@@ -61,7 +92,7 @@ create_new_dataset <- function(dataset) {
               typeName = "title",
               multiple = FALSE,
               typeClass = "primitive",
-              value = dataset$publication_meta$title
+              value = dataset$publication_metadata$title
             ),
             list(
               typeName = "alternativeURL",
@@ -76,7 +107,7 @@ create_new_dataset <- function(dataset) {
               value = get_author_list(desc_file)
             ),
             get_dataset_contact(),
-            get_dataset_description(dataset),
+            get_dataset_description(dataset$publication_metadata),
             list(
               typeName = "subject",
               multiple = TRUE,
@@ -106,8 +137,7 @@ create_new_dataset <- function(dataset) {
     )
   )
 
-  ds <- create_dataset(DATAVERSE_VERSEID, toJSON(dataset_meta))
-  return(ds)
+  return(dataset_meta)
 }
 
 get_author_list <- function(desc_file) {
@@ -189,10 +219,10 @@ get_dataset_description <- function(publication_meta) {
             typeName = "dsDescriptionValue",
             multiple = FALSE,
             typeClass = "primitive",
-            value = publication_meta$
-),
-)
-)
-)
-)
+            value = publication_meta$description
+          )
+        )
+      )
+    )
+  )
 }
