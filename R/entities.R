@@ -45,6 +45,7 @@ Region <- R6Class("Region",
                   inherit = AbstractDataset,
                   public = list(covid_regional_data_identifier = NA,
                                 cases_subregion_source = "region_level_1",
+                                data_args = NULL,
                                 initialize = function(name,
                                                       covid_regional_data_identifier = NA,
                                                       case_modifier = NA,
@@ -52,12 +53,14 @@ Region <- R6Class("Region",
                                                       incubation_period = NA,
                                                       reporting_delay = NA,
                                                       cases_subregion_source = "region_level_1",
+                                                      data_args = NULL,
                                                       region_scale = "Region",
                                                       stable = TRUE,
                                                       folder_name = NA,
                                                       dataset_folder_name = "cases") {
                                   self$name <- name
                                   self$covid_regional_data_identifier <- covid_regional_data_identifier
+                                  self$data_args <- data_args
                                   self$case_modifier <- case_modifier
                                   self$generation_time <- generation_time
                                   self$incubation_period <- incubation_period
