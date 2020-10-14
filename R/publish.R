@@ -59,7 +59,7 @@ check_for_existing_id <- function(dataset_name) {
                              }
     )
     if (!is.list(full_dataset)) {
-      break
+      next
     }
     # for some reason the metadata keywords are inside the citation block... go figure
     # loop over them looking for the keyword value and then check if it's the name of the dataset.
