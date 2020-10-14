@@ -1,4 +1,4 @@
-publish_data <- function(dataset) {
+publish_data <- function(dataset, files = TRUE) {
   if (exists("DATAVERSE_SERVER") && exists("DATAVERSE_KEY")) {
     Sys.setenv("DATAVERSE_SERVER" = DATAVERSE_SERVER)
     Sys.setenv("DATAVERSE_KEY" = DATAVERSE_KEY)
@@ -8,32 +8,39 @@ publish_data <- function(dataset) {
       if (is.list(full_dataset)) {
         futile.logger::flog.debug("%s: dataverse exists so just update", dataset$name)
         dataset_id <- full_dataset$datasetId
-        updated_metadata <- generate_new_dataset_metadata(dataset)$datasetVersion
+        updated_metadata <- generate_dataset_metadata(dataset)$datasetVersion
         update_dataset(dataset = dataset_id, body = updated_metadata)
         # loop  through the summary dir adding all the files
-        existing_files <- full_dataset$files
-        for (file in dir(dataset$summary_dir)) {
-          file_full_path <- paste0(dataset$summary_dir, "/", file)
-          existing_file_ids <- unique(existing_files[existing_files$filename == file | existing_files$originalFileName == file, "id"])
-          existing_file_id <- existing_file_ids[!is.na(existing_file_ids)]
-          if (length(existing_file_id) > 0) {
-            # allow silent failures - it rejects non-changing updates.
-            futile.logger::flog.debug("submitting file %s", file_full_path)
-            try(update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id), silent = TRUE)
-          }else {
-            try(futile.logger::ftry(add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
+        if (files) {
+          existing_files <- full_dataset$files
+          for (file in dir(dataset$summary_dir)) {
+            file_full_path <- paste0(dataset$summary_dir, "/", file)
+            existing_file_ids <- unique(existing_files[existing_files$filename == file | existing_files$originalFileName == file, "id"])
+            existing_file_id <- existing_file_ids[!is.na(existing_file_ids)]
+            if (length(existing_file_id) > 0) {
+              # allow silent failures - it rejects non-changing updates.
+              futile.logger::flog.debug("replacing file %s", file_full_path)
+              try(update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id), silent = TRUE)
+            }else {
+              futile.logger::flog.debug("uploading file %s", file_full_path)
+              try(futile.logger::ftry(add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
+            }
           }
         }
       }else {
         futile.logger::flog.info("%s: dataverse does not exist so creating a new one", dataset$name)
-        metadata <- generate_new_dataset_metadata(dataset)
+        metadata <- generate_dataset_metadata(dataset)
         ds <- create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
         dataset_id <- ds$data$id
         # loop  through the summary dir adding all the files
-        for (file in dir(dataset$summary_dir)) {
-          try(futile.logger::ftry(add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)), silent = TRUE)
+        if (files) {
+          for (file in dir(dataset$summary_dir)) {
+            futile.logger::flog.debug("submitting file %s", paste0(dataset$summary_dir, "/", file))
+            try(futile.logger::ftry(add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)), silent = TRUE)
+          }
         }
       }
+      futile.logger::flog.info("%s: publishing", dataset$name)
       publish_dataset(dataset_id, minor = FALSE)
     }else {
       futile.logger::flog.debug("Dataverse not enabled, no attempt to publish")
@@ -78,7 +85,7 @@ check_for_existing_id <- function(dataset_name) {
   return(existing)
 }
 
-generate_new_dataset_metadata <- function(dataset) {
+generate_dataset_metadata <- function(dataset) {
 
   desc_file <- desc::description$new()
   dataset_meta <- list(
@@ -120,6 +127,30 @@ get_fields_list <- function(dataset, desc_file) {
             typeClass = "primitive",
             value = dataset$name
           )
+        ),
+        list(
+          keywordValue = list(
+            typeName = "keywordValue",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = "COVID-19"
+          )
+        ),
+        list(
+          keywordValue = list(
+            typeName = "keywordValue",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = "Coronavirus"
+          )
+        ),
+        list(
+          keywordValue = list(
+            typeName = "keywordValue",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = "Pandemic"
+          )
         )
       )
     ),
@@ -158,28 +189,29 @@ get_geographic_metadata_list <- function(dataset) {
                         )
     )
   }
-  if (dataset$publication_metadata$breakdown_unit == "state") {
-    for (region in unique(summary_table$State)) {
+  if (dataset$publication_metadata$breakdown_unit %in% c("state", "region")) {
+    for (region in unique(summary_table[[dataset$region_scale]])) {
+      location_list <-
+        list(
+          country = get_country_list(dataset$publication_metadata$country)
+        )
+      type <- ifelse(dataset$publication_metadata$breakdown_unit == "state", "state", "otherGeographicCoverage")
+      location_list[[type]] <-
+        list(
+          typeName = type,
+          multiple = FALSE,
+          typeClass = "primitive",
+          value = region
+        )
       locations <- append(locations,
-                          list(
-                            list(
-                              country = get_country_list(dataset$publication_metadata$country),
-                              state = list(
-                                typeName = "state",
-                                multiple = FALSE,
-                                typeClass = "primitive",
-                                value = region
-                              )
-                            )
-                          )
+                          list(location_list)
       )
     }
-  }else if (dataset$publication_metadata$breakdown_unit == "region") {
-    for (region in unique(summary_table$Region)) {
+  }else if (dataset$publication_metadata$breakdown_unit == "continent") {
+    for (region in unique(summary_table[[dataset$region_scale]])) {
       locations <- append(locations,
                           list(
                             list(
-                              country = get_country_list(dataset$publication_metadata$country),
                               otherGeographicCoverage = list(
                                 typeName = "otherGeographicCoverage",
                                 multiple = FALSE,
@@ -191,17 +223,17 @@ get_geographic_metadata_list <- function(dataset) {
       )
     }
   }else if (dataset$publication_metadata$breakdown_unit == "country") {
-    #for (country in unique(summary_table$Country)) {
-    #  if (country %in% DATAVERSE_COUNTRIES) {
-    #    locations <- append(locations,
-    #                        list(
-    #                          list(
-    #                            country = get_country_list(country)
-    #                          )
-    #                        )
-    #    )
-    #  }
-    #}
+    for (country in unique(summary_table$Country)) {
+      if (country %in% DATAVERSE_COUNTRIES) {
+        locations <- append(locations,
+                            list(
+                              list(
+                                country = get_country_list(country)
+                              )
+                            )
+        )
+      }
+    }
   }
   if (length(locations) > 0) {
     meta <- append(meta,
