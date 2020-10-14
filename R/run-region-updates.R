@@ -224,8 +224,8 @@ rru_log_outcome <- function(outcome) {
     }
   }
   futile.logger::flog.trace("writing file")
-  write.csv(stats[order(region, subregion),], file = stats_filename, row.names = FALSE)
-  write.csv(status[order(region),], file = status_filename, row.names = FALSE)
+  write.csv(stats[order(dataset, subregion),], file = stats_filename, row.names = FALSE)
+  write.csv(status[order(dataset),], file = status_filename, row.names = FALSE)
 }
 
 loadStatsFile <- function(filename) {
