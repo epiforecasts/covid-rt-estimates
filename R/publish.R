@@ -19,10 +19,10 @@ publish_data <- function(dataset, files = TRUE) {
             existing_file_id <- existing_file_ids[!is.na(existing_file_ids)]
             if (length(existing_file_id) > 0) {
               # allow silent failures - it rejects non-changing updates.
-              futile.logger::flog.debug("replacing file %s", file_full_path)
+              futile.logger::flog.trace("replacing file %s", file_full_path)
               try(update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id), silent = TRUE)
             }else {
-              futile.logger::flog.debug("uploading file %s", file_full_path)
+              futile.logger::flog.trace("uploading file %s", file_full_path)
               try(futile.logger::ftry(add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
             }
           }
@@ -35,7 +35,7 @@ publish_data <- function(dataset, files = TRUE) {
         # loop  through the summary dir adding all the files
         if (files) {
           for (file in dir(dataset$summary_dir)) {
-            futile.logger::flog.debug("submitting file %s", paste0(dataset$summary_dir, "/", file))
+            futile.logger::flog.trace("submitting file %s", paste0(dataset$summary_dir, "/", file))
             try(futile.logger::ftry(add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)), silent = TRUE)
           }
         }
