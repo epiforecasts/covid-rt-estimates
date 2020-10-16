@@ -71,11 +71,11 @@ check_for_update <- function(cases, last_run) {
 }
 
 #' Clean regional data
-clean_regional_data <- function(cases) {
+clean_regional_data <- function(cases, truncation = 3) {
   futile.logger::flog.trace("starting to clean the cases")
   cases <- cases[, .(region, date = as.Date(date), confirm = cases_new)]
   cases <- cases[date <= Sys.Date()]
-  cases <- cases[, .SD[date <= (max(date, na.rm = TRUE) - lubridate::days(3))], by = region]
+  cases <- cases[, .SD[date <= (max(date, na.rm = TRUE) - lubridate::days(truncation))], by = region]
   cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
   cases <- cases[!is.na(confirm)]
   data.table::setorder(cases, date)
@@ -154,11 +154,11 @@ collate_estimates <- function(name, target = "rt"){
   if(!dir.exists(here::here("subnational", name, "collated", target))){
     dir.create(here::here("subnational", name, "collated", target), recursive = TRUE)
   }
-  
+
   # Save back to main folder
   data.table::fwrite(df, here::here("subnational", name, "collated", target, paste0('summary_',Sys.Date(), ".csv")))
   data.table::fwrite(df, here::here("subnational", name, "collated", target, 'summary_latest.csv'))
-  
+
   return(invisible(NULL))
 
 }
@@ -168,13 +168,13 @@ add_uk <- function(cases, min_uk){
   national_cases <- cases[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
   uk_cases <- data.table::copy(national_cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)), by = c("date")]
   uk_cases <- uk_cases[, region_level_1 := "United Kingdom"]
-  
+
   if (!missing(min_uk)) {
     uk_cases <- uk_cases[date >= as.Date(min_uk)]
     }
-  
+
   cases <- data.table::rbindlist(list(cases, uk_cases), fill = TRUE, use.names = TRUE)
   return(cases)
   }
- 
+
 

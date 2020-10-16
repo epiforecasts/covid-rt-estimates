@@ -110,8 +110,130 @@ rru_log_outcome <- function(outcome) {
   # outcome should be:
   # dataset:
   #     subregion : time / inf / null (good, timed out, failed)
-  filename <- "runtimes.csv"
+  stats_filename <- "runtimes.csv"
+  status_filename <- "status.csv"
   futile.logger::flog.info("processing outcome log")
+  stats <- loadStatsFile(stats_filename)
+  status <- loadStatusFile(status_filename)
+  # saveRDS(outcome, "outcome.rds")
+
+
+  for (dataset_name in names(outcome)) {
+    futile.logger::flog.trace("processing results for %s", dataset_name)
+    dataset_counts <- list(failures = 0, timeouts = 0, successes = 0)
+    for (subregion in names(outcome[[dataset_name]])) {
+      if (subregion %in% c("start", "max_data_date", "oldest_results")) {
+        next
+      }
+      existing <-
+        stats[stats$dataset == dataset_name &
+                stats$subregion == subregion,]
+
+      if (is.null(outcome[[dataset_name]][[subregion]])) {
+        runtime <- -1
+        dataset_counts$failures <- dataset_counts$failures + 1
+      } else if (is.finite(outcome[[dataset_name]][[subregion]])) {
+        runtime <- outcome[[dataset_name]][[subregion]]
+        dataset_counts$successes <- dataset_counts$successes + 1
+      }else {
+        runtime <- 999999
+        dataset_counts$timeouts <- dataset_counts$timeouts + 1
+      }
+
+      if (nrow(existing) == 0) {
+        futile.logger::flog.trace("no record exists for %s / %s so create a new one", dataset_name, subregion)
+        stats <- dplyr::rows_insert(
+          stats,
+          data.frame(
+            dataset = dataset_name,
+            subregion = subregion,
+            start_date = outcome[[dataset_name]]$start,
+            runtime = runtime
+          ),
+          by = c("dataset", "subregion")
+        )
+      } else {
+        futile.logger::flog.trace("record exists for %s / %s so advance prior counters and update", dataset_name, subregion)
+        existing$runtime_4 <- existing$runtime_3
+        existing$start_date_4 <- existing$start_date_3
+        existing$runtime_3 <- existing$runtime_2
+        existing$start_date_3 <- existing$start_date_2
+        existing$runtime_2 <- existing$runtime_1
+        existing$start_date_2 <- existing$start_date_1
+        existing$runtime_1 <- existing$runtime
+        existing$start_date_1 <- existing$start_date
+        existing$start_date <- outcome[[dataset_name]]$start
+        existing$runtime <- runtime
+        stats <- dplyr::rows_upsert(stats, existing, by = c("dataset", "subregion"))
+      }
+    }
+
+    status_row <-
+      status[status$dataset == dataset_name,]
+
+    # calculate dataset status
+    dataset_completed <- FALSE
+    dataset_processed <- FALSE
+    if (dataset_counts$failures == 0 &&
+      dataset_counts$timeouts == 0 &&
+      dataset_counts$successes == 0) {
+      futile.logger::flog.trace("dataset %s had no data to process", dataset_name)
+      dataset_status <- "No Data To Process"
+    }else if (dataset_counts$failures == 0 && dataset_counts$timeouts == 0) {
+      futile.logger::flog.trace("dataset %s has a complete results set", dataset_name)
+      dataset_status <- "Complete"
+      dataset_completed <- TRUE
+      dataset_processed <- TRUE
+    }else if (dataset_counts$successes > 0) {
+      futile.logger::flog.trace("dataset %s has a complete results set", dataset_name)
+      dataset_status <- "Partial"
+      dataset_processed <- TRUE
+    }else if (dataset_counts$failures == 0) {
+      futile.logger::flog.trace("dataset %s has a completely timed out", dataset_name)
+      dataset_status <- "Timed Out"
+    }else {
+      futile.logger::flog.trace("dataset %s had an error", dataset_name)
+      dataset_status <- "Error"
+    }
+    if (nrow(status_row) == 0) {
+      futile.logger::flog.trace("no status record exists for %s so create a new one", dataset_name)
+      status <- dplyr::rows_insert(
+        status,
+        data.frame(
+          dataset = dataset_name,
+          last_attempt = outcome[[dataset_name]]$start,
+          last_attempt_status = dataset_status,
+          latest_results = dplyr::if_else(dataset_processed, outcome[[dataset_name]]$start, NULL),
+          latest_results_status = ifelse(dataset_processed, dataset_status, NULL),
+          latest_results_data_up_to = dplyr::if_else(dataset_processed, outcome[[dataset_name]]$max_data_date, NULL),
+          latest_results_successful_regions = ifelse(dataset_processed, dataset_counts$successes, 0),
+          latest_results_timing_out_regions = ifelse(dataset_processed, dataset_counts$timeouts, 0),
+          latest_results_failing_regions = ifelse(dataset_processed, dataset_counts$failures, 0),
+          oldest_region_results = outcome[[dataset_name]]$oldest_results
+        ),
+        by = c("dataset")
+      )
+    } else {
+      futile.logger::flog.trace("status record exists for %s", dataset_name)
+      status_row$dataset <- dataset_name
+      status_row$last_attempt <- outcome[[dataset_name]]$start
+      status_row$last_attempt_status <- dataset_status
+      status_row$latest_results <- dplyr::if_else(dataset_processed, outcome[[dataset_name]]$start, status_row$latest_results)
+      status_row$latest_results_status <- ifelse(dataset_processed, dataset_status, status_row$latest_results_status)
+      status_row$latest_results_data_up_to <- dplyr::if_else(dataset_processed, outcome[[dataset_name]]$max_data_date, status_row$latest_results_data_up_to)
+      status_row$latest_results_successful_regions <- ifelse(dataset_processed, dataset_counts$successes, status_row$latest_results_successful_regions)
+      status_row$latest_results_timing_out_regions <- ifelse(dataset_processed, dataset_counts$timeouts, status_row$latest_results_timing_out_regions)
+      status_row$latest_results_failing_regions <- ifelse(dataset_processed, dataset_counts$failures, status_row$latest_results_failing_regions)
+      status_row$oldest_region_results <- outcome[[dataset_name]]$oldest_results
+      status <- dplyr::rows_upsert(status, status_row, by = c("dataset"))
+    }
+  }
+  futile.logger::flog.trace("writing file")
+  write.csv(stats[order(stats$dataset, stats$subregion),], file = stats_filename, row.names = FALSE)
+  write.csv(status[order(status$dataset),], file = status_filename, row.names = FALSE)
+}
+
+loadStatsFile <- function(filename) {
   if (file.exists(filename)) {
     futile.logger::flog.trace("loading the existing file")
     stats <- read.csv(file = filename,
@@ -128,11 +250,11 @@ rru_log_outcome <- function(outcome) {
                                      "start_date_4" = "character",
                                      "runtime_4" = "double"))
     futile.logger::flog.trace("reformatting the dates back to being dates")
-    stats$start_date <- strptime(stats$start_date, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_1 <- strptime(stats$start_date_1, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_2 <- strptime(stats$start_date_2, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_3 <- strptime(stats$start_date_3, "%Y-%m-%d %H:%M:%OS")
-    stats$start_date_4 <- strptime(stats$start_date_4, "%Y-%m-%d %H:%M:%OS")
+    stats$start_date <- as.POSIXct(strptime(stats$start_date, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_1 <- as.POSIXct(strptime(stats$start_date_1, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_2 <- as.POSIXct(strptime(stats$start_date_2, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_3 <- as.POSIXct(strptime(stats$start_date_3, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    stats$start_date_4 <- as.POSIXct(strptime(stats$start_date_4, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
   } else {
     futile.logger::flog.trace("no existing file, creating a blank table")
     stats <- data.frame(
@@ -150,58 +272,44 @@ rru_log_outcome <- function(outcome) {
       runtime_4 = double()
     )
   }
-
-
-  for (dataset_name in names(outcome)) {
-    futile.logger::flog.trace("processing results for %s", dataset_name)
-    for (subregion in names(outcome[[dataset_name]])) {
-      if (subregion == "start") {
-        next
-      }
-      existing <-
-        stats[stats$dataset == dataset_name &
-                stats$subregion == subregion,]
-      if (nrow(existing) == 0) {
-        futile.logger::flog.trace("no record exists for %s / %s so create a new one", dataset_name, subregion)
-        stats <- dplyr::rows_insert(
-          stats,
-          data.frame(
-            dataset = dataset_name,
-            subregion = subregion,
-            start_date = outcome[[dataset_name]]$start,
-            runtime = ifelse(is.null(outcome[[dataset_name]][[subregion]]),
-                             -1,
-                             ifelse(is.finite(outcome[[dataset_name]][[subregion]]),
-                                    outcome[[dataset_name]][[subregion]],
-                                    999999)
-            )
-          ),
-          by = c("dataset", "subregion")
-        )
-      } else {
-        futile.logger::flog.trace("record exists for %s / %s so advance prior counters and update", dataset_name, subregion)
-        existing$runtime_4 <- existing$runtime_3
-        existing$start_date_4 <- existing$start_date_3
-        existing$runtime_3 <- existing$runtime_2
-        existing$start_date_3 <- existing$start_date_2
-        existing$runtime_2 <- existing$runtime_1
-        existing$start_date_2 <- existing$start_date_1
-        existing$runtime_1 <- existing$runtime
-        existing$start_date_1 <- existing$start_date
-        existing$start_date <- outcome[[dataset_name]]$start
-        existing$runtime <- ifelse(is.null(outcome[[dataset_name]][[subregion]]),
-                                   -1,
-                                   ifelse(is.finite(outcome[[dataset_name]][[subregion]]),
-                                          outcome[[dataset_name]][[subregion]],
-                                          999999)
-        )
-        stats <-
-          dplyr::rows_upsert(stats, existing, by = c("dataset", "subregion"))
-      }
-    }
+  return(stats)
+}
+loadStatusFile <- function(filename) {
+  if (file.exists(filename)) {
+    futile.logger::flog.trace("loading the existing status file")
+    status <- read.csv(file = filename,
+                       colClasses = c("dataset" = "character",
+                                      "last_attempt" = "character",
+                                      "last_attempt_status" = "character",
+                                      "latest_results" = "character",
+                                      "latest_results_status" = "character",
+                                      "latest_results_data_up_to" = "character",
+                                      "latest_results_successful_regions" = "integer",
+                                      "latest_results_timing_out_regions" = "integer",
+                                      "latest_results_failing_regions" = "integer",
+                                      "oldest_region_results" = "character"
+                       ))
+    futile.logger::flog.trace("reformatting the dates back to being dates")
+    status$last_attempt <- as.POSIXct(strptime(status$last_attempt, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    status$latest_results <- as.POSIXct(strptime(status$latest_results, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
+    status$oldest_region_results <- strptime(status$oldest_region_results, "%Y-%m-%d %H:%M:%OS")
+    status$latest_results_data_up_to <- as.Date(status$latest_results_data_up_to, format = "%Y-%m-%d")
+  } else {
+    futile.logger::flog.trace("no existing status file, creating a blank table")
+    status <- data.frame(
+      dataset = character(),
+      last_attempt = POSIXct(),
+      last_attempt_status = character(),
+      latest_results = POSIXct(),
+      latest_results_status = character(),
+      latest_results_data_up_to = Date(),
+      latest_results_successful_regions = integer(),
+      latest_results_timing_out_regions = integer(),
+      latest_results_failing_regions = integer(),
+      oldest_region_results = POSIXct()
+    )
   }
-  futile.logger::flog.trace("writing file")
-  write.csv(stats, file = filename, row.names = FALSE)
+  return(status)
 }
 
 # only execute if this is the root, passing in datasets from dataset-list.R and the args from the cli interface

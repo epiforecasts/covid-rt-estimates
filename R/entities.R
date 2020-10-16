@@ -10,6 +10,7 @@ AbstractDataset <- R6Class("AbstractDataset", list(
   incubation_period = NA,
   reporting_delay = NA,
   region_scale = NA,
+  truncation = NA,
   stable = TRUE,
   target_folder = NA,
   summary_dir = NA,
@@ -23,7 +24,8 @@ AbstractDataset <- R6Class("AbstractDataset", list(
     incubation_period = NA,
     reporting_delay = NA,
     stable = TRUE,
-    data_args = NULL
+    data_args = NULL,
+    truncation = 3
   ) {
     self$name <- name
     self$publication_metadata <- publication_metadata
@@ -34,6 +36,7 @@ AbstractDataset <- R6Class("AbstractDataset", list(
     self$stable <- stable
     self$data_args <- data_args
     self$region_scale <- region_scale
+    self$truncation <- truncation
   }
 ))
 # This seemed a better name than global...
