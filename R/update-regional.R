@@ -128,7 +128,9 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       return_summary = FALSE
     )
     out <- list()
-    out$timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
+    timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
+    out <- as.list(timings$time)
+    names(out) <- timings$region
   } else {
     out <- list()
   }
