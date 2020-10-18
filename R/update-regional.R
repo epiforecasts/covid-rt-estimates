@@ -97,16 +97,24 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     }
     # Run Rt estimation -------------------------------------------------------
     futile.logger::flog.trace("calling regional_epinow")
-    out <- regional_epinow(reported_cases = cases,
-                           generation_time = location$generation_time,
-                           delays = list(location$incubation_period, location$reporting_delay),
-                           non_zero_points = 14, horizon = 14, burn_in = 14, samples = 4000,
-                           stan_args = list(warmup = 500, cores = no_cores,
-                                            chains = ifelse(no_cores <= 4, 4, no_cores)),
-                           fixed_future_rt = TRUE, target_folder = location$target_folder,
-                           return_estimates = FALSE, summary = TRUE,
-                           return_timings = TRUE, future = TRUE,
-                           max_execution_time = max_execution_time)
+    regional_epinow(reported_cases = cases,
+                    generation_time = location$generation_time,
+                    delays = list(location$incubation_period, location$reporting_delay),
+                    non_zero_points = 14, 
+                    horizon = 14, 
+                    burn_in = 14, 
+                    samples = 4000,
+                    stan_args = list(warmup = 500, cores = no_cores,
+                                     chains = ifelse(no_cores <= 4, 4, no_cores)),
+                    future_rt = "latest",
+                    target_folder = location$target_folder,
+                    future = TRUE,
+                    max_execution_time = max_execution_time,
+                    summary_args = list(
+                      results_dir = location$target_folder,
+                      summary_dir = location$summary_dir,
+                      region_scale = location$region_scale,
+                      all_regions = "Region" %in% class(location)))
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
 
@@ -119,6 +127,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       all_regions = "Region" %in% class(location),
       return_summary = FALSE
     )
+    out <- list()
+    out$timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
   } else {
     out <- list()
   }
