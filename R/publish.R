@@ -108,6 +108,9 @@ generate_dataset_metadata <- function(dataset, pub_date = NA) {
   return(dataset_meta)
 }
 get_fields_list <- function(dataset, desc_file, pub_date = NA) {
+  if(is.na(pub_date)){
+    pub_date <- Sys.Date()
+  }
   fields_list <- list(
     list(
       typeName = "title",
@@ -168,19 +171,17 @@ get_fields_list <- function(dataset, desc_file, pub_date = NA) {
         "Medicine, Health and Life Sciences"
       )
     ),
+    list(
+            typeName = "productionDate",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = pub_date
+          ),
     get_author_list(desc_file),
     get_dataset_contact_list(),
     get_dataset_description_list(dataset$publication_metadata),
     get_software_list(desc_file)
   )
-  if(!is.na(pub_date)){
-    fields_list <- append(fields_list, list(list(
-            typeName = "productionDate",
-            multiple = FALSE,
-            typeClass = "primitive",
-            value = pub_date
-          )))
-  }
   return(fields_list)
 }
 
