@@ -150,9 +150,6 @@ collate_estimates <- function(name, target = "rt"){
   df <- data.table::rbindlist(df, idcol = "source")
   df <- df[type %in% "estimate"][, type := NULL]
   
-  # Remove any deprecated regions
-  df <- df[!region %in% c("North East", "Yorkshire and The Humber", "East Midlands", "West Midlands")]
-
   # Check a collated file exists
   if(!dir.exists(here::here("subnational", name, "collated", target))){
     dir.create(here::here("subnational", name, "collated", target), recursive = TRUE)
