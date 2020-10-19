@@ -1,4 +1,4 @@
-publish_data <- function(dataset, files = TRUE) {
+publish_data <- function(dataset, files = TRUE, pub_date = NA) {
   if (exists("DATAVERSE_SERVER") && exists("DATAVERSE_KEY")) {
     Sys.setenv("DATAVERSE_SERVER" = DATAVERSE_SERVER)
     Sys.setenv("DATAVERSE_KEY" = DATAVERSE_KEY)
@@ -8,7 +8,7 @@ publish_data <- function(dataset, files = TRUE) {
       if (is.list(full_dataset)) {
         futile.logger::flog.debug("%s: dataverse exists so just update", dataset$name)
         dataset_id <- full_dataset$datasetId
-        updated_metadata <- generate_dataset_metadata(dataset)$datasetVersion
+        updated_metadata <- generate_dataset_metadata(dataset, pub_date)$datasetVersion
         update_dataset(dataset = dataset_id, body = updated_metadata)
         # loop  through the summary dir adding all the files
         if (files) {
@@ -29,7 +29,7 @@ publish_data <- function(dataset, files = TRUE) {
         }
       }else {
         futile.logger::flog.info("%s: dataverse does not exist so creating a new one", dataset$name)
-        metadata <- generate_dataset_metadata(dataset)
+        metadata <- generate_dataset_metadata(dataset, pub_date)
         ds <- create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
         dataset_id <- ds$data$id
         # loop  through the summary dir adding all the files
@@ -85,7 +85,7 @@ check_for_existing_id <- function(dataset_name) {
   return(existing)
 }
 
-generate_dataset_metadata <- function(dataset) {
+generate_dataset_metadata <- function(dataset, pub_date = NA) {
 
   desc_file <- desc::description$new()
   dataset_meta <- list(
@@ -95,7 +95,7 @@ generate_dataset_metadata <- function(dataset) {
       metadataBlocks = list(
         citation = list(
           displayName = "Citation Metadata",
-          fields = get_fields_list(dataset, desc_file)
+          fields = get_fields_list(dataset, desc_file, pub_date)
         ),
         geospatial = list(
           displayName = "Geospatial Metadata",
@@ -107,7 +107,7 @@ generate_dataset_metadata <- function(dataset) {
 
   return(dataset_meta)
 }
-get_fields_list <- function(dataset, desc_file) {
+get_fields_list <- function(dataset, desc_file, pub_date = NA) {
   fields_list <- list(
     list(
       typeName = "title",
@@ -173,6 +173,14 @@ get_fields_list <- function(dataset, desc_file) {
     get_dataset_description_list(dataset$publication_metadata),
     get_software_list(desc_file)
   )
+  if(!is.na(pub_date)){
+    fields_list <- append(fields_list, list(list(
+            typeName = "productionDate",
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = pub_date
+          )))
+  }
   return(fields_list)
 }
 
