@@ -282,7 +282,7 @@ get_author_list <- function(desc_file) {
         value = affiliations[[strsplit(desc_author$email, "@", perl = TRUE)[[1]][[2]]]]
       )
     }
-    if (!is.null(desc_author$comment)) {
+    if ("ORCID" %in% names(desc_author$comment)) {
       author$authorIdentifierScheme = list(
         typeName = "authorIdentifierScheme",
         multiple = FALSE,
@@ -293,7 +293,7 @@ get_author_list <- function(desc_file) {
         typeName = "authorIdentifier",
         multiple = FALSE,
         typeClass = "primitive",
-        value = strsplit(desc_author$comment, '"', perl = TRUE)[[1]]
+        value = desc_author$comment["ORCID"]
       )
     }
 
