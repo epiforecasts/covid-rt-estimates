@@ -293,7 +293,7 @@ get_author_list <- function(desc_file) {
         typeName = "authorIdentifier",
         multiple = FALSE,
         typeClass = "primitive",
-        value = desc_author$comment["ORCID"]
+        value = desc_author$comment[["ORCID"]]
       )
     }
 
