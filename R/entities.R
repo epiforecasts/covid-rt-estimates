@@ -40,7 +40,7 @@ SuperRegion <- R6Class("SuperRegion",
                                        highest_folder <- ifelse(region_scale == "Country", "national/", "region/")
                                        middle_folder <- ifelse(is.na(folder_name), name, folder_name)
                                        tail_target_folder <- ifelse(region_scale == "Country", "/national", "/region")
-                                       self$target_folder <- paste0(highest_folder, middle_folder, "/national")
+                                       self$target_folder <- paste0(highest_folder, middle_folder, tail_target_folder)
                                        self$summary_dir <- paste0(highest_folder, middle_folder, "/summary")
                                      }))
 
