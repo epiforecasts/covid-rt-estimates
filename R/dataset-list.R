@@ -16,7 +16,8 @@ datasets <- c(
              case_modifier = function(cases) {
                cases <- add_uk(cases)
                return(cases) },
-             data_args = list(nhsregions = TRUE)),
+             data_args = list(nhsregions = TRUE),
+             truncation = 5),
   Region$new(name = "united-kingdom-deaths",
              publication_metadata = PublicationMetadata$new(
                title = "National and Subnational Estimates of the Covid 19 R Rate for the United Kingdom Based on Deaths",
