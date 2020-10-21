@@ -3,19 +3,50 @@
 #' Rscript R/run-region-updates.R -w -i united-states/texas,united-kingdom/*
 #' Rscript R/run-region-updates.R -v -e afghanistan/*
 #'
+#' For more information on execution run Rscript R/run-region-updates.R --help
+#'
+#' This file is concerned with the high level control of the datasets, sequencing of processing and
+#' logging of run outcomes. The dataset processing itself starts to happen in update-regional.R
+#' which in turn calls on to EpiNow to do the real meat of the processing.
+#'
+#================  INCLUDES ===================#
 # Packages
 library(optparse, quietly = TRUE) # bring this in ready for setting up a proper CLI
 library(lubridate, quietly = TRUE) # pull in lubridate for the date handling in the summary
 
 # Pull in the definition of the datasets
 source(here::here("R", "dataset-list.R"))
-# get the onward script
+# get the script for processing each dataset (this one starts to deal with the model data rather
+# than just configuration )
 source(here::here("R", "update-regional.R"))
 
 # load utils
 source(here::here("R", "utils.R"))
 
+#================ Main trigger ================#
+# only executes if this is the root of the application, making it source the file in Rstudio and
+# extend / modify it for custom dataset processing. Search "python __main__" for a lot of info about
+# why this is helpful in python (the same concepts are true in R but it's less written about)
+#
+# This does minimal functionality - it only configures bits that are core to the functioning
+# of the code, not actually processing data
+# - triggers the cli interface
+# - configures logging
+# - Puts a top level log catch around the main function
+if (sys.nframe() == 0) {
+  args <- rru_cli_interface()
+  setup_log_from_args(args)
+  futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
+}
+
+#=============== Main Functions ====================#
+
 #' Run Regional Updates
+#' Main function for process - this is probably what you want to call if you are loading a custom
+#' dataset or modified args
+#' Sequences the high level blocks of the process
+#' @param datasets List of AbstractDataset - typically from dataset-list.R
+#' @param args List of arguments returned by the cli interface (
 #'
 run_regional_updates <- function(datasets, args) {
   # validate and load configuration
@@ -37,26 +68,14 @@ run_regional_updates <- function(datasets, args) {
   rru_log_outcome(outcome)
 }
 
-rru_cli_interface <- function() {
-  # set up the arguments
-  option_list <- list(
-    make_option(c("-v", "--verbose"), action = "store_true", default = FALSE, help = "Print verbose output "),
-    make_option(c("-w", "--werbose"), action = "store_true", default = FALSE, help = "Print v.verbose output "),
-    make_option(c("-q", "--quiet"), action = "store_true", default = FALSE, help = "Print less output "),
-    make_option(c("--log"), type = "character", help = "Specify log file name"),
-    make_option(c("-e", "--exclude"), default = "", type = "character", help = "List of locations to exclude. See include for more details."),
-    make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\""),
-    make_option(c("-u", "--unstable"), action = "store_true", default = FALSE, help = "Include unstable locations"),
-    make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
-    make_option(c("-t", "--timeout"), type = "integer", default = Inf, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
-    make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed.")
-  )
-
-  args <- parse_args(OptionParser(option_list = option_list))
-  return(args)
-}
-
-
+#' rru_process_locations
+#' handles the include / exclude functionality and unpacking the list of datasets.
+#' calls on to update_regional, adding additional logging with improved context.
+#' @param datasets List of AbstractDataset
+#' @param args List of arguments from cli tool
+#' @param excludes List of strings, processed from the args
+#' @param includes List of strings, processed from the args
+#' @returns List of results for each dataset
 rru_process_locations <- function(datasets, args, excludes, includes) {
   outcome <- list()
   for (location in datasets) {
@@ -75,11 +94,11 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
           {
           outcome[[location$name]] <-
             update_regional(location,
-                        excludes[region == location$name],
-                        includes[region == location$name],
-                        args$force,
-                        args$timeout,
-                        refresh = args$refresh)[[1]]
+                            excludes[region == location$name],
+                            includes[region == location$name],
+                            args$force,
+                            args$timeout,
+                            refresh = args$refresh)[[1]]
         },
           warning = function(w) {
             futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
@@ -100,6 +119,10 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
   return(outcome)
 }
 
+#' rru_log_outcome
+#' Processes the outcome returned by rru_process_locations to assorted log files
+#' This is handling runtime status information, not actual results values
+#' @param outcome List produced by rru_process_locations
 rru_log_outcome <- function(outcome) {
   # outcome should be:
   # dataset:
@@ -227,6 +250,39 @@ rru_log_outcome <- function(outcome) {
   write.csv(status[order(status$dataset),], file = status_filename, row.names = FALSE)
 }
 
+#============= Ancillary Functions ========================#
+
+#' rru_cli_interface
+#' Define the CLI interface and return the parsed arguments
+#' @param args_string String (optional) of command line flags to simulate CLI interface when running from
+#' within another program / rstudio
+#' @return List of arguments
+rru_cli_interface <- function(args_string = NA) {
+  # set up the arguments
+  option_list <- list(
+    make_option(c("-v", "--verbose"), action = "store_true", default = FALSE, help = "Print verbose output "),
+    make_option(c("-w", "--werbose"), action = "store_true", default = FALSE, help = "Print v.verbose output "),
+    make_option(c("-q", "--quiet"), action = "store_true", default = FALSE, help = "Print less output "),
+    make_option(c("--log"), type = "character", help = "Specify log file name"),
+    make_option(c("-e", "--exclude"), default = "", type = "character", help = "List of locations to exclude. See include for more details."),
+    make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\""),
+    make_option(c("-u", "--unstable"), action = "store_true", default = FALSE, help = "Include unstable locations"),
+    make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
+    make_option(c("-t", "--timeout"), type = "integer", default = Inf, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
+    make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed.")
+  )
+  if (is.na(args_string)) {
+    args <- parse_args(OptionParser(option_list = option_list))
+  }else {
+    args <- parse_args(OptionParser(option_list = option_list), args = args_string)
+  }
+  return(args)
+}
+
+#' loadStatsFile
+#' @param filename String filename to load stats from (csv)
+#' @return data.frame of correctly formatted data - either loaded from the filename or blank if
+#' filename is missing
 loadStatsFile <- function(filename) {
   if (file.exists(filename)) {
     futile.logger::flog.trace("loading the existing file")
@@ -268,6 +324,12 @@ loadStatsFile <- function(filename) {
   }
   return(stats)
 }
+
+#' loadStatusFile
+#' Clone of loadstatsfile but with different file structure
+#' @param filename String filename to load status from (csv)
+#' @return data.frame of correctly formatted data - either loaded from the filename or blank if
+#' filename is missing
 loadStatusFile <- function(filename) {
   if (file.exists(filename)) {
     futile.logger::flog.trace("loading the existing status file")
@@ -304,12 +366,4 @@ loadStatusFile <- function(filename) {
     )
   }
   return(status)
-}
-
-# only execute if this is the root, passing in datasets from dataset-list.R and the args from the cli interface
-# this bit handles the outer logging wrapping and top level error handling
-if (sys.nframe() == 0) {
-  args <- rru_cli_interface()
-  setup_log_from_args(args)
-  futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
 }
