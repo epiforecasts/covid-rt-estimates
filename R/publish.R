@@ -1,4 +1,8 @@
-publish_data <- function(dataset, files = TRUE, pub_date = NA) {
+#' Publish a dataset to a dataverse
+#' @param dataset AbstractDataset to publish
+#' @param files Boolean indicator as to if files should be uploaded. Helpful for test purposes
+#' @param production_date Date specifying when the data is for. Gets used as the production date in the metadata, defaults to today.
+publish_data <- function(dataset, files = TRUE, production_date = NA) {
   if (exists("DATAVERSE_SERVER") && exists("DATAVERSE_KEY")) {
     Sys.setenv("DATAVERSE_SERVER" = DATAVERSE_SERVER)
     Sys.setenv("DATAVERSE_KEY" = DATAVERSE_KEY)
@@ -8,7 +12,7 @@ publish_data <- function(dataset, files = TRUE, pub_date = NA) {
       if (is.list(full_dataset)) {
         futile.logger::flog.debug("%s: dataverse exists so just update", dataset$name)
         dataset_id <- full_dataset$datasetId
-        updated_metadata <- generate_dataset_metadata(dataset, pub_date)$datasetVersion
+        updated_metadata <- generate_dataset_metadata(dataset, production_date)$datasetVersion
         update_dataset(dataset = dataset_id, body = updated_metadata)
         # loop  through the summary dir adding all the files
         if (files) {
@@ -29,7 +33,7 @@ publish_data <- function(dataset, files = TRUE, pub_date = NA) {
         }
       }else {
         futile.logger::flog.info("%s: dataverse does not exist so creating a new one", dataset$name)
-        metadata <- generate_dataset_metadata(dataset, pub_date)
+        metadata <- generate_dataset_metadata(dataset, production_date)
         ds <- create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
         dataset_id <- ds$data$id
         # loop  through the summary dir adding all the files
@@ -50,7 +54,7 @@ publish_data <- function(dataset, files = TRUE, pub_date = NA) {
   }
   return()
 }
-
+# try to find an existing dataset using the dataset_name as an id in the keywords
 check_for_existing_id <- function(dataset_name) {
   # load existing
   existing_datasets <-
@@ -84,8 +88,8 @@ check_for_existing_id <- function(dataset_name) {
   }
   return(existing)
 }
-
-generate_dataset_metadata <- function(dataset, pub_date = NA) {
+# top level function for producing metadata
+generate_dataset_metadata <- function(dataset, production_date = NA) {
 
   desc_file <- desc::description$new()
   dataset_meta <- list(
@@ -95,7 +99,7 @@ generate_dataset_metadata <- function(dataset, pub_date = NA) {
       metadataBlocks = list(
         citation = list(
           displayName = "Citation Metadata",
-          fields = get_fields_list(dataset, desc_file, pub_date)
+          fields = get_fields_list(dataset, desc_file, production_date)
         ),
         geospatial = list(
           displayName = "Geospatial Metadata",
@@ -107,9 +111,10 @@ generate_dataset_metadata <- function(dataset, pub_date = NA) {
 
   return(dataset_meta)
 }
-get_fields_list <- function(dataset, desc_file, pub_date = NA) {
-  if (is.na(pub_date)) {
-    pub_date <- Sys.Date()
+#===== Here begins all the helper functions to produce sub-parts of the metadata =====#
+get_fields_list <- function(dataset, desc_file, production_date = NA) {
+  if (is.na(production_date)) {
+    production_date <- Sys.Date()
   }
   fields_list <- list(
     list(
@@ -136,7 +141,7 @@ get_fields_list <- function(dataset, desc_file, pub_date = NA) {
       typeName = "productionDate",
       multiple = FALSE,
       typeClass = "primitive",
-      value = pub_date
+      value = production_date
     ),
     get_keyword_list(dataset),
     get_author_list(desc_file),
