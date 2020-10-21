@@ -108,7 +108,7 @@ generate_dataset_metadata <- function(dataset, pub_date = NA) {
   return(dataset_meta)
 }
 get_fields_list <- function(dataset, desc_file, pub_date = NA) {
-  if(is.na(pub_date)){
+  if (is.na(pub_date)) {
     pub_date <- Sys.Date()
   }
   fields_list <- list(
@@ -117,45 +117,6 @@ get_fields_list <- function(dataset, desc_file, pub_date = NA) {
       multiple = FALSE,
       typeClass = "primitive",
       value = dataset$publication_metadata$title
-    ),
-    list(
-      typeName = "keyword",
-      multiple = TRUE,
-      typeClass = "compound",
-      value = list(
-        list(
-          keywordValue = list(
-            typeName = "keywordValue",
-            multiple = FALSE,
-            typeClass = "primitive",
-            value = dataset$name
-          )
-        ),
-        list(
-          keywordValue = list(
-            typeName = "keywordValue",
-            multiple = FALSE,
-            typeClass = "primitive",
-            value = "COVID-19"
-          )
-        ),
-        list(
-          keywordValue = list(
-            typeName = "keywordValue",
-            multiple = FALSE,
-            typeClass = "primitive",
-            value = "Coronavirus"
-          )
-        ),
-        list(
-          keywordValue = list(
-            typeName = "keywordValue",
-            multiple = FALSE,
-            typeClass = "primitive",
-            value = "Pandemic"
-          )
-        )
-      )
     ),
     list(
       typeName = "alternativeURL",
@@ -172,11 +133,12 @@ get_fields_list <- function(dataset, desc_file, pub_date = NA) {
       )
     ),
     list(
-            typeName = "productionDate",
-            multiple = FALSE,
-            typeClass = "primitive",
-            value = pub_date
-          ),
+      typeName = "productionDate",
+      multiple = FALSE,
+      typeClass = "primitive",
+      value = pub_date
+    ),
+    get_keyword_list(dataset),
     get_author_list(desc_file),
     get_dataset_contact_list(),
     get_dataset_description_list(dataset$publication_metadata),
@@ -314,6 +276,34 @@ get_author_list <- function(desc_file) {
     typeClass = "compound",
     value = authors
   ))
+}
+get_keyword_list <- function(dataset) {
+  keywords_list <- list()
+  keywords <- DATAVERSE_KEYWORDS
+  # add in dataset specific ones
+  keywords <- c(keywords, dataset$name)
+
+  # build up list
+  for (keyword in keywords) {
+    keyword_list <- list(
+      keywordValue = list(
+        typeName = "keywordValue",
+        multiple = FALSE,
+        typeClass = "primitive",
+        value = keyword
+      )
+    )
+    keywords_list <- c(keywords_list, list(keyword_list))
+  }
+
+  return(
+    list(
+      typeName = "keyword",
+      multiple = TRUE,
+      typeClass = "compound",
+      value = keywords_list
+    )
+  )
 }
 
 get_dataset_contact_list <- function() {
