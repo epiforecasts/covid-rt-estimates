@@ -111,7 +111,6 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                     future = TRUE,
                     max_execution_time = max_execution_time,
                     summary_args = list(
-                      results_dir = location$target_folder,
                       summary_dir = location$summary_dir,
                       region_scale = location$region_scale,
                       all_regions = "Region" %in% class(location)))
