@@ -127,16 +127,38 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   }
   # add some stats
   out$max_data_date <- max(cases$date, na.rm = TRUE)
-  out$oldest_results <- min(
-    strptime(
-      strsplit(
-        system(
-          paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f"; done'),
-          intern = TRUE),
-        '\\+\\d\\d\\d\\d',
-        perl = TRUE
-      )[[1]],
-      "%Y-%m-%d %H:%M:%S ")
+  out$oldest_results <- tryCatch(
+    min(
+      strptime(
+        strsplit(
+          system(
+            paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f"; done'),
+            intern = TRUE),
+          '\\+\\d\\d\\d\\d',
+          perl = TRUE
+        )[[1]],
+        "%Y-%m-%d %H:%M:%S ")
+    )
+    , error = function(e) {
+      futile.logger::flog.debug("git not working - try stat")
+      tryCatch(
+        min(
+          strptime(
+            strsplit(
+              system(
+                paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do stat -c %y $f; done'),
+                intern = TRUE),
+              '\\+\\d\\d\\d\\d',
+              perl = TRUE
+            )[[1]],
+            "%Y-%m-%d %H:%M:%S ")
+        )
+        , error = function(e) {
+          futile.logger::flog.debug("stat failed, just use sys.date")
+          Sys.Date()
+        }
+      )
+    }
   )
 
   return(out)
