@@ -98,7 +98,7 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
                             includes[region == location$name],
                             args$force,
                             args$timeout,
-                            refresh = args$refresh)[[1]]
+                            refresh = args$refresh)
         },
           warning = function(w) {
             futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
@@ -366,4 +366,12 @@ loadStatusFile <- function(filename) {
     )
   }
   return(status)
+}
+
+# only execute if this is the root, passing in datasets from dataset-list.R and the args from the cli interface
+# this bit handles the outer logging wrapping and top level error handling
+if (sys.nframe() == 0) {
+  args <- rru_cli_interface()
+  setup_log_from_args(args)
+  futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
 }
