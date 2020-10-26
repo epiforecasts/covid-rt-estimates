@@ -18,14 +18,15 @@ library(lubridate, quietly = TRUE) # pull in lubridate for the date handling in 
 source(here::here("R", "dataset-list.R"))
 # get the script for processing each dataset (this one starts to deal with the model data rather
 # than just configuration )
-source(here::here("R", "update-regional.R"))
+if (!exists("update_regional", mode = "function")) source(here::here("R", "update-regional.R"))
 
 # load utils
-source(here::here("R", "utils.R"))
-# load config
-source(here::here("data/runtime", "config.R"))
+if (!exists("setup_log", mode = "function")) source(here::here("R", "utils.R"))
+# load config (optional)
+if (!exists("DATAVERSE_KEY", mode = "function")
+  & file.exists(here::here("data/runtime", "config.R"))) source(here::here("data/runtime", "config.R"))
 # load utils
-source(here::here("R", "publish.R"))
+if (!exists("publish_data", mode = "function")) source(here::here("R", "publish-data.R"))
 
 
 #=============== Main Functions ====================#
