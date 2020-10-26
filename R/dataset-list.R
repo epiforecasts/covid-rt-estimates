@@ -1,4 +1,6 @@
-source(here::here("R", "entities.R"))
+#' Requirements
+if (!exists("Region", mode = "function")) source(here::here("R", "entities/region.R"))
+if (!exists("SuperRegion", mode = "function")) source(here::here("R", "entities/super-region.R"))
 
 # This list is processed in order when doing a full run.
 # Order is defined as follows:
@@ -163,4 +165,17 @@ datasets <- c(
                description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the Russian Federation. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively. <br/> <br/> The key files in this dataset are: <ul><li><b>rt.tab</b> - A breakdown of the estimated reproduction number for each location for every date in the calculated range. This includes a statistical breakdown.</li><li><b>summary_table.tab</b> - A summary of the latest effective reprodution number with some related figures describing growth and doubling / halving time</li><li><b>summary_data.tab</b> - a summary of the estimated number of cases with statistical breakdown</li></ul>",
                breakdown = "state",
                country = "Russian Federation"))
+)
+datasets2 <- list("italy" = Region$new(name = "italy",
+                                       publication_metadata = PublicationMetadata$new(
+                                         title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for Italy Based on Test Results",
+                                         description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in Italy. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
+                                         breakdown = "state",
+                                         country = "Italy")),
+                  "russia" = Region$new(name = "russia",
+                                        publication_metadata = PublicationMetadata$new(
+                                          title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for Russia Based on Test Results",
+                                          description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the Russian Federation. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
+                                          breakdown = "state",
+                                          country = "Russian Federation"))
 )
