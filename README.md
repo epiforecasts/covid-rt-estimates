@@ -1,9 +1,15 @@
 
 # National and subnational estimates of the time-varying reproduction number for Covid-19
 
-This repository contains estimates of the time-varying reproduction number for every country in the world listed in the ECDC Covid-19 data source and subnational estimates for 9 countries. Summarised estimates can be found in `national/cases/summary` and `national/deaths/summary` (based on cases and deaths respectively). Estimates for each country can be found in `national/cases/national` and `national/deaths/national`. Subnational estimates can be found in the relevant country folder (`subnational/country`) with the same folder structure as for the national estimates. Estimates are generated using [`{EpiNow2}`](https://epiforecasts.io/EpiNow2/) and presented on [epiforecasts.io/covid](https://epiforecasts.io/covid) (which also outlines the method used). An [interactive visualisation](https://hamishgibbs.github.io/rt_vis/) is currently under development.
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![Status](https://img.shields.io/badge/Status-csv-yellow.svg)](https://github.com/epiforecasts/covid-rt-estimates/blob/master/status.csv) [![Website epiforecasts.io/covid](https://img.shields.io/website-up-down-green-red/https/epiforecasts.io/covid/)](https://epiforecasts.io/covid/) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/epiforecasts/covid-rt-estimates/graphs/commit-activity) [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/epiforecasts/covid-rt-estimates.svg)](http://isitmaintained.com/project/epiforecasts/covid-rt-estimates "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/epiforecasts/covid-rt-estimates.svg)](http://isitmaintained.com/project/epiforecasts/covid-rt-estimates "Percentage of issues still open")
 
-If using these estimates please consider citing our associated [paper](https://wellcomeopenresearch.org/articles/5-112).
+This repository contains estimates of the time-varying reproduction number for every country in the world listed in the ECDC Covid-19 data source and subnational estimates for 9 countries. 
+
+Summarised estimates as csv's can be found in the `**/summary` folders. National estimates can be found in the `national` folder and subnational estimates in the `subnational/country` subfolder depending on the country of interest. 
+
+All regions have Rt estimates based on case counts. In some regions, we also separately estimate Rt using counts of hospital admissions or deaths. The differences between each of these estimates might suggest uneven or changing transmission by age and/or severity in the general population. For more on the influence and different uses of data source on Rt, see [here](https://github.com/epiforecasts/rt-comparison-uk-public).
+
+Estimates are generated using [`{EpiNow2}`](https://epiforecasts.io/EpiNow2/) and presented on [epiforecasts.io/covid](https://epiforecasts.io/covid) (which also outlines the method used). If using these estimates please consider citing our associated [paper](https://wellcomeopenresearch.org/articles/5-112).
 
 ## Updating the estimates
 
@@ -66,7 +72,9 @@ docker tag docker.pkg.github.com/epiforecasts/covid-rt-estimates/covidrtestimate
 5. Update the estimates (see `docker logs covidrtestimates` for runtime information).
 
 ```bash
-sudo docker run -d --user rstudio --mount type=bind,source=$(pwd),target=/home/rstudio/covid-rt-estimates --name covidrtestimates covidrtestimates /bin/bash bin/update-estimates.sh
+# This command uses the code that ships with in the docker image. You can use
+# your own version by mounting it in the container
+sudo docker run -d --user rstudio --name covidrtestimates covidrtestimates /bin/bash bin/update-estimates.sh
 ```
 
 

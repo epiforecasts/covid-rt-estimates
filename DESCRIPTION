@@ -3,7 +3,7 @@ Type: Package
 Title: Forecasting and nowcasting Covid-19 related metrics Globally and Subnationally.
 Version: 0.2.0
 Authors@R: c(
-  person(given = "Sam Abbott",
+  person("Sam", "Abbott",
          role = c("aut", "cre"),
          email = "sam.abbott@lshtm.ac.uk",
          comment = c(ORCID = "0000-0001-8057-8037")),
@@ -35,6 +35,9 @@ Imports:
   optparse,
   R6 (>= 2.4),
   rlang (>= 0.4.7)
+Suggests:
+  dataverse (>= 0.2.0),
+  desc
 Remotes:
   epiforecasts/EpiNow2@v1.2.1,
   epiforecasts/covidregionaldata@v0.7.0
