@@ -15,7 +15,7 @@ library(optparse, quietly = TRUE) # bring this in ready for setting up a proper 
 library(lubridate, quietly = TRUE) # pull in lubridate for the date handling in the summary
 
 # Pull in the definition of the datasets
-source(here::here("R", "dataset-list.R"))
+if (!exists("DATASETS", mode = "function")) source(here::here("R/lists", "dataset-list.R"))
 # get the script for processing each dataset (this one starts to deal with the model data rather
 # than just configuration )
 if (!exists("update_regional", mode = "function")) source(here::here("R", "update-regional.R"))
