@@ -4,7 +4,7 @@ if (!exists("PublicationMetadata", mode = "function")) source(here::here("R/enti
 #' Abstract Dataset class
 AbstractDataset <- R6::R6Class("AbstractDataset",
                                list(
-                                                                #' @field name of dataset
+                                 #' @field name of dataset
                                  name = NA,
                                                                 #' @field publication_metadata `PublicationMetadata` object
                                  publication_metadata = NA,

@@ -1,6 +1,7 @@
 #' Requirements
 if (!exists("Region", mode = "function")) source(here::here("R", "entities/region.R"))
 if (!exists("SuperRegion", mode = "function")) source(here::here("R", "entities/super-region.R"))
+if (!exists("add_uk", mode = "function")) source(here::here("R", "utils.R")) #todo: move this out of utils to a data parsing fns section
 
 #' List of datasets (Regions / Super regions
 #' Order is defined as follows:
