@@ -116,13 +116,17 @@ trim <- function(x) {
 #' @param cludes string of in/excludes
 #' @return data.frame of regions / subregions
 parse_cludes <- function(cludes) {
-  clude_list <- data.table(region = character(), subregion = character())
+  clude_list <- vector(mode = "list", length = length(cludes))
   locs <- strsplit(cludes, ",")
   for (loc in locs) {
     parts <- strsplit(loc, "/")
   }
+  i <- 1
   for (region in parts) {
-    clude_list <- rbind(clude_list, data.frame(region = tolower(trim(region[1])), subregion = trim(region[2])))
+    sub <- trim(region[2])
+    clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])),
+                                           subregion = ifelse(sub == "*", NULL, sub))
+    i <- i + 1
   }
   return(clude_list)
 }
@@ -132,7 +136,7 @@ parse_cludes <- function(cludes) {
 #' @param y string
 #' @return boolean
 `%in_ci%` <- function(x, y) {
-  tolower(x) == tolower(y)
+  tolower(x) %in% tolower(y)
 }
 
 #' Collate estimates from different estimates in same sub-regional folder 
