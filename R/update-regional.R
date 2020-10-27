@@ -75,14 +75,32 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   }
 
   # Exclude unwanted locations and clean data -------------------------------------------------
-
-  if (excludes[, .N] > 0) {
+  # filter a list of excluded sublocations within the current dataset
+  # if sublocation = * the dataset wouldn't have been included.
+  exclude_subregions <- lapply(
+    excludes,
+    function(dsl) {
+      if (dsl$dataset == location$name) {
+        dsl$sublocation
+      }
+    }
+  )
+  if (length(excludes) > 0) {
     futile.logger::flog.trace("Filtering out excluded regions")
-    cases <- cases[!(region %in_ci% excludes$subregion)]
+    cases <- cases[!(region %in_ci% exclude_subregions)]
   }
-  if (includes[, .N] > 0 && !("*" %in% includes$subregion)) {
+  # filter a list of include sublocations within the current dataset
+  include_subregions <- lapply(
+    includes,
+    function(dsl) {
+      if (dsl$dataset == location$name) {
+        dsl$sublocation
+      }
+    }
+  )
+  if (length(includes) > 0 && !("*" %in% include_subregions)) {
     futile.logger::flog.trace("Filtering out not included regions")
-    cases <- cases[region %in_ci% includes$subregion]
+    cases <- cases[region %in_ci% include_subregions]
   }
 
   cases <- clean_regional_data(cases, truncation = location$truncation)

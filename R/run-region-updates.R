@@ -45,6 +45,7 @@ run_regional_updates <- function(datasets, args) {
   }
   excludes <- parse_cludes(args$exclude)
   includes <- parse_cludes(args$include)
+  datasets <- rru_filter_datasets(datasets, excludes, includes)
 
   # now really do something
   outcome <- rru_process_locations(datasets, args, excludes, includes)
@@ -69,14 +70,6 @@ run_regional_updates <- function(datasets, args) {
 rru_process_locations <- function(datasets, args, excludes, includes) {
   outcome <- list()
   for (location in datasets) {
-    if (excludes[region == location$name & subregion == "*", .N] > 0) {
-      futile.logger::flog.debug("skipping location %s as it is in the exclude/* list", location$name)
-      next()
-    }
-    if (includes[, .N] > 0 && includes[region == location$name, .N] == 0) {
-      futile.logger::flog.debug("skipping location %s as it is not in the include list", location$name)
-      next()
-    }
     if (location$stable || (exists("unstable", args) && args$unstable == TRUE)) {
       start <- Sys.time()
       futile.logger::ftry(
