@@ -9,8 +9,7 @@ if (!exists("publish_data", mode = "function")) source(here::here("R", "publish-
 collate_derivative <- function(derivative) {
   datasets <- DATASETS[names(DATASETS) %in_ci% lapply(derivative$locations, function(dsl) { dsl$dataset })]
   for (target in derivative$targets) {
-    sources <- lapply(datasets, function(dataset) { here::here(dataset$summary_dir, paste0(target, ".csv")) })
-    names(sources) <- names(datasets)
+    sources <- cd_prime_sources(datasets)
     # collate the data - currently dataset only, #todo: subfiltering
     df <- cd_read_and_bind_sources(sources)
 
@@ -25,6 +24,18 @@ collate_derivative <- function(derivative) {
     publish_data(derivative)
   }
 }
+
+#' cd_prime_sources
+#' Calculate list of source files to process for a given target in a list of datasets
+#' @param datasets List of `DatasetLocation`
+#' @param target String csv filename to collate
+#' @return List of files to collate
+cd_prime_sources <- function(datasets, target) {
+  sources <- lapply(datasets, function(dataset) { here::here(dataset$summary_dir, paste0(target, ".csv")) })
+  names(sources) <- names(datasets)
+  return(sources)
+}
+
 #' read_and_bind_sources
 #' @param sources list of csv source files
 #' @return dataframe
