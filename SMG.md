@@ -1,14 +1,18 @@
 # System Maintenance Guide
 
-## Quickstart - adding a new location
+## Quickstart 
+### Adding a new location
 1. The data for the location needs to be available via epiforecasts/covidregionaldata - check the [system maintenance guide](https://github.com/epiforecasts/covidregionaldata/blob/master/inst/smg/SMG.md) for more information
-2. Add your location to the list in R/dataset-list.R (in alphabetical order), setting `stable=FALSE` until testing is complete
+2. Add your location to the list in R/lists/dataset-list.R (in alphabetical order), setting `stable=FALSE` until testing is complete. Ensure the key is the name. Ensure the name is unique and isn't repeated in the collated-derivative-list (this breaks publishing).
    ```
    Region$new(name = "middle-earth", stable=FALSE),
    ```
 3. Run it! `Rscript R/run-region-updates.R -w -u -i middle-earth/*` (executing in very verbose mode, including unstable locations, only include the new location and all sub-locations)
    
    This should take in the order of `(n*80)/cores` minutes where `n` is the number of sub-locations to process
+
+### Adding a new collated derivative
+1. Add the collation to R/lists/collated-derivative-list.R  - this should be in a similar style to Regions and an existing one should be fairly self explanatory. Ensure the name is unique and isn't repeated in the dataset-list (this breaks publishing).
 
 ## Region - additional control
 
