@@ -5,8 +5,8 @@ if (!exists("PublicationMetadata", mode = "function")) source(here::here("R/enti
 
 #' List of all collated derivatives
 COLLATED_DERIVATIVES <- list(
-  "united-kingdom" = CollatedDerivative$new(
-    name = "united-kingdom",
+  "united-kingdom-collated" = CollatedDerivative$new(
+    name = "united-kingdom-collated",
     locations = list(
       DatasetLocation$new("united-kingdom"),
       DatasetLocation$new("united-kingdom-deaths"),
