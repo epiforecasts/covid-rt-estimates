@@ -16,9 +16,11 @@ library(lubridate, quietly = TRUE) # pull in lubridate for the date handling in 
 
 # Pull in the definition of the datasets
 if (!exists("DATASETS", mode = "function")) source(here::here("R/lists", "dataset-list.R"))
+if (!exists("COLLATED_DERIVATIVES", mode = "function")) source(here::here("R/lists", "collated-derivative-list.R"))
 # get the script for processing each dataset (this one starts to deal with the model data rather
 # than just configuration )
 if (!exists("update_regional", mode = "function")) source(here::here("R", "update-regional.R"))
+if (!exists("collate_derivative", mode = "function")) source(here::here("R", "collate-derivative.R"))
 
 # load utils
 if (!exists("setup_log", mode = "function")) source(here::here("R", "utils.R"))
@@ -36,9 +38,10 @@ if (!exists("publish_data", mode = "function")) source(here::here("R", "publish-
 #' dataset or modified args
 #' Sequences the high level blocks of the process
 #' @param datasets List of AbstractDataset - typically from dataset-list.R
+#' @param datasets List of CollatedDerivative  - typically from collated-derivative-list.R
 #' @param args List of arguments returned by the cli interface (
 #'
-run_regional_updates <- function(datasets, args) {
+run_regional_updates <- function(datasets, derivatives, args) {
   # validate and load configuration
   if (nchar(args$exclude) > 0 && nchar(args$include) > 0) {
     stop("not possible to both include and exclude regions / subregions")
@@ -50,13 +53,11 @@ run_regional_updates <- function(datasets, args) {
   # now really do something
   outcome <- rru_process_locations(datasets, args, excludes, includes)
 
-  if ("united-kingdom-admissions" %in% includes) {
-    futile.logger::flog.debug("calling collate estimates for UK")
-    collate_estimates(name = "united-kingdom", target = "rt")
-  }
-
   # analysis of outcome
   rru_log_outcome(outcome)
+
+  # process derivatives
+  rru_process_derivatives(derivatives, datasets)
 }
 
 #' rru_process_locations
@@ -236,6 +237,22 @@ rru_log_outcome <- function(outcome) {
   write.csv(status[order(status$dataset),], file = status_filename, row.names = FALSE)
 }
 
+#' rru_process_derivatives
+#' work out what processing needs to happen for collated derivatives
+#' @param derivatives List of `CollatedDerivative`
+#' @param datasets List of `AbstractDataset`
+rru_process_derivatives <- function(derivatives, datasets) {
+  for (derivative in derivatives) {
+    if (
+      (derivative$incremental & any(names(datasets) %in_ci% lapply(derivative$locations, function(dsl) { dsl$dataset })))
+        |
+        (!derivative$incremental & tail(derivative$locations, n = 1)$dataset %in_ci% names(datasets))
+    ) {
+      futile.logger::flog.info("calculating derivative for %s", derivative$name)
+      collate_derivative(derivative)
+    }
+  }
+}
 #============= Ancillary Functions ========================#
 
 #' rru_cli_interface
@@ -266,6 +283,26 @@ rru_cli_interface <- function(args_string = NA) {
   return(args)
 }
 
+#' rru_filter_datasets
+#' Slice out only the top level datasets we want to process
+#' @param datasets List of AbstractDataset
+#' @param excludes List of strings, processed from the args
+#' @param includes List of strings, processed from the args
+#' @return List of AbstractDataset or empty list
+rru_filter_datasets <- function(datasets, excludes, includes) {
+  if (length(excludes) > 0) {
+    for (exclude in excludes) {
+      # if it applies to the whole dataset knock it out
+      if (is.null(exclude$sublocation)) {
+        datasets[[exclude$dataset]] <- NULL
+      }
+    }
+  }
+  if (length(includes) > 0) { # if there are includes filter to only those needed
+    datasets <- datasets[names(datasets) %in_ci% lapply(includes, function(dsl) { dsl$dataset })]
+  }
+  return(datasets)
+}
 #' loadStatsFile
 #' @param filename String filename to load stats from (csv)
 #' @return data.frame of correctly formatted data - either loaded from the filename or blank if
@@ -368,9 +405,14 @@ loadStatusFile <- function(filename) {
 if (sys.nframe() == 0) {
   args <- rru_cli_interface()
   setup_log_from_args(args)
-  futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
+  futile.logger::ftry(
+    run_regional_updates(
+      datasets = DATASETS,
+      derivatives = COLLATED_DERIVATIVES,
+      args = args
+    )
+  )
 }
-
 #==================== Debug function ======================#
 example_non_cli_trigger <- function() {
   # list is in the format [flag[, value]?,?]+
