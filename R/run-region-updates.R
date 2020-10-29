@@ -90,9 +90,9 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
                             refresh = args$refresh)
         },
           warning = function(w) {
-            # futile.logger::flog.warn("%s: %s - %s", location$name, w$mesage, toString(w$call))
+            futile.logger::flog.warn("%s: %s", location$name, w)
             futile.logger::flog.debug(capture.output(rlang::trace_back()))
-            # rlang::cnd_muffle(w)
+            rlang::cnd_muffle(w)
           },
           error = function(e) {
             futile.logger::flog.error(capture.output(rlang::trace_back()))
@@ -100,7 +100,9 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
         )
       )
       outcome[[location$name]]$start <- start
-      futile.logger::ftry(publish_data(location))
+      if (!args$suppress) {
+        futile.logger::ftry(publish_data(location))
+      }
     }else {
       futile.logger::flog.debug("skipping location %s as unstable", location$name)
     }
@@ -259,7 +261,8 @@ rru_cli_interface <- function(args_string = NA) {
     make_option(c("-u", "--unstable"), action = "store_true", default = FALSE, help = "Include unstable locations"),
     make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
     make_option(c("-t", "--timeout"), type = "integer", default = Inf, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
-    make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed.")
+    make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed."),
+    make_option(c("-s", "--suppress"), action = "store_true", default = FALSE, help = "Suppress publication of results")
   )
   if (is.na(args_string)) {
     args <- parse_args(OptionParser(option_list = option_list))
@@ -370,6 +373,14 @@ loadStatusFile <- function(filename) {
 # - Puts a top level log catch around the main function
 if (sys.nframe() == 0) {
   args <- rru_cli_interface()
+  setup_log_from_args(args)
+  futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
+}
+
+#==================== Debug function ======================#
+example_non_cli_trigger <- function() {
+  # list is in the format [flag[, value]?,?]+
+  args <- rru_cli_interface(c("w", "i", "canada/*", "t", "1800", "s"))
   setup_log_from_args(args)
   futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
 }

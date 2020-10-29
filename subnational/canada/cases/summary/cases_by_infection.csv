@@ -1,263 +1,257 @@
 region,date,type,median,mean,sd,lower_20,upper_20,lower_50,upper_50,lower_90,upper_90
-Alberta,2020-08-13,estimate,103,105,17,99,104,94,109,79,129
-Alberta,2020-08-14,estimate,104,106,17,100,106,95,111,80,130
-Alberta,2020-08-15,estimate,106,108,18,101,107,96,113,82,133
-Alberta,2020-08-16,estimate,107,110,18,103,110,97,114,83,136
-Alberta,2020-08-17,estimate,109,111,18,103,110,98,116,83,137
-Alberta,2020-08-18,estimate,111,113,18,106,112,100,119,85,139
-Alberta,2020-08-19,estimate,112,114,19,108,115,102,121,86,142
-Alberta,2020-08-20,estimate,114,116,19,110,117,103,123,87,144
-Alberta,2020-08-21,estimate,116,118,19,109,117,104,124,88,146
-Alberta,2020-08-22,estimate,117,120,19,111,118,106,127,89,148
-Alberta,2020-08-23,estimate,119,121,20,116,123,107,128,90,151
-Alberta,2020-08-24,estimate,121,123,20,116,124,109,131,91,152
-Alberta,2020-08-25,estimate,123,125,20,117,125,111,133,94,156
-Alberta,2020-08-26,estimate,124,126,21,117,125,112,135,94,157
-Alberta,2020-08-27,estimate,126,128,21,118,127,114,138,93,157
-Alberta,2020-08-28,estimate,128,130,21,121,130,115,140,97,162
-Alberta,2020-08-29,estimate,130,131,22,124,133,117,141,98,164
-Alberta,2020-08-30,estimate,132,133,22,126,135,116,141,100,168
-Alberta,2020-08-31,estimate,133,135,22,127,136,117,143,100,168
-Alberta,2020-09-01,estimate,135,137,22,128,138,120,146,100,170
-Alberta,2020-09-02,estimate,137,138,23,130,140,123,150,103,175
-Alberta,2020-09-03,estimate,139,140,23,132,143,124,152,104,177
-Alberta,2020-09-04,estimate,141,142,23,135,146,126,155,104,179
-Alberta,2020-09-05,estimate,143,144,24,135,146,128,158,105,183
-Alberta,2020-09-06,estimate,145,146,24,135,146,130,160,105,184
-Alberta,2020-09-07,estimate,147,148,25,139,151,133,163,107,186
-Alberta,2020-09-08,estimate,149,150,25,142,153,130,161,107,188
-Alberta,2020-09-09,estimate,151,152,26,144,156,133,165,108,191
-Alberta,2020-09-10,estimate,153,154,26,146,158,138,170,109,194
-Alberta,2020-09-11,estimate,155,156,27,147,159,140,172,112,199
-Alberta,2020-09-12,estimate,157,158,27,155,167,142,176,113,201
-Alberta,2020-09-13,estimate,160,161,28,157,170,142,177,114,205
-Alberta,2020-09-14,estimate,163,163,28,160,173,146,182,115,209
-Alberta,2020-09-15,estimate,166,166,29,163,176,149,185,116,211
-Alberta,2020-09-16,estimate,168,169,30,166,179,149,186,120,218
-Alberta,2020-09-17,estimate,171,172,30,161,175,152,190,121,221
-Alberta,2020-09-18,estimate,174,175,31,165,179,153,192,127,229
-Alberta,2020-09-19,estimate,177,178,32,171,185,159,198,127,231
-Alberta,2020-09-20,estimate,181,182,32,174,189,160,200,128,235
-Alberta,2020-09-21,estimate,184,185,33,178,193,160,202,130,240
-Alberta,2020-09-22,estimate,188,189,34,180,196,164,206,133,244
-Alberta,2020-09-23,estimate,191,193,35,178,194,168,211,135,248
-Alberta,2020-09-24,estimate,195,197,36,183,199,176,219,138,253
-Alberta,2020-09-25,estimate,199,202,36,187,203,178,223,145,262
-Alberta,2020-09-26,estimate,204,207,37,193,210,181,227,147,266
-Alberta,2020-09-27,estimate,209,212,39,196,213,184,231,151,272
-Alberta,2020-09-28,estimate,214,217,40,191,209,189,237,153,277
-Alberta,2020-09-29,estimate,219,222,41,214,233,188,238,156,284
-Alberta,2020-09-30,estimate,224,228,42,205,224,191,242,160,291
-Alberta,2020-10-01,estimate,230,234,44,211,231,198,251,169,305
-Alberta,2020-10-02,estimate,235,240,46,220,240,204,260,167,308
-Alberta,2020-10-03,estimate,241,246,48,224,245,207,265,169,315
-Alberta,2020-10-04,estimate,247,253,50,219,241,203,264,176,330
-Alberta,2020-10-05,estimate,253,260,53,221,245,209,272,178,340
-Alberta,2020-10-06,estimate,259,267,56,232,256,218,284,180,351
-Alberta,2020-10-07,estimate,266,274,59,231,257,219,289,182,364
-Alberta,2020-10-08,estimate,272,282,64,235,262,226,300,184,377
-Alberta,2020-10-09,estimate,278,290,69,244,273,227,306,186,392
-Alberta,2020-10-10,estimate,284,299,75,253,283,226,310,184,406
-Alberta,2020-10-11,estimate,291,308,82,262,293,229,319,184,423
-Alberta,2020-10-12,estimate based on partial data,299,317,90,266,300,226,321,184,442
-Alberta,2020-10-13,estimate based on partial data,306,327,100,268,304,229,330,184,465
-Alberta,2020-10-14,estimate based on partial data,314,338,111,267,306,233,341,191,496
-Alberta,2020-10-15,estimate based on partial data,321,349,125,285,326,233,349,181,515
-Alberta,2020-10-16,estimate based on partial data,328,361,141,281,326,231,354,172,538
-Alberta,2020-10-17,estimate based on partial data,335,375,160,285,332,234,364,185,584
-Alberta,2020-10-18,estimate based on partial data,343,389,182,288,338,238,375,185,622
-Alberta,2020-10-19,estimate based on partial data,350,404,209,294,346,238,382,158,634
-Alberta,2020-10-20,estimate based on partial data,358,421,242,298,353,240,393,161,681
-Alberta,2020-10-21,estimate based on partial data,366,440,286,304,360,242,404,162,734
-Alberta,2020-10-22,estimate based on partial data,374,462,345,298,358,245,416,145,772
-Alberta,2020-10-23,forecast,383,485,420,306,368,244,426,142,818
-Alberta,2020-10-24,forecast,390,512,522,312,379,246,438,129,862
-Alberta,2020-10-25,forecast,398,543,664,323,393,244,444,138,932
-Alberta,2020-10-26,forecast,406,578,863,328,402,244,456,134,1001
-Alberta,2020-10-27,forecast,415,619,1146,335,411,254,477,115,1053
-Alberta,2020-10-28,forecast,424,668,1551,340,421,250,483,99,1111
-Alberta,2020-10-29,forecast,434,727,2132,316,400,253,498,93,1185
-Alberta,2020-10-30,forecast,443,799,2968,319,407,256,512,64,1237
-Alberta,2020-10-31,forecast,453,889,4173,325,416,258,526,59,1313
-Alberta,2020-11-01,forecast,462,1002,5909,336,432,253,534,54,1393
-Alberta,2020-11-02,forecast,473,1147,8413,331,431,253,546,55,1489
-Alberta,2020-11-03,forecast,483,1337,12024,334,437,254,560,15,1547
-Alberta,2020-11-04,forecast,493,1588,17236,339,447,246,566,13,1644
-Alberta,2020-11-05,forecast,504,1923,24761,348,459,246,580,11,1751
-British Columbia,2020-08-13,estimate,73,76,16,68,75,58,77,52,98
-British Columbia,2020-08-14,estimate,75,78,17,67,74,61,80,54,102
-British Columbia,2020-08-15,estimate,77,80,17,68,75,63,82,55,104
-British Columbia,2020-08-16,estimate,79,82,17,70,77,64,84,56,106
-British Columbia,2020-08-17,estimate,81,84,18,73,80,66,86,57,109
-British Columbia,2020-08-18,estimate,83,86,18,75,83,68,89,57,111
-British Columbia,2020-08-19,estimate,85,88,18,77,85,70,91,60,114
-British Columbia,2020-08-20,estimate,86,89,19,78,87,72,94,61,117
-British Columbia,2020-08-21,estimate,89,91,19,80,88,74,96,63,120
-British Columbia,2020-08-22,estimate,90,93,19,82,91,76,98,63,121
-British Columbia,2020-08-23,estimate,92,95,19,80,89,76,99,65,124
-British Columbia,2020-08-24,estimate,94,96,20,82,91,78,101,67,127
-British Columbia,2020-08-25,estimate,96,98,20,83,92,79,103,68,129
-British Columbia,2020-08-26,estimate,97,100,20,85,94,80,104,70,132
-British Columbia,2020-08-27,estimate,99,102,20,86,95,84,107,71,133
-British Columbia,2020-08-28,estimate,100,103,20,86,95,86,109,72,135
-British Columbia,2020-08-29,estimate,102,105,21,89,98,88,112,74,137
-British Columbia,2020-08-30,estimate,104,107,21,91,100,88,112,74,138
-British Columbia,2020-08-31,estimate,105,108,21,91,100,88,113,77,141
-British Columbia,2020-09-01,estimate,107,110,21,93,102,90,115,79,144
-British Columbia,2020-09-02,estimate,108,111,21,94,103,92,117,79,144
-British Columbia,2020-09-03,estimate,109,112,21,95,104,94,118,81,147
-British Columbia,2020-09-04,estimate,111,114,22,97,106,93,118,81,147
-British Columbia,2020-09-05,estimate,112,115,22,98,108,96,121,82,148
-British Columbia,2020-09-06,estimate,113,116,22,103,112,97,122,82,149
-British Columbia,2020-09-07,estimate,114,117,22,104,113,98,124,84,151
-British Columbia,2020-09-08,estimate,115,118,22,106,115,97,123,84,151
-British Columbia,2020-09-09,estimate,116,119,22,105,114,100,126,82,149
-British Columbia,2020-09-10,estimate,116,119,22,106,116,100,126,84,151
-British Columbia,2020-09-11,estimate,117,120,22,108,117,102,128,86,154
-British Columbia,2020-09-12,estimate,118,120,22,111,121,103,129,86,155
-British Columbia,2020-09-13,estimate,118,121,22,110,119,102,129,87,156
-British Columbia,2020-09-14,estimate,119,121,22,111,120,101,128,86,156
-British Columbia,2020-09-15,estimate,120,122,22,112,122,103,131,86,157
-British Columbia,2020-09-16,estimate,120,122,22,115,125,104,133,83,155
-British Columbia,2020-09-17,estimate,121,123,23,110,121,102,131,84,157
-British Columbia,2020-09-18,estimate,122,123,23,118,128,107,137,85,158
-British Columbia,2020-09-19,estimate,123,124,23,117,128,103,134,87,161
-British Columbia,2020-09-20,estimate,124,125,24,118,129,105,136,85,161
-British Columbia,2020-09-21,estimate,125,126,24,121,132,109,140,86,163
-British Columbia,2020-09-22,estimate,126,127,24,123,135,109,141,85,163
-British Columbia,2020-09-23,estimate,127,128,25,123,135,107,140,86,167
-British Columbia,2020-09-24,estimate,128,129,25,122,133,109,142,88,171
-British Columbia,2020-09-25,estimate,129,130,26,123,135,109,143,86,170
-British Columbia,2020-09-26,estimate,131,132,27,124,137,109,144,88,174
-British Columbia,2020-09-27,estimate,132,133,27,127,140,112,147,88,174
-British Columbia,2020-09-28,estimate,134,135,28,130,143,117,153,90,178
-British Columbia,2020-09-29,estimate,136,137,28,131,144,118,155,91,181
-British Columbia,2020-09-30,estimate,138,140,29,135,148,118,155,94,186
-British Columbia,2020-10-01,estimate,140,142,30,134,148,120,158,95,189
-British Columbia,2020-10-02,estimate,142,145,30,131,145,122,160,92,187
-British Columbia,2020-10-03,estimate,144,147,31,131,145,121,159,100,197
-British Columbia,2020-10-04,estimate,147,150,32,131,145,124,163,101,199
-British Columbia,2020-10-05,estimate,150,154,33,134,149,127,167,104,206
-British Columbia,2020-10-06,estimate,153,157,34,141,157,127,169,104,209
-British Columbia,2020-10-07,estimate,156,161,35,137,153,126,169,105,213
-British Columbia,2020-10-08,estimate,160,165,37,141,157,131,175,107,221
-British Columbia,2020-10-09,estimate,164,169,39,142,159,134,180,109,230
-British Columbia,2020-10-10,estimate,167,173,42,136,155,136,185,108,236
-British Columbia,2020-10-11,estimate,172,178,46,140,160,138,191,105,242
-British Columbia,2020-10-12,estimate based on partial data,176,183,50,146,167,135,192,102,252
-British Columbia,2020-10-13,estimate based on partial data,180,188,55,151,174,137,199,107,270
-British Columbia,2020-10-14,estimate based on partial data,184,194,62,146,171,139,207,102,279
-British Columbia,2020-10-15,estimate based on partial data,188,200,70,150,177,139,212,100,294
-British Columbia,2020-10-16,estimate based on partial data,193,207,80,156,184,137,217,99,314
-British Columbia,2020-10-17,estimate based on partial data,197,214,93,156,187,134,218,97,333
-British Columbia,2020-10-18,estimate based on partial data,201,223,109,148,182,131,223,91,352
-British Columbia,2020-10-19,estimate based on partial data,205,232,128,154,191,132,231,93,378
-British Columbia,2020-10-20,estimate based on partial data,211,242,153,154,194,131,237,85,400
-British Columbia,2020-10-21,estimate based on partial data,215,254,185,142,185,134,247,78,430
-British Columbia,2020-10-22,estimate based on partial data,220,267,226,139,183,131,252,66,457
-British Columbia,2020-10-23,forecast,224,282,279,138,185,129,258,53,480
-British Columbia,2020-10-24,forecast,229,299,350,138,187,128,266,47,509
-British Columbia,2020-10-25,forecast,233,319,446,138,190,126,272,49,550
-British Columbia,2020-10-26,forecast,238,343,579,142,196,128,282,43,589
-British Columbia,2020-10-27,forecast,243,370,766,140,198,126,290,28,619
-British Columbia,2020-10-28,forecast,248,402,1032,136,196,117,289,26,669
-British Columbia,2020-10-29,forecast,253,441,1416,136,199,114,295,16,710
-British Columbia,2020-10-30,forecast,257,489,1975,129,196,110,302,14,766
-British Columbia,2020-10-31,forecast,262,547,2794,132,202,106,308,7,822
-British Columbia,2020-11-01,forecast,268,620,3995,129,202,105,317,7,889
-British Columbia,2020-11-02,forecast,273,713,5766,126,202,84,306,5,955
-British Columbia,2020-11-03,forecast,278,832,8379,130,210,84,314,5,1024
-British Columbia,2020-11-04,forecast,285,987,12242,130,213,82,320,0,1101
-British Columbia,2020-11-05,forecast,290,1192,17957,129,215,80,329,3,1185
-Manitoba,2020-08-13,estimate,38,38,6,36,39,32,40,29,47
-Manitoba,2020-08-14,estimate,38,38,6,37,40,33,41,28,47
-Manitoba,2020-08-15,estimate,38,38,6,37,40,34,41,28,47
-Manitoba,2020-08-16,estimate,37,38,6,37,40,33,41,28,46
-Manitoba,2020-08-17,estimate,36,37,5,34,37,33,40,27,45
-Manitoba,2020-08-18,estimate,35,35,5,33,36,31,38,27,43
-Manitoba,2020-08-19,estimate,33,34,5,32,34,30,36,26,41
-Manitoba,2020-08-20,estimate,31,32,5,30,33,28,34,25,39
-Manitoba,2020-08-21,estimate,30,30,4,29,31,26,32,23,37
-Manitoba,2020-08-22,estimate,28,28,4,27,29,25,30,21,34
-Manitoba,2020-08-23,estimate,26,26,4,25,27,23,28,20,32
-Manitoba,2020-08-24,estimate,24,24,4,23,25,21,26,18,30
-Manitoba,2020-08-25,estimate,23,23,4,22,23,20,25,17,28
-Manitoba,2020-08-26,estimate,21,21,4,20,22,19,23,15,27
-Manitoba,2020-08-27,estimate,20,20,4,19,21,17,22,14,26
-Manitoba,2020-08-28,estimate,19,19,3,18,20,17,21,13,24
-Manitoba,2020-08-29,estimate,18,18,3,17,19,16,20,12,23
-Manitoba,2020-08-30,estimate,17,18,3,17,18,15,20,12,23
-Manitoba,2020-08-31,estimate,17,17,3,16,17,14,19,12,22
-Manitoba,2020-09-01,estimate,17,17,3,16,17,14,18,11,22
-Manitoba,2020-09-02,estimate,17,17,3,16,17,14,18,12,22
-Manitoba,2020-09-03,estimate,17,17,3,15,17,14,18,12,22
-Manitoba,2020-09-04,estimate,17,17,3,15,17,14,19,12,22
-Manitoba,2020-09-05,estimate,17,18,3,16,17,15,19,12,22
-Manitoba,2020-09-06,estimate,18,18,3,16,18,15,20,13,23
-Manitoba,2020-09-07,estimate,19,19,3,17,18,16,20,14,24
-Manitoba,2020-09-08,estimate,20,20,3,18,19,17,21,14,25
-Manitoba,2020-09-09,estimate,21,21,3,20,22,18,22,15,26
-Manitoba,2020-09-10,estimate,22,22,3,21,23,19,24,17,28
-Manitoba,2020-09-11,estimate,24,24,4,23,25,21,25,18,30
-Manitoba,2020-09-12,estimate,25,26,4,24,26,22,27,19,31
-Manitoba,2020-09-13,estimate,27,27,4,26,28,24,29,21,33
-Manitoba,2020-09-14,estimate,29,29,4,27,29,26,31,23,36
-Manitoba,2020-09-15,estimate,31,32,5,29,31,28,34,24,39
+Alberta,2020-08-18,estimate,114,115,17,112,118,105,123,89,142
+Alberta,2020-08-19,estimate,116,117,17,114,120,107,126,89,143
+Alberta,2020-08-20,estimate,118,118,18,115,122,108,127,90,146
+Alberta,2020-08-21,estimate,119,120,18,116,123,107,127,90,146
+Alberta,2020-08-22,estimate,121,122,19,118,125,109,130,89,148
+Alberta,2020-08-23,estimate,123,124,19,121,128,110,132,91,151
+Alberta,2020-08-24,estimate,124,125,19,120,128,112,134,92,153
+Alberta,2020-08-25,estimate,126,127,20,123,130,112,134,92,154
+Alberta,2020-08-26,estimate,128,128,20,123,131,116,139,97,160
+Alberta,2020-08-27,estimate,129,130,20,126,134,120,143,95,159
+Alberta,2020-08-28,estimate,131,132,21,129,137,119,143,96,161
+Alberta,2020-08-29,estimate,133,133,21,130,139,122,147,97,163
+Alberta,2020-08-30,estimate,134,135,21,132,141,124,148,98,164
+Alberta,2020-08-31,estimate,136,137,22,135,144,122,148,100,167
+Alberta,2020-09-01,estimate,137,138,22,136,145,125,151,100,168
+Alberta,2020-09-02,estimate,139,140,22,136,146,127,153,102,172
+Alberta,2020-09-03,estimate,141,141,23,130,141,130,157,103,173
+Alberta,2020-09-04,estimate,142,143,23,132,143,130,159,105,177
+Alberta,2020-09-05,estimate,144,145,23,133,144,130,159,107,180
+Alberta,2020-09-06,estimate,146,147,24,138,149,130,160,107,181
+Alberta,2020-09-07,estimate,148,148,24,140,151,135,166,107,183
+Alberta,2020-09-08,estimate,149,150,25,142,154,137,168,109,188
+Alberta,2020-09-09,estimate,151,152,26,144,156,137,170,109,191
+Alberta,2020-09-10,estimate,153,154,26,147,159,137,170,111,194
+Alberta,2020-09-11,estimate,156,156,27,150,162,136,170,112,197
+Alberta,2020-09-12,estimate,158,159,27,152,165,140,174,114,202
+Alberta,2020-09-13,estimate,160,161,28,154,167,141,176,118,207
+Alberta,2020-09-14,estimate,163,163,29,157,170,143,179,117,209
+Alberta,2020-09-15,estimate,165,166,29,156,169,147,184,121,214
+Alberta,2020-09-16,estimate,168,169,30,160,174,151,188,121,217
+Alberta,2020-09-17,estimate,171,172,31,161,175,151,190,123,220
+Alberta,2020-09-18,estimate,174,175,31,164,179,155,194,122,222
+Alberta,2020-09-19,estimate,178,178,32,171,185,156,196,125,227
+Alberta,2020-09-20,estimate,181,182,33,176,191,162,203,129,233
+Alberta,2020-09-21,estimate,185,186,33,183,198,166,208,133,239
+Alberta,2020-09-22,estimate,188,189,34,186,201,171,213,132,241
+Alberta,2020-09-23,estimate,193,194,35,187,202,172,215,136,247
+Alberta,2020-09-24,estimate,197,198,35,192,207,174,218,138,251
+Alberta,2020-09-25,estimate,201,203,36,194,209,182,226,145,260
+Alberta,2020-09-26,estimate,206,208,37,198,213,183,228,149,266
+Alberta,2020-09-27,estimate,211,213,38,204,221,186,231,152,271
+Alberta,2020-09-28,estimate,216,218,39,207,224,191,238,155,277
+Alberta,2020-09-29,estimate,221,224,40,209,227,195,243,158,282
+Alberta,2020-09-30,estimate,227,230,41,210,228,200,250,163,291
+Alberta,2020-10-01,estimate,233,236,42,212,231,201,252,171,304
+Alberta,2020-10-02,estimate,239,243,44,217,237,206,258,171,308
+Alberta,2020-10-03,estimate,245,250,45,223,244,214,268,179,322
+Alberta,2020-10-04,estimate,251,257,48,229,251,217,273,179,329
+Alberta,2020-10-05,estimate,258,264,50,241,264,222,282,188,344
+Alberta,2020-10-06,estimate,265,272,52,253,277,228,290,189,352
+Alberta,2020-10-07,estimate,272,279,56,258,283,232,298,193,365
+Alberta,2020-10-08,estimate,280,288,59,263,289,234,303,197,378
+Alberta,2020-10-09,estimate,288,296,63,273,300,237,311,199,388
+Alberta,2020-10-10,estimate,296,305,68,274,304,246,323,197,401
+Alberta,2020-10-11,estimate,303,314,74,273,304,244,327,202,423
+Alberta,2020-10-12,estimate,310,324,80,278,311,251,340,205,443
+Alberta,2020-10-13,estimate,318,334,88,284,319,256,352,205,462
+Alberta,2020-10-14,estimate based on partial data,326,345,98,286,323,254,356,205,487
+Alberta,2020-10-15,estimate based on partial data,334,357,109,278,318,254,363,202,509
+Alberta,2020-10-16,estimate based on partial data,343,369,123,279,321,262,378,203,541
+Alberta,2020-10-17,estimate based on partial data,351,382,139,274,318,265,389,205,577
+Alberta,2020-10-18,estimate based on partial data,359,396,160,277,323,268,401,200,602
+Alberta,2020-10-19,estimate based on partial data,368,411,185,278,328,270,410,200,644
+Alberta,2020-10-20,estimate based on partial data,375,428,217,286,339,272,421,183,672
+Alberta,2020-10-21,estimate based on partial data,384,446,258,290,345,270,430,178,712
+Alberta,2020-10-22,estimate based on partial data,392,466,311,303,361,262,433,178,767
+Alberta,2020-10-23,estimate based on partial data,401,489,381,302,364,259,439,169,818
+Alberta,2020-10-24,estimate based on partial data,409,514,474,315,380,257,448,144,862
+Alberta,2020-10-25,forecast,418,543,595,304,372,261,462,139,920
+Alberta,2020-10-26,forecast,427,575,755,314,386,262,475,129,980
+Alberta,2020-10-27,forecast,436,611,968,317,392,258,483,130,1054
+Alberta,2020-10-28,forecast,447,653,1253,318,398,264,499,103,1103
+Alberta,2020-10-29,forecast,457,702,1633,323,407,264,512,106,1183
+Alberta,2020-10-30,forecast,467,759,2142,322,410,259,519,107,1266
+Alberta,2020-10-31,forecast,476,826,2824,323,413,257,531,104,1354
+Alberta,2020-11-01,forecast,486,906,3741,327,422,261,549,100,1446
+Alberta,2020-11-02,forecast,497,1002,4974,337,435,273,575,77,1533
+Alberta,2020-11-03,forecast,507,1120,6633,339,441,267,583,64,1623
+Alberta,2020-11-04,forecast,519,1264,8869,344,451,267,596,6,1677
+Alberta,2020-11-05,forecast,531,1443,11885,349,460,275,620,3,1778
+Alberta,2020-11-06,forecast,543,1667,15958,347,463,274,635,3,1892
+Alberta,2020-11-07,forecast,555,1949,21463,352,473,269,647,2,2012
+British Columbia,2020-08-18,estimate,80,83,14,74,79,69,83,64,105
+British Columbia,2020-08-19,estimate,82,85,14,72,78,70,85,65,107
+British Columbia,2020-08-20,estimate,84,86,15,75,81,71,87,66,109
+British Columbia,2020-08-21,estimate,85,88,15,76,82,73,89,66,111
+British Columbia,2020-08-22,estimate,87,90,15,79,85,74,91,68,114
+British Columbia,2020-08-23,estimate,89,92,16,81,87,75,92,69,116
+British Columbia,2020-08-24,estimate,90,93,16,83,89,77,94,70,118
+British Columbia,2020-08-25,estimate,92,95,16,84,90,78,96,72,120
+British Columbia,2020-08-26,estimate,94,97,17,82,89,80,99,72,121
+British Columbia,2020-08-27,estimate,95,98,17,86,92,81,100,73,122
+British Columbia,2020-08-28,estimate,97,100,17,87,94,82,102,75,125
+British Columbia,2020-08-29,estimate,98,102,18,91,99,84,104,76,128
+British Columbia,2020-08-30,estimate,100,103,18,92,99,86,106,78,129
+British Columbia,2020-08-31,estimate,101,105,18,93,101,86,107,79,132
+British Columbia,2020-09-01,estimate,103,106,18,95,102,88,108,80,134
+British Columbia,2020-09-02,estimate,104,108,18,96,103,90,111,82,137
+British Columbia,2020-09-03,estimate,106,109,18,93,101,91,112,83,138
+British Columbia,2020-09-04,estimate,107,110,19,98,106,92,113,83,139
+British Columbia,2020-09-05,estimate,109,112,19,100,107,94,115,84,140
+British Columbia,2020-09-06,estimate,110,113,19,101,108,95,116,83,140
+British Columbia,2020-09-07,estimate,111,114,19,102,110,97,118,86,143
+British Columbia,2020-09-08,estimate,112,115,19,103,110,97,118,87,143
+British Columbia,2020-09-09,estimate,113,116,19,104,111,99,121,87,144
+British Columbia,2020-09-10,estimate,114,117,19,105,113,100,121,89,146
+British Columbia,2020-09-11,estimate,115,118,19,107,115,100,122,87,145
+British Columbia,2020-09-12,estimate,116,119,19,108,116,102,124,89,146
+British Columbia,2020-09-13,estimate,117,119,19,110,118,102,124,90,148
+British Columbia,2020-09-14,estimate,118,120,19,113,121,105,127,90,149
+British Columbia,2020-09-15,estimate,120,121,19,112,120,107,130,91,151
+British Columbia,2020-09-16,estimate,121,122,19,114,123,106,129,91,152
+British Columbia,2020-09-17,estimate,122,123,19,116,125,108,131,91,153
+British Columbia,2020-09-18,estimate,123,124,20,118,127,108,133,91,154
+British Columbia,2020-09-19,estimate,124,125,20,118,127,111,136,91,156
+British Columbia,2020-09-20,estimate,125,126,21,118,128,112,138,91,157
+British Columbia,2020-09-21,estimate,127,127,21,124,134,113,139,93,160
+British Columbia,2020-09-22,estimate,128,128,21,120,130,114,140,94,163
+British Columbia,2020-09-23,estimate,129,130,22,127,138,113,140,94,165
+British Columbia,2020-09-24,estimate,131,131,22,125,135,115,143,96,168
+British Columbia,2020-09-25,estimate,132,133,23,125,135,117,145,94,168
+British Columbia,2020-09-26,estimate,134,134,23,129,139,117,146,97,171
+British Columbia,2020-09-27,estimate,136,136,23,132,142,118,147,98,174
+British Columbia,2020-09-28,estimate,138,138,24,132,142,120,150,99,176
+British Columbia,2020-09-29,estimate,139,140,24,135,146,120,150,101,179
+British Columbia,2020-09-30,estimate,142,142,25,135,146,124,155,103,183
+British Columbia,2020-10-01,estimate,144,145,25,139,150,125,157,102,183
+British Columbia,2020-10-02,estimate,146,147,26,141,153,126,159,105,187
+British Columbia,2020-10-03,estimate,148,150,26,143,155,128,161,108,192
+British Columbia,2020-10-04,estimate,151,153,27,140,153,129,163,107,192
+British Columbia,2020-10-05,estimate,153,156,28,139,152,133,167,112,198
+British Columbia,2020-10-06,estimate,156,159,28,142,155,135,171,113,202
+British Columbia,2020-10-07,estimate,159,162,30,144,158,138,175,114,209
+British Columbia,2020-10-08,estimate,162,165,31,147,161,140,178,112,211
+British Columbia,2020-10-09,estimate,166,169,33,150,164,140,180,114,216
+British Columbia,2020-10-10,estimate,169,172,34,150,165,144,186,115,224
+British Columbia,2020-10-11,estimate,172,176,37,152,168,149,194,112,227
+British Columbia,2020-10-12,estimate,175,180,40,158,175,152,199,111,235
+British Columbia,2020-10-13,estimate,179,184,43,163,181,155,205,110,242
+British Columbia,2020-10-14,estimate based on partial data,182,189,47,164,183,157,211,111,253
+British Columbia,2020-10-15,estimate based on partial data,186,193,52,163,184,148,206,114,267
+British Columbia,2020-10-16,estimate based on partial data,190,198,58,163,185,155,217,108,275
+British Columbia,2020-10-17,estimate based on partial data,193,204,65,171,195,149,214,104,285
+British Columbia,2020-10-18,estimate based on partial data,197,210,74,170,195,153,222,104,303
+British Columbia,2020-10-19,estimate based on partial data,200,216,85,172,199,152,226,99,317
+British Columbia,2020-10-20,estimate based on partial data,204,223,99,171,201,152,231,94,330
+British Columbia,2020-10-21,estimate based on partial data,208,231,117,175,207,154,238,91,351
+British Columbia,2020-10-22,estimate based on partial data,212,240,141,175,209,153,244,82,363
+British Columbia,2020-10-23,estimate based on partial data,215,250,173,170,205,151,247,85,392
+British Columbia,2020-10-24,estimate based on partial data,219,262,219,174,211,150,252,84,416
+British Columbia,2020-10-25,forecast,223,274,279,177,215,153,261,75,437
+British Columbia,2020-10-26,forecast,227,289,364,178,219,152,266,65,458
+British Columbia,2020-10-27,forecast,230,307,484,179,221,147,269,62,487
+British Columbia,2020-10-28,forecast,234,327,654,182,227,148,275,58,519
+British Columbia,2020-10-29,forecast,238,352,898,183,231,154,289,39,533
+British Columbia,2020-10-30,forecast,242,381,1248,188,239,154,295,31,562
+British Columbia,2020-10-31,forecast,246,417,1751,193,246,153,302,28,594
+British Columbia,2020-11-01,forecast,251,463,2476,172,229,152,310,16,621
+British Columbia,2020-11-02,forecast,255,520,3521,197,256,149,314,14,665
+British Columbia,2020-11-03,forecast,259,594,5030,167,228,147,320,6,702
+British Columbia,2020-11-04,forecast,264,690,7210,185,250,146,327,18,757
+British Columbia,2020-11-05,forecast,269,816,10361,166,234,129,318,18,804
+British Columbia,2020-11-06,forecast,273,985,14918,178,248,128,324,14,853
+British Columbia,2020-11-07,forecast,278,1213,21513,179,252,126,331,15,904
+Manitoba,2020-08-15,estimate,37,38,6,35,38,33,40,28,46
+Manitoba,2020-08-16,estimate,37,37,6,36,38,32,40,29,46
+Manitoba,2020-08-17,estimate,36,36,5,33,36,32,38,28,45
+Manitoba,2020-08-18,estimate,35,35,5,33,35,30,37,27,43
+Manitoba,2020-08-19,estimate,33,33,5,32,34,29,35,26,41
+Manitoba,2020-08-20,estimate,31,32,4,30,32,28,33,25,39
+Manitoba,2020-08-21,estimate,30,30,4,28,30,27,32,23,37
+Manitoba,2020-08-22,estimate,28,28,4,26,28,25,29,21,34
+Manitoba,2020-08-23,estimate,26,26,4,24,26,23,28,20,32
+Manitoba,2020-08-24,estimate,24,24,4,22,24,22,26,19,30
+Manitoba,2020-08-25,estimate,23,23,4,21,22,20,25,17,29
+Manitoba,2020-08-26,estimate,21,22,4,20,22,19,23,16,27
+Manitoba,2020-08-27,estimate,20,20,4,19,21,18,22,15,26
+Manitoba,2020-08-28,estimate,19,19,3,17,19,16,21,14,25
+Manitoba,2020-08-29,estimate,18,18,3,17,18,16,20,13,24
+Manitoba,2020-08-30,estimate,18,18,3,16,18,15,19,12,24
+Manitoba,2020-08-31,estimate,17,17,3,16,17,14,19,12,23
+Manitoba,2020-09-01,estimate,17,17,3,16,17,14,19,12,23
+Manitoba,2020-09-02,estimate,17,17,3,16,17,14,18,11,22
+Manitoba,2020-09-03,estimate,17,17,3,16,17,14,18,12,22
+Manitoba,2020-09-04,estimate,17,17,3,16,17,15,19,12,23
+Manitoba,2020-09-05,estimate,17,18,3,16,17,15,19,12,23
+Manitoba,2020-09-06,estimate,18,18,3,16,17,15,19,12,23
+Manitoba,2020-09-07,estimate,19,19,3,17,18,16,20,13,24
+Manitoba,2020-09-08,estimate,20,20,3,18,19,17,21,15,25
+Manitoba,2020-09-09,estimate,21,21,3,19,21,18,23,16,27
+Manitoba,2020-09-10,estimate,22,23,4,21,23,19,24,17,28
+Manitoba,2020-09-11,estimate,24,24,4,22,24,21,26,18,30
+Manitoba,2020-09-12,estimate,25,26,4,25,27,23,28,20,32
+Manitoba,2020-09-13,estimate,27,28,4,26,28,24,29,21,34
+Manitoba,2020-09-14,estimate,29,30,5,27,29,26,32,22,37
+Manitoba,2020-09-15,estimate,31,32,5,29,31,27,33,24,39
 Manitoba,2020-09-16,estimate,33,34,5,31,33,30,36,26,42
-Manitoba,2020-09-17,estimate,35,36,5,33,35,31,38,28,44
-Manitoba,2020-09-18,estimate,38,38,6,35,38,33,40,30,47
-Manitoba,2020-09-19,estimate,40,40,6,36,39,35,43,31,50
-Manitoba,2020-09-20,estimate,42,43,6,39,42,37,45,32,52
-Manitoba,2020-09-21,estimate,44,45,7,43,46,39,48,35,56
-Manitoba,2020-09-22,estimate,47,47,7,42,45,42,50,37,59
-Manitoba,2020-09-23,estimate,49,50,7,46,50,44,53,37,60
-Manitoba,2020-09-24,estimate,51,52,8,48,51,46,56,39,64
-Manitoba,2020-09-25,estimate,54,54,8,51,55,48,58,42,67
-Manitoba,2020-09-26,estimate,56,57,8,55,59,49,60,43,70
-Manitoba,2020-09-27,estimate,59,60,9,57,61,53,64,46,74
-Manitoba,2020-09-28,estimate,62,63,9,59,63,55,67,47,77
-Manitoba,2020-09-29,estimate,65,66,10,63,67,59,71,50,81
-Manitoba,2020-09-30,estimate,68,69,10,65,70,62,74,53,86
-Manitoba,2020-10-01,estimate,72,73,11,68,73,64,77,56,90
-Manitoba,2020-10-02,estimate,76,77,11,73,79,68,83,57,93
-Manitoba,2020-10-03,estimate,81,82,12,78,84,73,88,61,99
-Manitoba,2020-10-04,estimate,86,86,12,83,89,78,93,66,105
-Manitoba,2020-10-05,estimate,91,92,13,87,93,82,98,70,112
-Manitoba,2020-10-06,estimate,96,97,14,93,99,86,104,75,119
-Manitoba,2020-10-07,estimate,102,103,15,97,104,91,110,79,126
-Manitoba,2020-10-08,estimate,108,109,16,103,111,95,116,84,134
-Manitoba,2020-10-09,estimate,114,116,17,108,116,101,122,88,142
-Manitoba,2020-10-10,estimate,121,122,19,113,121,106,129,92,150
-Manitoba,2020-10-11,estimate,127,129,20,121,130,112,137,97,161
-Manitoba,2020-10-12,estimate based on partial data,133,136,23,126,136,115,143,99,171
-Manitoba,2020-10-13,estimate based on partial data,139,142,26,130,142,120,152,100,182
-Manitoba,2020-10-14,estimate based on partial data,146,149,31,138,152,121,159,99,197
-Manitoba,2020-10-15,estimate based on partial data,151,155,37,141,158,125,170,97,213
-Manitoba,2020-10-16,estimate based on partial data,157,162,45,139,159,125,180,89,228
-Manitoba,2020-10-17,estimate based on partial data,162,169,55,143,167,118,184,79,246
-Manitoba,2020-10-18,estimate based on partial data,167,176,67,136,165,113,190,71,270
-Manitoba,2020-10-19,estimate based on partial data,172,185,83,130,163,112,203,56,293
-Manitoba,2020-10-20,estimate based on partial data,176,195,103,125,163,100,206,51,332
-Manitoba,2020-10-21,estimate based on partial data,181,207,131,102,145,90,211,37,369
-Manitoba,2020-10-22,estimate based on partial data,185,222,176,101,151,87,224,28,415
-Manitoba,2020-10-23,forecast,191,241,247,98,152,88,240,24,465
-Manitoba,2020-10-24,forecast,196,263,379,95,153,53,218,13,515
-Manitoba,2020-10-25,forecast,201,291,633,92,154,49,227,9,578
-Manitoba,2020-10-26,forecast,207,327,1125,88,155,36,226,7,649
-Manitoba,2020-10-27,forecast,213,374,2064,79,150,31,231,2,723
-Manitoba,2020-10-28,forecast,219,441,3848,39,113,12,223,2,808
-Manitoba,2020-10-29,forecast,225,541,7227,34,109,11,231,1,911
-Manitoba,2020-10-30,forecast,230,698,13620,32,108,8,235,1,1021
-Manitoba,2020-10-31,forecast,237,956,25703,8,84,5,240,1,1148
-Manitoba,2020-11-01,forecast,243,1398,48540,8,83,3,245,1,1303
-Manitoba,2020-11-02,forecast,250,2180,91693,6,79,2,251,0,1462
-Manitoba,2020-11-03,forecast,255,3593,173237,5,77,0,255,0,1636
-Manitoba,2020-11-04,forecast,264,6182,327319,2,72,0,264,0,1845
-Manitoba,2020-11-05,forecast,270,10978,618467,1,70,0,270,0,2086
+Manitoba,2020-09-17,estimate,36,36,5,33,35,32,38,28,45
+Manitoba,2020-09-18,estimate,38,38,6,35,38,33,41,29,47
+Manitoba,2020-09-19,estimate,40,40,6,38,40,35,43,31,49
+Manitoba,2020-09-20,estimate,42,43,6,41,44,38,45,32,52
+Manitoba,2020-09-21,estimate,44,45,6,42,45,40,48,34,55
+Manitoba,2020-09-22,estimate,47,47,7,46,49,41,50,36,57
+Manitoba,2020-09-23,estimate,49,49,7,47,50,44,53,39,61
+Manitoba,2020-09-24,estimate,51,51,7,49,52,46,56,39,63
+Manitoba,2020-09-25,estimate,53,54,8,50,54,47,57,40,65
+Manitoba,2020-09-26,estimate,56,56,8,53,56,50,60,43,70
+Manitoba,2020-09-27,estimate,58,59,9,55,59,53,64,45,74
+Manitoba,2020-09-28,estimate,61,62,9,58,62,56,67,46,76
+Manitoba,2020-09-29,estimate,64,65,9,60,64,57,69,50,80
+Manitoba,2020-09-30,estimate,68,68,10,62,67,61,73,52,85
+Manitoba,2020-10-01,estimate,71,72,10,65,70,65,79,55,89
+Manitoba,2020-10-02,estimate,75,76,11,70,75,68,82,58,94
+Manitoba,2020-10-03,estimate,80,81,12,75,81,72,87,62,99
+Manitoba,2020-10-04,estimate,85,86,12,80,86,75,91,66,105
+Manitoba,2020-10-05,estimate,90,91,13,86,92,80,97,71,112
+Manitoba,2020-10-06,estimate,96,97,14,90,97,85,102,75,119
+Manitoba,2020-10-07,estimate,102,103,15,94,101,89,108,80,127
+Manitoba,2020-10-08,estimate,108,109,16,101,109,95,115,84,135
+Manitoba,2020-10-09,estimate,114,116,17,105,113,101,123,88,142
+Manitoba,2020-10-10,estimate,121,122,18,110,119,108,130,94,152
+Manitoba,2020-10-11,estimate,128,129,19,117,126,113,137,96,158
+Manitoba,2020-10-12,estimate,134,135,20,124,134,121,147,102,167
+Manitoba,2020-10-13,estimate,140,142,22,129,139,126,153,104,174
+Manitoba,2020-10-14,estimate based on partial data,146,148,24,133,145,126,156,107,184
+Manitoba,2020-10-15,estimate based on partial data,151,153,27,137,150,131,166,107,195
+Manitoba,2020-10-16,estimate based on partial data,156,159,32,138,152,132,171,106,208
+Manitoba,2020-10-17,estimate based on partial data,161,165,38,141,158,131,177,104,224
+Manitoba,2020-10-18,estimate based on partial data,165,171,47,144,164,132,188,96,240
+Manitoba,2020-10-19,estimate based on partial data,169,177,57,147,170,127,193,84,258
+Manitoba,2020-10-20,estimate based on partial data,174,185,70,148,175,122,201,76,284
+Manitoba,2020-10-21,estimate based on partial data,178,193,86,146,179,123,216,69,318
+Manitoba,2020-10-22,estimate based on partial data,183,204,107,148,186,101,209,61,354
+Manitoba,2020-10-23,estimate based on partial data,186,216,135,139,183,96,218,45,388
+Manitoba,2020-10-24,estimate based on partial data,192,233,174,121,171,81,218,23,427
+Manitoba,2020-10-25,forecast,197,251,223,121,176,76,227,20,478
+Manitoba,2020-10-26,forecast,203,273,291,102,163,66,230,16,540
+Manitoba,2020-10-27,forecast,208,300,390,97,163,55,233,14,608
+Manitoba,2020-10-28,forecast,215,332,538,69,137,43,232,5,672
+Manitoba,2020-10-29,forecast,221,372,762,54,125,39,239,3,749
+Manitoba,2020-10-30,forecast,226,421,1108,52,125,35,247,3,835
+Manitoba,2020-10-31,forecast,233,483,1650,47,122,20,243,3,932
+Manitoba,2020-11-01,forecast,238,563,2505,36,112,16,248,0,1040
+Manitoba,2020-11-02,forecast,245,668,3858,30,107,11,252,0,1177
+Manitoba,2020-11-03,forecast,252,807,6009,15,91,6,255,1,1310
+Manitoba,2020-11-04,forecast,258,997,9437,10,87,2,258,0,1461
+Manitoba,2020-11-05,forecast,265,1260,14910,7,82,1,265,0,1631
+Manitoba,2020-11-06,forecast,271,1630,23661,4,77,1,272,0,1844
+Manitoba,2020-11-07,forecast,278,2161,37674,3,74,0,278,0,2061
 New Brunswick,2020-08-19,estimate,0,0,0,0,0,0,0,0,1
 New Brunswick,2020-08-20,estimate,0,0,0,0,0,0,0,0,1
 New Brunswick,2020-08-21,estimate,0,0,0,0,0,0,0,0,1
-New Brunswick,2020-08-22,estimate,0,0,0,0,0,0,0,0,1
+New Brunswick,2020-08-22,estimate,0,0,0,0,0,0,0,0,0
 New Brunswick,2020-08-23,estimate,0,0,0,0,0,0,0,0,0
 New Brunswick,2020-08-24,estimate,0,0,0,0,0,0,0,0,0
 New Brunswick,2020-08-25,estimate,0,0,0,0,0,0,0,0,0
@@ -283,56 +277,58 @@ New Brunswick,2020-09-13,estimate,0,0,0,0,0,0,0,0,1
 New Brunswick,2020-09-14,estimate,0,0,0,0,0,0,0,0,1
 New Brunswick,2020-09-15,estimate,0,0,0,0,0,0,0,0,1
 New Brunswick,2020-09-16,estimate,0,0,0,0,0,0,0,0,1
-New Brunswick,2020-09-17,estimate,0,1,0,0,0,0,1,0,1
-New Brunswick,2020-09-18,estimate,1,1,0,0,0,0,1,0,1
+New Brunswick,2020-09-17,estimate,0,0,0,0,0,0,0,0,1
+New Brunswick,2020-09-18,estimate,0,1,0,0,0,0,1,0,1
 New Brunswick,2020-09-19,estimate,1,1,0,0,0,0,1,0,1
-New Brunswick,2020-09-20,estimate,1,1,0,0,1,0,1,0,1
+New Brunswick,2020-09-20,estimate,1,1,0,0,0,0,1,0,1
 New Brunswick,2020-09-21,estimate,1,1,1,0,1,0,1,0,2
 New Brunswick,2020-09-22,estimate,1,1,1,1,1,0,1,0,2
-New Brunswick,2020-09-23,estimate,1,1,1,1,1,1,1,0,2
-New Brunswick,2020-09-24,estimate,1,2,1,1,1,1,2,0,3
-New Brunswick,2020-09-25,estimate,2,2,1,1,2,1,2,1,3
-New Brunswick,2020-09-26,estimate,2,2,1,2,2,1,3,1,4
-New Brunswick,2020-09-27,estimate,3,3,1,2,3,2,3,1,5
-New Brunswick,2020-09-28,estimate,3,3,1,3,3,2,4,1,6
-New Brunswick,2020-09-29,estimate,4,4,2,4,4,3,4,2,7
-New Brunswick,2020-09-30,estimate,5,5,2,4,5,3,5,2,8
-New Brunswick,2020-10-01,estimate,6,6,2,5,6,4,6,3,9
-New Brunswick,2020-10-02,estimate,7,7,2,5,6,5,7,3,11
-New Brunswick,2020-10-03,estimate,7,8,3,6,7,6,9,4,12
-New Brunswick,2020-10-04,estimate,8,9,3,7,8,5,9,4,14
-New Brunswick,2020-10-05,estimate,9,10,4,7,9,6,10,4,15
-New Brunswick,2020-10-06,estimate,9,10,4,7,9,6,10,5,15
-New Brunswick,2020-10-07,estimate,9,10,4,8,9,6,10,5,15
-New Brunswick,2020-10-08,estimate,9,10,4,7,9,6,10,5,15
-New Brunswick,2020-10-09,estimate,9,10,4,7,8,6,10,4,15
-New Brunswick,2020-10-10,estimate,8,9,4,7,8,5,10,3,15
-New Brunswick,2020-10-11,estimate,8,9,5,6,7,4,9,2,14
-New Brunswick,2020-10-12,estimate based on partial data,7,8,5,4,6,4,8,1,14
-New Brunswick,2020-10-13,estimate based on partial data,6,8,6,4,5,3,8,1,15
-New Brunswick,2020-10-14,estimate based on partial data,6,7,7,3,4,2,6,1,15
-New Brunswick,2020-10-15,estimate based on partial data,5,7,8,2,4,1,5,0,15
-New Brunswick,2020-10-16,estimate based on partial data,4,7,10,0,2,0,5,0,15
-New Brunswick,2020-10-17,estimate based on partial data,4,7,12,0,1,0,4,0,16
-New Brunswick,2020-10-18,estimate based on partial data,4,7,15,0,1,0,4,0,17
-New Brunswick,2020-10-19,estimate based on partial data,3,8,18,0,1,0,3,0,18
-New Brunswick,2020-10-20,estimate based on partial data,3,8,23,0,1,0,3,0,19
-New Brunswick,2020-10-21,estimate based on partial data,3,9,30,0,0,0,3,0,20
-New Brunswick,2020-10-22,estimate based on partial data,2,11,40,0,0,0,2,0,22
-New Brunswick,2020-10-23,forecast,2,12,56,0,0,0,2,0,24
-New Brunswick,2020-10-24,forecast,2,15,84,0,0,0,2,0,26
-New Brunswick,2020-10-25,forecast,2,19,133,0,0,0,2,0,28
-New Brunswick,2020-10-26,forecast,2,25,227,0,0,0,2,0,31
-New Brunswick,2020-10-27,forecast,1,36,413,0,0,0,1,0,33
-New Brunswick,2020-10-28,forecast,1,54,805,0,0,0,1,0,35
-New Brunswick,2020-10-29,forecast,1,88,1684,0,0,0,1,0,38
-New Brunswick,2020-10-30,forecast,1,156,3759,0,0,0,1,0,42
-New Brunswick,2020-10-31,forecast,1,300,8868,0,0,0,1,0,47
-New Brunswick,2020-11-01,forecast,1,616,21781,0,0,0,1,0,51
-New Brunswick,2020-11-02,forecast,1,1345,54909,0,0,0,1,0,56
-New Brunswick,2020-11-03,forecast,1,3076,140590,0,0,0,1,0,62
-New Brunswick,2020-11-04,forecast,1,7289,363126,0,0,0,1,0,68
-New Brunswick,2020-11-05,forecast,1,17738,942394,0,0,0,1,0,74
+New Brunswick,2020-09-23,estimate,1,1,1,1,1,0,1,0,2
+New Brunswick,2020-09-24,estimate,1,1,1,1,1,1,1,0,3
+New Brunswick,2020-09-25,estimate,2,2,1,1,1,1,2,0,3
+New Brunswick,2020-09-26,estimate,2,2,1,1,2,1,2,0,4
+New Brunswick,2020-09-27,estimate,2,3,1,2,2,2,3,1,4
+New Brunswick,2020-09-28,estimate,3,3,1,2,3,2,4,1,6
+New Brunswick,2020-09-29,estimate,4,4,2,3,4,3,5,2,7
+New Brunswick,2020-09-30,estimate,5,5,2,4,5,3,5,3,8
+New Brunswick,2020-10-01,estimate,6,6,2,5,6,4,7,3,9
+New Brunswick,2020-10-02,estimate,7,8,2,6,7,5,8,4,11
+New Brunswick,2020-10-03,estimate,8,9,3,8,9,6,10,4,13
+New Brunswick,2020-10-04,estimate,9,10,3,7,9,7,11,4,15
+New Brunswick,2020-10-05,estimate,10,10,4,8,9,7,11,5,16
+New Brunswick,2020-10-06,estimate,10,11,4,9,10,6,11,5,17
+New Brunswick,2020-10-07,estimate,10,10,4,8,10,7,11,5,16
+New Brunswick,2020-10-08,estimate,9,10,4,7,9,7,11,5,15
+New Brunswick,2020-10-09,estimate,8,9,3,7,8,6,9,4,13
+New Brunswick,2020-10-10,estimate,7,8,3,6,7,5,8,3,12
+New Brunswick,2020-10-11,estimate,6,7,3,4,5,4,7,2,11
+New Brunswick,2020-10-12,estimate,5,6,3,3,5,3,6,1,10
+New Brunswick,2020-10-13,estimate,4,5,3,2,3,2,5,1,9
+New Brunswick,2020-10-14,estimate based on partial data,3,4,4,2,3,1,4,0,8
+New Brunswick,2020-10-15,estimate based on partial data,3,4,4,1,2,1,3,0,8
+New Brunswick,2020-10-16,estimate based on partial data,2,3,4,1,1,0,3,0,7
+New Brunswick,2020-10-17,estimate based on partial data,2,3,4,0,1,0,2,0,7
+New Brunswick,2020-10-18,estimate based on partial data,2,3,5,0,0,0,2,0,7
+New Brunswick,2020-10-19,estimate based on partial data,1,3,5,0,0,0,1,0,6
+New Brunswick,2020-10-20,estimate based on partial data,1,3,6,0,0,0,1,0,6
+New Brunswick,2020-10-21,estimate based on partial data,1,3,7,0,0,0,1,0,6
+New Brunswick,2020-10-22,estimate based on partial data,1,3,8,0,0,0,1,0,6
+New Brunswick,2020-10-23,estimate based on partial data,1,3,10,0,0,0,1,0,7
+New Brunswick,2020-10-24,estimate based on partial data,1,3,20,0,0,0,1,0,7
+New Brunswick,2020-10-25,forecast,0,5,89,0,0,0,0,0,7
+New Brunswick,2020-10-26,forecast,0,12,501,0,0,0,0,0,7
+New Brunswick,2020-10-27,forecast,0,51,2869,0,0,0,0,0,7
+New Brunswick,2020-10-28,forecast,0,268,16448,0,0,0,0,0,7
+New Brunswick,2020-10-29,forecast,0,1504,94313,0,0,0,0,0,8
+New Brunswick,2020-10-30,forecast,0,8572,540798,0,0,0,0,0,8
+New Brunswick,2020-10-31,forecast,0,49070,3100994,0,0,0,0,0,8
+New Brunswick,2020-11-01,forecast,0,281226,17781429,0,0,0,0,0,9
+New Brunswick,2020-11-02,forecast,0,1612295,101960582,0,0,0,0,0,9
+New Brunswick,2020-11-03,forecast,0,9244498,584652688,0,0,0,0,0,9
+New Brunswick,2020-11-04,forecast,0,53007747,3352459900,0,0,0,0,0,9
+New Brunswick,2020-11-05,forecast,0,303949485,19223356991,0,0,0,0,0,10
+New Brunswick,2020-11-06,forecast,0,1742872866,110228746818,0,0,0,0,0,10
+New Brunswick,2020-11-07,forecast,0,9993804183,632063204408,0,0,0,0,0,10
 Newfoundland and Labrador,2020-08-21,estimate,0,0,0,0,0,0,0,0,0
 Newfoundland and Labrador,2020-08-22,estimate,0,0,0,0,0,0,0,0,0
 Newfoundland and Labrador,2020-08-23,estimate,0,0,0,0,0,0,0,0,0
@@ -360,7 +356,7 @@ Newfoundland and Labrador,2020-09-13,estimate,0,0,0,0,0,0,0,0,0
 Newfoundland and Labrador,2020-09-14,estimate,0,0,0,0,0,0,0,0,0
 Newfoundland and Labrador,2020-09-15,estimate,0,0,0,0,0,0,0,0,0
 Newfoundland and Labrador,2020-09-16,estimate,0,0,0,0,0,0,0,0,0
-Newfoundland and Labrador,2020-09-17,estimate,0,0,0,0,0,0,0,0,0
+Newfoundland and Labrador,2020-09-17,estimate,0,0,0,0,0,0,0,0,1
 Newfoundland and Labrador,2020-09-18,estimate,0,0,0,0,0,0,0,0,1
 Newfoundland and Labrador,2020-09-19,estimate,0,0,0,0,0,0,0,0,1
 Newfoundland and Labrador,2020-09-20,estimate,0,0,0,0,0,0,0,0,1
@@ -368,63 +364,63 @@ Newfoundland and Labrador,2020-09-21,estimate,0,0,0,0,0,0,0,0,1
 Newfoundland and Labrador,2020-09-22,estimate,0,0,0,0,0,0,0,0,1
 Newfoundland and Labrador,2020-09-23,estimate,0,0,0,0,0,0,0,0,1
 Newfoundland and Labrador,2020-09-24,estimate,0,0,0,0,0,0,0,0,1
-Newfoundland and Labrador,2020-09-25,estimate,0,0,0,0,0,0,1,0,1
-Newfoundland and Labrador,2020-09-26,estimate,0,0,0,0,0,0,1,0,1
+Newfoundland and Labrador,2020-09-25,estimate,0,0,0,0,0,0,0,0,1
+Newfoundland and Labrador,2020-09-26,estimate,0,0,0,0,0,0,0,0,1
 Newfoundland and Labrador,2020-09-27,estimate,0,1,0,0,0,0,1,0,1
 Newfoundland and Labrador,2020-09-28,estimate,0,1,0,0,0,0,1,0,1
-Newfoundland and Labrador,2020-09-29,estimate,1,1,0,0,0,0,1,0,1
+Newfoundland and Labrador,2020-09-29,estimate,0,1,0,0,0,0,1,0,1
 Newfoundland and Labrador,2020-09-30,estimate,1,1,0,0,0,0,1,0,1
 Newfoundland and Labrador,2020-10-01,estimate,1,1,0,0,1,0,1,0,1
-Newfoundland and Labrador,2020-10-02,estimate,1,1,0,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-02,estimate,1,1,0,0,0,0,1,0,1
 Newfoundland and Labrador,2020-10-03,estimate,1,1,0,0,1,0,1,0,1
 Newfoundland and Labrador,2020-10-04,estimate,1,1,0,0,1,0,1,0,1
 Newfoundland and Labrador,2020-10-05,estimate,1,1,0,0,1,0,1,0,1
-Newfoundland and Labrador,2020-10-06,estimate,1,1,0,1,1,0,1,0,1
+Newfoundland and Labrador,2020-10-06,estimate,1,1,0,0,1,0,1,0,1
 Newfoundland and Labrador,2020-10-07,estimate,1,1,0,0,1,0,1,0,1
-Newfoundland and Labrador,2020-10-08,estimate,1,1,0,1,1,0,1,0,1
+Newfoundland and Labrador,2020-10-08,estimate,1,1,0,0,1,0,1,0,1
 Newfoundland and Labrador,2020-10-09,estimate,1,1,0,0,1,0,1,0,1
 Newfoundland and Labrador,2020-10-10,estimate,1,1,0,0,1,0,1,0,1
-Newfoundland and Labrador,2020-10-11,estimate,1,1,0,0,1,0,1,0,1
-Newfoundland and Labrador,2020-10-12,estimate based on partial data,1,1,0,1,1,0,1,0,1
-Newfoundland and Labrador,2020-10-13,estimate based on partial data,1,1,0,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-14,estimate based on partial data,1,1,1,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-15,estimate based on partial data,1,1,1,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-16,estimate based on partial data,1,1,1,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-17,estimate based on partial data,1,1,1,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-18,estimate based on partial data,1,1,1,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-19,estimate based on partial data,1,1,1,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-20,estimate based on partial data,1,1,1,0,1,0,1,0,2
-Newfoundland and Labrador,2020-10-21,estimate based on partial data,1,1,2,0,1,0,1,0,3
-Newfoundland and Labrador,2020-10-22,estimate based on partial data,1,1,5,0,1,0,1,0,3
-Newfoundland and Labrador,2020-10-23,forecast,1,2,12,0,1,0,1,0,3
-Newfoundland and Labrador,2020-10-24,forecast,1,2,32,0,1,0,1,0,3
-Newfoundland and Labrador,2020-10-25,forecast,1,3,84,0,1,0,1,0,4
-Newfoundland and Labrador,2020-10-26,forecast,1,6,222,0,0,0,1,0,4
-Newfoundland and Labrador,2020-10-27,forecast,1,13,590,0,0,0,1,0,4
-Newfoundland and Labrador,2020-10-28,forecast,1,29,1569,0,0,0,1,0,5
-Newfoundland and Labrador,2020-10-29,forecast,1,72,4172,0,0,0,1,0,5
-Newfoundland and Labrador,2020-10-30,forecast,1,185,11095,0,0,0,1,0,6
-Newfoundland and Labrador,2020-10-31,forecast,1,481,29507,0,0,0,1,0,6
-Newfoundland and Labrador,2020-11-01,forecast,1,1264,78473,0,0,0,1,0,7
-Newfoundland and Labrador,2020-11-02,forecast,1,3337,208703,0,0,0,1,0,8
-Newfoundland and Labrador,2020-11-03,forecast,1,8838,555057,0,0,0,1,0,8
-Newfoundland and Labrador,2020-11-04,forecast,1,23445,1476207,0,0,0,1,0,9
-Newfoundland and Labrador,2020-11-05,forecast,1,62255,3926061,0,0,0,1,0,10
-Nova Scotia,2020-08-14,estimate,0,1,0,0,0,0,0,0,1
-Nova Scotia,2020-08-15,estimate,0,1,0,0,0,0,0,0,1
-Nova Scotia,2020-08-16,estimate,0,1,0,0,0,0,0,0,1
-Nova Scotia,2020-08-17,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-08-18,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-08-19,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-08-20,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-08-21,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-08-22,estimate,0,0,0,0,0,0,0,0,1
+Newfoundland and Labrador,2020-10-11,estimate,1,1,0,1,1,0,1,0,1
+Newfoundland and Labrador,2020-10-12,estimate,1,1,0,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-13,estimate,1,1,0,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-14,estimate based on partial data,1,1,0,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-15,estimate based on partial data,1,1,0,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-16,estimate based on partial data,1,1,0,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-17,estimate based on partial data,1,1,1,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-18,estimate based on partial data,1,1,1,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-19,estimate based on partial data,1,1,1,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-20,estimate based on partial data,1,1,1,0,1,0,1,0,1
+Newfoundland and Labrador,2020-10-21,estimate based on partial data,1,1,1,0,1,0,1,0,2
+Newfoundland and Labrador,2020-10-22,estimate based on partial data,1,1,1,0,1,0,1,0,2
+Newfoundland and Labrador,2020-10-23,estimate based on partial data,1,1,2,0,1,0,1,0,2
+Newfoundland and Labrador,2020-10-24,estimate based on partial data,1,1,2,0,1,0,1,0,2
+Newfoundland and Labrador,2020-10-25,forecast,1,1,4,0,0,0,1,0,2
+Newfoundland and Labrador,2020-10-26,forecast,1,1,6,0,0,0,1,0,2
+Newfoundland and Labrador,2020-10-27,forecast,1,1,10,0,0,0,1,0,2
+Newfoundland and Labrador,2020-10-28,forecast,1,2,17,0,0,0,1,0,2
+Newfoundland and Labrador,2020-10-29,forecast,1,2,31,0,0,0,1,0,3
+Newfoundland and Labrador,2020-10-30,forecast,1,3,56,0,0,0,1,0,3
+Newfoundland and Labrador,2020-10-31,forecast,1,4,102,0,0,0,1,0,3
+Newfoundland and Labrador,2020-11-01,forecast,1,5,186,0,0,0,1,0,3
+Newfoundland and Labrador,2020-11-02,forecast,1,8,343,0,0,0,1,0,3
+Newfoundland and Labrador,2020-11-03,forecast,1,14,630,0,0,0,1,0,4
+Newfoundland and Labrador,2020-11-04,forecast,1,23,1160,0,0,0,1,0,4
+Newfoundland and Labrador,2020-11-05,forecast,1,40,2135,0,0,0,1,0,4
+Newfoundland and Labrador,2020-11-06,forecast,1,70,3931,0,0,0,1,0,4
+Newfoundland and Labrador,2020-11-07,forecast,1,126,7240,0,0,0,1,0,5
+Nova Scotia,2020-08-16,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-08-17,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-08-18,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-08-19,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-08-20,estimate,1,1,0,0,0,0,1,0,1
+Nova Scotia,2020-08-21,estimate,0,1,0,0,0,0,1,0,1
+Nova Scotia,2020-08-22,estimate,0,1,0,0,0,0,1,0,1
 Nova Scotia,2020-08-23,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-08-24,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-08-25,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-08-26,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-08-27,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-08-28,estimate,0,0,0,0,0,0,0,0,0
+Nova Scotia,2020-08-28,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-08-29,estimate,0,0,0,0,0,0,0,0,0
 Nova Scotia,2020-08-30,estimate,0,0,0,0,0,0,0,0,0
 Nova Scotia,2020-08-31,estimate,0,0,0,0,0,0,0,0,0
@@ -453,7 +449,7 @@ Nova Scotia,2020-09-22,estimate,0,0,0,0,0,0,0,0,0
 Nova Scotia,2020-09-23,estimate,0,0,0,0,0,0,0,0,0
 Nova Scotia,2020-09-24,estimate,0,0,0,0,0,0,0,0,0
 Nova Scotia,2020-09-25,estimate,0,0,0,0,0,0,0,0,0
-Nova Scotia,2020-09-26,estimate,0,0,0,0,0,0,0,0,1
+Nova Scotia,2020-09-26,estimate,0,0,0,0,0,0,0,0,0
 Nova Scotia,2020-09-27,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-09-28,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-09-29,estimate,0,0,0,0,0,0,0,0,1
@@ -463,122 +459,124 @@ Nova Scotia,2020-10-02,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-10-03,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-10-04,estimate,0,0,0,0,0,0,0,0,1
 Nova Scotia,2020-10-05,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-10-06,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-10-07,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-10-08,estimate,0,0,0,0,0,0,0,0,1
-Nova Scotia,2020-10-09,estimate,0,1,0,0,0,0,1,0,1
-Nova Scotia,2020-10-10,estimate,0,1,0,0,0,0,1,0,1
-Nova Scotia,2020-10-11,estimate,0,1,0,0,0,0,1,0,1
-Nova Scotia,2020-10-12,estimate based on partial data,0,1,0,0,0,0,1,0,1
-Nova Scotia,2020-10-13,estimate based on partial data,1,1,0,0,0,0,1,0,1
-Nova Scotia,2020-10-14,estimate based on partial data,1,1,1,0,0,0,1,0,1
-Nova Scotia,2020-10-15,estimate based on partial data,1,1,1,0,0,0,1,0,1
-Nova Scotia,2020-10-16,estimate based on partial data,1,1,1,0,0,0,1,0,2
-Nova Scotia,2020-10-17,estimate based on partial data,1,1,1,0,0,0,1,0,2
-Nova Scotia,2020-10-18,estimate based on partial data,1,1,2,0,0,0,1,0,2
-Nova Scotia,2020-10-19,estimate based on partial data,1,1,3,0,0,0,1,0,2
-Nova Scotia,2020-10-20,estimate based on partial data,1,1,5,0,0,0,1,0,3
-Nova Scotia,2020-10-21,estimate based on partial data,1,2,7,0,0,0,1,0,3
-Nova Scotia,2020-10-22,estimate based on partial data,1,2,13,0,0,0,1,0,4
-Nova Scotia,2020-10-23,forecast,1,3,26,0,0,0,1,0,4
-Nova Scotia,2020-10-24,forecast,1,5,66,0,0,0,1,0,5
-Nova Scotia,2020-10-25,forecast,1,9,186,0,0,0,1,0,6
-Nova Scotia,2020-10-26,forecast,1,18,558,0,0,0,1,0,7
-Nova Scotia,2020-10-27,forecast,1,43,1710,0,0,0,1,0,8
-Nova Scotia,2020-10-28,forecast,1,110,5271,0,0,0,1,0,9
-Nova Scotia,2020-10-29,forecast,1,306,16292,0,0,0,1,0,11
-Nova Scotia,2020-10-30,forecast,1,885,50411,0,0,0,1,0,13
-Nova Scotia,2020-10-31,forecast,1,2634,156040,0,0,0,1,0,15
-Nova Scotia,2020-11-01,forecast,1,7964,483075,0,0,0,1,0,17
-Nova Scotia,2020-11-02,forecast,1,24299,1495635,0,0,0,1,0,20
-Nova Scotia,2020-11-03,forecast,1,74550,4630758,0,0,0,1,0,23
-Nova Scotia,2020-11-04,forecast,1,229479,14337922,0,0,0,1,0,27
-Nova Scotia,2020-11-05,forecast,1,707814,44393984,0,0,0,1,0,33
-Ontario,2020-08-13,estimate,111,112,16,106,114,99,121,85,139
-Ontario,2020-08-14,estimate,113,114,17,109,117,100,122,86,141
-Ontario,2020-08-15,estimate,115,116,18,110,118,103,127,86,144
-Ontario,2020-08-16,estimate,118,119,18,111,120,104,128,89,149
-Ontario,2020-08-17,estimate,120,121,19,113,122,104,129,90,152
-Ontario,2020-08-18,estimate,123,124,19,112,122,104,130,91,154
-Ontario,2020-08-19,estimate,126,128,20,118,127,109,135,94,159
-Ontario,2020-08-20,estimate,129,131,21,120,130,113,140,96,164
-Ontario,2020-08-21,estimate,133,135,22,120,131,116,144,98,168
-Ontario,2020-08-22,estimate,137,139,22,126,137,121,151,102,174
-Ontario,2020-08-23,estimate,141,143,23,129,141,124,154,104,179
-Ontario,2020-08-24,estimate,147,148,24,132,144,129,161,109,186
-Ontario,2020-08-25,estimate,152,153,25,138,151,134,167,113,193
-Ontario,2020-08-26,estimate,158,159,25,156,169,137,171,118,200
-Ontario,2020-08-27,estimate,165,166,26,162,176,141,176,122,206
-Ontario,2020-08-28,estimate,172,173,27,169,183,149,185,130,216
-Ontario,2020-08-29,estimate,179,180,27,178,191,156,193,135,224
-Ontario,2020-08-30,estimate,188,188,28,186,201,163,202,142,232
-Ontario,2020-08-31,estimate,197,197,29,187,202,175,215,151,244
-Ontario,2020-09-01,estimate,206,207,30,195,210,182,223,158,253
-Ontario,2020-09-02,estimate,217,217,30,209,224,195,237,169,266
-Ontario,2020-09-03,estimate,228,229,31,214,230,206,248,177,278
-Ontario,2020-09-04,estimate,240,241,32,236,252,217,260,188,292
-Ontario,2020-09-05,estimate,253,254,34,242,259,228,272,197,306
-Ontario,2020-09-06,estimate,266,268,35,258,275,240,286,208,321
-Ontario,2020-09-07,estimate,280,282,37,269,287,250,298,222,341
-Ontario,2020-09-08,estimate,295,298,39,278,297,265,315,237,363
-Ontario,2020-09-09,estimate,311,314,42,290,309,279,332,245,379
-Ontario,2020-09-10,estimate,327,332,45,310,330,295,350,259,400
-Ontario,2020-09-11,estimate,344,350,48,327,348,310,369,272,422
-Ontario,2020-09-12,estimate,362,368,51,345,367,323,386,286,446
-Ontario,2020-09-13,estimate,381,387,55,361,385,342,408,301,470
-Ontario,2020-09-14,estimate,400,407,59,384,410,356,425,316,495
-Ontario,2020-09-15,estimate,419,427,62,403,432,371,445,326,516
-Ontario,2020-09-16,estimate,439,448,66,407,436,383,461,340,541
-Ontario,2020-09-17,estimate,459,468,70,438,470,406,490,363,577
-Ontario,2020-09-18,estimate,480,489,73,450,483,429,518,371,595
-Ontario,2020-09-19,estimate,500,510,77,464,498,441,535,391,627
-Ontario,2020-09-20,estimate,520,530,80,480,515,459,556,407,654
-Ontario,2020-09-21,estimate,540,551,83,499,536,480,583,421,679
-Ontario,2020-09-22,estimate,560,571,86,514,553,484,591,438,703
-Ontario,2020-09-23,estimate,580,591,89,540,580,518,628,452,728
-Ontario,2020-09-24,estimate,599,610,91,556,597,533,647,465,746
-Ontario,2020-09-25,estimate,618,629,93,576,618,545,662,480,769
-Ontario,2020-09-26,estimate,636,647,95,588,630,562,682,493,788
-Ontario,2020-09-27,estimate,655,665,96,615,659,587,709,510,809
-Ontario,2020-09-28,estimate,673,683,97,621,665,610,734,530,833
-Ontario,2020-09-29,estimate,691,700,98,635,680,626,752,540,848
-Ontario,2020-09-30,estimate,707,717,100,656,701,625,753,550,861
-Ontario,2020-10-01,estimate,724,734,101,683,730,660,791,565,881
-Ontario,2020-10-02,estimate,742,750,103,698,746,669,803,581,905
-Ontario,2020-10-03,estimate,758,766,105,714,763,688,825,603,936
-Ontario,2020-10-04,estimate,776,782,108,749,799,700,841,614,961
-Ontario,2020-10-05,estimate,790,798,112,770,822,727,874,605,969
-Ontario,2020-10-06,estimate,806,814,117,767,823,729,881,611,990
-Ontario,2020-10-07,estimate,821,831,124,788,846,729,888,636,1038
-Ontario,2020-10-08,estimate,835,847,132,774,836,738,908,627,1056
-Ontario,2020-10-09,estimate,851,864,142,782,849,745,927,644,1106
-Ontario,2020-10-10,estimate,866,881,155,759,831,759,954,635,1134
-Ontario,2020-10-11,estimate,880,899,169,801,879,762,974,635,1179
-Ontario,2020-10-12,estimate based on partial data,897,918,186,820,904,757,988,629,1225
-Ontario,2020-10-13,estimate based on partial data,913,938,206,843,934,758,1016,619,1277
-Ontario,2020-10-14,estimate based on partial data,933,959,228,838,939,767,1054,600,1329
-Ontario,2020-10-15,estimate based on partial data,952,982,254,841,954,727,1046,577,1388
-Ontario,2020-10-16,estimate based on partial data,972,1006,283,839,967,783,1135,539,1437
-Ontario,2020-10-17,estimate based on partial data,995,1032,316,864,1007,777,1165,517,1513
-Ontario,2020-10-18,estimate based on partial data,1018,1060,355,832,990,730,1159,507,1604
-Ontario,2020-10-19,estimate based on partial data,1041,1091,402,929,1104,686,1158,486,1698
-Ontario,2020-10-20,estimate based on partial data,1061,1125,459,833,1026,691,1207,446,1781
-Ontario,2020-10-21,estimate based on partial data,1085,1163,533,804,1013,743,1309,393,1865
-Ontario,2020-10-22,estimate based on partial data,1106,1205,632,802,1030,711,1329,352,1972
-Ontario,2020-10-23,forecast,1133,1251,759,831,1078,670,1338,354,2119
-Ontario,2020-10-24,forecast,1153,1301,934,810,1078,618,1337,308,2225
-Ontario,2020-10-25,forecast,1180,1357,1180,844,1130,603,1375,255,2338
-Ontario,2020-10-26,forecast,1205,1420,1529,791,1099,582,1405,198,2439
-Ontario,2020-10-27,forecast,1229,1492,2029,803,1128,565,1440,199,2611
-Ontario,2020-10-28,forecast,1261,1574,2742,801,1146,559,1492,168,2760
-Ontario,2020-10-29,forecast,1284,1669,3760,795,1163,540,1529,113,2872
-Ontario,2020-10-30,forecast,1312,1782,5210,781,1176,528,1574,106,3056
-Ontario,2020-10-31,forecast,1341,1918,7274,653,1070,407,1510,88,3216
-Ontario,2020-11-01,forecast,1374,2084,10208,658,1094,389,1547,47,3378
-Ontario,2020-11-02,forecast,1407,2289,14377,638,1094,390,1602,33,3551
-Ontario,2020-11-03,forecast,1437,2549,20299,483,960,378,1646,28,3755
-Ontario,2020-11-04,forecast,1468,2881,28712,408,901,339,1667,25,3992
-Ontario,2020-11-05,forecast,1502,3314,40664,386,892,313,1698,21,4209
+Nova Scotia,2020-10-06,estimate,0,0,0,0,0,0,1,0,1
+Nova Scotia,2020-10-07,estimate,0,1,0,0,0,0,1,0,1
+Nova Scotia,2020-10-08,estimate,1,1,0,0,0,0,1,0,1
+Nova Scotia,2020-10-09,estimate,1,1,0,0,0,0,1,0,1
+Nova Scotia,2020-10-10,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-10-11,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-10-12,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-10-13,estimate,1,1,0,0,1,0,1,0,1
+Nova Scotia,2020-10-14,estimate based on partial data,1,1,1,0,1,0,1,0,1
+Nova Scotia,2020-10-15,estimate based on partial data,1,1,1,0,1,0,1,0,2
+Nova Scotia,2020-10-16,estimate based on partial data,1,1,1,0,1,0,1,0,2
+Nova Scotia,2020-10-17,estimate based on partial data,1,1,1,0,1,0,1,0,2
+Nova Scotia,2020-10-18,estimate based on partial data,1,1,1,0,1,0,1,0,2
+Nova Scotia,2020-10-19,estimate based on partial data,1,1,1,0,1,0,1,0,3
+Nova Scotia,2020-10-20,estimate based on partial data,1,1,2,0,1,0,1,0,3
+Nova Scotia,2020-10-21,estimate based on partial data,1,2,3,0,1,0,1,0,4
+Nova Scotia,2020-10-22,estimate based on partial data,1,2,4,0,0,0,1,0,4
+Nova Scotia,2020-10-23,estimate based on partial data,1,3,7,0,0,0,1,0,5
+Nova Scotia,2020-10-24,estimate based on partial data,1,3,12,0,0,0,1,0,7
+Nova Scotia,2020-10-25,forecast,1,5,24,0,0,0,1,0,9
+Nova Scotia,2020-10-26,forecast,1,7,50,0,0,0,1,0,11
+Nova Scotia,2020-10-27,forecast,1,12,109,0,0,0,1,0,13
+Nova Scotia,2020-10-28,forecast,1,20,246,0,0,0,1,0,16
+Nova Scotia,2020-10-29,forecast,1,37,572,0,0,0,1,0,21
+Nova Scotia,2020-10-30,forecast,1,71,1353,0,0,0,1,0,26
+Nova Scotia,2020-10-31,forecast,1,146,3230,0,0,0,1,0,34
+Nova Scotia,2020-11-01,forecast,1,312,7766,0,0,0,1,0,44
+Nova Scotia,2020-11-02,forecast,1,687,18763,0,0,0,1,0,56
+Nova Scotia,2020-11-03,forecast,1,1555,45483,0,0,0,1,0,72
+Nova Scotia,2020-11-04,forecast,1,3583,110543,0,0,0,1,0,92
+Nova Scotia,2020-11-05,forecast,1,8375,269233,0,0,0,2,0,118
+Nova Scotia,2020-11-06,forecast,2,19787,656921,0,0,0,2,0,154
+Nova Scotia,2020-11-07,forecast,2,47136,1605506,0,0,0,2,0,200
+Ontario,2020-08-15,estimate,117,118,17,110,119,104,127,92,148
+Ontario,2020-08-16,estimate,120,121,18,113,121,106,131,92,151
+Ontario,2020-08-17,estimate,123,124,19,115,125,108,133,94,155
+Ontario,2020-08-18,estimate,126,127,20,117,127,110,136,98,162
+Ontario,2020-08-19,estimate,129,130,20,122,132,111,139,98,164
+Ontario,2020-08-20,estimate,133,134,21,126,137,116,145,100,170
+Ontario,2020-08-21,estimate,136,138,22,130,141,118,149,102,175
+Ontario,2020-08-22,estimate,141,142,23,134,146,123,154,106,182
+Ontario,2020-08-23,estimate,145,147,24,135,147,126,159,109,188
+Ontario,2020-08-24,estimate,150,152,25,144,156,131,164,111,192
+Ontario,2020-08-25,estimate,156,157,26,148,160,137,171,115,199
+Ontario,2020-08-26,estimate,162,163,26,154,168,143,179,120,206
+Ontario,2020-08-27,estimate,168,169,27,160,174,147,184,126,214
+Ontario,2020-08-28,estimate,175,176,28,167,181,152,190,129,221
+Ontario,2020-08-29,estimate,182,184,29,168,182,162,202,137,230
+Ontario,2020-08-30,estimate,191,192,29,177,192,170,211,144,240
+Ontario,2020-08-31,estimate,200,201,30,187,202,178,219,153,251
+Ontario,2020-09-01,estimate,209,210,31,200,215,184,226,160,259
+Ontario,2020-09-02,estimate,219,221,31,210,226,198,240,173,274
+Ontario,2020-09-03,estimate,231,232,32,220,236,206,248,182,284
+Ontario,2020-09-04,estimate,242,244,33,232,248,220,264,189,295
+Ontario,2020-09-05,estimate,255,256,34,247,264,234,278,198,307
+Ontario,2020-09-06,estimate,268,270,35,257,275,243,288,212,325
+Ontario,2020-09-07,estimate,282,284,37,266,284,256,303,224,340
+Ontario,2020-09-08,estimate,296,299,39,279,297,269,318,238,360
+Ontario,2020-09-09,estimate,311,315,41,297,315,283,334,247,377
+Ontario,2020-09-10,estimate,327,332,44,314,333,294,346,257,397
+Ontario,2020-09-11,estimate,343,349,47,325,345,310,365,280,428
+Ontario,2020-09-12,estimate,360,367,50,338,359,323,382,291,447
+Ontario,2020-09-13,estimate,377,386,53,356,377,335,398,305,471
+Ontario,2020-09-14,estimate,396,405,57,366,389,351,418,314,488
+Ontario,2020-09-15,estimate,415,425,61,378,404,361,433,324,511
+Ontario,2020-09-16,estimate,435,444,64,394,422,381,457,342,540
+Ontario,2020-09-17,estimate,454,464,68,414,443,399,481,359,568
+Ontario,2020-09-18,estimate,474,485,72,435,466,418,505,377,596
+Ontario,2020-09-19,estimate,494,505,75,455,488,439,530,386,616
+Ontario,2020-09-20,estimate,514,525,79,466,501,451,547,402,642
+Ontario,2020-09-21,estimate,534,545,82,490,527,458,557,418,669
+Ontario,2020-09-22,estimate,553,565,85,506,544,475,579,432,695
+Ontario,2020-09-23,estimate,573,584,88,541,581,495,602,445,718
+Ontario,2020-09-24,estimate,592,604,91,532,574,525,634,463,745
+Ontario,2020-09-25,estimate,611,622,93,557,599,540,651,478,765
+Ontario,2020-09-26,estimate,629,641,95,570,613,558,673,487,780
+Ontario,2020-09-27,estimate,646,659,96,599,642,575,693,501,799
+Ontario,2020-09-28,estimate,664,676,98,603,646,589,709,519,821
+Ontario,2020-09-29,estimate,681,694,99,624,669,606,727,531,837
+Ontario,2020-09-30,estimate,698,711,100,645,691,622,745,554,865
+Ontario,2020-10-01,estimate,717,727,101,669,717,640,766,562,877
+Ontario,2020-10-02,estimate,734,744,103,681,730,650,778,586,906
+Ontario,2020-10-03,estimate,750,760,105,695,744,677,809,601,925
+Ontario,2020-10-04,estimate,767,776,107,714,764,689,824,613,948
+Ontario,2020-10-05,estimate,782,793,110,759,809,699,838,614,958
+Ontario,2020-10-06,estimate,799,809,113,773,825,712,856,625,983
+Ontario,2020-10-07,estimate,814,825,118,766,820,717,865,626,1000
+Ontario,2020-10-08,estimate,831,842,123,783,841,732,888,647,1034
+Ontario,2020-10-09,estimate,847,858,130,780,841,753,918,660,1072
+Ontario,2020-10-10,estimate,863,875,139,797,863,763,938,650,1089
+Ontario,2020-10-11,estimate,882,893,149,789,861,760,947,652,1125
+Ontario,2020-10-12,estimate,900,911,161,842,919,782,983,652,1165
+Ontario,2020-10-13,estimate,915,931,175,852,933,781,1002,637,1196
+Ontario,2020-10-14,estimate based on partial data,934,950,192,867,958,807,1052,636,1246
+Ontario,2020-10-15,estimate based on partial data,952,971,211,906,1005,801,1074,615,1291
+Ontario,2020-10-16,estimate based on partial data,974,994,233,915,1024,799,1102,607,1346
+Ontario,2020-10-17,estimate based on partial data,994,1017,258,873,994,799,1136,607,1416
+Ontario,2020-10-18,estimate based on partial data,1016,1043,286,923,1058,852,1222,591,1486
+Ontario,2020-10-19,estimate based on partial data,1041,1070,318,988,1138,761,1169,560,1542
+Ontario,2020-10-20,estimate based on partial data,1068,1099,354,963,1130,854,1307,539,1619
+Ontario,2020-10-21,estimate based on partial data,1094,1131,396,1033,1219,857,1356,532,1717
+Ontario,2020-10-22,estimate based on partial data,1120,1166,446,939,1144,807,1354,497,1799
+Ontario,2020-10-23,estimate based on partial data,1148,1203,505,1069,1290,822,1418,451,1876
+Ontario,2020-10-24,estimate based on partial data,1178,1245,579,1093,1339,829,1477,425,1986
+Ontario,2020-10-25,forecast,1207,1289,666,925,1194,828,1534,385,2084
+Ontario,2020-10-26,forecast,1235,1337,775,905,1196,776,1537,311,2153
+Ontario,2020-10-27,forecast,1269,1389,918,892,1205,718,1536,285,2284
+Ontario,2020-10-28,forecast,1300,1446,1107,885,1219,699,1574,280,2444
+Ontario,2020-10-29,forecast,1333,1509,1364,884,1243,705,1637,311,2643
+Ontario,2020-10-30,forecast,1365,1578,1718,742,1126,711,1702,244,2763
+Ontario,2020-10-31,forecast,1398,1656,2211,732,1137,687,1747,195,2902
+Ontario,2020-11-01,forecast,1433,1745,2900,746,1172,642,1763,110,2996
+Ontario,2020-11-02,forecast,1469,1845,3865,725,1171,474,1659,78,3134
+Ontario,2020-11-03,forecast,1502,1962,5216,725,1195,395,1644,59,3305
+Ontario,2020-11-04,forecast,1539,2098,7109,700,1195,395,1704,79,3527
+Ontario,2020-11-05,forecast,1580,2261,9762,683,1199,382,1748,34,3688
+Ontario,2020-11-06,forecast,1622,2458,13481,673,1211,359,1790,30,3887
+Ontario,2020-11-07,forecast,1660,2700,18692,358,914,358,1854,37,4116
 Prince Edward Island,2020-07-26,estimate,0,0,0,0,0,0,0,0,0
 Prince Edward Island,2020-07-27,estimate,0,0,0,0,0,0,0,0,0
 Prince Edward Island,2020-07-28,estimate,0,0,0,0,0,0,0,0,0
@@ -664,173 +662,173 @@ Prince Edward Island,2020-10-15,forecast,1,9758678,420563836,0,0,0,1,0,7
 Prince Edward Island,2020-10-16,forecast,1,36510125,1607032749,0,0,0,1,0,8
 Prince Edward Island,2020-10-17,forecast,1,136984991,6153437055,0,0,0,1,0,9
 Prince Edward Island,2020-10-18,forecast,1,515287119,23601281057,0,0,0,1,0,10
-Quebec,2020-08-13,estimate,75,75,8,73,77,70,81,62,90
-Quebec,2020-08-14,estimate,75,75,8,73,77,71,82,61,89
-Quebec,2020-08-15,estimate,77,77,9,74,78,71,82,63,91
-Quebec,2020-08-16,estimate,78,78,9,77,81,73,84,64,93
-Quebec,2020-08-17,estimate,81,81,9,79,83,76,88,67,96
-Quebec,2020-08-18,estimate,85,85,9,84,88,80,92,70,99
-Quebec,2020-08-19,estimate,89,89,9,86,90,85,96,74,104
-Quebec,2020-08-20,estimate,94,94,9,92,96,88,99,79,108
-Quebec,2020-08-21,estimate,100,100,9,99,103,94,106,85,115
-Quebec,2020-08-22,estimate,107,107,10,105,109,101,113,93,124
-Quebec,2020-08-23,estimate,115,115,10,112,117,108,122,99,132
-Quebec,2020-08-24,estimate,123,124,11,118,124,115,129,107,143
-Quebec,2020-08-25,estimate,133,134,12,128,134,125,140,113,152
-Quebec,2020-08-26,estimate,144,144,13,139,145,134,151,121,164
-Quebec,2020-08-27,estimate,155,156,14,149,156,143,162,131,178
-Quebec,2020-08-28,estimate,166,167,16,160,168,156,176,141,191
-Quebec,2020-08-29,estimate,178,179,17,172,180,167,189,152,207
-Quebec,2020-08-30,estimate,191,192,18,182,191,177,201,161,219
-Quebec,2020-08-31,estimate,203,205,19,199,208,189,213,173,234
-Quebec,2020-09-01,estimate,216,218,20,211,220,203,228,186,250
-Quebec,2020-09-02,estimate,230,231,20,219,229,217,244,199,265
-Quebec,2020-09-03,estimate,244,245,21,233,244,228,256,209,279
-Quebec,2020-09-04,estimate,258,259,22,250,261,241,270,225,297
-Quebec,2020-09-05,estimate,274,275,23,267,278,260,291,237,313
-Quebec,2020-09-06,estimate,290,292,25,284,295,275,308,252,332
-Quebec,2020-09-07,estimate,309,310,27,304,317,290,325,267,352
-Quebec,2020-09-08,estimate,329,330,29,318,332,306,345,283,375
-Quebec,2020-09-09,estimate,351,352,31,341,356,322,364,302,402
-Quebec,2020-09-10,estimate,376,377,34,370,386,349,393,321,428
-Quebec,2020-09-11,estimate,404,405,36,387,405,376,424,349,465
-Quebec,2020-09-12,estimate,435,436,39,424,443,407,458,376,501
-Quebec,2020-09-13,estimate,470,471,42,464,485,442,497,404,538
-Quebec,2020-09-14,estimate,509,511,44,504,526,475,533,436,582
-Quebec,2020-09-15,estimate,552,554,47,530,553,515,577,476,631
-Quebec,2020-09-16,estimate,600,602,51,591,616,568,634,524,690
-Quebec,2020-09-17,estimate,652,654,54,636,662,613,685,563,742
-Quebec,2020-09-18,estimate,707,709,59,683,712,666,743,606,799
-Quebec,2020-09-19,estimate,764,767,64,733,764,717,802,661,868
-Quebec,2020-09-20,estimate,823,827,69,787,822,761,852,708,933
-Quebec,2020-09-21,estimate,882,886,76,868,905,817,916,763,1008
-Quebec,2020-09-22,estimate,941,945,82,923,962,880,988,810,1076
-Quebec,2020-09-23,estimate,994,1000,87,955,997,922,1037,858,1144
-Quebec,2020-09-24,estimate,1045,1050,92,1005,1049,973,1094,888,1189
-Quebec,2020-09-25,estimate,1088,1094,96,1045,1092,1022,1147,922,1235
-Quebec,2020-09-26,estimate,1123,1130,98,1087,1135,1049,1179,964,1279
-Quebec,2020-09-27,estimate,1150,1157,100,1120,1167,1082,1213,990,1312
-Quebec,2020-09-28,estimate,1169,1176,101,1133,1180,1076,1208,997,1320
-Quebec,2020-09-29,estimate,1179,1185,101,1151,1199,1089,1220,1025,1351
-Quebec,2020-09-30,estimate,1181,1187,101,1158,1205,1093,1224,1025,1347
-Quebec,2020-10-01,estimate,1177,1182,101,1128,1177,1108,1238,1017,1341
-Quebec,2020-10-02,estimate,1166,1171,102,1121,1170,1092,1225,1006,1331
-Quebec,2020-10-03,estimate,1152,1156,102,1124,1173,1085,1218,980,1309
-Quebec,2020-10-04,estimate,1135,1139,102,1107,1156,1078,1214,972,1304
-Quebec,2020-10-05,estimate,1117,1119,103,1086,1137,1055,1191,953,1288
-Quebec,2020-10-06,estimate,1097,1099,102,1078,1128,1030,1167,927,1262
-Quebec,2020-10-07,estimate,1078,1080,102,1073,1124,1002,1136,923,1253
-Quebec,2020-10-08,estimate,1059,1062,102,1049,1099,992,1125,900,1230
-Quebec,2020-10-09,estimate,1041,1045,102,1025,1074,968,1099,894,1226
-Quebec,2020-10-10,estimate,1026,1031,103,1008,1057,947,1079,876,1212
-Quebec,2020-10-11,estimate,1013,1019,106,985,1035,928,1065,846,1191
-Quebec,2020-10-12,estimate based on partial data,1002,1011,112,957,1010,925,1073,825,1189
-Quebec,2020-10-13,estimate based on partial data,995,1004,123,945,1003,899,1060,817,1219
-Quebec,2020-10-14,estimate based on partial data,990,1001,140,946,1012,868,1048,780,1233
-Quebec,2020-10-15,estimate based on partial data,985,1001,162,905,982,861,1068,756,1284
-Quebec,2020-10-16,estimate based on partial data,983,1004,193,899,986,836,1082,720,1344
-Quebec,2020-10-17,estimate based on partial data,985,1011,231,911,1016,793,1081,657,1397
-Quebec,2020-10-18,estimate based on partial data,984,1021,278,862,984,768,1103,596,1467
-Quebec,2020-10-19,estimate based on partial data,984,1035,338,844,986,737,1124,521,1552
-Quebec,2020-10-20,estimate based on partial data,982,1054,412,781,941,703,1145,423,1622
-Quebec,2020-10-21,estimate based on partial data,981,1080,506,730,907,647,1144,399,1793
-Quebec,2020-10-22,estimate based on partial data,975,1113,632,694,890,577,1135,325,1925
-Quebec,2020-10-23,forecast,971,1149,769,666,878,539,1139,234,2012
-Quebec,2020-10-24,forecast,967,1193,944,587,814,461,1104,205,2163
-Quebec,2020-10-25,forecast,963,1245,1172,540,780,400,1082,157,2318
-Quebec,2020-10-26,forecast,958,1306,1475,502,752,335,1048,112,2477
-Quebec,2020-10-27,forecast,951,1380,1886,468,727,303,1042,86,2658
-Quebec,2020-10-28,forecast,948,1467,2450,441,707,279,1045,79,2869
-Quebec,2020-10-29,forecast,944,1572,3236,423,696,260,1048,67,3108
-Quebec,2020-10-30,forecast,939,1700,4341,353,631,241,1050,53,3346
-Quebec,2020-10-31,forecast,936,1855,5907,334,617,218,1046,45,3596
-Quebec,2020-11-01,forecast,934,2045,8137,267,552,203,1049,35,3875
-Quebec,2020-11-02,forecast,930,2281,11327,250,534,185,1050,6,4131
-Quebec,2020-11-03,forecast,924,2577,15906,234,519,100,977,5,4442
-Quebec,2020-11-04,forecast,916,2952,22495,217,501,88,976,10,4799
-Quebec,2020-11-05,forecast,914,3431,31999,199,483,63,956,3,5139
-Saskatchewan,2020-08-13,estimate,4,4,1,4,4,3,5,2,7
-Saskatchewan,2020-08-14,estimate,4,4,1,3,4,3,4,2,6
+Quebec,2020-08-15,estimate,79,79,8,78,82,73,84,67,93
+Quebec,2020-08-16,estimate,81,81,8,78,82,75,86,68,95
+Quebec,2020-08-17,estimate,83,83,8,78,82,77,88,69,97
+Quebec,2020-08-18,estimate,86,87,9,82,86,80,91,74,102
+Quebec,2020-08-19,estimate,91,91,9,86,90,84,95,76,104
+Quebec,2020-08-20,estimate,95,96,9,94,98,89,101,81,111
+Quebec,2020-08-21,estimate,101,102,9,99,103,95,107,86,117
+Quebec,2020-08-22,estimate,108,108,10,104,109,102,115,93,125
+Quebec,2020-08-23,estimate,115,116,10,110,115,108,121,99,132
+Quebec,2020-08-24,estimate,123,124,11,119,124,116,130,107,142
+Quebec,2020-08-25,estimate,132,133,12,127,133,123,139,113,151
+Quebec,2020-08-26,estimate,142,143,13,135,142,133,149,124,165
+Quebec,2020-08-27,estimate,153,154,14,145,152,144,161,134,178
+Quebec,2020-08-28,estimate,164,165,15,156,163,153,171,142,189
+Quebec,2020-08-29,estimate,175,177,16,168,176,164,184,153,204
+Quebec,2020-08-30,estimate,188,189,17,179,187,174,196,162,216
+Quebec,2020-08-31,estimate,200,202,18,194,202,186,210,173,231
+Quebec,2020-09-01,estimate,214,215,19,208,217,200,224,187,247
+Quebec,2020-09-02,estimate,228,229,20,219,228,216,241,197,261
+Quebec,2020-09-03,estimate,242,243,21,240,250,225,252,209,276
+Quebec,2020-09-04,estimate,258,259,22,249,259,240,269,225,296
+Quebec,2020-09-05,estimate,274,275,23,261,272,258,288,238,312
+Quebec,2020-09-06,estimate,291,292,24,280,292,275,306,251,329
+Quebec,2020-09-07,estimate,310,311,26,303,315,292,326,269,354
+Quebec,2020-09-08,estimate,331,332,28,325,338,311,347,290,380
+Quebec,2020-09-09,estimate,354,355,30,351,365,333,372,307,404
+Quebec,2020-09-10,estimate,379,380,32,362,378,356,398,330,435
+Quebec,2020-09-11,estimate,407,409,35,389,407,383,429,348,460
+Quebec,2020-09-12,estimate,438,440,37,424,443,408,458,379,500
+Quebec,2020-09-13,estimate,473,475,40,462,482,440,494,411,540
+Quebec,2020-09-14,estimate,512,514,43,498,519,478,535,443,582
+Quebec,2020-09-15,estimate,554,556,46,535,557,518,580,480,628
+Quebec,2020-09-16,estimate,600,602,49,587,611,560,626,519,679
+Quebec,2020-09-17,estimate,650,653,53,633,659,613,684,564,736
+Quebec,2020-09-18,estimate,703,706,58,669,698,662,738,613,800
+Quebec,2020-09-19,estimate,759,762,62,722,753,717,800,658,862
+Quebec,2020-09-20,estimate,816,820,68,801,834,758,848,705,926
+Quebec,2020-09-21,estimate,875,879,74,862,898,820,918,743,984
+Quebec,2020-09-22,estimate,933,936,79,915,954,881,986,800,1057
+Quebec,2020-09-23,estimate,986,991,85,961,1001,926,1037,847,1124
+Quebec,2020-09-24,estimate,1037,1042,90,1001,1044,979,1097,888,1181
+Quebec,2020-09-25,estimate,1083,1087,94,1065,1109,1012,1132,940,1247
+Quebec,2020-09-26,estimate,1120,1125,97,1090,1136,1050,1173,970,1288
+Quebec,2020-09-27,estimate,1150,1155,100,1119,1166,1078,1205,1005,1330
+Quebec,2020-09-28,estimate,1171,1177,101,1141,1187,1104,1235,1013,1342
+Quebec,2020-09-29,estimate,1185,1191,102,1153,1200,1111,1243,1013,1346
+Quebec,2020-09-30,estimate,1191,1197,102,1150,1197,1121,1253,1024,1356
+Quebec,2020-10-01,estimate,1190,1195,103,1147,1195,1121,1253,1027,1363
+Quebec,2020-10-02,estimate,1182,1187,103,1157,1204,1108,1242,1011,1346
+Quebec,2020-10-03,estimate,1168,1174,103,1126,1176,1083,1217,1000,1335
+Quebec,2020-10-04,estimate,1153,1158,104,1117,1168,1078,1214,987,1322
+Quebec,2020-10-05,estimate,1134,1138,104,1109,1159,1058,1193,969,1306
+Quebec,2020-10-06,estimate,1113,1117,103,1071,1121,1035,1170,944,1281
+Quebec,2020-10-07,estimate,1092,1096,102,1056,1105,1024,1157,924,1255
+Quebec,2020-10-08,estimate,1070,1075,101,1011,1060,1007,1137,916,1245
+Quebec,2020-10-09,estimate,1049,1055,99,1007,1053,980,1107,889,1211
+Quebec,2020-10-10,estimate,1029,1036,98,990,1035,960,1087,875,1194
+Quebec,2020-10-11,estimate,1012,1019,97,970,1015,947,1074,863,1176
+Quebec,2020-10-12,estimate,997,1003,98,958,1005,925,1055,839,1153
+Quebec,2020-10-13,estimate,984,990,102,953,1001,905,1038,826,1152
+Quebec,2020-10-14,estimate based on partial data,973,978,108,940,992,897,1037,795,1141
+Quebec,2020-10-15,estimate based on partial data,961,969,119,911,968,878,1033,769,1148
+Quebec,2020-10-16,estimate based on partial data,953,961,134,913,974,854,1029,738,1168
+Quebec,2020-10-17,estimate based on partial data,945,955,155,913,982,828,1027,698,1195
+Quebec,2020-10-18,estimate based on partial data,937,951,181,905,986,802,1028,642,1228
+Quebec,2020-10-19,estimate based on partial data,929,949,213,846,941,776,1038,586,1263
+Quebec,2020-10-20,estimate based on partial data,922,949,251,836,947,716,1022,539,1320
+Quebec,2020-10-21,estimate based on partial data,912,951,296,798,925,652,1000,475,1372
+Quebec,2020-10-22,estimate based on partial data,902,955,350,717,862,626,1015,413,1439
+Quebec,2020-10-23,estimate based on partial data,892,963,414,679,842,606,1038,367,1515
+Quebec,2020-10-24,estimate based on partial data,878,975,493,686,865,542,1016,321,1626
+Quebec,2020-10-25,forecast,869,990,574,657,847,490,999,281,1711
+Quebec,2020-10-26,forecast,860,1009,670,509,705,459,1000,255,1804
+Quebec,2020-10-27,forecast,849,1032,784,482,686,404,976,199,1872
+Quebec,2020-10-28,forecast,838,1060,922,449,662,347,945,144,1944
+Quebec,2020-10-29,forecast,829,1092,1091,428,649,320,941,127,2052
+Quebec,2020-10-30,forecast,820,1131,1300,410,638,291,932,66,2120
+Quebec,2020-10-31,forecast,810,1176,1561,375,608,268,926,77,2268
+Quebec,2020-11-01,forecast,803,1229,1890,346,582,200,872,67,2386
+Quebec,2020-11-02,forecast,793,1291,2308,255,493,159,841,39,2494
+Quebec,2020-11-03,forecast,782,1364,2842,236,473,146,833,34,2625
+Quebec,2020-11-04,forecast,772,1449,3528,239,474,131,824,18,2762
+Quebec,2020-11-05,forecast,762,1550,4412,220,455,116,816,14,2902
+Quebec,2020-11-06,forecast,753,1668,5556,190,425,88,791,6,3047
+Quebec,2020-11-07,forecast,743,1808,7040,177,410,72,777,5,3232
 Saskatchewan,2020-08-15,estimate,3,3,1,3,3,2,4,1,5
-Saskatchewan,2020-08-16,estimate,3,3,1,3,3,2,3,1,5
+Saskatchewan,2020-08-16,estimate,3,3,1,2,3,2,3,1,5
 Saskatchewan,2020-08-17,estimate,3,3,1,2,3,2,3,1,4
-Saskatchewan,2020-08-18,estimate,2,3,1,2,3,2,3,1,4
-Saskatchewan,2020-08-19,estimate,2,3,1,2,2,2,3,1,4
-Saskatchewan,2020-08-20,estimate,2,2,1,2,2,1,3,1,4
-Saskatchewan,2020-08-21,estimate,2,2,1,2,2,2,3,1,4
-Saskatchewan,2020-08-22,estimate,2,2,1,2,3,2,3,1,4
-Saskatchewan,2020-08-23,estimate,2,3,1,2,3,2,3,1,4
-Saskatchewan,2020-08-24,estimate,3,3,1,2,3,2,3,1,4
-Saskatchewan,2020-08-25,estimate,3,3,1,2,3,2,3,2,4
-Saskatchewan,2020-08-26,estimate,3,3,1,3,3,2,4,2,5
-Saskatchewan,2020-08-27,estimate,4,4,1,3,4,3,4,2,5
-Saskatchewan,2020-08-28,estimate,4,4,1,4,4,3,5,2,6
+Saskatchewan,2020-08-18,estimate,2,2,1,2,2,2,3,1,4
+Saskatchewan,2020-08-19,estimate,2,2,1,2,2,2,3,1,4
+Saskatchewan,2020-08-20,estimate,2,2,1,2,2,1,2,1,4
+Saskatchewan,2020-08-21,estimate,2,2,1,2,2,1,2,1,4
+Saskatchewan,2020-08-22,estimate,2,2,1,2,2,2,3,1,4
+Saskatchewan,2020-08-23,estimate,2,2,1,2,2,2,3,1,4
+Saskatchewan,2020-08-24,estimate,2,3,1,2,2,2,3,1,4
+Saskatchewan,2020-08-25,estimate,3,3,1,2,3,2,3,1,4
+Saskatchewan,2020-08-26,estimate,3,3,1,3,3,2,3,2,4
+Saskatchewan,2020-08-27,estimate,3,4,1,3,3,3,4,2,5
+Saskatchewan,2020-08-28,estimate,4,4,1,3,4,3,4,2,6
 Saskatchewan,2020-08-29,estimate,5,5,1,4,5,4,5,3,7
-Saskatchewan,2020-08-30,estimate,6,6,1,5,6,4,6,4,8
-Saskatchewan,2020-08-31,estimate,6,7,2,6,7,5,7,4,9
-Saskatchewan,2020-09-01,estimate,8,8,2,7,7,6,8,5,11
-Saskatchewan,2020-09-02,estimate,9,9,2,7,8,7,9,6,12
-Saskatchewan,2020-09-03,estimate,10,10,2,9,10,8,11,6,13
-Saskatchewan,2020-09-04,estimate,11,11,3,11,12,9,12,7,15
-Saskatchewan,2020-09-05,estimate,12,12,3,11,12,10,13,8,17
-Saskatchewan,2020-09-06,estimate,13,13,3,12,14,11,14,9,18
-Saskatchewan,2020-09-07,estimate,14,14,3,12,14,11,15,9,19
-Saskatchewan,2020-09-08,estimate,14,14,3,13,14,12,16,9,19
-Saskatchewan,2020-09-09,estimate,14,15,3,13,14,12,16,10,20
-Saskatchewan,2020-09-10,estimate,14,15,3,13,14,12,16,10,19
-Saskatchewan,2020-09-11,estimate,14,14,3,13,14,12,16,10,19
-Saskatchewan,2020-09-12,estimate,14,14,3,13,14,12,15,9,18
-Saskatchewan,2020-09-13,estimate,13,13,3,13,14,11,15,9,18
-Saskatchewan,2020-09-14,estimate,13,13,3,12,13,10,14,9,17
-Saskatchewan,2020-09-15,estimate,12,12,2,12,13,10,13,8,16
-Saskatchewan,2020-09-16,estimate,12,12,2,11,12,10,13,8,16
-Saskatchewan,2020-09-17,estimate,11,12,2,10,11,9,12,8,15
-Saskatchewan,2020-09-18,estimate,11,11,2,10,11,9,12,8,15
-Saskatchewan,2020-09-19,estimate,11,11,2,10,11,9,12,7,15
-Saskatchewan,2020-09-20,estimate,11,11,2,10,11,9,12,7,15
-Saskatchewan,2020-09-21,estimate,11,11,2,10,11,9,12,7,15
-Saskatchewan,2020-09-22,estimate,11,11,2,10,11,9,12,7,15
-Saskatchewan,2020-09-23,estimate,11,11,3,11,12,9,12,7,15
-Saskatchewan,2020-09-24,estimate,12,12,3,11,12,10,13,8,16
-Saskatchewan,2020-09-25,estimate,12,13,3,11,13,10,13,8,17
-Saskatchewan,2020-09-26,estimate,13,13,3,12,13,10,14,9,18
-Saskatchewan,2020-09-27,estimate,14,14,3,12,14,11,15,9,19
-Saskatchewan,2020-09-28,estimate,15,15,3,14,16,12,16,10,21
-Saskatchewan,2020-09-29,estimate,16,17,3,15,17,14,18,11,22
-Saskatchewan,2020-09-30,estimate,18,18,4,16,18,15,19,13,25
-Saskatchewan,2020-10-01,estimate,20,20,4,18,19,16,21,14,26
-Saskatchewan,2020-10-02,estimate,22,22,4,20,22,18,24,15,29
-Saskatchewan,2020-10-03,estimate,24,25,5,23,25,21,27,17,32
-Saskatchewan,2020-10-04,estimate,27,27,5,25,27,23,29,19,36
-Saskatchewan,2020-10-05,estimate,30,30,6,28,30,25,32,21,40
-Saskatchewan,2020-10-06,estimate,33,34,7,31,34,28,36,23,44
-Saskatchewan,2020-10-07,estimate,36,37,7,33,36,30,39,25,49
-Saskatchewan,2020-10-08,estimate,40,41,8,36,39,33,43,28,55
-Saskatchewan,2020-10-09,estimate,44,45,9,40,44,36,48,29,59
-Saskatchewan,2020-10-10,estimate,48,49,10,41,46,39,51,33,64
-Saskatchewan,2020-10-11,estimate,52,53,11,44,50,43,57,35,69
-Saskatchewan,2020-10-12,estimate based on partial data,56,58,12,50,56,46,61,38,77
-Saskatchewan,2020-10-13,estimate based on partial data,61,63,14,52,59,50,68,40,83
-Saskatchewan,2020-10-14,estimate based on partial data,65,68,17,58,65,52,73,40,91
-Saskatchewan,2020-10-15,estimate based on partial data,71,74,21,60,70,55,80,42,106
-Saskatchewan,2020-10-16,estimate based on partial data,77,81,28,65,77,56,88,37,120
-Saskatchewan,2020-10-17,estimate based on partial data,83,90,37,69,84,55,96,34,143
-Saskatchewan,2020-10-18,estimate based on partial data,90,100,52,63,82,52,106,29,175
-Saskatchewan,2020-10-19,estimate based on partial data,98,115,74,63,88,45,112,22,215
-Saskatchewan,2020-10-20,estimate based on partial data,106,135,110,47,77,37,120,14,269
-Saskatchewan,2020-10-21,estimate based on partial data,115,164,176,45,79,30,129,8,346
-Saskatchewan,2020-10-22,estimate based on partial data,125,211,324,35,74,20,135,2,453
-Saskatchewan,2020-10-23,forecast,135,276,641,22,65,14,143,1,589
-Saskatchewan,2020-10-24,forecast,145,379,1429,17,62,5,147,1,755
-Saskatchewan,2020-10-25,forecast,156,552,3472,16,63,4,159,1,974
-Saskatchewan,2020-10-26,forecast,168,864,8879,11,58,2,170,1,1256
-Saskatchewan,2020-10-27,forecast,183,1473,23304,7,55,0,183,0,1653
-Saskatchewan,2020-10-28,forecast,197,2749,61968,2,50,0,197,0,2149
-Saskatchewan,2020-10-29,forecast,213,5606,165882,0,47,0,213,0,2798
-Saskatchewan,2020-10-30,forecast,230,12336,445631,0,46,0,230,0,3668
-Saskatchewan,2020-10-31,forecast,248,28811,1199568,0,46,0,249,0,4815
-Saskatchewan,2020-11-01,forecast,269,70278,3232961,0,44,0,269,0,6362
-Saskatchewan,2020-11-02,forecast,291,176696,8719931,0,43,0,291,0,8365
-Saskatchewan,2020-11-03,forecast,315,453528,23531758,0,42,0,315,0,10869
-Saskatchewan,2020-11-04,forecast,337,1180516,63527085,0,40,0,338,0,14215
-Saskatchewan,2020-11-05,forecast,363,3102468,171547643,0,40,0,364,0,18699
+Saskatchewan,2020-08-30,estimate,5,6,1,5,5,4,6,3,8
+Saskatchewan,2020-08-31,estimate,6,7,1,6,6,5,7,4,9
+Saskatchewan,2020-09-01,estimate,8,8,2,7,8,6,8,5,10
+Saskatchewan,2020-09-02,estimate,9,9,2,8,9,7,10,6,12
+Saskatchewan,2020-09-03,estimate,10,10,2,9,10,8,11,7,14
+Saskatchewan,2020-09-04,estimate,11,11,3,10,12,9,12,8,16
+Saskatchewan,2020-09-05,estimate,12,13,3,12,13,10,14,8,17
+Saskatchewan,2020-09-06,estimate,13,14,3,13,14,11,15,9,18
+Saskatchewan,2020-09-07,estimate,14,14,3,13,14,12,15,9,19
+Saskatchewan,2020-09-08,estimate,14,15,3,14,15,12,16,10,19
+Saskatchewan,2020-09-09,estimate,14,15,3,14,15,12,16,10,19
+Saskatchewan,2020-09-10,estimate,14,15,3,13,15,12,16,10,19
+Saskatchewan,2020-09-11,estimate,14,14,3,13,14,12,15,9,18
+Saskatchewan,2020-09-12,estimate,13,14,3,13,14,11,15,10,18
+Saskatchewan,2020-09-13,estimate,13,13,3,12,13,11,14,9,17
+Saskatchewan,2020-09-14,estimate,12,13,2,11,12,11,14,9,17
+Saskatchewan,2020-09-15,estimate,12,12,2,11,12,10,13,8,16
+Saskatchewan,2020-09-16,estimate,11,12,2,10,11,10,13,8,15
+Saskatchewan,2020-09-17,estimate,11,11,2,10,11,9,12,8,15
+Saskatchewan,2020-09-18,estimate,11,11,2,10,11,9,12,7,14
+Saskatchewan,2020-09-19,estimate,10,11,2,9,10,9,12,7,14
+Saskatchewan,2020-09-20,estimate,10,11,2,9,10,9,12,7,14
+Saskatchewan,2020-09-21,estimate,10,11,2,9,10,9,11,7,14
+Saskatchewan,2020-09-22,estimate,10,11,2,10,11,9,12,7,14
+Saskatchewan,2020-09-23,estimate,11,11,2,10,11,9,12,7,15
+Saskatchewan,2020-09-24,estimate,11,12,2,10,11,9,13,8,15
+Saskatchewan,2020-09-25,estimate,12,12,3,11,12,10,13,8,16
+Saskatchewan,2020-09-26,estimate,13,13,3,12,13,11,14,8,17
+Saskatchewan,2020-09-27,estimate,14,14,3,13,14,12,15,9,19
+Saskatchewan,2020-09-28,estimate,15,15,3,14,15,12,16,10,20
+Saskatchewan,2020-09-29,estimate,16,17,3,15,16,14,18,11,22
+Saskatchewan,2020-09-30,estimate,18,18,4,17,18,15,20,12,24
+Saskatchewan,2020-10-01,estimate,20,20,4,18,20,17,22,14,26
+Saskatchewan,2020-10-02,estimate,22,23,4,21,23,19,24,16,29
+Saskatchewan,2020-10-03,estimate,25,25,5,23,25,21,27,18,33
+Saskatchewan,2020-10-04,estimate,27,28,5,25,27,24,30,20,36
+Saskatchewan,2020-10-05,estimate,30,31,6,27,30,26,33,22,40
+Saskatchewan,2020-10-06,estimate,34,34,7,29,32,29,36,24,44
+Saskatchewan,2020-10-07,estimate,37,38,7,35,38,31,40,26,49
+Saskatchewan,2020-10-08,estimate,40,41,8,40,43,34,44,28,54
+Saskatchewan,2020-10-09,estimate,44,45,9,43,47,36,47,31,58
+Saskatchewan,2020-10-10,estimate,47,48,9,42,46,40,51,32,62
+Saskatchewan,2020-10-11,estimate,50,51,10,45,49,43,55,36,67
+Saskatchewan,2020-10-12,estimate,53,54,11,48,53,45,58,38,71
+Saskatchewan,2020-10-13,estimate,56,57,11,51,55,48,61,40,75
+Saskatchewan,2020-10-14,estimate based on partial data,58,60,12,52,57,51,65,41,79
+Saskatchewan,2020-10-15,estimate based on partial data,60,62,13,55,61,50,67,41,83
+Saskatchewan,2020-10-16,estimate based on partial data,63,65,16,58,65,49,68,39,89
+Saskatchewan,2020-10-17,estimate based on partial data,65,67,19,62,70,48,70,36,97
+Saskatchewan,2020-10-18,estimate based on partial data,66,70,25,58,68,46,75,32,107
+Saskatchewan,2020-10-19,estimate based on partial data,68,73,32,55,67,45,80,27,120
+Saskatchewan,2020-10-20,estimate based on partial data,69,78,42,48,63,39,83,17,133
+Saskatchewan,2020-10-21,estimate based on partial data,70,84,56,40,58,35,86,11,153
+Saskatchewan,2020-10-22,estimate based on partial data,71,92,79,35,55,22,81,6,181
+Saskatchewan,2020-10-23,estimate based on partial data,72,105,116,24,46,11,76,2,214
+Saskatchewan,2020-10-24,estimate based on partial data,71,125,185,16,39,6,74,1,267
+Saskatchewan,2020-10-25,forecast,73,152,292,13,35,5,75,1,323
+Saskatchewan,2020-10-26,forecast,74,191,480,8,30,2,75,1,391
+Saskatchewan,2020-10-27,forecast,74,249,815,3,24,0,74,0,468
+Saskatchewan,2020-10-28,forecast,76,337,1426,2,22,0,76,0,561
+Saskatchewan,2020-10-29,forecast,77,476,2559,1,19,0,77,0,676
+Saskatchewan,2020-10-30,forecast,77,698,4694,1,18,0,77,0,822
+Saskatchewan,2020-10-31,forecast,79,1065,8776,0,16,0,79,0,1009
+Saskatchewan,2020-11-01,forecast,80,1684,16683,0,14,0,80,0,1219
+Saskatchewan,2020-11-02,forecast,81,2752,32171,0,13,0,81,0,1469
+Saskatchewan,2020-11-03,forecast,81,4630,62800,0,12,0,81,0,1809
+Saskatchewan,2020-11-04,forecast,82,7993,123868,0,11,0,82,0,2184
+Saskatchewan,2020-11-05,forecast,83,14104,246447,0,10,0,83,0,2625
+Saskatchewan,2020-11-06,forecast,84,25362,493861,0,9,0,84,0,3177
+Saskatchewan,2020-11-07,forecast,85,46358,995514,0,8,0,85,0,3900

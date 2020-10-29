@@ -28,7 +28,7 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
               # are there any?
               if (length(existing_file_ids) > 0) {
                 # unpackage for later use
-                existing_file_id <- existing_file_ids[[1]]
+                existing_file_id <- as.numeric(existing_file_ids[[1]])
                 existing_file_checksum <- existing_file_ids[[2]]
                 # if there's a checksum check it!
                 if (length(existing_file_checksum) > 0) {

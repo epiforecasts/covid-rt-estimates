@@ -20,25 +20,29 @@ source(here::here("R", "utils.R"))
 update_regional <- function(location, excludes, includes, force, max_execution_time, refresh) {
 
   futile.logger::flog.info("Processing dataset for %s", location$name)
-
+  futile.logger::flog.trace("loading ancillary data")
   # Update delays -----------------------------------------------------------
-  if (is.na(location$generation_time)) {
+  if (!is.list(location$generation_time)) {
+    futile.logger::flog.trace("loading generation_time.rds")
     location$generation_time <- readRDS(here::here("data", "generation_time.rds"))
   }
-  if (is.na(location$incubation_period)) {
+  if (!is.list(location$incubation_period)) {
+    futile.logger::flog.trace("loading incubation_period.rds")
     location$incubation_period <- readRDS(here::here("data", "incubation_period.rds"))
   }
-  if (is.na(location$reporting_delay)) {
+  if (!is.list(location$reporting_delay)) {
     if (location$name %in% c("deaths", "regional-deaths")) {
+      futile.logger::flog.trace("loading onset_to_death_delay.rds")
       location$reporting_delay <- readRDS(here::here("data", "onset_to_death_delay.rds"))
     }
     else {
+      futile.logger::flog.trace("loading onset_to_admission_delay.rds")
       location$reporting_delay <- readRDS(here::here("data", "onset_to_admission_delay.rds"))
     }
   }
 
   # Get cases  ---------------------------------------------------------------
-
+  futile.logger::flog.trace("loading cases")
   if ("Region" %in% class(location)) {
     if (is.na(location$covid_regional_data_identifier)) {
       location$covid_regional_data_identifier <- location$name
@@ -143,7 +147,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       strptime(
         strsplit(
           system(
-            paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f"; done'),
+            paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f" 2>/dev/null; done'),
             intern = TRUE),
           '\\+\\d\\d\\d\\d',
           perl = TRUE
