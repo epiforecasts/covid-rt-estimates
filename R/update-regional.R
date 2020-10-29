@@ -131,8 +131,10 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       return_output = FALSE
     )
     out <- list()
+    futile.logger::flog.trace("reading runtimes.csv")
     timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
     out <- as.list(timings$time)
+    futile.logger::flog.trace("naming output")
     names(out) <- timings$region
   } else {
     out <- list()
@@ -141,6 +143,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     futile.logger::flog.warning("no cases left for region so not processing!")
   }
   # add some stats
+  futile.logger::flog.debug("add stats to output")
   out$max_data_date <- max(cases$date, na.rm = TRUE)
   out$oldest_results <- tryCatch(
     min(
