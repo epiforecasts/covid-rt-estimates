@@ -23,16 +23,20 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   futile.logger::flog.trace("loading ancillary data")
   # Update delays -----------------------------------------------------------
   if (!is.list(location$generation_time)) {
+    futile.logger::flog.trace("loading generation_time.rds")
     location$generation_time <- readRDS(here::here("data", "generation_time.rds"))
   }
   if (!is.list(location$incubation_period)) {
+    futile.logger::flog.trace("loading incubation_period.rds")
     location$incubation_period <- readRDS(here::here("data", "incubation_period.rds"))
   }
   if (!is.list(location$reporting_delay)) {
     if (location$name %in% c("deaths", "regional-deaths")) {
+      futile.logger::flog.trace("loading onset_to_death_delay.rds")
       location$reporting_delay <- readRDS(here::here("data", "onset_to_death_delay.rds"))
     }
     else {
+      futile.logger::flog.trace("loading onset_to_admission_delay.rds")
       location$reporting_delay <- readRDS(here::here("data", "onset_to_admission_delay.rds"))
     }
   }
