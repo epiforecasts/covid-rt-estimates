@@ -20,7 +20,7 @@ source(here::here("R", "utils.R"))
 update_regional <- function(location, excludes, includes, force, max_execution_time, refresh) {
 
   futile.logger::flog.info("Processing dataset for %s", location$name)
-
+  futile.logger::flog.trace("loading ancillary data")
   # Update delays -----------------------------------------------------------
   if (is.na(location$generation_time)) {
     location$generation_time <- readRDS(here::here("data", "generation_time.rds"))
@@ -38,7 +38,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   }
 
   # Get cases  ---------------------------------------------------------------
-
+  futile.logger::flog.trace("loading cases")
   if ("Region" %in% class(location)) {
     if (is.na(location$covid_regional_data_identifier)) {
       location$covid_regional_data_identifier <- location$name
