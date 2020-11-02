@@ -94,7 +94,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     includes,
     function(dsl) {
       if (dsl$dataset == location$name) {
-        dsl$sublocation
+        ifelse(is.null(dsl$sublocation), "*", dsl$sublocation)
       }
     }
   )
