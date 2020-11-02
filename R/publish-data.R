@@ -53,7 +53,8 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
             if (length(existing_file_id) > 0) {
               # allow silent failures - it rejects non-changing updates.
               futile.logger::flog.trace("replacing file %s", file_full_path)
-              try(futile.logger::ftry(update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
+              # try(futile.logger::ftry(dataverse::update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
+              try(futile.logger::ftry(curl_update_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
             }else {
               futile.logger::flog.trace("uploading file %s", file_full_path)
               try(futile.logger::ftry(dataverse::add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
@@ -449,4 +450,15 @@ get_country_list <- function(country) {
     typeClass = "controlledVocabulary",
     value = country
   ))
+}
+
+curl_update_file <- function(file, dataset, id, description = NULL) {
+  bod2 <- list(forceReplace = TRUE)
+  if (!is.null(description)) {
+    bod2$description <- description
+  }
+  jsondata <- as.character(jsonlite::toJSON(bod2, auto_unbox = TRUE))
+  curlcomm <- paste0('curl -H "X-Dataverse-key: ', DATAVERSE_KEY, '" -X POST -F \'file=@', file, '\' -F \'jsonData=', jsondata, '\' ', DATAVERSE_SERVER, '/api/files/', id, '/replace')
+  futile.logger::flog.trace(curlcomm)
+  futile.logger::flog.trace(system(curlcomm, intern = TRUE))
 }
