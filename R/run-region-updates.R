@@ -42,15 +42,19 @@ if (!exists("publish_data", mode = "function")) source(here::here("R", "publish-
 #' @param args List of arguments returned by the cli interface (
 #'
 run_regional_updates <- function(datasets, derivatives, args) {
+  futile.logger::flog.trace("run_regional_updates")
   # validate and load configuration
   if (nchar(args$exclude) > 0 && nchar(args$include) > 0) {
     stop("not possible to both include and exclude regions / subregions")
   }
+  futile.logger::flog.trace("process includes")
   excludes <- parse_cludes(args$exclude)
   includes <- parse_cludes(args$include)
+  futile.logger::flog.trace("filter datasets")
   datasets <- rru_filter_datasets(datasets, excludes, includes)
 
   # now really do something
+  futile.logger::flog.trace("process locations")
   outcome <- rru_process_locations(datasets, args, excludes, includes)
 
   if ("united-kingdom-admissions" %in% includes) { # DEPRECATED
@@ -59,9 +63,11 @@ run_regional_updates <- function(datasets, derivatives, args) {
   }
 
   # analysis of outcome
+  futile.logger::flog.trace("analise results")
   rru_log_outcome(outcome)
 
   # process derivatives
+  futile.logger::flog.trace("process derivative datasets")
   rru_process_derivatives(derivatives, datasets)
 }
 
@@ -276,11 +282,11 @@ rru_cli_interface <- function(args_string = NA) {
     optparse::make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\""),
     optparse::make_option(c("-u", "--unstable"), action = "store_true", default = FALSE, help = "Include unstable locations"),
     optparse::make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
-    optparse::make_option(c("-t", "--timeout"), type = "integer", default = Inf, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
+    optparse::make_option(c("-t", "--timeout"), type = "integer", default = 999999, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
     optparse::make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed."),
     optparse::make_option(c("-s", "--suppress"), action = "store_true", default = FALSE, help = "Suppress publication of results")
   )
-  if (is.na(args_string)) {
+  if (length(args_string) == 0) {
     args <- optparse::parse_args(optparse::OptionParser(option_list = option_list))
   }else {
     args <- optparse::parse_args(optparse::OptionParser(option_list = option_list), args = args_string)

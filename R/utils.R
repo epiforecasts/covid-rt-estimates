@@ -35,9 +35,9 @@ setup_future <- function(jobs, min_cores_per_worker = 4) {
 
   futile.logger::flog.info("Using %s workers with %s cores per worker",
                            workers, cores_per_worker)
-  
 
-  future::plan(list(future::tweak(future::multiprocess, workers = workers, gc = TRUE, earlySignal = TRUE), 
+
+  future::plan(list(future::tweak(future::multiprocess, workers = workers, gc = TRUE, earlySignal = TRUE),
                     future::tweak(future::multiprocess, workers = cores_per_worker)))
   futile.logger::flog.debug("Checking the cores available - %s cores and %s jobs. Using %s workers",
                             future::availableCores(),
@@ -89,17 +89,17 @@ regional_epinow_with_settings <- function(reported_cases, generation_time, delay
                                           region_scale = "Region", region_summary = TRUE) {
   futile.logger::flog.trace("calling regional_epinow")
   out <- regional_epinow(reported_cases = reported_cases,
-                  generation_time = generation_time,
-                  delays = delays, non_zero_points = 14,
-                  horizon = 14, burn_in = 14,
-                  samples = 2000, warmup = 500,
-                  fixed_future_rt = TRUE,
-                  cores = no_cores, chains = ifelse(no_cores <= 2, 2, no_cores),
-                  target_folder = target_dir,
-                  summary_dir = summary_dir,
-                  region_scale = region_scale,
-                  all_regions = region_summary,
-                  return_estimates = FALSE, verbose = FALSE, max_execution_time = max_execution_time, return_timings = TRUE)
+                         generation_time = generation_time,
+                         delays = delays, non_zero_points = 14,
+                         horizon = 14, burn_in = 14,
+                         samples = 2000, warmup = 500,
+                         fixed_future_rt = TRUE,
+                         cores = no_cores, chains = ifelse(no_cores <= 2, 2, no_cores),
+                         target_folder = target_dir,
+                         summary_dir = summary_dir,
+                         region_scale = region_scale,
+                         all_regions = region_summary,
+                         return_estimates = FALSE, verbose = FALSE, max_execution_time = max_execution_time, return_timings = TRUE)
   futile.logger::flog.debug("resetting future plan to sequential")
   future::plan("sequential")
   return(invisible(out))
@@ -180,6 +180,6 @@ add_uk <- function(cases, min_uk) {
 
   cases <- data.table::rbindlist(list(cases, uk_cases), fill = TRUE, use.names = TRUE)
   return(cases)
-  }
+}
 
 
