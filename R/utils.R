@@ -116,7 +116,9 @@ trim <- function(x) {
 #' @param cludes string of in/excludes
 #' @return data.frame of regions / subregions
 parse_cludes <- function(cludes) {
-  clude_list <- vector(mode = "list", length = length(cludes))
+  nrows <- length(regmatches(cludes, gregexpr("/", cludes))[[1]])
+  if (nrows == 0) return(list())
+  clude_list <- vector(mode = "list", length = nrows)
   locs <- strsplit(cludes, ",")
   for (loc in locs) {
     parts <- strsplit(loc, "/")
