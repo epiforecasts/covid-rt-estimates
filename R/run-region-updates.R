@@ -89,8 +89,8 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
           {
           outcome[[location$name]] <-
             update_regional(location,
-                            excludes[region == location$name],
-                            includes[region == location$name],
+                            excludes,
+                            includes,
                             args$force,
                             args$timeout,
                             refresh = args$refresh)
