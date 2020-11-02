@@ -124,8 +124,12 @@ parse_cludes <- function(cludes) {
   i <- 1
   for (region in parts) {
     sub <- trim(region[2])
-    clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])),
-                                           sublocation = ifelse(sub == "*", NULL, sub))
+    if (sub == "*") {
+      clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])))
+    }else {
+      clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])),
+                                             sublocation = sub)
+    }
     i <- i + 1
   }
   return(clude_list)
