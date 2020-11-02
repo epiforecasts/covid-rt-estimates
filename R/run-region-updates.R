@@ -11,8 +11,8 @@
 #'
 #================  INCLUDES ===================#
 # Packages
-library(optparse, quietly = TRUE) # bring this in ready for setting up a proper CLI
-library(lubridate, quietly = TRUE) # pull in lubridate for the date handling in the summary
+suppressPackageStartupMessages(library(optparse, quietly = TRUE)) # bring this in ready for setting up a proper CLI
+suppressPackageStartupMessages(library(lubridate, quietly = TRUE)) # pull in lubridate for the date handling in the summary
 
 # Pull in the definition of the datasets
 if (!exists("DATASETS", mode = "function")) source(here::here("R/lists", "dataset-list.R"))
@@ -268,22 +268,22 @@ rru_process_derivatives <- function(derivatives, datasets) {
 rru_cli_interface <- function(args_string = NA) {
   # set up the arguments
   option_list <- list(
-    make_option(c("-v", "--verbose"), action = "store_true", default = FALSE, help = "Print verbose output "),
-    make_option(c("-w", "--werbose"), action = "store_true", default = FALSE, help = "Print v.verbose output "),
-    make_option(c("-q", "--quiet"), action = "store_true", default = FALSE, help = "Print less output "),
-    make_option(c("--log"), type = "character", help = "Specify log file name"),
-    make_option(c("-e", "--exclude"), default = "", type = "character", help = "List of locations to exclude. See include for more details."),
-    make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\""),
-    make_option(c("-u", "--unstable"), action = "store_true", default = FALSE, help = "Include unstable locations"),
-    make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
-    make_option(c("-t", "--timeout"), type = "integer", default = Inf, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
-    make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed."),
-    make_option(c("-s", "--suppress"), action = "store_true", default = FALSE, help = "Suppress publication of results")
+    optparse::make_option(c("-v", "--verbose"), action = "store_true", default = FALSE, help = "Print verbose output "),
+    optparse::make_option(c("-w", "--werbose"), action = "store_true", default = FALSE, help = "Print v.verbose output "),
+    optparse::make_option(c("-q", "--quiet"), action = "store_true", default = FALSE, help = "Print less output "),
+    optparse::make_option(c("--log"), type = "character", help = "Specify log file name"),
+    optparse::make_option(c("-e", "--exclude"), default = "", type = "character", help = "List of locations to exclude. See include for more details."),
+    optparse::make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\""),
+    optparse::make_option(c("-u", "--unstable"), action = "store_true", default = FALSE, help = "Include unstable locations"),
+    optparse::make_option(c("-f", "--force"), action = "store_true", default = FALSE, help = "Run even if data for a region has not been updated since the last run"),
+    optparse::make_option(c("-t", "--timeout"), type = "integer", default = Inf, help = "Specify the maximum execution time in seconds that each sublocation will be allowed to run for. Note this is not the overall run time."),
+    optparse::make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed."),
+    optparse::make_option(c("-s", "--suppress"), action = "store_true", default = FALSE, help = "Suppress publication of results")
   )
   if (is.na(args_string)) {
-    args <- parse_args(OptionParser(option_list = option_list))
+    args <- optparse::parse_args(optparse::OptionParser(option_list = option_list))
   }else {
-    args <- parse_args(OptionParser(option_list = option_list), args = args_string)
+    args <- optparse::parse_args(optparse::OptionParser(option_list = option_list), args = args_string)
   }
   return(args)
 }
@@ -339,15 +339,15 @@ loadStatsFile <- function(filename) {
     stats <- data.frame(
       dataset = character(),
       subregion = character(),
-      start_date = POSIXct(),
+      start_date = lubridate::POSIXct(),
       runtime = double(),
-      start_date_1 = POSIXct(),
+      start_date_1 = lubridate::POSIXct(),
       runtime_1 = double(),
-      start_date_2 = POSIXct(),
+      start_date_2 = lubridate::POSIXct(),
       runtime_2 = double(),
-      start_date_3 = POSIXct(),
+      start_date_3 = lubridate::POSIXct(),
       runtime_3 = double(),
-      start_date_4 = POSIXct(),
+      start_date_4 = lubridate::POSIXct(),
       runtime_4 = double()
     )
   }
@@ -383,15 +383,15 @@ loadStatusFile <- function(filename) {
     futile.logger::flog.trace("no existing status file, creating a blank table")
     status <- data.frame(
       dataset = character(),
-      last_attempt = POSIXct(),
+      last_attempt = lubridate::POSIXct(),
       last_attempt_status = character(),
-      latest_results = POSIXct(),
+      latest_results = lubridate::POSIXct(),
       latest_results_status = character(),
       latest_results_data_up_to = Date(),
       latest_results_successful_regions = integer(),
       latest_results_timing_out_regions = integer(),
       latest_results_failing_regions = integer(),
-      oldest_region_results = POSIXct()
+      oldest_region_results = lubridate::POSIXct()
     )
   }
   return(status)
