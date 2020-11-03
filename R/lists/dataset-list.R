@@ -172,5 +172,5 @@ DATASETS <- list(
                       publication_metadata = PublicationMetadata$new(
                         title = "Test",
                         description = "Null",
-                        breakdown = "region"))
+                        breakdown = "continent"))
 )
