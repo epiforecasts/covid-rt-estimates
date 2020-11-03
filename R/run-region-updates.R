@@ -257,7 +257,7 @@ rru_process_derivatives <- function(derivatives, datasets) {
     if (
       (derivative$incremental & any(names(datasets) %in_ci% lapply(derivative$locations, function(dsl) { dsl$dataset })))
         |
-        (!derivative$incremental & tail(derivative$locations, n = 1)$dataset %in_ci% names(datasets))
+        (!derivative$incremental & tail(derivative$locations, n = 1)[[1]]$dataset %in_ci% names(datasets))
     ) {
       futile.logger::flog.info("calculating derivative for %s", derivative$name)
       collate_derivative(derivative)
