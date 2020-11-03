@@ -23,7 +23,7 @@ if (!exists("update_regional", mode = "function")) source(here::here("R", "updat
 if (!exists("collate_derivative", mode = "function")) source(here::here("R", "collate-derivative.R"))
 
 # load utils
-if (!exists("setup_log", mode = "function")) source(here::here("R", "utils.R"))
+if (!exists("setup_log_from_args", mode = "function")) source(here::here("R", "utils.R"))
 # load config (optional)
 if (!exists("DATAVERSE_KEY", mode = "function")
   & file.exists(here::here("data/runtime", "config.R"))) source(here::here("data/runtime", "config.R"))

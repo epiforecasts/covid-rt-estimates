@@ -1,11 +1,3 @@
-#' Set up logging to file
-setup_log <- function(threshold = "INFO", file = "info.log") {
-  futile.logger::flog.threshold(threshold)
-
-  futile.logger::flog.appender(futile.logger::appender.tee(file))
-
-  return(invisible(NULL))
-}
 #' Set up logging from optparse arguments
 setup_log_from_args <- function(args) {
   file <- ifelse(exists("log", args), args$log, "info.log")

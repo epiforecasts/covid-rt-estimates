@@ -6,7 +6,7 @@ suppressPackageStartupMessages(require(future, quietly = TRUE))
 suppressPackageStartupMessages(require(lubridate, quietly = TRUE))
 
 # Load utils --------------------------------------------------------------
-if (!exists("setup_log", mode = "function")) source(here::here("R", "utils.R"))
+if (!exists("setup_future", mode = "function")) source(here::here("R", "utils.R"))
 
 
 #' Update Regional
