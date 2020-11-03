@@ -165,5 +165,12 @@ DATASETS <- list(
                           title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for Russia Based on Test Results",
                           description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the Russian Federation. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
                           breakdown = "state",
-                          country = "Russian Federation"))
+                          country = "Russian Federation")),
+  "test" = Region$new(name = "test",
+                      stable = FALSE,
+                      case_modifier = function(cases) { return(generate_clean_cases(days_since_peak = 20, peak_cases = 500)) },
+                      publication_metadata = PublicationMetadata$new(
+                        title = "Test",
+                        description = "Null",
+                        breakdown = "region"))
 )
