@@ -167,6 +167,7 @@ DATASETS <- list(
                           breakdown = "state",
                           country = "Russian Federation")),
   "test" = Region$new(name = "test",
+                      covid_region_data_identifier = "belgium",
                       stable = FALSE,
                       case_modifier = function(cases) { return(generate_clean_cases(days_since_peak = 20, peak_cases = 500)) },
                       publication_metadata = PublicationMetadata$new(
