@@ -75,7 +75,6 @@ clean_regional_data <- function(cases, truncation = 3) {
   return(cases)
 }
 
-
 #' trim
 #' remove leading and trailing whitespace
 #' @param x string
