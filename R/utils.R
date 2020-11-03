@@ -1,3 +1,7 @@
+#' Requires
+if (!exists("DatasetLocation", mode = "function")) source(here::here("R/entities/dataset-location.R"))
+
+
 #' Set up logging from optparse arguments
 setup_log_from_args <- function(args) {
   file <- ifelse(exists("log", args), args$log, "info.log")
@@ -145,18 +149,51 @@ collate_estimates <- function(name, target = "rt") {
 
 }
 
-#' Adds a UK case count to a dataset usng national level data
-add_uk <- function(cases, min_uk) {
-  national_cases <- cases[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
-  uk_cases <- data.table::copy(national_cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)), by = c("date")]
-  uk_cases <- uk_cases[, region_level_1 := "United Kingdom"]
+#'generate clean cases
+#' produce a neat data set for a single region
+#' @param number_of_days - how far back in time should we go
+#' @param regions List Character region names
+#' @param peak_cases What's the last value for number of new cases
+#' @param days_since_peak Which day is the peak (0=today, 20 = 20 days ago)
+generate_clean_cases <- function(
+  number_of_days = 120,
+  regions = list("my_test_region"),
+  peak_cases = 5,
+  days_since_peak = 0
+) {
+  today <- Sys.Date()
+  df <- data.frame(
+    "date" = lubridate::Date(),
+    "region" = character(),
+    "cases_new" = numeric(),
+    "cases_total" = numeric(),
+    "deaths_new" = numeric(),
+    "deaths_total" = numeric()
+  )
+  # peak_day = days since peak
+  pre_peak <- number_of_days - days_since_peak
+  larger_side <- max(pre_peak, days_since_peak)
+  day_size <- pi / larger_side
 
-  if (!missing(min_uk)) {
-    uk_cases <- uk_cases[date >= as.Date(min_uk)]
+  for (region in regions) {
+    for (n in 1:pre_peak) {
+      val <- (cos(0 - n * day_size) + 1) / 2 * peak_cases
+      df <- rbind(df, data.frame(date = today - days_since_peak - n,
+                                 region = region,
+                                 cases_new = round(val),
+                                 cases_total = 500,
+                                 deaths_new = 1,
+                                 deaths_total = 100))
+    }
+    for (n in 0:days_since_peak) {
+      val <- (cos(n * day_size) + 1) / 2 * peak_cases
+      df <- rbind(df, data.frame(date = today - days_since_peak + n,
+                                 region = region,
+                                 cases_new = round(val),
+                                 cases_total = 500,
+                                 deaths_new = 1,
+                                 deaths_total = 100))
+    }
   }
-
-  cases <- data.table::rbindlist(list(cases, uk_cases), fill = TRUE, use.names = TRUE)
-  return(cases)
+  return(data.table::as.data.table(df))
 }
-
-

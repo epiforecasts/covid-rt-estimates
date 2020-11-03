@@ -393,7 +393,7 @@ loadStatusFile <- function(filename) {
       last_attempt_status = character(),
       latest_results = lubridate::POSIXct(),
       latest_results_status = character(),
-      latest_results_data_up_to = Date(),
+      latest_results_data_up_to = lubridate::Date(),
       latest_results_successful_regions = integer(),
       latest_results_timing_out_regions = integer(),
       latest_results_failing_regions = integer(),
