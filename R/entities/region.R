@@ -19,7 +19,7 @@ Region <- R6::R6Class("Region",
                                                           #' @param stable Boolean
                                                           #' @param data_args list for passing to getregionaldata as arguments
                                                           #' @param truncation Integer Number of days to trim off the end of the newest end of the data
-                                                          #' @param covid_region_data_identifier String specifying identification of data on covid region data for when the dataset name != method
+                                                          #' @param covid_regional_data_identifier String specifying identification of data on covid region data for when the dataset name != method
                                                           #' @param cases_subregion_source String specifying column to use as location breakdown identifier in dataset
                                                           #' @param folder_name String, Optional, to specify location of output folder.
                                                           #' Used to relocate multiple related datasets into a common folder e.g.
