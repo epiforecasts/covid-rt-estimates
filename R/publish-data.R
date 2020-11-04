@@ -203,7 +203,7 @@ get_geographic_metadata_list <- function(dataset) {
     warning = function(w) { NA },
     error = function(e) { NA }
   )
-  if (is.data.frame(summary_table)) {
+  if (is.list(summary_table)) {
     if (dataset$publication_metadata$breakdown_unit %in% c("state", "region")) {
       for (region in unique(summary_table[[dataset$region_scale]])) {
         location_list <-
