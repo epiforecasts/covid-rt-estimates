@@ -170,7 +170,7 @@ DATASETS <- list(
                       covid_regional_data_identifier = "belgium",
                       cases_subregion_source = "region",
                       stable = FALSE,
-                      case_modifier = function(cases) { return(generate_clean_cases(days_since_peak = 20, peak_cases = 500)) },
+                      case_modifier = function(cases) { return(generate_clean_cases(days_since_peak = 40)) },
                       publication_metadata = PublicationMetadata$new(
                         title = "Test",
                         description = "Null",

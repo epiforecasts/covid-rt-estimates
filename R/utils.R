@@ -156,9 +156,9 @@ collate_estimates <- function(name, target = "rt") {
 #' @param peak_cases What's the last value for number of new cases
 #' @param days_since_peak Which day is the peak (0=today, 20 = 20 days ago)
 generate_clean_cases <- function(
-  number_of_days = 120,
+  number_of_days = 90,
   regions = list("my_test_region"),
-  peak_cases = 5,
+  peak_cases = 2000,
   days_since_peak = 0
 ) {
   today <- Sys.Date()
