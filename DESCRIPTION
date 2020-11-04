@@ -36,8 +36,9 @@ Imports:
   R6 (>= 2.4),
   rlang (>= 0.4.7)
 Suggests:
-  dataverse (>= 0.2.0),
-  desc
+    dataverse (>= 0.2.0),
+    desc,
+    testthat
 Remotes:
   epiforecasts/EpiNow2@v1.2.1,
   epiforecasts/covidregionaldata@v0.7.0

@@ -1,5 +1,5 @@
 #' Publish a dataset to a dataverse
-#' @param dataset AbstractDataset to publish
+#' @param dataset AbstractDataset to publish or CollatedDerivative (they both have the required interface)
 #' @param files Boolean indicator as to if files should be uploaded. Helpful for test purposes
 #' @param production_date Date specifying when the data is for. Gets used as the production date in the metadata, defaults to today.
 publish_data <- function(dataset, files = TRUE, production_date = NA) {
@@ -17,7 +17,8 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
         # loop  through the summary dir adding all the files
         if (files) {
           existing_files <- full_dataset$files
-          for (file in dir(dataset$summary_dir)) {
+          # exclude directories
+          for (file in dir(dataset$summary_dir, pattern = ".*\\..*")) {
             file_full_path <- paste0(dataset$summary_dir, "/", file)
             existing_file_id <- list()
             if (length(existing_files) > 0) {
@@ -56,7 +57,7 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
         dataset_id <- ds$data$id
         # loop  through the summary dir adding all the files
         if (files) {
-          for (file in dir(dataset$summary_dir)) {
+          for (file in dir(dataset$summary_dir, pattern = ".*\\..*")) {
             futile.logger::flog.trace("submitting file %s", paste0(dataset$summary_dir, "/", file))
             try(futile.logger::ftry(add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)), silent = TRUE)
           }
@@ -91,7 +92,7 @@ check_for_existing_id <- function(dataset_name) {
     if (!is.list(full_dataset)) {
       next
     }
-    # for some reason the metadata keywords are inside the citation block... go figure
+    # for some reason the metadata keywords are inside the citation bcollate_derivative(COLLATED_DERIVATIVES[[1]])lock... go figure
     # loop over them looking for the keyword value and then check if it's the name of the dataset.
     for (metadata in full_dataset$metadataBlocks$citation$fields$value) {
       if (is.data.frame(metadata) &&
@@ -174,7 +175,6 @@ get_fields_list <- function(dataset, desc_file, production_date = NA) {
 get_geographic_metadata_list <- function(dataset) {
   meta <- list()
   locations <- list()
-  summary_table <- read.csv(paste(dataset$summary_dir, "summary_table.csv", sep = "/"))
   if ("Region" %in% class(dataset)) {
     locations <- append(locations,
                         list(
@@ -184,49 +184,56 @@ get_geographic_metadata_list <- function(dataset) {
                         )
     )
   }
-  if (dataset$publication_metadata$breakdown_unit %in% c("state", "region")) {
-    for (region in unique(summary_table[[dataset$region_scale]])) {
-      location_list <-
-        list(
-          country = get_country_list(dataset$publication_metadata$country)
+  summary_table <- tryCatch(
+    read.csv(paste(dataset$summary_dir, "summary_table.csv", sep = "/")),
+    warning = function(w) { NA },
+    error = function(e) { NA }
+  )
+  if (is.list(summary_table)) {
+    if (dataset$publication_metadata$breakdown_unit %in% c("state", "region")) {
+      for (region in unique(summary_table[[dataset$region_scale]])) {
+        location_list <-
+          list(
+            country = get_country_list(dataset$publication_metadata$country)
+          )
+        type <- ifelse(dataset$publication_metadata$breakdown_unit == "state", "state", "otherGeographicCoverage")
+        location_list[[type]] <-
+          list(
+            typeName = type,
+            multiple = FALSE,
+            typeClass = "primitive",
+            value = region
+          )
+        locations <- append(locations,
+                            list(location_list)
         )
-      type <- ifelse(dataset$publication_metadata$breakdown_unit == "state", "state", "otherGeographicCoverage")
-      location_list[[type]] <-
-        list(
-          typeName = type,
-          multiple = FALSE,
-          typeClass = "primitive",
-          value = region
-        )
-      locations <- append(locations,
-                          list(location_list)
-      )
-    }
-  }else if (dataset$publication_metadata$breakdown_unit == "continent") {
-    for (region in unique(summary_table[[dataset$region_scale]])) {
-      locations <- append(locations,
-                          list(
-                            list(
-                              otherGeographicCoverage = list(
-                                typeName = "otherGeographicCoverage",
-                                multiple = FALSE,
-                                typeClass = "primitive",
-                                value = region
-                              )
-                            )
-                          )
-      )
-    }
-  }else if (dataset$publication_metadata$breakdown_unit == "country") {
-    for (country in unique(summary_table$Country)) {
-      if (country %in% DATAVERSE_COUNTRIES) {
+      }
+    }else if (dataset$publication_metadata$breakdown_unit == "continent") {
+      for (region in unique(summary_table[[dataset$region_scale]])) {
         locations <- append(locations,
                             list(
                               list(
-                                country = get_country_list(country)
+                                otherGeographicCoverage = list(
+                                  typeName = "otherGeographicCoverage",
+                                  multiple = FALSE,
+                                  typeClass = "primitive",
+                                  value = region
+                                )
                               )
                             )
         )
+      }
+    }else if (dataset$publication_metadata$breakdown_unit == "country") {
+      for (country in unique(summary_table$Country)) {
+        if (country %in% DATAVERSE_COUNTRIES) {
+          locations <- append(locations,
+                              list(
+                                list(
+                                  country = get_country_list(country)
+                                )
+                              )
+          )
+        }
       }
     }
   }

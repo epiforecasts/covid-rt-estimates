@@ -116,13 +116,23 @@ trim <- function(x) {
 #' @param cludes string of in/excludes
 #' @return data.frame of regions / subregions
 parse_cludes <- function(cludes) {
-  clude_list <- data.table(region = character(), subregion = character())
+  nrows <- length(regmatches(cludes, gregexpr("/", cludes))[[1]])
+  if (nrows == 0) return(list())
+  clude_list <- vector(mode = "list", length = nrows)
   locs <- strsplit(cludes, ",")
   for (loc in locs) {
     parts <- strsplit(loc, "/")
   }
+  i <- 1
   for (region in parts) {
-    clude_list <- rbind(clude_list, data.frame(region = tolower(trim(region[1])), subregion = trim(region[2])))
+    sub <- trim(region[2])
+    if (sub == "*") {
+      clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])))
+    }else {
+      clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])),
+                                             sublocation = sub)
+    }
+    i <- i + 1
   }
   return(clude_list)
 }
@@ -132,31 +142,32 @@ parse_cludes <- function(cludes) {
 #' @param y string
 #' @return boolean
 `%in_ci%` <- function(x, y) {
-  tolower(x) == tolower(y)
+  tolower(x) %in% tolower(y)
 }
 
-#' Collate estimates from different estimates in same sub-regional folder 
+#' Collate estimates from different estimates in same sub-regional folder
+#' DEPRECATED
 
-collate_estimates <- function(name, target = "rt"){
-  
+collate_estimates <- function(name, target = "rt") {
+
   # Get locations of summary csv
   sources <- as.list(paste0(list.files(here::here("subnational", name), full.names = TRUE),
                             "/summary/", target, ".csv"))
   names(sources) <- list.files(here::here("subnational", name))
-  
+
   # Read and bind
   sources <- sources[!grepl("collated", names(sources))]
   df <- lapply(sources, data.table::fread)
   df <- data.table::rbindlist(df, idcol = "source")
   df <- df[type %in% "estimate"][, type := NULL]
-  
+
   # Check a collated file exists
-  if(!dir.exists(here::here("subnational", name, "collated", target))){
+  if (!dir.exists(here::here("subnational", name, "collated", target))) {
     dir.create(here::here("subnational", name, "collated", target), recursive = TRUE)
   }
 
   # Save back to main folder
-  data.table::fwrite(df, here::here("subnational", name, "collated", target, paste0('summary_',Sys.Date(), ".csv")))
+  data.table::fwrite(df, here::here("subnational", name, "collated", target, paste0('summary_', Sys.Date(), ".csv")))
   data.table::fwrite(df, here::here("subnational", name, "collated", target, 'summary_latest.csv'))
 
   return(invisible(NULL))
@@ -164,14 +175,14 @@ collate_estimates <- function(name, target = "rt"){
 }
 
 #' Adds a UK case count to a dataset usng national level data
-add_uk <- function(cases, min_uk){
+add_uk <- function(cases, min_uk) {
   national_cases <- cases[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
   uk_cases <- data.table::copy(national_cases)[, .(cases_new = sum(cases_new, na.rm = TRUE)), by = c("date")]
   uk_cases <- uk_cases[, region_level_1 := "United Kingdom"]
 
   if (!missing(min_uk)) {
     uk_cases <- uk_cases[date >= as.Date(min_uk)]
-    }
+  }
 
   cases <- data.table::rbindlist(list(cases, uk_cases), fill = TRUE, use.names = TRUE)
   return(cases)

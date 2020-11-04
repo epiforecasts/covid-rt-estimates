@@ -6,8 +6,7 @@ require(future, quietly = TRUE)
 require(lubridate, quietly = TRUE)
 
 # Load utils --------------------------------------------------------------
-
-source(here::here("R", "utils.R"))
+if (!exists("setup_log", mode = "function")) source(here::here("R", "utils.R"))
 
 
 #' Update Regional
@@ -54,7 +53,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                                                              location$data_args))
     cases <- data.table::setDT(cases)
   }else if ("SuperRegion" %in% class(location)) {
-    futile.logger::flog.info("Getting national data", location$name)
+    futile.logger::flog.info("Getting national data for %s", location$name)
     cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier))
   }
 
@@ -76,14 +75,32 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   }
 
   # Exclude unwanted locations and clean data -------------------------------------------------
-
-  if (excludes[, .N] > 0) {
+  # filter a list of excluded sublocations within the current dataset
+  # if sublocation = * the dataset wouldn't have been included.
+  exclude_subregions <- lapply(
+    excludes,
+    function(dsl) {
+      if (dsl$dataset == location$name) {
+        dsl$sublocation
+      }
+    }
+  )
+  if (length(excludes) > 0) {
     futile.logger::flog.trace("Filtering out excluded regions")
-    cases <- cases[!(region %in_ci% excludes$subregion)]
+    cases <- cases[!(region %in_ci% exclude_subregions)]
   }
-  if (includes[, .N] > 0 && !("*" %in% includes$subregion)) {
+  # filter a list of include sublocations within the current dataset
+  include_subregions <- lapply(
+    includes,
+    function(dsl) {
+      if (dsl$dataset == location$name) {
+        ifelse(is.null(dsl$sublocation), "*", dsl$sublocation)
+      }
+    }
+  )
+  if (length(includes) > 0 && !("*" %in% include_subregions)) {
     futile.logger::flog.trace("Filtering out not included regions")
-    cases <- cases[region %in_ci% includes$subregion]
+    cases <- cases[region %in_ci% include_subregions]
   }
 
   cases <- clean_regional_data(cases, truncation = location$truncation)

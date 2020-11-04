@@ -15,17 +15,20 @@ library(optparse, quietly = TRUE) # bring this in ready for setting up a proper 
 library(lubridate, quietly = TRUE) # pull in lubridate for the date handling in the summary
 
 # Pull in the definition of the datasets
-source(here::here("R", "dataset-list.R"))
+if (!exists("DATASETS", mode = "function")) source(here::here("R/lists", "dataset-list.R"))
+if (!exists("COLLATED_DERIVATIVES", mode = "function")) source(here::here("R/lists", "collated-derivative-list.R"))
 # get the script for processing each dataset (this one starts to deal with the model data rather
 # than just configuration )
-source(here::here("R", "update-regional.R"))
+if (!exists("update_regional", mode = "function")) source(here::here("R", "update-regional.R"))
+if (!exists("collate_derivative", mode = "function")) source(here::here("R", "collate-derivative.R"))
 
 # load utils
-source(here::here("R", "utils.R"))
-# load config
-source(here::here("data/runtime", "config.R"))
+if (!exists("setup_log", mode = "function")) source(here::here("R", "utils.R"))
+# load config (optional)
+if (!exists("DATAVERSE_KEY", mode = "function")
+  & file.exists(here::here("data/runtime", "config.R"))) source(here::here("data/runtime", "config.R"))
 # load utils
-source(here::here("R", "publish.R"))
+if (!exists("publish_data", mode = "function")) source(here::here("R", "publish-data.R"))
 
 
 #=============== Main Functions ====================#
@@ -35,26 +38,31 @@ source(here::here("R", "publish.R"))
 #' dataset or modified args
 #' Sequences the high level blocks of the process
 #' @param datasets List of AbstractDataset - typically from dataset-list.R
+#' @param datasets List of CollatedDerivative  - typically from collated-derivative-list.R
 #' @param args List of arguments returned by the cli interface (
 #'
-run_regional_updates <- function(datasets, args) {
+run_regional_updates <- function(datasets, derivatives, args) {
   # validate and load configuration
   if (nchar(args$exclude) > 0 && nchar(args$include) > 0) {
     stop("not possible to both include and exclude regions / subregions")
   }
   excludes <- parse_cludes(args$exclude)
   includes <- parse_cludes(args$include)
+  datasets <- rru_filter_datasets(datasets, excludes, includes)
 
   # now really do something
   outcome <- rru_process_locations(datasets, args, excludes, includes)
 
-  if ("united-kingdom-admissions" %in% includes) {
+  if ("united-kingdom-admissions" %in% includes) { # DEPRECATED
     futile.logger::flog.debug("calling collate estimates for UK")
     collate_estimates(name = "united-kingdom", target = "rt")
   }
   saveRDS(outcome, "outcome.RDS")
   # analysis of outcome
   rru_log_outcome(outcome)
+
+  # process derivatives
+  rru_process_derivatives(derivatives, datasets)
 }
 
 #' rru_process_locations
@@ -68,14 +76,6 @@ run_regional_updates <- function(datasets, args) {
 rru_process_locations <- function(datasets, args, excludes, includes) {
   outcome <- list()
   for (location in datasets) {
-    if (excludes[region == location$name & subregion == "*", .N] > 0) {
-      futile.logger::flog.debug("skipping location %s as it is in the exclude/* list", location$name)
-      next()
-    }
-    if (includes[, .N] > 0 && includes[region == location$name, .N] == 0) {
-      futile.logger::flog.debug("skipping location %s as it is not in the include list", location$name)
-      next()
-    }
     if (location$stable || (exists("unstable", args) && args$unstable == TRUE)) {
       start <- Sys.time()
       futile.logger::ftry(
@@ -83,8 +83,8 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
           {
           outcome[[location$name]] <-
             update_regional(location,
-                            excludes[region == location$name],
-                            includes[region == location$name],
+                            excludes,
+                            includes,
                             args$force,
                             args$timeout,
                             refresh = args$refresh)
@@ -242,6 +242,22 @@ rru_log_outcome <- function(outcome) {
   write.csv(status[order(status$dataset),], file = status_filename, row.names = FALSE)
 }
 
+#' rru_process_derivatives
+#' work out what processing needs to happen for collated derivatives
+#' @param derivatives List of `CollatedDerivative`
+#' @param datasets List of `AbstractDataset`
+rru_process_derivatives <- function(derivatives, datasets) {
+  for (derivative in derivatives) {
+    if (
+      (derivative$incremental & any(names(datasets) %in_ci% lapply(derivative$locations, function(dsl) { dsl$dataset })))
+        |
+        (!derivative$incremental & tail(derivative$locations, n = 1)[[1]]$dataset %in_ci% names(datasets))
+    ) {
+      futile.logger::flog.info("calculating derivative for %s", derivative$name)
+      collate_derivative(derivative)
+    }
+  }
+}
 #============= Ancillary Functions ========================#
 
 #' rru_cli_interface
@@ -264,14 +280,34 @@ rru_cli_interface <- function(args_string = NA) {
     make_option(c("-r", "--refresh"), action = "store_true", default = FALSE, help = "Should estimates be fully refreshed."),
     make_option(c("-s", "--suppress"), action = "store_true", default = FALSE, help = "Suppress publication of results")
   )
-  if (is.na(args_string)) {
-    args <- parse_args(OptionParser(option_list = option_list))
+  if (is.character(args_string)) {
+    args <- optparse::parse_args(optparse::OptionParser(option_list = option_list), args = args_string)
   }else {
-    args <- parse_args(OptionParser(option_list = option_list), args = args_string)
+    args <- optparse::parse_args(optparse::OptionParser(option_list = option_list))
   }
   return(args)
 }
 
+#' rru_filter_datasets
+#' Slice out only the top level datasets we want to process
+#' @param datasets List of AbstractDataset
+#' @param excludes List of strings, processed from the args
+#' @param includes List of strings, processed from the args
+#' @return List of AbstractDataset or empty list
+rru_filter_datasets <- function(datasets, excludes, includes) {
+  if (length(excludes) > 0) {
+    for (exclude in excludes) {
+      # if it applies to the whole dataset knock it out
+      if (is.null(exclude$sublocation)) {
+        datasets[[exclude$dataset]] <- NULL
+      }
+    }
+  }
+  if (length(includes) > 0) { # if there are includes filter to only those needed
+    datasets <- datasets[names(datasets) %in_ci% lapply(includes, function(dsl) { dsl$dataset })]
+  }
+  return(datasets)
+}
 #' loadStatsFile
 #' @param filename String filename to load stats from (csv)
 #' @return data.frame of correctly formatted data - either loaded from the filename or blank if
@@ -374,13 +410,18 @@ loadStatusFile <- function(filename) {
 if (sys.nframe() == 0) {
   args <- rru_cli_interface()
   setup_log_from_args(args)
-  futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
+  futile.logger::ftry(
+    run_regional_updates(
+      datasets = DATASETS,
+      derivatives = COLLATED_DERIVATIVES,
+      args = args
+    )
+  )
 }
-
 #==================== Debug function ======================#
 example_non_cli_trigger <- function() {
   # list is in the format [flag[, value]?,?]+
-  args <- rru_cli_interface(c("w", "i", "canada/*", "t", "1800", "s"))
+  args <- rru_cli_interface(c("-w", "-i", "canada/*", "-t", "1800", "-s"))
   setup_log_from_args(args)
   futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
 }
