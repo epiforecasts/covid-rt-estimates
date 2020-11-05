@@ -177,6 +177,11 @@ rru_log_outcome <- function(outcome) {
       }
     }
 
+    if (Reduce("+", dataset_counts) == 0) {
+      futile.logger::flog.error("No subregions recorded in outcome for %s", dataset_name)
+      next
+    }
+
     status_row <-
       status[status$dataset == dataset_name,]
 
