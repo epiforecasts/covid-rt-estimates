@@ -88,6 +88,7 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
                             args$force,
                             args$timeout,
                             refresh = args$refresh)
+          saveRDS(outcome, paste0(location$name, "_raw_outcome.rds"))
         },
           warning = function(w) {
             futile.logger::flog.warn("%s: %s", location$name, w)
