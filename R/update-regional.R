@@ -1,12 +1,12 @@
 # Packages -----------------------------------------------------------------
-require(EpiNow2, quietly = TRUE)
-require(covidregionaldata, quietly = TRUE)
-require(data.table, quietly = TRUE)
-require(future, quietly = TRUE)
-require(lubridate, quietly = TRUE)
+suppressPackageStartupMessages(require(EpiNow2, quietly = TRUE))
+suppressPackageStartupMessages(require(covidregionaldata, quietly = TRUE))
+suppressPackageStartupMessages(require(data.table, quietly = TRUE))
+suppressPackageStartupMessages(require(future, quietly = TRUE))
+suppressPackageStartupMessages(require(lubridate, quietly = TRUE))
 
 # Load utils --------------------------------------------------------------
-if (!exists("setup_log", mode = "function")) source(here::here("R", "utils.R"))
+if (!exists("setup_future", mode = "function")) source(here::here("R", "utils.R"))
 
 
 #' Update Regional
@@ -121,9 +121,9 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     regional_epinow(reported_cases = cases,
                     generation_time = location$generation_time,
                     delays = list(location$incubation_period, location$reporting_delay),
-                    non_zero_points = 14, 
-                    horizon = 14, 
-                    burn_in = 14, 
+                    non_zero_points = 14,
+                    horizon = 14,
+                    burn_in = 14,
                     samples = 4000,
                     stan_args = list(warmup = 500, cores = no_cores,
                                      chains = ifelse(no_cores <= 4, 4, no_cores)),
@@ -139,7 +139,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     future::plan("sequential")
 
     futile.logger::flog.trace("generating summary data")
-    try(futile.logger::frty(regional_summary(
+    try(futile.logger::ftry(regional_summary(
       reported_cases = cases,
       results_dir = location$target_folder,
       summary_dir = location$summary_dir,
@@ -166,9 +166,11 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     min(
       strptime(
         strsplit(
-          system(
-            paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f" 2>/dev/null; done'),
-            intern = TRUE),
+          suppressMessages(
+            system(
+              paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f" 2>/dev/null; done'),
+              intern = TRUE)
+          ),
           '\\+\\d\\d\\d\\d',
           perl = TRUE
         )[[1]],

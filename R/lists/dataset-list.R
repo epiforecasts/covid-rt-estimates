@@ -1,7 +1,7 @@
 #' Requirements
 if (!exists("Region", mode = "function")) source(here::here("R", "entities/region.R"))
 if (!exists("SuperRegion", mode = "function")) source(here::here("R", "entities/super-region.R"))
-if (!exists("add_uk", mode = "function")) source(here::here("R", "utils.R")) #todo: move this out of utils to a data parsing fns section
+if (!exists("add_uk", mode = "function")) source(here::here("R", "case-manipulation-utils.R"))
 
 #' List of datasets (Regions / Super regions
 #' Order is defined as follows:
@@ -165,5 +165,14 @@ DATASETS <- list(
                           title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for Russia Based on Test Results",
                           description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the Russian Federation. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
                           breakdown = "state",
-                          country = "Russian Federation"))
+                          country = "Russian Federation")),
+  "test" = Region$new(name = "test",
+                      covid_regional_data_identifier = "belgium",
+                      cases_subregion_source = "region",
+                      stable = FALSE,
+                      case_modifier = function(cases) { return(generate_clean_cases(days_since_peak = 40)) },
+                      publication_metadata = PublicationMetadata$new(
+                        title = "Test",
+                        description = "Null",
+                        breakdown = "continent"))
 )

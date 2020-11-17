@@ -3,36 +3,46 @@
 #' @param files Boolean indicator as to if files should be uploaded. Helpful for test purposes
 #' @param production_date Date specifying when the data is for. Gets used as the production date in the metadata, defaults to today.
 publish_data <- function(dataset, files = TRUE, production_date = NA) {
+  futile.logger::flog.trace("publish_data function")
   if (exists("DATAVERSE_SERVER") && exists("DATAVERSE_KEY")) {
     Sys.setenv("DATAVERSE_SERVER" = DATAVERSE_SERVER)
     Sys.setenv("DATAVERSE_KEY" = DATAVERSE_KEY)
     if (require(dataverse)) {
       library(desc) # this is used to get the author data from the DESCRIPTION file
+      futile.logger::flog.debug("search for dataset")
       full_dataset <- check_for_existing_id(dataset$name)
       if (is.list(full_dataset)) {
         futile.logger::flog.debug("%s: dataverse exists so just update", dataset$name)
         dataset_id <- full_dataset$datasetId
+        futile.logger::flog.trace("generate metadata")
         updated_metadata <- generate_dataset_metadata(dataset, production_date)$datasetVersion
-        update_dataset(dataset = dataset_id, body = updated_metadata)
+        futile.logger::flog.trace("update dataset with new meta")
+        dataverse::update_dataset(dataset = dataset_id, body = updated_metadata)
         # loop  through the summary dir adding all the files
         if (files) {
+          futile.logger::flog.trace("get current list of files")
           existing_files <- full_dataset$files
           # exclude directories
+          futile.logger::flog.trace("loop over every file in the summary dir")
           for (file in dir(dataset$summary_dir, pattern = ".*\\..*")) {
             file_full_path <- paste0(dataset$summary_dir, "/", file)
+            futile.logger::flog.trace("file %s", file_full_path)
             existing_file_id <- list()
             if (length(existing_files) > 0) {
+              futile.logger::flog.trace("check if the file exists")
               # if there are files to look at filter on either filename or original filename == the file, selecting just the ID and MD5 checksum cols
               existing_file_ids <- unique(existing_files[existing_files$filename == file | existing_files$originalFileName == file, c("id", "md5")])
               # strip na's
               existing_file_ids <- existing_file_ids[!is.na(existing_file_ids)]
               # are there any?
               if (length(existing_file_ids) > 0) {
+                futile.logger::flog.trace("There's a matched id")
                 # unpackage for later use
                 existing_file_id <- as.numeric(existing_file_ids[[1]])
                 existing_file_checksum <- existing_file_ids[[2]]
                 # if there's a checksum check it!
                 if (length(existing_file_checksum) > 0) {
+                  futile.logger::flog.trace("there's a checksum on the saved file")
                   if (existing_file_checksum == tools::md5sum(file_full_path)) {
                     futile.logger::flog.debug("file is unchanged, don't re-upload %s", file_full_path)
                     next
@@ -43,29 +53,30 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
             if (length(existing_file_id) > 0) {
               # allow silent failures - it rejects non-changing updates.
               futile.logger::flog.trace("replacing file %s", file_full_path)
-              try(futile.logger::ftry(update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
+              # try(futile.logger::ftry(dataverse::update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
+              try(futile.logger::ftry(curl_update_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
             }else {
               futile.logger::flog.trace("uploading file %s", file_full_path)
-              try(futile.logger::ftry(add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
+              try(futile.logger::ftry(dataverse::add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
             }
           }
         }
       }else {
         futile.logger::flog.info("%s: dataverse does not exist so creating a new one", dataset$name)
         metadata <- generate_dataset_metadata(dataset, production_date)
-        ds <- create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
+        ds <- dataverse::create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
         dataset_id <- ds$data$id
         # loop  through the summary dir adding all the files
         if (files) {
           for (file in dir(dataset$summary_dir, pattern = ".*\\..*")) {
             futile.logger::flog.trace("submitting file %s", paste0(dataset$summary_dir, "/", file))
-            try(futile.logger::ftry(add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)), silent = TRUE)
+            try(futile.logger::ftry(dataverse::add_dataset_file(paste0(dataset$summary_dir, "/", file), dataset_id)), silent = TRUE)
           }
         }
       }
       futile.logger::flog.info("%s: publishing", dataset$name)
       Sys.sleep(30) # sleep for 30 seconds to give dataverse a chance to catch up on the files...
-      try(futile.logger::ftry(publish_dataset(dataset_id, minor = FALSE)), silent = TRUE)
+      try(futile.logger::ftry(dataverse::publish_dataset(dataset_id, minor = FALSE)), silent = TRUE)
     }else {
       futile.logger::flog.debug("Dataverse not enabled, no attempt to publish")
     }
@@ -78,13 +89,13 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
 check_for_existing_id <- function(dataset_name) {
   # load existing
   existing_datasets <-
-    dataverse_contents(DATAVERSE_VERSEID, key = DATAVERSE_KEY, server = DATAVERSE_SERVER)
+    dataverse::dataverse_contents(DATAVERSE_VERSEID, key = DATAVERSE_KEY, server = DATAVERSE_SERVER)
   existing <- NA
   for (existing_dataset in existing_datasets) {
     # deaccessed datasets are not accessible anymore - they can be skipped over but you can't test
     # for them from the data returned in the contents. Best I can find is they just 404 when you
     # load them. :(
-    full_dataset <- tryCatch(get_dataset(existing_dataset$id),
+    full_dataset <- tryCatch(dataverse::get_dataset(existing_dataset$id),
                              error = function(c) {
                                NA
                              }
@@ -133,6 +144,8 @@ generate_dataset_metadata <- function(dataset, production_date = NA) {
 }
 #===== Here begins all the helper functions to produce sub-parts of the metadata =====#
 get_fields_list <- function(dataset, desc_file, production_date = NA) {
+
+  futile.logger::flog.trace("get_fields_list_fn")
   if (is.na(production_date)) {
     production_date <- Sys.Date()
   }
@@ -173,6 +186,7 @@ get_fields_list <- function(dataset, desc_file, production_date = NA) {
 }
 
 get_geographic_metadata_list <- function(dataset) {
+  futile.logger::flog.trace("get_geographic_metadata_list")
   meta <- list()
   locations <- list()
   if ("Region" %in% class(dataset)) {
@@ -264,6 +278,7 @@ get_geographic_metadata_list <- function(dataset) {
   return(meta)
 }
 get_author_list <- function(desc_file) {
+  futile.logger::flog.trace("get_author_list function")
   # load affiliations
   source(here::here("data/runtime", "known-author-affiliations.R"))
   authors <- list()
@@ -309,6 +324,7 @@ get_author_list <- function(desc_file) {
   ))
 }
 get_keyword_list <- function(dataset) {
+  futile.logger::flog.trace("get_keyword_list_fn")
   keywords_list <- list()
   keywords <- DATAVERSE_KEYWORDS
   # add in dataset specific ones
@@ -338,6 +354,7 @@ get_keyword_list <- function(dataset) {
 }
 
 get_dataset_contact_list <- function() {
+  futile.logger::flog.trace("get_dataset_contact_list function")
   return(
     list(
       typeName = "datasetContact",
@@ -364,6 +381,7 @@ get_dataset_contact_list <- function() {
 }
 
 get_dataset_description_list <- function(publication_meta) {
+  futile.logger::flog.trace("get_dataset_description_list function")
   return(
     list(
       typeName = "dsDescription",
@@ -384,6 +402,7 @@ get_dataset_description_list <- function(publication_meta) {
 }
 
 get_software_list <- function(desc_file) {
+  futile.logger::flog.trace("get_software_list function")
   epinow2_version <- tryCatch(toString(packageVersion("EpiNow2")), error = function(c) { NA })
   return(
     list(
@@ -431,4 +450,15 @@ get_country_list <- function(country) {
     typeClass = "controlledVocabulary",
     value = country
   ))
+}
+
+curl_update_file <- function(file, dataset, id, description = NULL) {
+  bod2 <- list(forceReplace = TRUE)
+  if (!is.null(description)) {
+    bod2$description <- description
+  }
+  jsondata <- as.character(jsonlite::toJSON(bod2, auto_unbox = TRUE))
+  curlcomm <- paste0('curl -H "X-Dataverse-key: ', DATAVERSE_KEY, '" -X POST -F \'file=@', file, '\' -F \'jsonData=', jsondata, '\' ', DATAVERSE_SERVER, '/api/files/', id, '/replace')
+  futile.logger::flog.trace(curlcomm)
+  futile.logger::flog.trace(system(curlcomm, intern = TRUE))
 }

@@ -12,7 +12,7 @@ Authors@R: c(
          role = c("aut")),   
   person("Jamie", "Allen",
          email = "jamie.allen@metoffice.gov.uk",
-         role = c("aut")), 
+         role = c("aut")),
   person("Katharine", "Sherratt",
          email = "katharine.sherratt@lshtm.ac.uk",
          role = c("aut")),
@@ -25,7 +25,7 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   EpiNow2 (>= 1.2.1),
-  covidregionaldata (>= 0.7.0),
+  covidregionaldata (>= 0.8.0),
   data.table,
   dplyr (>= 1.0.0),
   futile.logger (>= 1.4),
