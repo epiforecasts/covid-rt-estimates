@@ -460,5 +460,5 @@ curl_update_file <- function(file, dataset, id, description = NULL) {
   jsondata <- as.character(jsonlite::toJSON(bod2, auto_unbox = TRUE))
   curlcomm <- paste0('curl -H "X-Dataverse-key: ', DATAVERSE_KEY, '" -X POST -F \'file=@', file, '\' -F \'jsonData=', jsondata, '\' ', DATAVERSE_SERVER, '/api/files/', id, '/replace')
   futile.logger::flog.trace(curlcomm)
-  futile.logger::flog.trace(system(curlcomm, intern = TRUE))
+  suppressMessages(futile.logger::ftry(futile.logger::flog.trace(system(curlcomm, intern = TRUE))))
 }

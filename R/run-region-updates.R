@@ -97,6 +97,7 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
           saveRDS(outcome, paste0(location$name, "_raw_outcome.rds"))
         },
           warning = function(w) {
+            futile.logger::flog.warn(w)
             futile.logger::flog.debug(capture.output(rlang::trace_back()))
             saveRDS(w, "last_warning.rds")
             futile.logger::flog.warn("%s: %s", location$name, w)
@@ -104,6 +105,7 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
           },
           error = function(e) {
             futile.logger::flog.error(capture.output(rlang::trace_back()))
+            futile.logger::flog.error(e)
           }
         )
       )
