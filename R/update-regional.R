@@ -128,7 +128,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                                        future = TRUE, max_execution_time = max_execution_time),
                       target_folder = location$target_folder,
                       output = c("plots", "latest"),
-                      non_zero_points = 14, horizon = 14)
+                      non_zero_points = 14, horizon = 14, logs = NULL)
     )
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
