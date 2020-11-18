@@ -146,6 +146,10 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     out <- list()
     futile.logger::flog.trace("reading runtimes.csv")
     timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
+    if (is.null(timings) | nrow(timings) == 0) {
+      futile.logger::flog.error("no timings read")
+      stop("timings required but missing")
+    }  
     out <- as.list(timings$time)
     futile.logger::flog.trace("naming output")
     names(out) <- timings$region
