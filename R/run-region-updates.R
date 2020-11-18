@@ -57,13 +57,13 @@ run_regional_updates <- function(datasets, derivatives, args) {
   futile.logger::flog.trace("process locations")
   outcome <- rru_process_locations(datasets, args, excludes, includes)
 
-  if ("united-kingdom-admissions" %in% includes) { # DEPRECATED
+  if ("united-kingdom-admissions" %in_ci% lapply(includes, function(dl) { dl$dataset })) { # DEPRECATED
     futile.logger::flog.debug("calling collate estimates for UK")
     collate_estimates(name = "united-kingdom", target = "rt")
   }
   saveRDS(outcome, "outcome.RDS")
   # analysis of outcome
-  futile.logger::flog.trace("analise results")
+  futile.logger::flog.trace("analyse results")
   rru_log_outcome(outcome)
 
   # process derivatives
