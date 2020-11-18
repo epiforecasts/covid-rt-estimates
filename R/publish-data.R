@@ -7,8 +7,8 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
   if (exists("DATAVERSE_SERVER") && exists("DATAVERSE_KEY")) {
     Sys.setenv("DATAVERSE_SERVER" = DATAVERSE_SERVER)
     Sys.setenv("DATAVERSE_KEY" = DATAVERSE_KEY)
-    if (require(dataverse)) {
-      library(desc) # this is used to get the author data from the DESCRIPTION file
+    if (require(dataverse, quietly = TRUE)) {
+      library(desc, quietly = TRUE) # this is used to get the author data from the DESCRIPTION file
       futile.logger::flog.debug("search for dataset")
       full_dataset <- check_for_existing_id(dataset$name)
       if (is.list(full_dataset)) {
@@ -404,6 +404,7 @@ get_dataset_description_list <- function(publication_meta) {
 get_software_list <- function(desc_file) {
   futile.logger::flog.trace("get_software_list function")
   epinow2_version <- tryCatch(toString(packageVersion("EpiNow2")), error = function(c) { NA })
+  git_build_version <- suppressMessages(tryCatch(system("git rev-parse HEAD", intern = TRUE), error = function(c) { NA }, warning = function(w) { NA }))
   return(
     list(
       typeName = "software",
@@ -421,7 +422,7 @@ get_software_list <- function(desc_file) {
             typeName = "softwareVersion",
             multiple = FALSE,
             typeClass = "primitive",
-            value = paste0(desc_file$get_version(), ":", system("git rev-parse HEAD", intern = TRUE))
+            value = paste0(desc_file$get_version(), ":", git_build_version)
           )
         ),
         list(

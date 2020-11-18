@@ -69,6 +69,8 @@ run_regional_updates <- function(datasets, derivatives, args) {
   # process derivatives
   futile.logger::flog.trace("process derivative datasets")
   rru_process_derivatives(derivatives, datasets)
+
+  futile.logger::flog.info("run complete")
 }
 
 #' rru_process_locations
