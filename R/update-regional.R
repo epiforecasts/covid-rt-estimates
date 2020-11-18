@@ -125,7 +125,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                       stan = stan_opts(samples = 4000, warmup = 250, cores = no_cores,
                                        chains = ifelse(no_cores <= 4, 4, no_cores),
                                        control = list(adapt_delta = 0.95), 
-                                       future = TRUE, max_execution_time = max_execution_time),
+                                       future = FALSE, max_execution_time = max_execution_time),
                       target_folder = location$target_folder,
                       output = c("plots", "latest"),
                       non_zero_points = 14, horizon = 14, logs = NULL)
