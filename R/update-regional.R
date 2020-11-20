@@ -122,7 +122,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       regional_epinow(reported_cases = cases,
                       generation_time = location$generation_time,
                       delays = delay_opts(location$incubation_period, location$reporting_delay),
-                      stan = stan_opts(samples = 4000, warmup = 250, cores = no_cores,
+                      stan = stan_opts(samples = 4000, warmup = 400, cores = no_cores,
                                        chains = 4, control = list(adapt_delta = 0.95), 
                                        future = TRUE, max_execution_time = max_execution_time),
                       target_folder = location$target_folder,
