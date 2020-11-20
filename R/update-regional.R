@@ -123,7 +123,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                       generation_time = location$generation_time,
                       delays = delay_opts(location$incubation_period, location$reporting_delay),
                       stan = stan_opts(samples = 4000, warmup = 400, cores = no_cores,
-                                       chains = 4, control = list(adapt_delta = 0.95), 
+                                       chains = 4, control = list(adapt_delta = 0.95),
                                        future = TRUE, max_execution_time = max_execution_time),
                       target_folder = location$target_folder,
                       output = c("plots", "latest"),
@@ -147,11 +147,12 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     if (is.null(timings) | nrow(timings) == 0) {
       futile.logger::flog.error("no timings read")
       stop("timings required but missing")
-    }  
+    }
     out <- as.list(timings$time)
     futile.logger::flog.trace("naming output")
     names(out) <- timings$region
-  } else {
+  }
+  if (!(exists("out") && is.list(out))) {
     out <- list()
   }
   if (cases[, .N] == 0) {
