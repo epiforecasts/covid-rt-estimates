@@ -22,21 +22,28 @@ if (!exists("get_latest_source_data_date", mode = "function")) source(here::here
 update_regional <- function(location, excludes, includes, force, max_execution_time, refresh) {
 
   futile.logger::flog.info("Processing dataset for %s", location$name)
+
+  futile.logger::flog.trace("loading ancillary data")
   location <- ur_load_ancil_files(location)
 
-  # Get cases  ---------------------------------------------------------------
+  futile.logger::flog.trace("loading cases")
   cases <- ur_load_cases(location)
 
+  futile.logger::flog.trace("starting to modify cases")
   cases <- ur_modify_cases(cases, location, excludes, includes)
 
   # Check to see if there is data and if the data has been updated  ------------------------------
   out <- list()
   if (cases[, .N] > 0) {
     if (!force) {
+      futile.logger::flog.trace("check for latest source data date")
       last_dataverse_run <- get_latest_source_data_date(location$name)
+      futile.logger::flog.trace("check if theres data to process")
       new_data_exists <- check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds")), last_dataverse_run = last_dataverse_run)
     }
-    if (force | new_data_exists) {
+    if (force || new_data_exists) {
+
+      futile.logger::flog.trace("processing dataset %s", location$dataset)
       out <- ur_process_cases(cases, location, max_execution_time)
     }
   }
@@ -44,6 +51,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     futile.logger::flog.warning("no cases left for region so not processing!")
   }
   # add some stats
+  futile.logger::flog.trace("add stats")
   out$max_data_date <- max(cases$date, na.rm = TRUE)
   out$oldest_results <- ur_get_oldest_result(location)
 
@@ -56,7 +64,6 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
 #' @return AbstractDataset
 ur_load_ancil_files <- function(location) {
 
-  futile.logger::flog.trace("loading ancillary data")
   # Update delays -----------------------------------------------------------
   if (!is.list(location$generation_time)) {
     futile.logger::flog.trace("loading generation_time.rds")
@@ -83,7 +90,6 @@ ur_load_ancil_files <- function(location) {
 #' load the cases for a given location
 #' return DataTable of cases
 ur_load_cases <- function(location) {
-  futile.logger::flog.trace("loading cases")
   if ("Region" %in% class(location)) {
     if (is.na(location$covid_regional_data_identifier)) {
       location$covid_regional_data_identifier <- location$name
