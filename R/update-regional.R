@@ -34,6 +34,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
 
   # Check to see if there is data and if the data has been updated  ------------------------------
   out <- list()
+  futile.logger::flog.trace("checking there is data to process")
   if (cases[, .N] > 0) {
     if (!force) {
       futile.logger::flog.trace("check for latest source data date")
@@ -42,7 +43,6 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       new_data_exists <- check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds")), last_dataverse_run = last_dataverse_run)
     }
     if (force || new_data_exists) {
-
       futile.logger::flog.trace("processing dataset %s", location$dataset)
       out <- ur_process_cases(cases, location, max_execution_time)
     }
@@ -162,7 +162,7 @@ ur_modify_cases <- function(cases, location, excludes, includes) {
   }
 
   cases <- clean_regional_data(cases, truncation = location$truncation)
-
+  futile.logger::flog.trace("finished modifying cases")
   return(cases)
 }
 
