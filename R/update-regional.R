@@ -36,6 +36,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   out <- list()
   futile.logger::flog.trace("checking there is data to process")
   if (cases[, .N] > 0) {
+    futile.logger::flog.trace("there are cases!")
     if (!force) {
       futile.logger::flog.trace("check for latest source data date")
       last_dataverse_run <- get_latest_source_data_date(location$name)
