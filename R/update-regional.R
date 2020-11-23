@@ -180,12 +180,16 @@ ur_modify_cases <- function(cases, location, excludes, includes) {
 ur_process_cases <- function(cases, location, max_execution_time, refresh) {
   # Set up cores -----------------------------------------------------
   no_cores <- setup_future(length(unique(cases$region)))
-
+  futile.logger::flog.trace("futures configured using %s cores", no_cores)
   if (refresh) {
     if (dir.exists(location$target_folder)) {
       futile.logger::flog.trace("removing estimates in order to refresh")
       unlink(location$target_folder, recursive = TRUE)
+    }else{
+      futile.logger::flog.trace("no directory to remove to allow a refresh")
     }
+  }else{
+      futile.logger::flog.trace("running without refresh")
   }
   # Run Rt estimation -------------------------------------------------------
   futile.logger::flog.trace("calling regional_epinow")
