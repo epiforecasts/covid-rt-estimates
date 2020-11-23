@@ -20,7 +20,7 @@ run_collate_derivative <- function(derivatives, args){
 rcd_cli_interface <- function(){
     # set up the arguments
   option_list <- list(
-    optparse::make_option(c("-d", "--derivative"), default = "", type = "character", help = "A single collated derivative name to process),
+    optparse::make_option(c("-d", "--derivative"), default = "", type = "character", help = "A single collated derivative name to process"),
     optparse::make_option(c("-v", "--verbose"), action = "store_true", default = FALSE, help = "Print verbose output "),
     optparse::make_option(c("-w", "--werbose"), action = "store_true", default = FALSE, help = "Print v.verbose output "),
     optparse::make_option(c("-q", "--quiet"), action = "store_true", default = FALSE, help = "Print less output "),
