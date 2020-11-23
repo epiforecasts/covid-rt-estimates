@@ -48,7 +48,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     }
     if (force || new_data_exists) {
       futile.logger::flog.trace("processing dataset %s", location$name)
-      out <- ur_process_cases(cases, location, max_execution_time)
+      out <- ur_process_cases(cases, location, max_execution_time, refresh = refresh)
     }
   }
   if (cases[, .N] == 0) {
