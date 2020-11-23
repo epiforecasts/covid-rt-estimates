@@ -17,7 +17,7 @@ run_collate_derivative <- function(derivatives, args) {
   }
 }
 
-rcd_cli_interface <- function() {
+rcd_cli_interface <- function(args_string) {
   # set up the arguments
   option_list <- list(
     optparse::make_option(c("-d", "--derivative"), default = "", type = "character", help = "A single collated derivative name to process"),
