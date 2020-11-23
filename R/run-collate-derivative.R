@@ -7,9 +7,9 @@ if (!exists("COLLATED_DERIVATIVES", mode = "function")) source(here::here("R/lis
 if (!exists("collate_derivative", mode = "function")) source(here::here("R", "collate-derivative.R"))
 
 
-run_collate_derivative <- function(derivatives, args){
+run_collate_derivative <- function(derivatives, args) {
   #validate
-  if(args$derivative %in_ci% names(derivatives)){
+  if (args$derivative %in_ci% names(derivatives)) {
     #run
     collate_derivative(derivatives[[tolower(args$derivative)]], !args$suppress)
   } else {
@@ -17,8 +17,8 @@ run_collate_derivative <- function(derivatives, args){
   }
 }
 
-rcd_cli_interface <- function(){
-    # set up the arguments
+rcd_cli_interface <- function() {
+  # set up the arguments
   option_list <- list(
     optparse::make_option(c("-d", "--derivative"), default = "", type = "character", help = "A single collated derivative name to process"),
     optparse::make_option(c("-v", "--verbose"), action = "store_true", default = FALSE, help = "Print verbose output "),
@@ -36,7 +36,7 @@ rcd_cli_interface <- function(){
 }
 
 if (sys.nframe() == 0) {
-  args <- rru_cli_interface()
+  args <- rcd_cli_interface()
   setup_log_from_args(args)
   futile.logger::ftry(
     run_collate_derivative(
