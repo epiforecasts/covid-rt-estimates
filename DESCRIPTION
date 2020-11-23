@@ -12,7 +12,10 @@ Authors@R: c(
          role = c("aut")),   
   person("Jamie", "Allen",
          email = "jamie.allen@metoffice.gov.uk",
-         role = c("aut")),   
+         role = c("aut")),
+  person("Katharine", "Sherratt",
+         email = "katharine.sherratt@lshtm.ac.uk",
+         role = c("aut")),
   person("Sebastian", "Funk", 
          email = "sebastian.funk@lshtm.ac.uk", 
          role = c("aut")))
@@ -21,7 +24,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-  EpiNow2 (>= 1.2.0),
+  EpiNow2 (>= 1.3.0),
   covidregionaldata (>= 0.8.0),
   data.table,
   dplyr (>= 1.0.0),
@@ -37,7 +40,7 @@ Suggests:
     desc,
     testthat
 Remotes:
-  epiforecasts/EpiNow2@v1.2.0,
+  epiforecasts/EpiNow2@v1.3.0,
   epiforecasts/covidregionaldata@v0.8.1
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0

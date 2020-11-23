@@ -1,25 +1,25 @@
-region,point,lower,upper,mid_lower,mid_upper,central_lower,central_upper,metric,Expected change in daily cases
-United Kingdom,371,51,767,169,455,244,349,New confirmed cases by infection date,Unsure
-England,345,42,681,157,410,265,362,New confirmed cases by infection date,Unsure
-Midlands,123,7,268,25,136,42,82,New confirmed cases by infection date,Unsure
-North East and Yorkshire,78,10,165,28,89,61,84,New confirmed cases by infection date,Unsure
-South East,67,18,114,49,87,66,80,New confirmed cases by infection date,Likely increasing
-North West,63,4,146,22,76,36,55,New confirmed cases by infection date,Unsure
-South West,32,1,63,4,33,8,19,New confirmed cases by infection date,Unsure
-Wales,27,0,72,5,30,12,20,New confirmed cases by infection date,Unsure
-London,24,1,53,8,28,13,21,New confirmed cases by infection date,Unsure
-East of England,17,0,52,0,17,1,7,New confirmed cases by infection date,Unsure
-Scotland,16,0,50,1,17,3,8,New confirmed cases by infection date,Unsure
-Northern Ireland,14,0,69,0,14,1,5,New confirmed cases by infection date,Unsure
-South East,1.2,0.9,1.4,1.2,1.3,1.2,1.2,Effective reproduction no.,Likely increasing
-South West,1.2,0.7,1.4,1.1,1.3,1.2,1.3,Effective reproduction no.,Unsure
-London,1.1,0.7,1.4,0.9,1.2,1,1.1,Effective reproduction no.,Unsure
-Midlands,1.1,0.7,1.3,1,1.2,1.1,1.2,Effective reproduction no.,Unsure
-East of England,1,0.5,1.4,0.9,1.2,1,1.1,Effective reproduction no.,Unsure
-England,1,0.7,1.2,0.9,1.1,1,1.1,Effective reproduction no.,Unsure
-North East and Yorkshire,1,0.6,1.2,0.9,1.1,1,1,Effective reproduction no.,Unsure
-Northern Ireland,1,0.4,1.7,0.7,1.2,0.9,1,Effective reproduction no.,Unsure
-United Kingdom,1,0.7,1.2,0.9,1.1,1,1.1,Effective reproduction no.,Unsure
-Wales,1,0.6,1.4,0.9,1.2,1,1.1,Effective reproduction no.,Unsure
-North West,0.9,0.6,1.3,0.8,1.1,0.9,1,Effective reproduction no.,Unsure
-Scotland,0.9,0.4,1.3,0.7,1,0.9,1,Effective reproduction no.,Unsure
+region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
+United Kingdom,204 (89 -- 415),204,224,114,89,150,181,227,273,415,New confirmed cases by infection date,Unsure
+England,180 (75 -- 368),180,197,104,75,130,159,201,240,368,New confirmed cases by infection date,Unsure
+Midlands,48 (11 -- 175),48,66,72,11,28,40,59,80,175,New confirmed cases by infection date,Unsure
+South East,48 (11 -- 94),48,50,29,11,29,40,55,67,94,New confirmed cases by infection date,Likely increasing
+North West,42 (16 -- 90),42,46,29,16,29,36,47,57,90,New confirmed cases by infection date,Unsure
+South West,33 (8 -- 91),33,41,47,8,20,27,38,49,91,New confirmed cases by infection date,Likely increasing
+London,26 (5 -- 76),26,40,247,5,16,22,30,38,76,New confirmed cases by infection date,Likely increasing
+North East and Yorkshire,25 (3 -- 77),25,31,24,3,13,20,31,41,77,New confirmed cases by infection date,Unsure
+Scotland,14 (2 -- 47),14,18,21,2,8,11,17,23,47,New confirmed cases by infection date,Unsure
+Wales,14 (1 -- 56),14,23,89,1,6,11,18,27,56,New confirmed cases by infection date,Unsure
+Northern Ireland,8 (0 -- 104),8,33,184,0,3,6,11,20,104,New confirmed cases by infection date,Unsure
+East of England,6 (0 -- 31),6,11,30,0,3,5,9,13,31,New confirmed cases by infection date,Unsure
+London,1.1 (0.7 -- 1.5),1.1,1.1,0.3,0.7,0.9,1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing
+South East,1.1 (0.7 -- 1.3),1.1,1.1,0.2,0.7,1,1.1,1.2,1.2,1.3,Effective reproduction no.,Likely increasing
+South West,1.1 (0.8 -- 1.6),1.1,1.1,0.3,0.8,1,1.1,1.2,1.2,1.6,Effective reproduction no.,Likely increasing
+Midlands,0.9 (0.5 -- 1.4),0.9,0.9,0.3,0.5,0.7,0.8,0.9,1,1.4,Effective reproduction no.,Unsure
+Northern Ireland,0.9 (0.4 -- 2),0.9,1,0.6,0.4,0.7,0.9,1,1.2,2,Effective reproduction no.,Unsure
+Wales,0.9 (0.4 -- 1.3),0.9,0.9,0.3,0.4,0.7,0.8,0.9,1,1.3,Effective reproduction no.,Unsure
+East of England,0.8 (0.3 -- 1.3),0.8,0.8,0.3,0.3,0.6,0.7,0.8,0.9,1.3,Effective reproduction no.,Unsure
+England,0.8 (0.6 -- 1.1),0.8,0.8,0.2,0.6,0.7,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+North West,0.8 (0.6 -- 1.1),0.8,0.8,0.2,0.6,0.8,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+Scotland,0.8 (0.4 -- 1.2),0.8,0.8,0.2,0.4,0.7,0.8,0.9,1,1.2,Effective reproduction no.,Unsure
+United Kingdom,0.8 (0.6 -- 1.1),0.8,0.8,0.2,0.6,0.7,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+North East and Yorkshire,0.7 (0.4 -- 1),0.7,0.7,0.2,0.4,0.6,0.7,0.8,0.9,1,Effective reproduction no.,Unsure
