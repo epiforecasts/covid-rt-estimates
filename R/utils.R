@@ -86,7 +86,7 @@ clean_regional_data <- function(cases, truncation = 3) {
   cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
   cases <- cases[!is.na(confirm)]
   data.table::setorder(cases, date)
-
+  futile.logger::flog.trace("finished cleaning the cases")
   return(cases)
 }
 
