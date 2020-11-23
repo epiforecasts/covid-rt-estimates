@@ -16,6 +16,7 @@ if (!exists("get_latest_source_data_date", mode = "function")) source(here::here
 #' @param location Location object containing information about region
 #' @param excludes Dataframe containing regions to exclude
 #' @param includes Dataframe containing the only regions to include
+#' @param force Bool flag indicating the force state from the config
 #' @param max_execution_time Integer specifying the timeout in seconds
 #' @param refresh Bool force removal of previous results before processing to guarantee a full refresh
 #' @return List of runtime info
@@ -42,6 +43,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       last_dataverse_run <- get_latest_source_data_date(location$name)
       futile.logger::flog.trace("check if theres data to process")
       new_data_exists <- check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds")), last_dataverse_run = last_dataverse_run)
+    }else{
+      futile.logger::flog.trace("force is engaged")
     }
     if (force || new_data_exists) {
       futile.logger::flog.trace("processing dataset %s", location$dataset)
