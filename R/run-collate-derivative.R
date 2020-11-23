@@ -5,6 +5,9 @@ if (!exists("setup_log_from_args", mode = "function")) source(here::here("R", "u
 if (!exists("COLLATED_DERIVATIVES", mode = "function")) source(here::here("R/lists", "collated-derivative-list.R"))
 # load the actual script
 if (!exists("collate_derivative", mode = "function")) source(here::here("R", "collate-derivative.R"))
+# load config (optional)
+if (!exists("DATAVERSE_KEY", mode = "function")
+  & file.exists(here::here("data/runtime", "config.R"))) source(here::here("data/runtime", "config.R"))
 
 
 run_collate_derivative <- function(derivatives, args) {
