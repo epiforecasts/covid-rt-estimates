@@ -439,5 +439,5 @@ example_non_cli_trigger <- function() {
   # list is in the format [flag[, value]?,?]+
   args <- rru_cli_interface(c("-w", "-i", "canada/*", "-t", "1800", "-s"))
   setup_log_from_args(args)
-  futile.logger::ftry(run_regional_updates(datasets = datasets, args = args))
+  futile.logger::ftry(run_regional_updates(datasets = DATASETS, derivatives = COLLATED_DERIVATIVES, args = args))
 }
