@@ -61,7 +61,7 @@ run_regional_updates <- function(datasets, derivatives, args) {
     futile.logger::flog.debug("calling collate estimates for UK")
     collate_estimates(name = "united-kingdom", target = "rt")
   }
-  saveRDS(outcome, "outcome.RDS")
+  # saveRDS(outcome, "outcome.RDS")
   # analysis of outcome
   futile.logger::flog.trace("analyse results")
   rru_log_outcome(outcome)
@@ -96,7 +96,6 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
                             args$force,
                             args$timeout,
                             refresh = args$refresh)
-          saveRDS(outcome, paste0(location$name, "_raw_outcome.rds"))
         },
           warning = function(w) {
             futile.logger::flog.warn(w)
