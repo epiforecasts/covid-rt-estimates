@@ -181,9 +181,11 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
         min(
           strptime(
             strsplit(
-              system(
-                paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do stat -c %y $f; done'),
-                intern = TRUE),
+              suppressMessages(
+                system(
+                  paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do stat -c %y $f; done'),
+                  intern = TRUE)
+              ),
               '\\+\\d\\d\\d\\d',
               perl = TRUE
             )[[1]],
