@@ -1,13 +1,13 @@
-region,point,lower,upper,mid_lower,mid_upper,central_lower,central_upper,metric,Expected change in daily cases
-Global,693671,504313,872204,615219,758588,659800,710457,New confirmed cases by infection date,Likely increasing
-Americas,280644,205457,373164,238405,301487,267991,291439,New confirmed cases by infection date,Increasing
-Europe,245320,136132,360567,190500,280278,218672,252593,New confirmed cases by infection date,Unsure
-Asia,94709,64371,125103,81787,105341,87373,95968,New confirmed cases by infection date,Unsure
-Africa,15076,11201,19685,13326,16481,13988,15087,New confirmed cases by infection date,Likely increasing
-Oceania,511,80,1113,256,608,363,487,New confirmed cases by infection date,Unsure
-Americas,1.1,1,1.2,1.1,1.1,1.1,1.1,Effective reproduction no.,Increasing
-Global,1.1,1,1.1,1,1.1,1,1.1,Effective reproduction no.,Likely increasing
-Oceania,1.1,0.7,1.4,1,1.2,1,1.1,Effective reproduction no.,Unsure
-Africa,1,1,1.1,1,1.1,1,1,Effective reproduction no.,Likely increasing
-Asia,1,0.9,1.1,1,1,1,1,Effective reproduction no.,Unsure
-Europe,1,0.8,1.1,0.9,1,0.9,1,Effective reproduction no.,Unsure
+region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
+Global,582012 (503050 -- 668676),582012,582891,51323,503050,549682,568207,594273,614719,668676,New confirmed cases by infection date,Unsure
+Europe,211564 (159829 -- 287640),211564,216162,40720,159829,187983,201185,221585,239257,287640,New confirmed cases by infection date,Unsure
+Americas,207798 (112098 -- 341824),207798,215941,74017,112098,162686,190314,225914,259677,341824,New confirmed cases by infection date,Unsure
+Asia,113501 (98889 -- 144714),113501,116405,14978,98889,107142,110959,116193,121473,144714,New confirmed cases by infection date,Unsure
+Africa,14733 (11073 -- 18543),14733,14749,2314,11073,13252,14151,15245,16126,18543,New confirmed cases by infection date,Unsure
+Oceania,340 (86 -- 1055),340,444,527,86,202,279,407,529,1055,New confirmed cases by infection date,Unsure
+Asia,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1,1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Africa,1 (0.9 -- 1.1),1,1,0.1,0.9,1,1,1,1.1,1.1,Effective reproduction no.,Unsure
+Global,1 (0.9 -- 1),1,1,0,0.9,1,1,1,1,1,Effective reproduction no.,Unsure
+Oceania,1 (0.6 -- 1.4),1,1,0.3,0.6,0.8,0.9,1,1.1,1.4,Effective reproduction no.,Unsure
+Americas,0.9 (0.6 -- 1.2),0.9,0.9,0.2,0.6,0.8,0.9,1,1,1.2,Effective reproduction no.,Unsure
+Europe,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.9,0.9,1,1,1.1,Effective reproduction no.,Unsure

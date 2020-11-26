@@ -124,23 +124,22 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                       delays = delay_opts(location$incubation_period, location$reporting_delay),
                       stan = stan_opts(samples = 4000, warmup = 400, cores = no_cores,
                                        chains = 4, control = list(adapt_delta = 0.95),
-                                       future = TRUE, max_execution_time = max_execution_time),
+                                       future = FALSE, max_execution_time = max_execution_time),
                       target_folder = location$target_folder,
                       output = c("plots", "latest"),
-                      non_zero_points = 14, horizon = 14, logs = NULL)
+                      non_zero_points = 14, horizon = 14, logs = NULL), silent = TRUE
     )
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
 
     futile.logger::flog.trace("generating summary data")
-    try(futile.logger::ftry(regional_summary(
+    futile.logger::ftry(regional_summary(
       reported_cases = cases,
       results_dir = location$target_folder,
       summary_dir = location$summary_dir,
       region_scale = location$region_scale,
       all_regions = "Region" %in% class(location),
-      return_output = FALSE
-    )), silent = TRUE)
+      return_output = FALSE), silent = TRUE)
     out <- list()
     futile.logger::flog.trace("reading runtimes.csv")
     timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
@@ -181,9 +180,11 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
         min(
           strptime(
             strsplit(
-              system(
-                paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do stat -c %y $f; done'),
-                intern = TRUE),
+              suppressMessages(
+                system(
+                  paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do stat -c %y $f; done'),
+                  intern = TRUE)
+              ),
               '\\+\\d\\d\\d\\d',
               perl = TRUE
             )[[1]],
