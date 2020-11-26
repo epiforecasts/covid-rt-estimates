@@ -24,7 +24,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-  EpiNow2 (>= 1.3.0),
+  EpiNow2 (>= 1.3.2),
   covidregionaldata (>= 0.8.0),
   data.table,
   dplyr (>= 1.0.0),
@@ -40,7 +40,7 @@ Suggests:
     desc,
     testthat
 Remotes:
-  epiforecasts/EpiNow2@v1.3.0,
+  epiforecasts/EpiNow2@v1.3.2,
   epiforecasts/covidregionaldata@v0.8.1
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
