@@ -50,8 +50,8 @@ rrp_cli_interface <- function(args_string = NA) {
     optparse::make_option(c("-q", "--quiet"), action = "store_true", default = FALSE, help = "Print less output "),
     optparse::make_option(c("--log"), type = "character", help = "Specify log file name"),
     optparse::make_option(c("-e", "--exclude"), default = "", type = "character", help = "List of locations to exclude. See include for more details."),
-    optparse::make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\"")
-    optparse::make_option(c("-c", "--collated"), action = "store_true", default = FALSE, help = "process collated derivative rather than raw dataset"),
+    optparse::make_option(c("-i", "--include"), default = "", type = "character", help = "List of locations to include (excluding all non-specified), comma separated in the format region/subregion or region/*. Case Insensitive. Spaces can be included using quotes - e.g. \"united-states/rhode island, United-States/New York\""),
+    optparse::make_option(c("-c", "--collated"), action = "store_true", default = FALSE, help = "process collated derivative rather than raw dataset")
   )
   if (is.character(args_string)) {
     args <- optparse::parse_args(optparse::OptionParser(option_list = option_list), args = args_string)
