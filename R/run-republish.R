@@ -87,5 +87,10 @@ example_non_cli_republish_trigger <- function() {
   # list is in the format [flag[, value]?,?]+
   args <- rrp_cli_interface(c("-w", "-i", "canada/*"))
   setup_log_from_args(args)
-  futile.logger::ftry(run_republish(datasets = ifelse(args$collated, COLLATED_DERIVATIVES, DATASETS), dargs = args))
+  if (args$collated){
+    dataset <- COLLATED_DERIVATIVES
+  }else{
+    dataset <- DATASETS
+  }
+  futile.logger::ftry(run_republish(datasets = dataset, args = args))
 }
