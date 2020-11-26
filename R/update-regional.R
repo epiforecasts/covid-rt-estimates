@@ -133,14 +133,14 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     future::plan("sequential")
 
     futile.logger::flog.trace("generating summary data")
-    try(futile.logger::ftry(regional_summary(
+    futile.logger::ftry(regional_summary(
       reported_cases = cases,
       results_dir = location$target_folder,
       summary_dir = location$summary_dir,
       region_scale = location$region_scale,
       all_regions = "Region" %in% class(location),
       return_output = FALSE
-    )), silent = TRUE)
+    ))
     out <- list()
     futile.logger::flog.trace("reading runtimes.csv")
     timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
