@@ -1,33 +1,33 @@
-region,point,lower,upper,mid_lower,mid_upper,central_lower,central_upper,metric,Expected change in daily cases
-Nordrhein-Westfalen,1338,689,2084,966,1527,1133,1341,New confirmed cases by infection date,Unsure
-Bayern,1208,495,2037,820,1412,1022,1248,New confirmed cases by infection date,Unsure
-Baden-Württemberg,654,315,1075,474,770,567,678,New confirmed cases by infection date,Likely decreasing
-Niedersachsen,611,257,972,449,741,485,591,New confirmed cases by infection date,Unsure
-Berlin,464,261,686,355,520,395,457,New confirmed cases by infection date,Unsure
-Hessen,454,188,745,305,520,350,431,New confirmed cases by infection date,Unsure
-Rheinland-Pfalz,440,202,722,298,496,373,447,New confirmed cases by infection date,Unsure
-Sachsen,429,178,699,302,504,365,438,New confirmed cases by infection date,Unsure
-Brandenburg,269,110,448,179,307,215,263,New confirmed cases by infection date,Unsure
-Thüringen,258,76,476,155,302,189,241,New confirmed cases by infection date,Unsure
-Sachsen-Anhalt,157,40,293,87,183,112,146,New confirmed cases by infection date,Unsure
-Schleswig-Holstein,127,28,258,65,146,81,110,New confirmed cases by infection date,Unsure
-Mecklenburg-Vorpommern,77,27,133,47,88,65,81,New confirmed cases by infection date,Unsure
-Saarland,76,24,148,40,87,50,67,New confirmed cases by infection date,Unsure
-Bremen,64,27,107,44,74,52,62,New confirmed cases by infection date,Unsure
-Hamburg,19,5,36,10,22,13,17,New confirmed cases by infection date,Likely decreasing
-Berlin,1,0.9,1.2,1,1.1,1,1,Effective reproduction no.,Unsure
-Brandenburg,1,0.8,1.2,0.9,1.1,1,1,Effective reproduction no.,Unsure
-Bremen,1,0.8,1.2,0.9,1.1,1,1,Effective reproduction no.,Unsure
-Mecklenburg-Vorpommern,1,0.7,1.2,0.9,1.1,1,1,Effective reproduction no.,Unsure
-Rheinland-Pfalz,1,0.8,1.3,0.9,1.1,1,1,Effective reproduction no.,Unsure
-Sachsen,1,0.8,1.2,0.9,1.1,1,1,Effective reproduction no.,Unsure
-Sachsen-Anhalt,1,0.7,1.3,0.9,1.1,0.9,1,Effective reproduction no.,Unsure
-Thüringen,1,0.7,1.4,0.9,1.1,1,1.1,Effective reproduction no.,Unsure
-Baden-Württemberg,0.9,0.6,1.1,0.8,1,0.8,0.9,Effective reproduction no.,Likely decreasing
-Bayern,0.9,0.6,1.2,0.8,1,0.9,1,Effective reproduction no.,Unsure
-Hessen,0.9,0.7,1.2,0.8,1,0.9,0.9,Effective reproduction no.,Unsure
-Niedersachsen,0.9,0.7,1.1,0.9,1,0.9,1,Effective reproduction no.,Unsure
-Nordrhein-Westfalen,0.9,0.7,1.1,0.8,1,0.9,1,Effective reproduction no.,Unsure
-Saarland,0.9,0.6,1.2,0.8,1,0.8,0.9,Effective reproduction no.,Unsure
-Schleswig-Holstein,0.9,0.6,1.3,0.7,1,0.9,1,Effective reproduction no.,Unsure
-Hamburg,0.8,0.5,1,0.7,0.9,0.7,0.8,Effective reproduction no.,Likely decreasing
+region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
+Nordrhein-Westfalen,979 (706 -- 1368),979,1001,206,706,862,935,1026,1115,1368,New confirmed cases by infection date,Unsure
+Bayern,962 (574 -- 1675),962,1028,360,574,784,898,1043,1196,1675,New confirmed cases by infection date,Unsure
+Baden-Württemberg,598 (420 -- 838),598,611,130,420,525,569,628,682,838,New confirmed cases by infection date,Unsure
+Thüringen,540 (281 -- 1109),540,596,278,281,414,487,596,708,1109,New confirmed cases by infection date,Likely increasing
+Niedersachsen,527 (336 -- 925),527,566,195,336,440,491,567,644,925,New confirmed cases by infection date,Unsure
+Brandenburg,452 (308 -- 688),452,469,124,308,386,426,477,531,688,New confirmed cases by infection date,Increasing
+Hessen,381 (247 -- 597),381,397,111,247,320,358,408,458,597,New confirmed cases by infection date,Unsure
+Berlin,355 (217 -- 501),355,357,87,217,296,333,376,415,501,New confirmed cases by infection date,Unsure
+Sachsen,349 (203 -- 638),349,378,164,203,285,322,377,433,638,New confirmed cases by infection date,Unsure
+Rheinland-Pfalz,302 (204 -- 448),302,312,78,204,259,286,321,353,448,New confirmed cases by infection date,Unsure
+Sachsen-Anhalt,242 (113 -- 618),242,293,212,113,176,216,276,346,618,New confirmed cases by infection date,Likely increasing
+Schleswig-Holstein,81 (33 -- 197),81,93,57,33,57,71,92,112,197,New confirmed cases by infection date,Unsure
+Mecklenburg-Vorpommern,69 (44 -- 115),69,73,23,44,58,65,75,84,115,New confirmed cases by infection date,Unsure
+Saarland,44 (20 -- 93),44,49,24,20,33,40,50,59,93,New confirmed cases by infection date,Unsure
+Bremen,31 (12 -- 60),31,33,17,12,22,27,34,41,60,New confirmed cases by infection date,Unsure
+Hamburg,14 (6 -- 26),14,15,6,6,10,13,16,18,26,New confirmed cases by infection date,Unsure
+Thüringen,1.2 (0.9 -- 1.7),1.2,1.3,0.3,0.9,1.1,1.2,1.3,1.4,1.7,Effective reproduction no.,Likely increasing
+Brandenburg,1.1 (1 -- 1.4),1.1,1.1,0.1,1,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Increasing
+Sachsen-Anhalt,1.1 (0.8 -- 1.7),1.1,1.2,0.3,0.8,1,1.1,1.2,1.3,1.7,Effective reproduction no.,Likely increasing
+Mecklenburg-Vorpommern,1 (0.8 -- 1.2),1,1,0.1,0.8,0.9,0.9,1,1,1.2,Effective reproduction no.,Unsure
+Bayern,0.9 (0.7 -- 1.2),0.9,0.9,0.2,0.7,0.8,0.8,0.9,1,1.2,Effective reproduction no.,Unsure
+Berlin,0.9 (0.8 -- 1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1,Effective reproduction no.,Unsure
+Hessen,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,0.9,1.1,Effective reproduction no.,Unsure
+Niedersachsen,0.9 (0.8 -- 1.2),0.9,1,0.2,0.8,0.9,0.9,1,1,1.2,Effective reproduction no.,Unsure
+Nordrhein-Westfalen,0.9 (0.7 -- 1),0.9,0.9,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
+Rheinland-Pfalz,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
+Sachsen,0.9 (0.7 -- 1.2),0.9,1,0.2,0.7,0.9,0.9,1,1,1.2,Effective reproduction no.,Unsure
+Baden-Württemberg,0.8 (0.7 -- 1),0.8,0.8,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
+Bremen,0.8 (0.5 -- 1.1),0.8,0.8,0.2,0.5,0.7,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+Saarland,0.8 (0.6 -- 1.1),0.8,0.8,0.2,0.6,0.7,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+Schleswig-Holstein,0.8 (0.5 -- 1.3),0.8,0.9,0.2,0.5,0.7,0.8,0.9,1,1.3,Effective reproduction no.,Unsure
+Hamburg,0.7 (0.4 -- 0.8),0.7,0.6,0.1,0.4,0.6,0.6,0.7,0.7,0.8,Effective reproduction no.,Unsure
