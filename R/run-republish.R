@@ -75,9 +75,14 @@ rrp_cli_interface <- function(args_string = NA) {
 if (sys.nframe() == 0) {
   args <- rrp_cli_interface()
   setup_log_from_args(args)
+  if (args$collated){
+    datasets <- COLLATED_DERIVATIVES
+  }else{
+    datasets <- DATASETS
+  }
   futile.logger::ftry(
     run_republish(
-      datasets = DATASETS,
+      datasets = datasets,
       args = args
     )
   )
@@ -88,9 +93,9 @@ example_non_cli_republish_trigger <- function() {
   args <- rrp_cli_interface(c("-w", "-i", "canada/*"))
   setup_log_from_args(args)
   if (args$collated){
-    dataset <- COLLATED_DERIVATIVES
+    datasets <- COLLATED_DERIVATIVES
   }else{
-    dataset <- DATASETS
+    datasets <- DATASETS
   }
-  futile.logger::ftry(run_republish(datasets = dataset, args = args))
+  futile.logger::ftry(run_republish(datasets = datasets, args = args))
 }
