@@ -1,33 +1,33 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
-Bayern,1049 (653 -- 1753),1049,1109,354,653,869,976,1127,1281,1753,New confirmed cases by infection date,Unsure
-Nordrhein-Westfalen,945 (687 -- 1294),945,962,188,687,831,899,991,1073,1294,New confirmed cases by infection date,Unsure
-Baden-Württemberg,578 (407 -- 815),578,590,126,407,506,549,608,659,815,New confirmed cases by infection date,Unsure
-Niedersachsen,458 (306 -- 708),458,478,128,306,394,434,490,544,708,New confirmed cases by infection date,Unsure
-Thüringen,430 (219 -- 806),430,462,191,219,335,393,469,551,806,New confirmed cases by infection date,Likely increasing
-Hessen,358 (240 -- 541),358,371,95,240,308,338,381,423,541,New confirmed cases by infection date,Unsure
-Brandenburg,329 (213 -- 480),329,336,82,213,282,310,350,385,480,New confirmed cases by infection date,Likely increasing
-Rheinland-Pfalz,294 (199 -- 438),294,303,74,199,252,278,311,343,438,New confirmed cases by infection date,Unsure
-Sachsen,275 (141 -- 503),275,294,121,141,213,249,301,350,503,New confirmed cases by infection date,Unsure
-Berlin,254 (132 -- 409),254,260,84,132,199,233,276,316,409,New confirmed cases by infection date,Unsure
-Sachsen-Anhalt,221 (106 -- 497),221,251,130,106,166,197,249,305,497,New confirmed cases by infection date,Likely increasing
-Schleswig-Holstein,106 (50 -- 241),106,123,69,50,79,96,120,148,241,New confirmed cases by infection date,Unsure
-Mecklenburg-Vorpommern,75 (49 -- 117),75,78,21,49,64,71,80,89,117,New confirmed cases by infection date,Unsure
-Saarland,46 (22 -- 93),46,51,25,22,35,42,51,61,93,New confirmed cases by infection date,Unsure
-Bremen,38 (19 -- 63),38,39,13,19,29,34,41,47,63,New confirmed cases by infection date,Unsure
-Hamburg,15 (7 -- 27),15,15,6,7,11,13,16,19,27,New confirmed cases by infection date,Unsure
-Sachsen-Anhalt,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing
-Thüringen,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1.1,1.2,1.2,1.5,Effective reproduction no.,Likely increasing
-Brandenburg,1 (0.8 -- 1.2),1,1,0.1,0.8,0.9,1,1,1.1,1.2,Effective reproduction no.,Likely increasing
+Bayern,954 (609 -- 1533),954,998,301,609,793,886,1020,1154,1533,New confirmed cases by infection date,Unsure
+Nordrhein-Westfalen,800 (567 -- 1096),800,812,166,567,697,759,838,905,1096,New confirmed cases by infection date,Unsure
+Baden-Württemberg,536 (377 -- 746),536,545,114,377,469,511,563,609,746,New confirmed cases by infection date,Unsure
+Niedersachsen,455 (295 -- 706),455,474,131,295,386,429,485,540,706,New confirmed cases by infection date,Unsure
+Thüringen,366 (169 -- 689),366,387,161,169,277,331,399,467,689,New confirmed cases by infection date,Likely increasing
+Hessen,326 (219 -- 503),326,338,90,219,271,304,348,391,503,New confirmed cases by infection date,Unsure
+Sachsen,285 (150 -- 511),285,302,121,150,225,260,310,358,511,New confirmed cases by infection date,Unsure
+Rheinland-Pfalz,277 (192 -- 409),277,286,68,192,241,264,294,324,409,New confirmed cases by infection date,Unsure
+Brandenburg,259 (147 -- 387),259,262,72,147,215,243,276,303,387,New confirmed cases by infection date,Unsure
+Sachsen-Anhalt,242 (117 -- 538),242,275,144,117,182,216,271,332,538,New confirmed cases by infection date,Likely increasing
+Berlin,207 (102 -- 363),207,216,81,102,157,186,226,267,363,New confirmed cases by infection date,Unsure
+Schleswig-Holstein,111 (53 -- 254),111,127,68,53,82,100,124,152,254,New confirmed cases by infection date,Unsure
+Mecklenburg-Vorpommern,81 (54 -- 125),81,84,22,54,69,76,85,96,125,New confirmed cases by infection date,Unsure
+Saarland,41 (19 -- 84),41,45,22,19,31,37,45,54,84,New confirmed cases by infection date,Unsure
+Bremen,28 (12 -- 50),28,29,11,12,21,25,31,36,50,New confirmed cases by infection date,Unsure
+Hamburg,10 (4 -- 20),10,11,5,4,7,9,11,13,20,New confirmed cases by infection date,Unsure
+Sachsen-Anhalt,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1.1,1.2,1.3,1.5,Effective reproduction no.,Likely increasing
 Mecklenburg-Vorpommern,1 (0.8 -- 1.2),1,1,0.1,0.8,0.9,1,1,1.1,1.2,Effective reproduction no.,Unsure
 Schleswig-Holstein,1 (0.7 -- 1.4),1,1,0.2,0.7,0.8,0.9,1,1.1,1.4,Effective reproduction no.,Unsure
-Bayern,0.9 (0.7 -- 1.2),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.2,Effective reproduction no.,Unsure
-Bremen,0.9 (0.7 -- 1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1,Effective reproduction no.,Unsure
-Hessen,0.9 (0.7 -- 1),0.9,0.9,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
+Thüringen,1 (0.7 -- 1.4),1,1,0.2,0.7,0.9,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing
+Bayern,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
+Brandenburg,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.9,0.9,1,1,1.1,Effective reproduction no.,Unsure
 Niedersachsen,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
-Nordrhein-Westfalen,0.9 (0.7 -- 1),0.9,0.9,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
-Rheinland-Pfalz,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
-Saarland,0.9 (0.6 -- 1.2),0.9,0.9,0.2,0.6,0.8,0.8,0.9,1,1.2,Effective reproduction no.,Unsure
+Rheinland-Pfalz,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
 Sachsen,0.9 (0.6 -- 1.1),0.9,0.9,0.2,0.6,0.8,0.8,0.9,1,1.1,Effective reproduction no.,Unsure
-Baden-Württemberg,0.8 (0.7 -- 1),0.8,0.8,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
-Berlin,0.8 (0.6 -- 1),0.8,0.8,0.1,0.6,0.7,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
-Hamburg,0.7 (0.5 -- 0.9),0.7,0.7,0.1,0.5,0.6,0.6,0.7,0.7,0.9,Effective reproduction no.,Unsure
+Baden-Württemberg,0.8 (0.7 -- 1),0.8,0.8,0.1,0.7,0.8,0.8,0.8,0.9,1,Effective reproduction no.,Unsure
+Berlin,0.8 (0.5 -- 0.9),0.8,0.8,0.1,0.5,0.7,0.7,0.8,0.8,0.9,Effective reproduction no.,Unsure
+Bremen,0.8 (0.6 -- 1),0.8,0.8,0.1,0.6,0.7,0.8,0.8,0.9,1,Effective reproduction no.,Unsure
+Hessen,0.8 (0.7 -- 1),0.8,0.8,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
+Nordrhein-Westfalen,0.8 (0.7 -- 0.9),0.8,0.8,0.1,0.7,0.8,0.8,0.8,0.9,0.9,Effective reproduction no.,Unsure
+Saarland,0.8 (0.6 -- 1.1),0.8,0.8,0.2,0.6,0.7,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+Hamburg,0.6 (0.4 -- 0.8),0.6,0.6,0.1,0.4,0.5,0.6,0.6,0.7,0.8,Effective reproduction no.,Unsure
