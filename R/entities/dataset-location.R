@@ -1,5 +1,4 @@
 #' requirements
-if (!exists("DATASETS", mode = "function")) source(here::here("R/lists", "dataset-list.R"))
 
 #' R6 Class representing a dataset and optionally a sublocation
 DatasetLocation <- R6::R6Class("DatasetLocation",
@@ -14,9 +13,6 @@ DatasetLocation <- R6::R6Class("DatasetLocation",
                                                                 #' @param sublocation String, Optional of sublocation
                                                                 #' @return a new `DatasetLocation` object
                                  initialize = function(dataset, sublocation = NULL) {
-                                   if (!dataset %in% names(DATASETS)) {
-                                     stop(paste("Dataset id must be in DATASETS - ", dataset))
-                                   }
                                    self$dataset <- dataset
                                    self$sublocation <- sublocation
                                  }
