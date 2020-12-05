@@ -1,41 +1,41 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
-Veneto,2462 (1540 -- 4075),2462,2591,823,1540,2025,2284,2659,2996,4075,New confirmed cases by infection date,Unsure
-Puglia,1284 (745 -- 2150),1284,1338,440,745,1032,1178,1385,1565,2150,New confirmed cases by infection date,Unsure
-Emilia-Romagna,1211 (627 -- 2194),1211,1286,512,627,944,1104,1322,1535,2194,New confirmed cases by infection date,Unsure
-Campania,1118 (607 -- 1946),1118,1180,438,607,886,1021,1209,1392,1946,New confirmed cases by infection date,Unsure
-Friuli Venezia Giulia,1039 (551 -- 2053),1039,1139,540,551,800,941,1144,1336,2053,New confirmed cases by infection date,Likely increasing
-Lazio,992 (590 -- 1571),992,1026,310,590,813,923,1070,1193,1571,New confirmed cases by infection date,Unsure
-Lombardia,893 (369 -- 1869),893,980,489,369,636,793,1004,1228,1869,New confirmed cases by infection date,Unsure
-Sicilia,848 (483 -- 1399),848,882,292,483,681,783,914,1033,1399,New confirmed cases by infection date,Unsure
-Piemonte,785 (362 -- 1523),785,846,378,362,583,705,873,1039,1523,New confirmed cases by infection date,Unsure
-Marche,473 (218 -- 1223),473,566,373,218,345,422,533,662,1223,New confirmed cases by infection date,Unsure
-Abruzzo,390 (146 -- 976),390,462,303,146,271,340,451,573,976,New confirmed cases by infection date,Unsure
-Trentino-Alto Adige,389 (147 -- 1094),389,481,357,147,268,337,449,592,1094,New confirmed cases by infection date,Unsure
-Sardegna,266 (137 -- 434),266,273,94,137,208,243,288,325,434,New confirmed cases by infection date,Unsure
-Toscana,251 (100 -- 570),251,291,202,100,180,222,286,350,570,New confirmed cases by infection date,Unsure
-Liguria,209 (93 -- 460),209,234,128,93,150,183,234,284,460,New confirmed cases by infection date,Unsure
-Calabria,198 (69 -- 444),198,222,126,69,136,173,227,283,444,New confirmed cases by infection date,Unsure
-Basilicata,161 (44 -- 481),161,204,192,44,97,135,192,252,481,New confirmed cases by infection date,Unsure
-Molise,90 (26 -- 260),90,111,89,26,57,77,105,137,260,New confirmed cases by infection date,Unsure
-Umbria,79 (33 -- 180),79,90,54,33,56,70,90,110,180,New confirmed cases by infection date,Unsure
-Valle d'Aosta,15 (3 -- 57),15,21,23,3,9,13,19,26,57,New confirmed cases by infection date,Unsure
-Friuli Venezia Giulia,1.1 (0.8 -- 1.4),1.1,1.1,0.2,0.8,1,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing
-Marche,1.1 (0.8 -- 1.7),1.1,1.1,0.3,0.8,0.9,1,1.2,1.3,1.7,Effective reproduction no.,Unsure
-Puglia,1 (0.8 -- 1.2),1,1,0.1,0.8,0.9,0.9,1,1,1.2,Effective reproduction no.,Unsure
-Abruzzo,0.9 (0.6 -- 1.2),0.9,0.9,0.2,0.6,0.8,0.8,0.9,1,1.2,Effective reproduction no.,Unsure
-Basilicata,0.9 (0.5 -- 1.3),0.9,0.9,0.3,0.5,0.7,0.8,0.9,1,1.3,Effective reproduction no.,Unsure
-Molise,0.9 (0.5 -- 1.3),0.9,0.9,0.2,0.5,0.8,0.9,1,1.1,1.3,Effective reproduction no.,Unsure
-Sardegna,0.9 (0.6 -- 1),0.9,0.9,0.1,0.6,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
-Trentino-Alto Adige,0.9 (0.7 -- 1.2),0.9,0.9,0.1,0.7,0.9,0.9,1,1,1.2,Effective reproduction no.,Unsure
-Veneto,0.9 (0.8 -- 1.2),0.9,0.9,0.1,0.8,0.9,0.9,1,1,1.2,Effective reproduction no.,Unsure
-Calabria,0.8 (0.5 -- 1.1),0.8,0.8,0.2,0.5,0.6,0.7,0.8,0.9,1.1,Effective reproduction no.,Unsure
-Campania,0.8 (0.6 -- 1),0.8,0.8,0.1,0.6,0.7,0.7,0.8,0.8,1,Effective reproduction no.,Unsure
-Emilia-Romagna,0.8 (0.5 -- 1.1),0.8,0.8,0.2,0.5,0.7,0.8,0.8,0.9,1.1,Effective reproduction no.,Unsure
-Liguria,0.8 (0.5 -- 1.1),0.8,0.8,0.2,0.5,0.7,0.7,0.8,0.9,1.1,Effective reproduction no.,Unsure
-Sicilia,0.8 (0.6 -- 1),0.8,0.8,0.1,0.6,0.7,0.8,0.8,0.9,1,Effective reproduction no.,Unsure
-Lazio,0.7 (0.5 -- 0.9),0.7,0.7,0.1,0.5,0.7,0.7,0.8,0.8,0.9,Effective reproduction no.,Unsure
-Piemonte,0.7 (0.4 -- 0.9),0.7,0.7,0.1,0.4,0.6,0.6,0.7,0.8,0.9,Effective reproduction no.,Unsure
-Umbria,0.7 (0.4 -- 1),0.7,0.7,0.2,0.4,0.6,0.6,0.7,0.8,1,Effective reproduction no.,Unsure
-Toscana,0.6 (0.3 -- 0.9),0.6,0.6,0.2,0.3,0.5,0.5,0.6,0.7,0.9,Effective reproduction no.,Unsure
-Valle d'Aosta,0.6 (0.3 -- 1),0.6,0.6,0.2,0.3,0.5,0.5,0.6,0.7,1,Effective reproduction no.,Unsure
-Lombardia,0.5 (0.3 -- 0.8),0.5,0.5,0.1,0.3,0.4,0.5,0.5,0.6,0.8,Effective reproduction no.,Unsure
+Veneto,2703 (1653 -- 4614),2703,2869,956,1653,2210,2504,2923,3332,4614,New confirmed cases by infection date,Unsure
+Puglia,1436 (849 -- 2450),1436,1520,529,849,1167,1331,1558,1768,2450,New confirmed cases by infection date,Unsure
+Lombardia,1306 (586 -- 2634),1306,1427,678,586,970,1172,1462,1729,2634,New confirmed cases by infection date,Unsure
+Friuli Venezia Giulia,1214 (641 -- 2508),1214,1356,695,641,940,1104,1342,1603,2508,New confirmed cases by infection date,Likely increasing
+Sicilia,923 (542 -- 1507),923,960,321,542,749,856,991,1118,1507,New confirmed cases by infection date,Unsure
+Emilia-Romagna,908 (475 -- 1617),908,961,370,475,704,828,993,1155,1617,New confirmed cases by infection date,Unsure
+Lazio,865 (518 -- 1378),865,894,269,518,703,801,929,1047,1378,New confirmed cases by infection date,Unsure
+Campania,798 (437 -- 1422),798,849,304,437,638,736,876,1008,1422,New confirmed cases by infection date,Unsure
+Piemonte,759 (363 -- 1505),759,825,379,363,569,684,839,994,1505,New confirmed cases by infection date,Unsure
+Marche,527 (251 -- 1297),527,616,358,251,388,468,597,731,1297,New confirmed cases by infection date,Unsure
+Trentino-Alto Adige,361 (140 -- 951),361,435,301,140,245,312,419,537,951,New confirmed cases by infection date,Unsure
+Abruzzo,358 (130 -- 940),358,426,285,130,243,309,414,528,940,New confirmed cases by infection date,Unsure
+Sardegna,305 (175 -- 486),305,314,97,175,246,282,329,370,486,New confirmed cases by infection date,Unsure
+Toscana,234 (95 -- 569),234,275,256,95,166,206,264,323,569,New confirmed cases by infection date,Unsure
+Calabria,193 (77 -- 428),193,217,119,77,135,170,220,273,428,New confirmed cases by infection date,Unsure
+Liguria,166 (76 -- 372),166,188,100,76,123,149,186,226,372,New confirmed cases by infection date,Unsure
+Basilicata,148 (41 -- 477),148,193,193,41,94,125,177,233,477,New confirmed cases by infection date,Unsure
+Molise,71 (20 -- 216),71,90,77,20,44,59,85,112,216,New confirmed cases by infection date,Unsure
+Umbria,71 (29 -- 161),71,81,46,29,50,63,81,101,161,New confirmed cases by infection date,Unsure
+Valle d'Aosta,10 (1 -- 38),10,14,14,1,5,8,12,17,38,New confirmed cases by infection date,Unsure
+Friuli Venezia Giulia,1.1 (0.9 -- 1.5),1.1,1.1,0.2,0.9,1,1.1,1.2,1.2,1.5,Effective reproduction no.,Likely increasing
+Marche,1.1 (0.8 -- 1.7),1.1,1.2,0.3,0.8,1,1.1,1.2,1.3,1.7,Effective reproduction no.,Unsure
+Puglia,1 (0.8 -- 1.2),1,1,0.1,0.8,0.9,1,1,1.1,1.2,Effective reproduction no.,Unsure
+Veneto,1 (0.8 -- 1.2),1,1,0.1,0.8,0.9,0.9,1,1.1,1.2,Effective reproduction no.,Unsure
+Abruzzo,0.9 (0.6 -- 1.2),0.9,0.9,0.2,0.6,0.7,0.8,0.9,1,1.2,Effective reproduction no.,Unsure
+Basilicata,0.9 (0.5 -- 1.4),0.9,0.9,0.3,0.5,0.7,0.8,0.9,1,1.4,Effective reproduction no.,Unsure
+Molise,0.9 (0.5 -- 1.3),0.9,0.9,0.2,0.5,0.7,0.8,0.9,1,1.3,Effective reproduction no.,Unsure
+Sardegna,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
+Sicilia,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+Trentino-Alto Adige,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.9,0.9,1,1,1.1,Effective reproduction no.,Unsure
+Calabria,0.8 (0.5 -- 1.1),0.8,0.8,0.2,0.5,0.7,0.7,0.8,0.9,1.1,Effective reproduction no.,Unsure
+Campania,0.7 (0.5 -- 0.9),0.7,0.7,0.1,0.5,0.6,0.7,0.7,0.8,0.9,Effective reproduction no.,Unsure
+Emilia-Romagna,0.7 (0.5 -- 1),0.7,0.7,0.2,0.5,0.6,0.7,0.7,0.8,1,Effective reproduction no.,Unsure
+Lazio,0.7 (0.5 -- 0.9),0.7,0.7,0.1,0.5,0.6,0.7,0.7,0.8,0.9,Effective reproduction no.,Unsure
+Liguria,0.7 (0.5 -- 1),0.7,0.7,0.2,0.5,0.6,0.7,0.8,0.8,1,Effective reproduction no.,Unsure
+Piemonte,0.7 (0.5 -- 0.9),0.7,0.7,0.1,0.5,0.6,0.6,0.7,0.8,0.9,Effective reproduction no.,Unsure
+Umbria,0.7 (0.4 -- 1),0.7,0.7,0.2,0.4,0.5,0.6,0.7,0.8,1,Effective reproduction no.,Unsure
+Lombardia,0.6 (0.4 -- 0.9),0.6,0.6,0.2,0.4,0.5,0.6,0.7,0.7,0.9,Effective reproduction no.,Unsure
+Toscana,0.6 (0.4 -- 0.9),0.6,0.6,0.2,0.4,0.5,0.5,0.6,0.7,0.9,Effective reproduction no.,Unsure
+Valle d'Aosta,0.5 (0.2 -- 0.9),0.5,0.6,0.2,0.2,0.4,0.5,0.6,0.7,0.9,Effective reproduction no.,Unsure
