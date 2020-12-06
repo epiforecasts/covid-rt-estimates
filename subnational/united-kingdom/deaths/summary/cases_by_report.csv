@@ -1,24 +1,21 @@
 region,date,strat,type,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90
-Northern Ireland,2020-09-19,,estimate,0,1,1,0,0,0,0,1,2
+Northern Ireland,2020-09-12,,estimate,0,1,1,0,0,0,0,1,2
+Northern Ireland,2020-09-22,,estimate,0,1,1,0,0,0,0,1,2
 South West,2020-09-10,,estimate,0,1,1,0,0,0,0,1,2
-South West,2020-09-15,,estimate,0,1,1,0,0,0,0,1,2
 East of England,2020-09-13,,estimate,0,1,1,0,0,0,1,1,2
-East of England,2020-09-14,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-10,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-11,,estimate,0,1,1,0,0,0,1,1,2
-Northern Ireland,2020-09-12,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-13,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-14,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-15,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-16,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-17,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-18,,estimate,0,1,1,0,0,0,1,1,2
+Northern Ireland,2020-09-19,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-20,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-21,,estimate,0,1,1,0,0,0,1,1,2
-Northern Ireland,2020-09-22,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-23,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-24,,estimate,0,1,1,0,0,0,1,1,2
-Northern Ireland,2020-09-25,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-26,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-27,,estimate,0,1,1,0,0,0,1,1,2
 Northern Ireland,2020-09-28,,estimate,0,1,1,0,0,0,1,1,2
@@ -27,28 +24,31 @@ South West,2020-09-11,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-12,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-13,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-14,,estimate,0,1,1,0,0,0,1,1,2
+South West,2020-09-15,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-16,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-17,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-18,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-19,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-21,,estimate,0,1,1,0,0,0,1,1,2
 South West,2020-09-22,,estimate,0,1,1,0,0,0,1,1,2
+East of England,2020-09-14,,estimate,1,1,1,0,0,0,1,1,2
+Northern Ireland,2020-09-25,,estimate,1,1,1,0,0,0,1,1,2
 South West,2020-09-20,,estimate,1,1,1,0,0,0,1,1,2
+South West,2020-09-23,,estimate,1,1,1,0,0,0,1,1,2
 East of England,2020-09-15,,estimate,1,1,1,0,0,0,1,1,3
 East of England,2020-09-16,,estimate,1,1,1,0,0,0,1,1,3
 Northern Ireland,2020-09-30,,estimate,1,1,1,0,0,0,1,1,3
 Northern Ireland,2020-10-01,,estimate,1,1,1,0,0,0,1,1,3
 Northern Ireland,2020-10-03,,estimate,1,1,1,0,0,0,1,1,3
 Scotland,2020-09-16,,estimate,1,1,1,0,0,0,1,1,3
-South West,2020-09-23,,estimate,1,1,1,0,0,0,1,1,3
 South West,2020-09-24,,estimate,1,1,1,0,0,0,1,1,3
+South West,2020-09-25,,estimate,1,1,1,0,0,0,1,1,3
 South West,2020-09-26,,estimate,1,1,1,0,0,0,1,1,3
 South West,2020-09-29,,estimate,1,1,1,0,0,0,1,1,3
 Wales,2020-09-11,,estimate,1,1,1,0,0,0,1,1,3
 Wales,2020-09-12,,estimate,1,1,1,0,0,0,1,1,3
+East of England,2020-09-17,,estimate,1,1,1,0,0,1,1,1,3
 Scotland,2020-09-13,,estimate,1,1,1,0,0,1,1,1,3
-South West,2020-09-25,,estimate,1,1,1,0,0,1,1,1,3
-East of England,2020-09-17,,estimate,1,1,1,0,0,1,1,2,3
 East of England,2020-09-18,,estimate,1,1,1,0,0,1,1,2,3
 East of England,2020-09-19,,estimate,1,1,1,0,0,1,1,2,3
 East of England,2020-09-20,,estimate,1,1,1,0,0,1,1,2,3
@@ -72,33 +72,33 @@ South West,2020-10-01,,estimate,1,1,1,0,0,1,1,2,3
 Wales,2020-09-13,,estimate,1,1,1,0,0,1,1,2,3
 Wales,2020-09-14,,estimate,1,1,1,0,0,1,1,2,3
 Wales,2020-09-15,,estimate,1,1,1,0,0,1,1,2,3
+Wales,2020-09-16,,estimate,1,1,1,0,0,1,1,2,3
 East of England,2020-09-22,,estimate,1,1,1,0,0,1,1,2,4
+London,2020-09-10,,estimate,1,1,1,0,0,1,1,2,4
+London,2020-09-12,,estimate,1,1,1,0,0,1,1,2,4
+Scotland,2020-09-23,,estimate,1,1,1,0,0,1,1,2,4
 South East,2020-09-12,,estimate,1,1,1,0,0,1,1,2,4
-Wales,2020-09-16,,estimate,1,1,1,0,0,1,1,2,4
+South West,2020-10-02,,estimate,1,1,1,0,0,1,1,2,4
+Wales,2020-09-18,,estimate,1,1,1,0,0,1,1,2,4
 Wales,2020-09-19,,estimate,1,1,1,0,0,1,1,2,4
-London,2020-09-10,,estimate,1,1,1,0,0,1,2,2,4
-London,2020-09-12,,estimate,1,1,1,0,0,1,2,2,4
 Northern Ireland,2020-10-07,,estimate,1,1,1,0,0,1,2,2,4
-Scotland,2020-09-23,,estimate,1,1,1,0,0,1,2,2,4
-South East,2020-09-15,,estimate,1,1,1,0,0,1,2,2,4
-South West,2020-10-02,,estimate,1,1,1,0,0,1,2,2,4
 South West,2020-10-03,,estimate,1,1,1,0,0,1,2,2,4
-Wales,2020-09-18,,estimate,1,1,1,0,0,1,2,2,4
-East of England,2020-09-23,,estimate,1,1,1,0,1,1,2,2,4
-Scotland,2020-09-22,,estimate,1,1,1,0,1,1,2,2,4
-East of England,2020-09-24,,estimate,1,2,1,0,1,1,2,2,4
+South West,2020-10-06,,estimate,1,1,1,0,0,1,2,2,4
+East of England,2020-09-24,,estimate,1,1,1,0,1,1,2,2,4
+Scotland,2020-09-20,,estimate,1,1,1,0,1,1,2,2,4
+Scotland,2020-09-21,,estimate,1,1,1,0,1,1,2,2,4
+South East,2020-09-15,,estimate,1,1,1,0,1,1,2,2,4
+East of England,2020-09-23,,estimate,1,2,1,0,1,1,2,2,4
 East of England,2020-09-25,,estimate,1,2,1,0,1,1,2,2,4
 East of England,2020-09-27,,estimate,1,2,1,0,1,1,2,2,4
 Northern Ireland,2020-10-08,,estimate,1,2,1,0,1,1,2,2,4
-Scotland,2020-09-20,,estimate,1,2,1,0,1,1,2,2,4
-Scotland,2020-09-21,,estimate,1,2,1,0,1,1,2,2,4
+Scotland,2020-09-22,,estimate,1,2,1,0,1,1,2,2,4
 South East,2020-09-13,,estimate,1,2,1,0,1,1,2,2,4
+South East,2020-09-17,,estimate,1,2,1,0,1,1,2,2,4
 South East,2020-09-18,,estimate,1,2,1,0,1,1,2,2,4
 South West,2020-10-04,,estimate,1,2,1,0,1,1,2,2,4
 South West,2020-10-05,,estimate,1,2,1,0,1,1,2,2,4
-South West,2020-10-06,,estimate,1,2,1,0,1,1,2,2,4
-Wales,2020-09-17,,estimate,1,2,1,0,1,1,2,2,4
-South East,2020-09-17,,estimate,1,2,1,0,1,1,2,3,4
+South West,2020-10-07,,estimate,1,2,1,0,1,1,2,2,4
 East of England,2020-09-26,,estimate,2,2,1,0,1,1,2,3,4
 East of England,2020-09-28,,estimate,2,2,1,0,1,1,2,3,4
 London,2020-09-13,,estimate,2,2,1,0,1,1,2,3,4
@@ -106,1062 +106,1070 @@ Northern Ireland,2020-10-10,,estimate,2,2,1,0,1,1,2,3,4
 Scotland,2020-09-24,,estimate,2,2,1,0,1,1,2,3,4
 Scotland,2020-09-25,,estimate,2,2,1,0,1,1,2,3,4
 South East,2020-09-14,,estimate,2,2,1,0,1,1,2,3,4
+South East,2020-09-16,,estimate,2,2,1,0,1,1,2,3,4
 South East,2020-09-19,,estimate,2,2,1,0,1,1,2,3,4
 South East,2020-09-22,,estimate,2,2,1,0,1,1,2,3,4
-South West,2020-10-07,,estimate,2,2,1,0,1,1,2,3,4
-Wales,2020-09-20,,estimate,2,2,1,0,1,1,2,3,4
+South East,2020-09-25,,estimate,2,2,1,0,1,1,2,3,4
+Wales,2020-09-17,,estimate,2,2,1,0,1,1,2,3,4
 Wales,2020-09-21,,estimate,2,2,1,0,1,1,2,3,4
 East of England,2020-09-29,,estimate,2,2,1,0,1,1,2,3,5
-South East,2020-09-16,,estimate,2,2,1,0,1,1,2,3,5
-South East,2020-09-20,,estimate,2,2,1,0,1,1,2,3,5
-South East,2020-09-25,,estimate,2,2,1,0,1,1,2,3,5
+South West,2020-10-08,,estimate,2,2,1,0,1,1,2,3,5
+Wales,2020-09-20,,estimate,2,2,1,0,1,1,2,3,5
 Wales,2020-09-22,,estimate,2,2,1,0,1,1,2,3,5
-Wales,2020-09-23,,estimate,2,2,1,0,1,1,2,3,5
 London,2020-09-14,,estimate,2,2,2,0,1,1,2,3,5
 London,2020-09-15,,estimate,2,2,2,0,1,1,2,3,5
+London,2020-09-18,,estimate,2,2,2,0,1,1,2,3,5
 Northern Ireland,2020-10-09,,estimate,2,2,2,0,1,1,2,3,5
-Scotland,2020-09-26,,estimate,2,2,2,0,1,1,2,3,5
-South East,2020-09-24,,estimate,2,2,2,0,1,1,2,3,5
-South West,2020-10-08,,estimate,2,2,2,0,1,1,2,3,5
-Wales,2020-09-26,,estimate,2,2,2,0,1,1,2,3,5
+Northern Ireland,2020-10-11,,estimate,2,2,2,0,1,1,2,3,5
+South East,2020-09-20,,estimate,2,2,2,0,1,1,2,3,5
+Wales,2020-09-23,,estimate,2,2,2,0,1,1,2,3,5
 East of England,2020-09-30,,estimate,2,2,2,0,1,2,2,3,5
 East of England,2020-10-01,,estimate,2,2,2,0,1,2,2,3,5
-London,2020-09-18,,estimate,2,2,2,0,1,2,2,3,5
-London,2020-09-19,,estimate,2,2,2,0,1,2,2,3,5
-Northern Ireland,2020-10-11,,estimate,2,2,2,0,1,2,2,3,5
+Scotland,2020-09-26,,estimate,2,2,2,0,1,2,2,3,5
 South East,2020-09-21,,estimate,2,2,2,0,1,2,2,3,5
 South East,2020-09-23,,estimate,2,2,2,0,1,2,2,3,5
+South East,2020-09-24,,estimate,2,2,2,0,1,2,2,3,5
 South East,2020-09-26,,estimate,2,2,2,0,1,2,2,3,5
-South East,2020-09-29,,estimate,2,2,2,0,1,2,2,3,5
-South West,2020-10-09,,estimate,2,2,2,0,1,2,2,3,5
 Wales,2020-09-25,,estimate,2,2,2,0,1,2,2,3,5
+Wales,2020-09-26,,estimate,2,2,2,0,1,2,2,3,5
+London,2020-09-17,,estimate,2,2,2,0,1,2,2,3,6
+London,2020-09-19,,estimate,2,2,2,0,1,2,2,3,6
 East of England,2020-10-02,,estimate,2,2,2,0,1,2,3,3,5
-London,2020-09-17,,estimate,2,2,2,0,1,2,3,3,5
-Midlands,2020-09-08,,estimate,2,2,2,0,1,2,3,3,5
+East of England,2020-10-04,,estimate,2,2,2,0,1,2,3,3,5
+Northern Ireland,2020-10-13,,estimate,2,2,2,0,1,2,3,3,5
 Scotland,2020-09-27,,estimate,2,2,2,0,1,2,3,3,5
-Scotland,2020-09-28,,estimate,2,2,2,0,1,2,3,3,5
-Scotland,2020-09-29,,estimate,2,2,2,0,1,2,3,3,5
 Scotland,2020-09-30,,estimate,2,2,2,0,1,2,3,3,5
+South East,2020-09-27,,estimate,2,2,2,0,1,2,3,3,5
+South East,2020-09-29,,estimate,2,2,2,0,1,2,3,3,5
 South East,2020-10-02,,estimate,2,2,2,0,1,2,3,3,5
+South West,2020-10-09,,estimate,2,2,2,0,1,2,3,3,5
 South West,2020-10-10,,estimate,2,2,2,0,1,2,3,3,5
-East of England,2020-10-04,,estimate,2,2,2,0,1,2,3,3,6
-Northern Ireland,2020-10-13,,estimate,2,2,2,0,1,2,3,3,6
-South East,2020-09-27,,estimate,2,2,2,0,1,2,3,3,6
+Midlands,2020-09-09,,estimate,2,2,2,0,1,2,3,3,6
+Northern Ireland,2020-10-12,,estimate,2,2,2,0,1,2,3,3,6
+Scotland,2020-09-28,,estimate,2,2,2,0,1,2,3,3,6
 London,2020-09-16,,estimate,2,2,2,0,1,2,3,4,6
-Northern Ireland,2020-10-12,,estimate,2,2,2,0,1,2,3,4,6
-East of England,2020-10-03,,estimate,2,3,2,0,1,2,3,4,6
+Scotland,2020-09-29,,estimate,2,3,2,0,1,2,3,3,5
+East of England,2020-10-03,,estimate,2,3,2,0,1,2,3,3,6
 East of England,2020-10-05,,estimate,2,3,2,0,1,2,3,4,6
+London,2020-09-20,,estimate,2,3,2,0,1,2,3,4,6
 South East,2020-09-28,,estimate,2,3,2,0,1,2,3,4,6
 South East,2020-10-01,,estimate,2,3,2,0,1,2,3,4,6
 South West,2020-10-11,,estimate,2,3,2,0,1,2,3,4,6
 South West,2020-10-12,,estimate,2,3,2,0,1,2,3,4,6
 South West,2020-10-13,,estimate,2,3,2,0,1,2,3,4,6
 Wales,2020-09-24,,estimate,2,3,2,0,1,2,3,4,6
-London,2020-09-20,,estimate,3,3,2,0,1,2,3,4,6
-Midlands,2020-09-09,,estimate,3,3,2,0,1,2,3,4,6
+Wales,2020-09-28,,estimate,2,3,2,0,1,2,3,4,6
 South East,2020-09-30,,estimate,3,3,2,0,1,2,3,4,6
-Wales,2020-09-27,,estimate,3,3,2,0,1,2,3,4,6
-Wales,2020-09-28,,estimate,3,3,2,0,1,2,3,4,6
+South East,2020-10-03,,estimate,3,3,2,0,1,2,3,4,6
 East of England,2020-10-06,,estimate,3,3,2,0,2,2,3,4,6
+London,2020-09-22,,estimate,3,3,2,0,2,2,3,4,6
 London,2020-09-25,,estimate,3,3,2,0,2,2,3,4,6
 Midlands,2020-09-10,,estimate,3,3,2,0,2,2,3,4,6
 Midlands,2020-09-11,,estimate,3,3,2,0,2,2,3,4,6
-North East and Yorkshire,2020-09-09,,estimate,3,3,2,0,2,2,3,4,6
-South East,2020-10-03,,estimate,3,3,2,0,2,2,3,4,6
+Midlands,2020-09-12,,estimate,3,3,2,0,2,2,3,4,6
+Northern Ireland,2020-10-14,,estimate,3,3,2,0,2,2,3,4,6
+South East,2020-10-04,,estimate,3,3,2,0,2,2,3,4,6
 South East,2020-10-06,,estimate,3,3,2,0,2,2,3,4,6
-Wales,2020-09-29,,estimate,3,3,2,0,2,2,3,4,6
+South West,2020-10-14,,estimate,3,3,2,0,2,2,3,4,6
+Wales,2020-09-30,,estimate,3,3,2,0,2,2,3,4,6
 London,2020-09-21,,estimate,3,3,2,0,2,2,3,4,7
-London,2020-09-22,,estimate,3,3,2,0,2,2,3,4,7
 London,2020-09-26,,estimate,3,3,2,0,2,2,3,4,7
-Northern Ireland,2020-10-14,,estimate,3,3,2,0,2,2,3,4,7
-South West,2020-10-14,,estimate,3,3,2,0,2,2,3,4,7
-Wales,2020-09-30,,estimate,3,3,2,0,2,2,3,4,7
-Northern Ireland,2020-10-15,,estimate,3,3,2,0,2,2,4,4,7
-London,2020-09-24,,estimate,3,3,2,0,2,3,4,4,7
-South East,2020-10-04,,estimate,3,3,2,1,2,2,3,4,6
-Scotland,2020-10-01,,estimate,3,3,2,1,2,2,3,4,7
-Midlands,2020-09-12,,estimate,3,3,2,1,2,3,4,4,7
+Northern Ireland,2020-10-15,,estimate,3,3,2,0,2,2,3,4,7
+Scotland,2020-10-01,,estimate,3,3,2,0,2,2,3,4,7
+Scotland,2020-10-02,,estimate,3,3,2,0,2,2,3,4,7
+Wales,2020-09-27,,estimate,3,3,2,0,2,2,3,4,7
+Wales,2020-09-29,,estimate,3,3,2,0,2,2,3,4,7
+Wales,2020-10-02,,estimate,3,3,2,0,2,3,4,5,7
+North East and Yorkshire,2020-09-09,,estimate,3,3,2,1,2,2,3,4,6
 North East and Yorkshire,2020-09-10,,estimate,3,3,2,1,2,3,4,4,7
-Scotland,2020-10-02,,estimate,3,3,2,1,2,3,4,4,7
-South West,2020-10-15,,estimate,3,3,2,1,2,3,4,4,7
 East of England,2020-10-07,,estimate,3,3,2,1,2,3,4,5,7
+London,2020-09-23,,estimate,3,3,2,1,2,3,4,5,7
+London,2020-09-24,,estimate,3,3,2,1,2,3,4,5,7
 South East,2020-10-09,,estimate,3,3,2,1,2,3,4,5,7
-Wales,2020-10-02,,estimate,3,3,2,1,2,3,4,5,7
+South West,2020-10-15,,estimate,3,3,2,1,2,3,4,5,7
 Wales,2020-10-03,,estimate,3,3,2,1,2,3,4,5,7
 East of England,2020-10-08,,estimate,3,4,2,1,2,3,4,5,7
-North East and Yorkshire,2020-09-11,,estimate,3,4,2,1,2,3,4,5,7
+Midlands,2020-09-13,,estimate,3,4,2,1,2,3,4,5,7
 Northern Ireland,2020-10-17,,estimate,3,4,2,1,2,3,4,5,7
 South East,2020-10-05,,estimate,3,4,2,1,2,3,4,5,7
 South East,2020-10-08,,estimate,3,4,2,1,2,3,4,5,7
-London,2020-09-23,,estimate,3,4,2,1,2,3,4,5,8
 London,2020-09-27,,estimate,3,4,2,1,2,3,4,5,8
-Midlands,2020-09-13,,estimate,4,4,2,1,2,3,4,5,7
-Scotland,2020-10-03,,estimate,4,4,2,1,2,3,4,5,7
+London,2020-10-02,,estimate,3,4,2,1,2,3,4,5,8
+South East,2020-10-07,,estimate,3,4,2,1,2,3,4,5,8
+Midlands,2020-09-15,,estimate,4,4,2,1,2,3,4,5,7
+North East and Yorkshire,2020-09-11,,estimate,4,4,2,1,2,3,4,5,7
 East of England,2020-10-09,,estimate,4,4,2,1,2,3,4,5,8
-East of England,2020-10-10,,estimate,4,4,2,1,2,3,4,5,8
 East of England,2020-10-11,,estimate,4,4,2,1,2,3,4,5,8
 London,2020-09-29,,estimate,4,4,2,1,2,3,4,5,8
-London,2020-10-02,,estimate,4,4,2,1,2,3,4,5,8
-London,2020-10-03,,estimate,4,4,2,1,2,3,4,5,8
-Midlands,2020-09-15,,estimate,4,4,2,1,2,3,4,5,8
+Midlands,2020-09-14,,estimate,4,4,2,1,2,3,4,5,8
 Northern Ireland,2020-10-16,,estimate,4,4,2,1,2,3,4,5,8
-South East,2020-10-07,,estimate,4,4,2,1,2,3,4,5,8
+Scotland,2020-10-03,,estimate,4,4,2,1,2,3,4,5,8
 South East,2020-10-10,,estimate,4,4,2,1,2,3,4,5,8
 South West,2020-10-16,,estimate,4,4,2,1,2,3,4,5,8
 South West,2020-10-17,,estimate,4,4,2,1,2,3,4,5,8
-Wales,2020-10-01,,estimate,4,4,2,1,2,3,4,5,8
-London,2020-09-28,,estimate,4,4,2,1,2,3,4,6,8
-Midlands,2020-09-14,,estimate,4,4,2,1,3,3,4,5,8
+London,2020-10-03,,estimate,4,4,2,1,2,3,4,6,8
+Wales,2020-10-01,,estimate,4,4,2,1,2,3,4,6,8
+London,2020-09-28,,estimate,4,4,2,1,3,3,4,5,8
 North East and Yorkshire,2020-09-12,,estimate,4,4,2,1,3,3,4,5,8
 North East and Yorkshire,2020-09-13,,estimate,4,4,2,1,3,3,4,5,8
-North West,2020-09-08,,estimate,4,4,2,1,3,3,5,6,8
-South West,2020-10-20,,estimate,4,4,2,1,3,3,5,6,8
+East of England,2020-10-10,,estimate,4,4,2,1,3,3,4,6,8
 London,2020-10-01,,estimate,4,4,2,1,3,3,5,6,9
-Wales,2020-10-05,,estimate,4,4,2,1,3,3,5,6,9
 East of England,2020-10-12,,estimate,4,4,2,1,3,4,5,6,8
 Midlands,2020-09-16,,estimate,4,4,2,1,3,4,5,6,8
 North East and Yorkshire,2020-09-14,,estimate,4,4,2,1,3,4,5,6,8
-Northern Ireland,2020-10-18,,estimate,4,4,2,1,3,4,5,6,8
-Scotland,2020-10-04,,estimate,4,4,2,1,3,4,5,6,8
-North East and Yorkshire,2020-09-15,,estimate,4,4,2,1,3,4,5,6,9
-South East,2020-10-13,,estimate,4,4,2,1,3,4,5,6,9
+North East and Yorkshire,2020-09-15,,estimate,4,4,2,1,3,4,5,6,8
+Northern Ireland,2020-10-18,,estimate,4,4,2,1,3,4,5,6,9
+Scotland,2020-10-04,,estimate,4,4,2,1,3,4,5,6,9
+Scotland,2020-10-07,,estimate,4,4,2,1,3,4,5,6,9
+South West,2020-10-20,,estimate,4,4,2,1,3,4,5,6,9
+Wales,2020-10-05,,estimate,4,4,2,1,3,4,5,6,9
 Midlands,2020-09-17,,estimate,4,5,2,1,3,4,5,6,9
 Midlands,2020-09-18,,estimate,4,5,2,1,3,4,5,6,9
+North East and Yorkshire,2020-09-16,,estimate,4,5,2,1,3,4,5,6,9
+North West,2020-09-09,,estimate,4,5,2,1,3,4,5,6,9
+North West,2020-09-10,,estimate,4,5,2,1,3,4,5,6,9
 Scotland,2020-10-05,,estimate,4,5,2,1,3,4,5,6,9
-Scotland,2020-10-07,,estimate,4,5,2,1,3,4,5,6,9
+Scotland,2020-10-06,,estimate,4,5,2,1,3,4,5,6,9
 South East,2020-10-11,,estimate,4,5,2,1,3,4,5,6,9
+South East,2020-10-13,,estimate,4,5,2,1,3,4,5,6,9
+South West,2020-10-18,,estimate,4,5,2,1,3,4,5,6,9
+South West,2020-10-19,,estimate,4,5,2,1,3,4,5,6,9
 Wales,2020-10-04,,estimate,4,5,2,1,3,4,5,6,9
 London,2020-09-30,,estimate,4,5,3,1,3,4,5,6,9
 Northern Ireland,2020-10-20,,estimate,4,5,3,1,3,4,5,6,9
-South West,2020-10-18,,estimate,4,5,3,1,3,4,5,6,9
-South West,2020-10-19,,estimate,4,5,3,1,3,4,5,6,9
 Midlands,2020-09-19,,estimate,5,5,2,1,3,4,5,6,9
-North East and Yorkshire,2020-09-16,,estimate,5,5,2,1,3,4,5,6,9
-Scotland,2020-10-06,,estimate,5,5,2,1,3,4,5,6,9
-Wales,2020-10-06,,estimate,5,5,2,1,3,4,5,6,9
-North West,2020-09-10,,estimate,5,5,2,2,3,4,5,6,9
 North East and Yorkshire,2020-09-17,,estimate,5,5,2,2,3,4,5,7,9
-North West,2020-09-09,,estimate,5,5,2,2,3,4,5,7,9
-Midlands,2020-09-20,,estimate,5,5,2,2,4,5,6,7,10
-North West,2020-09-11,,estimate,5,5,2,2,4,5,6,7,10
+North West,2020-09-11,,estimate,5,5,2,2,3,4,6,7,9
+South East,2020-10-12,,estimate,5,5,2,2,3,4,6,7,10
+North West,2020-09-12,,estimate,5,5,2,2,4,5,6,7,10
+London,2020-10-04,,estimate,5,5,3,1,3,4,5,6,9
 Northern Ireland,2020-10-19,,estimate,5,5,3,1,3,4,5,6,9
-Wales,2020-10-07,,estimate,5,5,3,1,3,4,5,6,9
-London,2020-10-04,,estimate,5,5,3,1,3,4,5,6,10
+Wales,2020-10-06,,estimate,5,5,3,1,3,4,5,6,10
+Wales,2020-10-07,,estimate,5,5,3,1,3,4,5,6,10
+East of England,2020-10-13,,estimate,5,5,3,1,3,4,5,7,10
 London,2020-10-09,,estimate,5,5,3,1,3,4,5,7,10
+South West,2020-10-21,,estimate,5,5,3,1,3,4,5,7,10
+London,2020-10-05,,estimate,5,5,3,1,3,4,6,7,10
 London,2020-10-06,,estimate,5,5,3,1,3,4,6,7,10
 London,2020-10-10,,estimate,5,5,3,1,3,4,6,7,10
-South West,2020-10-21,,estimate,5,5,3,1,3,4,6,7,10
+South East,2020-10-16,,estimate,5,5,3,1,3,4,6,7,10
 Wales,2020-10-10,,estimate,5,5,3,1,3,4,6,7,10
-East of England,2020-10-13,,estimate,5,5,3,2,3,4,5,7,10
-London,2020-10-05,,estimate,5,5,3,2,3,4,6,7,10
-South East,2020-10-16,,estimate,5,5,3,2,3,4,6,7,10
 Wales,2020-10-09,,estimate,5,5,3,2,3,4,6,7,10
-South East,2020-10-12,,estimate,5,5,3,2,4,4,6,7,10
-Midlands,2020-09-22,,estimate,5,6,2,2,4,5,6,7,10
-North West,2020-09-12,,estimate,5,6,2,2,4,5,6,7,10
+South East,2020-10-14,,estimate,5,5,3,2,3,5,6,7,10
 North West,2020-09-13,,estimate,5,6,2,2,4,5,6,7,10
-East of England,2020-10-14,,estimate,5,6,3,2,4,5,6,7,10
-Midlands,2020-09-21,,estimate,5,6,3,2,4,5,6,7,10
+Midlands,2020-09-20,,estimate,5,6,3,2,4,5,6,7,10
+Midlands,2020-09-22,,estimate,5,6,3,2,4,5,6,7,10
 North East and Yorkshire,2020-09-18,,estimate,5,6,3,2,4,5,6,7,10
 South East,2020-10-15,,estimate,5,6,3,2,4,5,6,7,10
 London,2020-10-08,,estimate,5,6,3,2,4,5,6,7,11
-South West,2020-10-22,,estimate,5,6,3,2,4,5,6,8,11
-Northern Ireland,2020-12-15,,forecast,5,161,3264,1,3,4,7,11,46
-North West,2020-09-14,,estimate,6,6,3,2,4,5,6,7,10
-Midlands,2020-09-23,,estimate,6,6,3,2,4,5,6,8,10
-South East,2020-10-14,,estimate,6,6,3,2,4,5,6,8,10
+Northern Ireland,2020-10-21,,estimate,5,6,3,2,4,5,6,7,11
+South West,2020-10-22,,estimate,5,6,3,2,4,5,6,7,11
+Northern Ireland,2020-12-15,,forecast,5,17,163,1,3,4,7,10,39
+North West,2020-09-14,,estimate,6,6,2,2,4,5,6,7,10
+East of England,2020-10-14,,estimate,6,6,3,2,4,5,6,7,10
+Midlands,2020-09-21,,estimate,6,6,3,2,4,5,6,7,10
 East of England,2020-10-15,,estimate,6,6,3,2,4,5,6,8,11
-Northern Ireland,2020-10-21,,estimate,6,6,3,2,4,5,6,8,11
+Midlands,2020-09-23,,estimate,6,6,3,2,4,5,6,8,11
+North East and Yorkshire,2020-09-19,,estimate,6,6,3,2,4,5,6,8,11
+North East and Yorkshire,2020-09-20,,estimate,6,6,3,2,4,5,6,8,11
 Northern Ireland,2020-10-22,,estimate,6,6,3,2,4,5,6,8,11
-Scotland,2020-10-08,,estimate,6,6,3,2,4,5,6,8,11
 East of England,2020-10-16,,estimate,6,6,3,2,4,5,7,8,11
 London,2020-10-07,,estimate,6,6,3,2,4,5,7,8,11
-Midlands,2020-09-25,,estimate,6,6,3,2,4,5,7,8,11
-North East and Yorkshire,2020-09-19,,estimate,6,6,3,2,4,5,7,8,11
-North East and Yorkshire,2020-09-20,,estimate,6,6,3,2,4,5,7,8,11
 North West,2020-09-15,,estimate,6,6,3,2,4,5,7,8,11
+Scotland,2020-10-08,,estimate,6,6,3,2,4,5,7,8,11
 Scotland,2020-10-09,,estimate,6,6,3,2,4,5,7,8,11
 South East,2020-10-17,,estimate,6,6,3,2,4,5,7,8,11
 London,2020-10-11,,estimate,6,6,3,2,4,5,7,8,12
 Northern Ireland,2020-10-24,,estimate,6,6,3,2,4,5,7,8,12
-Midlands,2020-09-24,,estimate,6,6,3,2,4,6,7,8,11
-South West,2020-10-24,,estimate,6,7,3,2,4,6,7,8,12
+Midlands,2020-09-25,,estimate,6,6,3,2,5,5,7,8,11
+East of England,2020-10-18,,estimate,6,7,3,2,4,6,7,8,12
 Wales,2020-10-08,,estimate,6,7,3,2,4,6,7,8,12
 London,2020-10-16,,estimate,6,7,3,2,4,6,7,9,12
-South West,2020-10-23,,estimate,6,7,3,2,4,6,7,9,12
-Midlands,2020-09-26,,estimate,6,7,3,2,5,6,7,8,11
-East of England,2020-10-18,,estimate,6,7,3,2,5,6,7,8,12
-North East and Yorkshire,2020-09-21,,estimate,6,7,3,3,5,6,7,8,12
-Northern Ireland,2020-12-08,,forecast,6,9,20,2,4,5,7,10,19
-Northern Ireland,2020-12-12,,forecast,6,29,384,1,3,5,7,10,31
-Northern Ireland,2020-12-13,,forecast,6,47,734,1,3,5,8,11,38
-Northern Ireland,2020-12-14,,forecast,6,83,1451,1,3,5,8,12,44
+South West,2020-10-23,,estimate,6,7,3,2,5,6,7,9,12
+South West,2020-10-24,,estimate,6,7,3,2,5,6,7,9,12
+Midlands,2020-09-24,,estimate,6,7,3,3,5,6,7,8,11
+Midlands,2020-09-26,,estimate,6,7,3,3,5,6,7,8,11
+North East and Yorkshire,2020-09-21,,estimate,6,7,3,3,5,6,7,8,11
+Northern Ireland,2020-12-08,,forecast,6,7,6,2,4,5,7,9,16
+Northern Ireland,2020-12-12,,forecast,6,11,65,1,3,5,7,10,26
+Northern Ireland,2020-12-13,,forecast,6,13,103,1,3,5,7,11,31
+Northern Ireland,2020-12-14,,forecast,6,16,126,1,3,5,8,11,38
+Northern Ireland,2020-12-16,,forecast,6,28,418,1,3,5,8,12,48
 East of England,2020-10-17,,estimate,7,7,3,2,5,6,7,9,12
-South West,2020-10-27,,estimate,7,7,3,2,5,6,7,9,12
-Wales,2020-10-12,,estimate,7,7,3,2,5,6,7,9,12
 London,2020-10-13,,estimate,7,7,3,2,5,6,7,9,13
-London,2020-10-17,,estimate,7,7,3,2,5,6,7,9,13
+Wales,2020-10-12,,estimate,7,7,3,2,5,6,7,9,13
 London,2020-10-12,,estimate,7,7,3,2,5,6,8,9,13
-South West,2020-10-26,,estimate,7,7,3,2,5,6,8,9,13
-North East and Yorkshire,2020-09-22,,estimate,7,7,3,3,5,6,7,8,11
+London,2020-10-17,,estimate,7,7,3,2,5,6,8,9,13
+North East and Yorkshire,2020-09-22,,estimate,7,7,3,3,5,6,7,8,12
 North West,2020-09-17,,estimate,7,7,3,3,5,6,7,9,12
-Midlands,2020-09-27,,estimate,7,7,3,3,5,6,8,9,12
-Midlands,2020-09-29,,estimate,7,7,3,3,5,6,8,9,12
 North East and Yorkshire,2020-09-23,,estimate,7,7,3,3,5,6,8,9,12
 North West,2020-09-16,,estimate,7,7,3,3,5,6,8,9,12
 South East,2020-10-18,,estimate,7,7,3,3,5,6,8,9,12
 East of England,2020-10-19,,estimate,7,7,3,3,5,6,8,9,13
+Midlands,2020-09-29,,estimate,7,7,3,3,5,6,8,9,13
 Northern Ireland,2020-10-23,,estimate,7,7,3,3,5,6,8,9,13
 Northern Ireland,2020-10-25,,estimate,7,7,3,3,5,6,8,9,13
 Northern Ireland,2020-10-27,,estimate,7,7,3,3,5,6,8,9,13
+Northern Ireland,2020-12-01,,estimate based on partial data,7,7,3,3,5,6,8,9,13
 Scotland,2020-10-10,,estimate,7,7,3,3,5,6,8,9,13
 South East,2020-10-20,,estimate,7,7,3,3,5,6,8,9,13
+South West,2020-10-27,,estimate,7,7,3,3,5,6,8,9,13
 Wales,2020-10-11,,estimate,7,7,3,3,5,6,8,9,13
-Northern Ireland,2020-12-01,,estimate based on partial data,7,7,4,2,5,6,8,10,14
-South West,2020-10-25,,estimate,7,8,3,3,5,6,8,10,13
-Wales,2020-10-13,,estimate,7,8,3,3,5,6,8,10,14
-Midlands,2020-09-28,,estimate,7,8,3,3,5,7,8,10,13
-Northern Ireland,2020-10-26,,estimate,7,8,3,3,5,7,8,10,14
+South West,2020-10-26,,estimate,7,7,3,3,5,6,8,9,14
+Midlands,2020-09-27,,estimate,7,7,3,3,5,7,8,9,13
+Northern Ireland,2020-12-05,,forecast,7,7,4,2,4,6,7,9,14
+Wales,2020-10-14,,estimate,7,8,3,3,5,7,8,10,13
 Northern Ireland,2020-11-28,,estimate based on partial data,7,8,3,3,5,7,8,10,14
-North East and Yorkshire,2020-09-24,,estimate,7,8,3,3,6,7,8,10,13
-North West,2020-09-18,,estimate,7,8,3,3,6,7,8,10,13
-London,2020-10-15,,estimate,7,8,4,3,5,6,8,10,14
-Northern Ireland,2020-12-03,,forecast,7,8,4,3,5,6,8,10,16
-Northern Ireland,2020-12-05,,forecast,7,8,5,2,4,6,8,9,15
-Northern Ireland,2020-12-06,,forecast,7,8,7,2,5,6,8,10,18
-Northern Ireland,2020-12-07,,forecast,7,9,12,2,5,6,8,11,20
-Northern Ireland,2020-12-09,,forecast,7,11,37,2,4,6,8,11,25
-Northern Ireland,2020-12-10,,forecast,7,15,109,1,4,5,8,11,27
-Northern Ireland,2020-12-11,,forecast,7,23,221,1,4,6,9,12,35
-Wales,2020-10-14,,estimate,8,8,3,3,5,7,8,10,14
-Midlands,2020-09-30,,estimate,8,8,3,3,6,7,9,10,13
+South West,2020-10-25,,estimate,7,8,3,3,5,7,8,10,14
+Wales,2020-10-13,,estimate,7,8,3,3,5,7,8,10,14
+North West,2020-09-18,,estimate,7,8,3,3,6,7,8,9,13
+London,2020-10-15,,estimate,7,8,4,3,5,7,8,10,14
+Northern Ireland,2020-12-03,,forecast,7,8,4,3,5,7,8,10,15
+Northern Ireland,2020-12-06,,forecast,7,8,5,2,5,6,8,10,16
+Northern Ireland,2020-12-07,,forecast,7,8,6,2,5,6,8,10,17
+Northern Ireland,2020-12-09,,forecast,7,9,13,2,4,6,8,11,21
+Northern Ireland,2020-12-10,,forecast,7,9,19,1,4,5,8,10,23
+Northern Ireland,2020-12-11,,forecast,7,12,55,2,4,6,9,12,27
+Northern Ireland,2020-10-26,,estimate,8,8,3,3,5,7,8,10,14
+South West,2020-10-28,,estimate,8,8,3,3,5,7,8,10,14
+Midlands,2020-09-28,,estimate,8,8,3,3,6,7,8,10,13
+North East and Yorkshire,2020-09-24,,estimate,8,8,3,3,6,7,8,10,13
 South East,2020-10-19,,estimate,8,8,3,3,6,7,9,10,14
-South West,2020-10-28,,estimate,8,8,3,3,6,7,9,10,14
-Wales,2020-10-16,,estimate,8,8,3,3,6,7,9,10,14
-North West,2020-09-19,,estimate,8,8,3,4,6,7,9,10,13
+South East,2020-10-23,,estimate,8,8,3,3,6,7,9,10,14
+Midlands,2020-09-30,,estimate,8,8,3,4,6,7,9,10,13
+North West,2020-09-19,,estimate,8,8,3,4,6,7,9,10,14
 North West,2020-09-20,,estimate,8,8,3,4,6,7,9,10,14
-Northern Ireland,2020-12-02,,forecast,8,8,4,3,5,7,9,11,16
-Wales,2020-10-17,,estimate,8,8,4,3,6,7,9,10,14
-London,2020-10-14,,estimate,8,8,4,3,6,7,9,11,15
+London,2020-10-14,,estimate,8,8,4,3,5,7,9,10,14
+Northern Ireland,2020-12-02,,estimate based on partial data,8,8,4,3,6,7,9,10,15
+Wales,2020-10-17,,estimate,8,8,4,3,6,7,9,10,15
 London,2020-10-18,,estimate,8,8,4,3,6,7,9,11,15
 Northern Ireland,2020-11-24,,estimate based on partial data,8,8,4,3,6,7,9,11,15
 Northern Ireland,2020-11-29,,estimate based on partial data,8,8,4,3,6,7,9,11,15
-Scotland,2020-10-11,,estimate,8,9,3,4,6,7,9,11,14
-South East,2020-10-23,,estimate,8,9,3,4,6,7,9,11,14
-East of England,2020-10-20,,estimate,8,9,3,4,6,8,9,11,14
-Midlands,2020-10-01,,estimate,8,9,3,4,6,8,9,11,14
-Midlands,2020-10-02,,estimate,8,9,3,4,6,8,9,11,14
-North East and Yorkshire,2020-09-25,,estimate,8,9,3,4,6,8,9,11,15
-Scotland,2020-10-14,,estimate,8,9,3,4,6,8,9,11,15
+Northern Ireland,2020-11-30,,estimate based on partial data,8,8,4,3,6,7,9,11,15
+Wales,2020-10-16,,estimate,8,8,4,3,6,7,9,11,15
+East of England,2020-10-20,,estimate,8,9,3,3,6,8,9,11,15
+Midlands,2020-10-02,,estimate,8,9,3,4,6,8,9,10,14
+North East and Yorkshire,2020-09-25,,estimate,8,9,3,4,6,8,9,11,14
+Scotland,2020-10-11,,estimate,8,9,3,4,6,8,9,11,14
+Scotland,2020-10-14,,estimate,8,9,3,4,6,8,9,11,14
+South East,2020-10-21,,estimate,8,9,3,4,6,8,9,11,15
+Northern Ireland,2020-10-28,,estimate,8,9,4,3,6,7,9,11,15
 Northern Ireland,2020-10-31,,estimate,8,9,4,3,6,7,9,11,15
-Northern Ireland,2020-11-26,,estimate based on partial data,8,9,4,3,6,7,9,11,15
-Northern Ireland,2020-11-30,,estimate based on partial data,8,9,4,3,6,7,9,11,15
-London,2020-10-23,,estimate,8,9,4,3,6,7,9,11,16
-Northern Ireland,2020-10-29,,estimate,8,9,4,3,6,8,9,11,15
-Northern Ireland,2020-10-28,,estimate,8,9,4,4,6,7,9,11,15
-South West,2020-10-29,,estimate,8,9,4,4,6,8,9,11,16
-Northern Ireland,2020-12-04,,forecast,8,9,5,3,6,7,10,12,19
-Scotland,2020-10-12,,estimate,9,9,3,4,6,8,9,11,15
+Northern Ireland,2020-10-29,,estimate,8,9,4,3,6,7,9,11,16
+South West,2020-10-29,,estimate,8,9,4,3,6,7,9,11,16
+London,2020-10-23,,estimate,8,9,4,3,6,8,9,11,16
+Northern Ireland,2020-11-26,,estimate based on partial data,8,9,4,4,6,8,9,11,16
+Northern Ireland,2020-12-04,,forecast,8,9,5,3,6,7,10,12,17
+Midlands,2020-10-01,,estimate,9,9,3,4,6,8,9,11,14
+South East,2020-10-22,,estimate,9,9,3,4,6,8,9,11,15
 North West,2020-09-21,,estimate,9,9,3,4,7,8,9,11,14
-South East,2020-10-22,,estimate,9,9,3,4,7,8,9,11,15
-Midlands,2020-10-03,,estimate,9,9,3,4,7,8,10,11,15
-North West,2020-09-22,,estimate,9,9,3,4,7,8,10,11,15
+Midlands,2020-10-03,,estimate,9,9,3,4,7,8,10,11,14
+Scotland,2020-10-12,,estimate,9,9,3,4,7,8,10,11,15
 Scotland,2020-10-13,,estimate,9,9,3,4,7,8,10,11,15
-South East,2020-10-21,,estimate,9,9,3,4,7,8,10,11,15
-North East and Yorkshire,2020-09-26,,estimate,9,9,3,4,7,8,10,12,15
-London,2020-10-20,,estimate,9,9,4,3,6,8,10,11,16
-Northern Ireland,2020-11-21,,estimate based on partial data,9,9,4,4,6,8,10,11,16
-East of England,2020-10-21,,estimate,9,9,4,4,7,8,10,12,16
-London,2020-10-24,,estimate,9,9,4,4,7,8,10,12,16
+North East and Yorkshire,2020-09-27,,estimate,9,9,3,4,7,8,10,12,15
+North West,2020-09-22,,estimate,9,9,3,4,7,8,10,12,15
+Northern Ireland,2020-11-21,,estimate based on partial data,9,9,4,3,6,8,9,11,16
+London,2020-10-20,,estimate,9,9,4,4,6,8,10,12,16
 Northern Ireland,2020-11-03,,estimate,9,9,4,4,7,8,10,12,16
-Northern Ireland,2020-11-17,,estimate based on partial data,9,9,4,4,7,8,10,12,16
-London,2020-10-19,,estimate,9,9,4,4,7,8,10,12,17
-North East and Yorkshire,2020-09-27,,estimate,9,10,3,4,7,8,10,12,16
+Northern Ireland,2020-11-22,,estimate based on partial data,9,9,4,4,7,8,10,12,16
+Northern Ireland,2020-11-25,,estimate based on partial data,9,9,4,4,7,8,10,12,16
+North East and Yorkshire,2020-09-26,,estimate,9,10,3,4,7,8,10,12,15
+East of England,2020-10-21,,estimate,9,10,4,4,7,8,10,12,16
 Northern Ireland,2020-11-01,,estimate,9,10,4,4,7,8,10,12,16
-Northern Ireland,2020-11-22,,estimate based on partial data,9,10,4,4,7,8,10,12,16
+Northern Ireland,2020-11-17,,estimate based on partial data,9,10,4,4,7,8,10,12,16
+Northern Ireland,2020-11-23,,estimate based on partial data,9,10,4,4,7,8,10,12,16
+London,2020-10-19,,estimate,9,10,4,4,7,8,10,12,17
+London,2020-10-24,,estimate,9,10,4,4,7,8,10,12,17
+Northern Ireland,2020-11-07,,estimate,9,10,4,4,7,8,10,12,17
 Northern Ireland,2020-11-14,,estimate based on partial data,9,10,4,4,7,8,10,12,17
-Northern Ireland,2020-11-23,,estimate based on partial data,9,10,4,4,7,8,10,12,17
-Northern Ireland,2020-11-25,,estimate based on partial data,9,10,4,4,7,8,10,12,17
-South East,2020-10-24,,estimate,9,10,4,4,7,9,10,12,16
-Northern Ireland,2020-11-07,,estimate,9,10,4,4,7,9,10,12,17
+East of England,2020-10-22,,estimate,9,10,4,4,7,9,10,12,16
+Northern Ireland,2020-11-27,,estimate based on partial data,9,10,4,4,7,9,11,12,17
 Midlands,2020-10-04,,estimate,10,10,3,5,8,9,11,12,16
-East of England,2020-10-22,,estimate,10,10,4,4,7,9,11,12,17
+South East,2020-10-24,,estimate,10,10,4,4,7,9,11,12,16
 Northern Ireland,2020-11-02,,estimate,10,10,4,4,7,9,11,12,17
 Northern Ireland,2020-11-10,,estimate,10,10,4,4,7,9,11,12,17
-Northern Ireland,2020-11-27,,estimate based on partial data,10,10,4,4,7,9,11,12,17
-South West,2020-10-31,,estimate,10,10,4,4,7,9,11,12,17
 Northern Ireland,2020-11-19,,estimate based on partial data,10,10,4,4,7,9,11,13,17
+South West,2020-10-31,,estimate,10,10,4,4,7,9,11,13,17
 Wales,2020-10-15,,estimate,10,10,4,4,7,9,11,13,17
 London,2020-10-22,,estimate,10,10,4,4,7,9,11,13,18
 Northern Ireland,2020-10-30,,estimate,10,10,4,4,7,9,11,13,18
-South West,2020-11-03,,estimate,10,10,4,4,7,9,11,13,18
-South West,2020-10-30,,estimate,10,10,4,5,7,9,11,13,17
+Northern Ireland,2020-11-05,,estimate,10,10,4,4,7,9,11,13,18
+Northern Ireland,2020-11-18,,estimate based on partial data,10,10,4,4,8,9,11,13,18
+South West,2020-10-30,,estimate,10,10,4,5,7,9,11,13,18
 East of England,2020-10-23,,estimate,10,10,4,5,8,9,11,13,17
-Northern Ireland,2020-11-05,,estimate,10,10,4,5,8,9,11,13,18
-Northern Ireland,2020-11-15,,estimate based on partial data,10,11,4,4,8,9,11,13,18
+Midlands,2020-10-05,,estimate,10,11,3,6,8,10,11,13,17
 Northern Ireland,2020-11-16,,estimate based on partial data,10,11,4,4,8,9,11,13,18
+London,2020-10-21,,estimate,10,11,4,4,8,9,12,13,19
 East of England,2020-10-25,,estimate,10,11,4,5,8,9,11,13,17
+Midlands,2020-10-06,,estimate,10,11,4,5,8,9,11,13,17
 Northern Ireland,2020-11-04,,estimate,10,11,4,5,8,9,11,13,18
-Northern Ireland,2020-11-18,,estimate based on partial data,10,11,4,5,8,9,11,13,18
+Northern Ireland,2020-11-08,,estimate,10,11,4,5,8,9,11,13,18
+Northern Ireland,2020-11-12,,estimate,10,11,4,5,8,9,11,13,18
+Northern Ireland,2020-11-15,,estimate based on partial data,10,11,4,5,8,9,11,13,18
+South West,2020-11-03,,estimate,10,11,4,5,8,9,11,13,18
 Wales,2020-10-19,,estimate,10,11,4,5,8,9,11,13,18
-Northern Ireland,2020-11-08,,estimate,10,11,4,5,8,9,12,13,18
-Northern Ireland,2020-11-12,,estimate based on partial data,10,11,4,5,8,9,12,14,18
-Midlands,2020-10-05,,estimate,10,11,4,5,8,10,11,13,17
-Midlands,2020-10-06,,estimate,10,11,4,5,8,10,11,13,17
-North East and Yorkshire,2020-09-28,,estimate,10,11,4,5,8,10,11,13,17
-North West,2020-09-24,,estimate,11,11,3,6,8,10,11,13,17
-England,2020-09-08,,estimate,11,11,3,6,9,10,12,13,17
+North West,2020-09-24,,estimate,11,11,3,5,8,10,11,13,17
+North East and Yorkshire,2020-09-28,,estimate,11,11,4,5,8,10,11,13,17
 North East and Yorkshire,2020-09-29,,estimate,11,11,4,5,8,10,12,13,17
+North West,2020-09-23,,estimate,11,11,4,5,8,10,12,13,17
 East of England,2020-10-24,,estimate,11,11,4,5,8,10,12,14,18
-South East,2020-10-27,,estimate,11,11,4,5,8,10,12,14,18
-London,2020-10-21,,estimate,11,11,4,5,8,10,12,14,19
-London,2020-10-25,,estimate,11,11,4,5,8,10,12,14,19
+South East,2020-10-25,,estimate,11,11,4,5,8,10,12,14,18
 Northern Ireland,2020-11-09,,estimate,11,11,4,5,8,10,12,14,19
 Northern Ireland,2020-11-11,,estimate,11,11,4,5,8,10,12,14,19
 Northern Ireland,2020-11-20,,estimate based on partial data,11,11,4,5,8,10,12,14,19
-South West,2020-11-01,,estimate,11,11,4,5,8,10,12,14,19
 South West,2020-11-02,,estimate,11,11,4,5,8,10,12,14,19
 Wales,2020-10-18,,estimate,11,11,4,5,8,10,12,14,19
-South East,2020-10-25,,estimate,11,11,4,5,9,10,12,14,18
-North West,2020-09-23,,estimate,11,11,4,6,9,10,12,13,17
-Scotland,2020-10-15,,estimate,11,11,4,6,9,10,12,14,18
+Scotland,2020-10-15,,estimate,11,11,4,5,9,10,12,14,18
+Midlands,2020-10-07,,estimate,11,11,4,6,9,10,12,14,18
 Scotland,2020-10-16,,estimate,11,11,4,6,9,10,12,14,18
-Wales,2020-10-20,,estimate,11,12,4,5,8,10,12,14,20
+London,2020-10-25,,estimate,11,11,5,5,8,10,12,14,20
+South West,2020-11-04,,estimate,11,12,4,5,8,10,12,14,19
 East of England,2020-10-26,,estimate,11,12,4,5,9,10,12,14,19
-Midlands,2020-10-07,,estimate,11,12,4,6,9,11,12,14,18
-London,2020-10-30,,estimate,11,12,5,5,8,10,12,14,20
-Wales,2020-10-21,,estimate,11,12,5,5,9,10,13,15,20
-North East and Yorkshire,2020-09-30,,estimate,12,12,4,6,9,11,13,14,19
-North West,2020-09-25,,estimate,12,12,4,6,9,11,13,14,19
-United Kingdom,2020-09-08,,estimate,12,12,4,7,10,11,13,14,18
-Northern Ireland,2020-11-06,,estimate,12,12,5,5,9,10,13,15,20
-South West,2020-11-04,,estimate,12,12,5,5,9,10,13,15,20
-London,2020-10-27,,estimate,12,12,5,5,9,10,13,15,21
+South East,2020-10-27,,estimate,11,12,4,5,9,10,12,14,19
+Wales,2020-10-20,,estimate,11,12,4,5,9,10,12,14,19
+Wales,2020-10-21,,estimate,11,12,4,5,9,10,12,14,19
+South West,2020-11-01,,estimate,11,12,4,5,9,10,12,14,20
+North East and Yorkshire,2020-09-30,,estimate,11,12,4,6,9,11,13,14,19
+London,2020-10-30,,estimate,11,12,5,5,8,10,12,15,20
+Scotland,2020-12-16,,forecast,11,16,103,3,7,9,13,16,33
+North West,2020-09-25,,estimate,12,12,4,7,10,11,13,15,19
+Northern Ireland,2020-11-06,,estimate,12,12,5,5,9,11,13,15,20
+London,2020-10-27,,estimate,12,12,5,5,9,11,13,15,21
 London,2020-10-31,,estimate,12,12,5,5,9,11,13,15,21
 Northern Ireland,2020-11-13,,estimate based on partial data,12,12,5,6,9,11,13,15,20
-Wales,2020-10-24,,estimate,12,12,5,6,9,11,13,15,21
-Midlands,2020-10-08,,estimate,12,13,4,7,10,11,13,15,19
-Midlands,2020-10-09,,estimate,12,13,4,7,10,11,14,15,19
-North East and Yorkshire,2020-10-01,,estimate,12,13,4,7,10,12,13,15,20
-London,2020-10-26,,estimate,12,13,5,5,9,11,13,16,21
-Wales,2020-10-23,,estimate,12,13,5,6,9,11,13,15,21
-South West,2020-11-05,,estimate,12,13,5,6,9,11,14,16,22
-Wales,2020-12-12,,forecast,12,15,15,4,8,10,14,18,31
-South East,2020-10-30,,estimate,13,13,4,6,10,12,14,16,21
-England,2020-09-09,,estimate,13,13,4,7,10,12,14,15,19
+Wales,2020-10-24,,estimate,12,12,5,6,9,11,13,15,20
+Wales,2020-10-23,,estimate,12,12,5,6,9,11,13,15,21
+South East,2020-10-30,,estimate,12,13,4,6,10,11,13,15,20
+England,2020-09-09,,estimate,12,13,4,7,10,11,13,15,19
+Midlands,2020-10-09,,estimate,12,13,4,7,10,11,13,15,19
+Midlands,2020-10-08,,estimate,12,13,4,7,10,12,13,15,20
+London,2020-10-26,,estimate,12,13,5,6,9,11,13,16,21
+South West,2020-11-05,,estimate,12,13,5,6,9,11,14,16,21
+Wales,2020-12-12,,forecast,12,15,18,5,8,11,14,18,30
+Wales,2020-12-16,,forecast,12,17,78,4,8,10,14,19,38
 North West,2020-09-26,,estimate,13,13,4,7,10,12,14,15,19
-Scotland,2020-10-17,,estimate,13,13,4,7,10,12,14,16,20
+North East and Yorkshire,2020-10-01,,estimate,13,13,4,7,10,12,14,15,20
+East of England,2020-10-27,,estimate,13,13,4,7,10,12,14,16,21
 South East,2020-10-26,,estimate,13,13,4,7,10,12,14,16,21
 England,2020-09-10,,estimate,13,13,4,7,11,12,14,16,20
+Midlands,2020-10-10,,estimate,13,13,4,7,11,12,14,16,20
 North West,2020-09-27,,estimate,13,13,4,7,11,12,14,16,20
-London,2020-10-29,,estimate,13,13,5,6,10,12,14,16,23
-East of England,2020-10-27,,estimate,13,13,5,7,10,12,14,16,21
-Midlands,2020-10-10,,estimate,13,14,4,7,11,12,14,16,21
-South East,2020-10-29,,estimate,13,14,5,7,11,12,15,17,22
-Wales,2020-12-11,,forecast,13,16,14,5,9,12,15,19,33
-Wales,2020-12-14,,forecast,13,17,24,4,8,11,15,19,41
-Wales,2020-12-15,,forecast,13,18,34,4,8,11,15,20,43
-United Kingdom,2020-09-09,,estimate,14,14,4,8,11,13,15,17,20
+London,2020-10-29,,estimate,13,13,5,6,10,12,14,17,23
+Scotland,2020-10-17,,estimate,13,14,4,7,10,12,14,16,21
+South East,2020-10-28,,estimate,13,14,5,7,10,12,14,16,22
+Wales,2020-12-14,,forecast,13,17,38,4,9,12,15,20,36
+Scotland,2020-12-15,,forecast,13,18,69,4,9,11,15,19,37
+Wales,2020-12-15,,forecast,13,19,74,4,9,11,16,20,40
+United Kingdom,2020-09-09,,estimate,14,14,4,8,11,13,14,16,20
 England,2020-09-11,,estimate,14,14,4,8,11,13,15,17,21
-North West,2020-09-28,,estimate,14,14,4,8,11,13,15,17,21
 North East and Yorkshire,2020-10-02,,estimate,14,14,4,8,11,13,15,17,22
-South East,2020-10-28,,estimate,14,14,5,7,11,13,15,17,22
-East of England,2020-10-28,,estimate,14,14,5,7,11,13,15,17,23
-South West,2020-11-10,,estimate,14,14,5,7,11,13,15,17,23
-London,2020-10-28,,estimate,14,15,5,7,11,13,15,18,24
-London,2020-11-06,,estimate,14,15,5,7,11,13,15,18,24
-South West,2020-11-07,,estimate,14,15,5,7,11,13,15,18,24
+North West,2020-09-28,,estimate,14,14,4,8,12,13,15,17,21
+London,2020-10-28,,estimate,14,14,5,6,10,12,15,17,24
+South East,2020-10-29,,estimate,14,14,5,7,11,12,15,17,22
+Scotland,2020-10-21,,estimate,14,14,5,8,11,13,15,17,22
+East of England,2020-10-28,,estimate,14,14,5,8,11,13,15,17,23
+South West,2020-11-10,,estimate,14,15,5,7,11,13,15,18,24
+London,2020-11-06,,estimate,14,15,5,7,11,13,16,18,24
 South West,2020-11-06,,estimate,14,15,5,7,11,13,16,18,24
-London,2020-11-01,,estimate,14,15,5,7,11,13,16,18,25
-East of England,2020-10-29,,estimate,14,15,5,8,11,13,16,18,23
-East of England,2020-11-01,,estimate,14,15,5,8,12,13,16,18,23
-Wales,2020-12-05,,forecast,14,15,6,7,11,13,16,19,27
-Scotland,2020-12-15,,forecast,14,39,946,4,9,12,16,21,49
+South West,2020-11-07,,estimate,14,15,5,7,11,13,16,18,24
+East of England,2020-11-01,,estimate,14,15,5,8,11,13,15,17,23
+East of England,2020-10-29,,estimate,14,15,5,8,11,13,15,18,23
+London,2020-11-01,,estimate,14,15,6,7,11,13,16,18,25
+Wales,2020-12-11,,forecast,14,16,13,5,9,12,16,19,31
 North West,2020-09-29,,estimate,15,15,4,9,12,14,16,18,22
-United Kingdom,2020-09-10,,estimate,15,15,4,9,12,14,16,18,22
-Scotland,2020-10-18,,estimate,15,15,5,8,12,14,16,18,23
-Scotland,2020-10-21,,estimate,15,15,5,8,12,14,16,18,23
+United Kingdom,2020-09-10,,estimate,15,15,4,9,12,14,16,18,23
 East of England,2020-10-30,,estimate,15,15,5,8,12,14,16,18,24
-Scotland,2020-10-19,,estimate,15,15,5,8,12,14,16,18,24
 South East,2020-10-31,,estimate,15,15,5,8,12,14,16,18,24
+Wales,2020-10-22,,estimate,15,15,5,8,12,14,16,19,25
 Wales,2020-10-26,,estimate,15,15,5,8,12,14,16,19,25
-London,2020-11-07,,estimate,15,15,6,7,11,13,16,18,25
-London,2020-11-03,,estimate,15,15,6,7,11,14,16,19,26
+Scotland,2020-10-18,,estimate,15,15,5,9,12,14,16,18,24
 England,2020-09-12,,estimate,15,16,4,9,13,14,16,18,23
-Scotland,2020-10-20,,estimate,15,16,5,8,12,14,16,18,24
-Wales,2020-10-22,,estimate,15,16,5,8,12,14,16,19,25
-East of England,2020-11-02,,estimate,15,16,5,8,12,14,17,19,24
-North East and Yorkshire,2020-10-03,,estimate,15,16,5,9,13,14,17,19,24
-South West,2020-11-09,,estimate,15,16,6,8,12,14,17,19,26
-Wales,2020-12-07,,forecast,15,17,8,7,12,14,17,21,31
-Wales,2020-12-09,,forecast,15,17,10,6,11,13,17,21,34
-Scotland,2020-12-09,,forecast,15,18,23,7,11,14,17,21,33
-Wales,2020-12-13,,forecast,15,19,21,5,10,13,17,22,42
-Scotland,2020-12-14,,forecast,15,32,571,5,10,13,18,23,48
-Midlands,2020-10-11,,estimate,16,16,4,9,13,14,17,19,23
-United Kingdom,2020-09-11,,estimate,16,16,4,9,13,15,17,18,23
-Midlands,2020-10-12,,estimate,16,16,4,10,13,15,17,19,24
+Midlands,2020-10-11,,estimate,15,16,4,9,13,14,16,18,23
+Scotland,2020-10-19,,estimate,15,16,5,8,12,14,16,18,24
+East of England,2020-11-02,,estimate,15,16,5,8,12,14,17,19,25
+South West,2020-11-09,,estimate,15,16,5,8,12,14,17,19,25
+Scotland,2020-10-20,,estimate,15,16,5,9,12,14,17,19,24
+Wales,2020-12-05,,forecast,15,16,6,7,11,14,17,19,27
+London,2020-11-03,,estimate,15,16,6,7,12,14,17,19,26
+London,2020-11-07,,estimate,15,16,6,7,12,14,17,19,26
+Scotland,2020-12-09,,forecast,15,16,8,6,11,13,16,19,28
+Wales,2020-12-09,,forecast,15,16,8,6,11,13,17,20,31
+Scotland,2020-12-11,,forecast,15,17,13,7,11,14,17,21,33
+Scotland,2020-12-14,,forecast,15,19,51,5,10,12,16,21,38
+North East and Yorkshire,2020-10-03,,estimate,16,16,4,9,13,15,17,19,23
+United Kingdom,2020-09-11,,estimate,16,16,4,9,13,15,17,19,23
+Midlands,2020-10-13,,estimate,16,16,4,10,13,15,17,19,24
 East of England,2020-10-31,,estimate,16,16,5,8,12,14,17,19,25
-North East and Yorkshire,2020-10-04,,estimate,16,16,5,9,13,14,17,19,24
-London,2020-11-02,,estimate,16,16,6,7,12,14,17,20,27
-South West,2020-11-08,,estimate,16,16,6,8,12,14,17,19,26
-Wales,2020-10-25,,estimate,16,16,6,8,12,14,17,20,26
-England,2020-09-13,,estimate,16,17,4,10,14,15,18,19,24
-Wales,2020-10-27,,estimate,16,17,6,8,13,15,18,20,27
-London,2020-11-05,,estimate,16,17,6,8,13,15,18,20,28
-South West,2020-11-11,,estimate,16,17,6,8,13,15,18,20,28
-Wales,2020-10-28,,estimate,16,17,6,8,13,15,18,21,28
-Wales,2020-10-31,,estimate,16,17,6,9,13,15,18,20,27
-Wales,2020-12-04,,forecast,16,17,7,8,12,15,18,21,29
-Wales,2020-12-08,,forecast,16,17,9,7,11,14,18,21,32
-East of England,2020-12-13,,forecast,16,19,14,5,11,14,18,23,40
-East of England,2020-12-14,,forecast,16,19,18,5,10,14,18,23,44
-Scotland,2020-12-11,,forecast,16,21,98,6,11,14,18,22,39
-Scotland,2020-12-12,,forecast,16,23,165,6,11,14,18,23,44
-Midlands,2020-10-13,,estimate,17,17,4,10,14,15,18,20,24
-United Kingdom,2020-09-12,,estimate,17,17,4,10,14,16,18,20,24
-North West,2020-10-01,,estimate,17,17,4,11,14,16,18,20,25
-South East,2020-11-03,,estimate,17,17,5,9,13,15,18,20,26
-South East,2020-11-01,,estimate,17,17,5,9,14,16,18,21,26
+North East and Yorkshire,2020-10-04,,estimate,16,16,5,9,13,15,17,19,24
+South West,2020-11-11,,estimate,16,16,6,8,12,14,17,19,26
+London,2020-11-02,,estimate,16,16,6,8,12,14,17,20,27
+Wales,2020-10-28,,estimate,16,16,6,8,12,14,17,20,27
+South West,2020-11-08,,estimate,16,16,6,8,12,15,17,20,27
+Wales,2020-10-25,,estimate,16,16,6,8,13,15,17,20,26
+Midlands,2020-10-12,,estimate,16,17,4,10,13,15,17,19,25
+London,2020-11-05,,estimate,16,17,6,8,13,15,18,21,28
+Wales,2020-10-31,,estimate,16,17,6,9,13,15,18,20,28
+Wales,2020-10-27,,estimate,16,17,6,9,13,15,18,21,27
+Wales,2020-12-07,,forecast,16,17,8,7,12,15,18,21,31
+Wales,2020-12-08,,forecast,16,18,8,7,12,15,18,21,32
+Wales,2020-12-13,,forecast,16,18,18,6,11,13,18,22,38
+Scotland,2020-12-12,,forecast,16,19,22,6,11,14,18,22,36
+East of England,2020-12-13,,forecast,16,20,19,6,11,14,18,23,43
+Scotland,2020-12-13,,forecast,16,20,32,6,11,14,18,23,40
+England,2020-09-13,,estimate,17,17,4,10,14,15,18,20,24
+United Kingdom,2020-09-12,,estimate,17,17,4,10,14,16,18,20,25
+South East,2020-11-03,,estimate,17,17,5,9,14,16,18,21,26
+South East,2020-11-01,,estimate,17,17,5,9,14,16,18,21,27
+North West,2020-10-01,,estimate,17,17,5,10,14,16,18,20,25
+Wales,2020-12-04,,forecast,17,17,6,8,13,15,18,21,29
 Wales,2020-10-30,,estimate,17,17,6,9,13,16,18,21,28
-North East and Yorkshire,2020-10-05,,estimate,17,18,5,10,14,16,19,21,26
 East of England,2020-11-03,,estimate,17,18,5,10,14,16,19,21,27
-North West,2020-09-30,,estimate,17,18,5,11,14,16,19,21,26
-London,2020-11-13,,estimate based on partial data,17,18,6,9,13,15,19,21,29
-South West,2020-11-12,,estimate based on partial data,17,18,6,9,14,16,19,21,28
-Wales,2020-11-28,,estimate based on partial data,17,18,6,9,14,16,19,21,29
-East of England,2020-12-06,,forecast,17,18,7,8,13,16,19,22,31
-East of England,2020-12-15,,forecast,17,22,22,5,11,14,20,26,52
-Scotland,2020-12-13,,forecast,17,27,257,6,11,15,19,24,50
-East of England,2020-11-08,,estimate,18,18,5,10,14,16,19,21,28
-England,2020-09-14,,estimate,18,18,5,11,15,17,19,21,26
+North West,2020-09-30,,estimate,17,18,5,11,14,16,18,20,25
+London,2020-11-13,,estimate based on partial data,17,18,6,9,13,16,19,22,29
+South West,2020-11-12,,estimate,17,18,6,9,14,16,19,22,29
+Scotland,2020-12-08,,forecast,17,18,8,9,13,16,19,22,31
+Scotland,2020-12-10,,forecast,17,19,11,8,13,15,19,23,34
+East of England,2020-12-14,,forecast,17,21,25,6,11,14,19,24,46
+England,2020-09-14,,estimate,18,18,4,11,15,17,19,21,26
+North East and Yorkshire,2020-10-05,,estimate,18,18,5,10,14,16,19,21,26
 England,2020-09-15,,estimate,18,18,5,11,15,17,19,21,26
+North East and Yorkshire,2020-10-06,,estimate,18,18,5,11,15,17,19,21,26
 Midlands,2020-10-14,,estimate,18,18,5,11,15,17,19,21,27
-North East and Yorkshire,2020-10-06,,estimate,18,18,5,11,15,17,19,21,27
-London,2020-11-14,,estimate based on partial data,18,18,6,9,14,16,19,22,30
-East of England,2020-12-07,,forecast,18,18,7,8,13,16,19,23,31
-London,2020-11-08,,estimate,18,18,7,9,14,16,19,22,30
-London,2020-11-04,,estimate,18,18,7,9,14,16,20,22,30
-United Kingdom,2020-09-13,,estimate,18,19,4,12,16,17,20,22,26
-East of England,2020-11-09,,estimate,18,19,5,11,15,17,20,22,28
+Wales,2020-11-28,,estimate based on partial data,18,18,6,9,14,16,19,22,30
+Wales,2020-12-02,,estimate based on partial data,18,18,6,9,14,16,19,22,30
+East of England,2020-11-08,,estimate,18,18,6,10,14,16,19,22,28
+London,2020-11-04,,estimate,18,18,7,9,14,16,19,22,30
+London,2020-11-08,,estimate,18,18,7,9,14,16,20,22,30
 Scotland,2020-10-22,,estimate,18,19,5,11,15,17,20,22,28
 Scotland,2020-10-23,,estimate,18,19,5,11,15,17,20,22,28
-London,2020-11-10,,estimate,18,19,7,9,14,17,20,23,31
-Wales,2020-12-02,,forecast,18,19,7,9,14,17,20,23,31
-Wales,2020-12-06,,forecast,18,19,8,8,14,16,20,23,34
-Scotland,2020-12-08,,forecast,18,19,14,9,14,16,20,23,34
-East of England,2020-12-11,,forecast,18,20,12,7,13,16,21,25,41
-East of England,2020-12-10,,forecast,18,21,11,8,13,16,21,25,39
-Wales,2020-12-10,,forecast,18,21,13,7,13,16,20,24,42
-East of England,2020-12-12,,forecast,18,21,14,7,12,15,20,25,43
-Scotland,2020-12-10,,forecast,18,21,36,8,13,16,20,24,40
-North West,2020-10-02,,estimate,19,19,5,12,16,18,20,23,28
-East of England,2020-11-04,,estimate,19,19,6,10,15,17,20,23,29
-East of England,2020-11-29,,estimate based on partial data,19,19,6,10,15,17,20,23,30
-East of England,2020-11-30,,estimate based on partial data,19,19,6,10,15,17,20,23,30
-South West,2020-11-17,,estimate based on partial data,19,19,6,10,15,17,20,23,30
-South West,2020-11-14,,estimate based on partial data,19,19,6,10,15,17,21,24,31
-East of England,2020-11-05,,estimate,19,19,6,11,15,17,20,22,29
-South East,2020-11-06,,estimate,19,19,6,11,15,17,20,22,29
-East of England,2020-11-06,,estimate,19,19,6,11,15,17,20,23,29
-Wales,2020-11-30,,estimate based on partial data,19,19,7,10,15,17,20,23,31
+East of England,2020-11-05,,estimate,18,19,6,10,15,17,20,22,28
+South East,2020-11-06,,estimate,18,19,6,10,15,17,20,22,28
+East of England,2020-12-06,,forecast,18,19,7,9,14,16,20,23,31
+London,2020-11-14,,estimate based on partial data,18,19,7,9,14,16,20,23,31
+East of England,2020-12-07,,forecast,18,19,8,9,14,17,20,24,33
+North West,2020-12-15,,forecast,18,19,9,8,13,16,20,23,33
+North West,2020-12-16,,forecast,18,20,10,8,14,16,20,24,35
+East of England,2020-12-15,,forecast,18,24,38,6,12,16,21,27,54
+East of England,2020-12-16,,forecast,18,26,56,6,12,15,21,28,59
+United Kingdom,2020-09-13,,estimate,19,19,5,12,16,18,20,22,27
+East of England,2020-11-09,,estimate,19,19,6,10,15,17,20,22,29
+East of England,2020-11-04,,estimate,19,19,6,11,15,17,20,23,29
+Scotland,2020-12-02,,estimate based on partial data,19,19,6,11,15,17,20,23,29
+East of England,2020-11-06,,estimate,19,19,6,11,15,18,20,23,29
+London,2020-11-10,,estimate,19,19,7,9,15,17,20,23,32
+North West,2020-10-02,,estimate,19,20,5,12,16,18,21,23,28
 North East and Yorkshire,2020-10-07,,estimate,19,20,5,12,16,18,21,23,29
+East of England,2020-11-29,,estimate based on partial data,19,20,6,11,15,18,21,23,30
 East of England,2020-11-07,,estimate,19,20,6,11,16,18,21,23,30
 East of England,2020-11-15,,estimate based on partial data,19,20,6,11,16,18,21,23,30
-Scotland,2020-12-02,,forecast,19,20,6,11,16,18,21,24,30
-Wales,2020-12-01,,estimate based on partial data,19,20,7,10,15,17,21,24,32
-Wales,2020-11-27,,estimate based on partial data,19,20,7,10,15,18,21,24,31
-London,2020-11-09,,estimate,19,20,7,10,15,18,21,24,32
-East of England,2020-12-08,,forecast,19,20,9,9,14,17,21,25,36
-East of England,2020-12-09,,forecast,19,21,10,8,14,17,21,25,39
-North East and Yorkshire,2020-12-15,,forecast,19,22,42,8,13,16,22,27,44
-United Kingdom,2020-09-14,,estimate,20,20,5,13,17,19,21,23,28
-United Kingdom,2020-09-15,,estimate,20,20,5,13,17,19,21,23,28
+South West,2020-11-17,,estimate based on partial data,19,20,7,10,15,18,21,24,31
+South West,2020-11-14,,estimate based on partial data,19,20,7,10,15,18,21,24,32
+Wales,2020-11-27,,estimate based on partial data,19,20,7,10,15,18,21,24,32
+Wales,2020-11-30,,estimate based on partial data,19,20,7,10,15,18,21,24,32
+Scotland,2020-12-07,,forecast,19,20,7,10,15,18,21,24,33
+Wales,2020-12-06,,forecast,19,20,8,9,14,17,21,24,34
+Wales,2020-12-10,,forecast,19,21,12,8,13,17,21,25,39
+East of England,2020-12-10,,forecast,19,21,12,8,14,17,21,26,40
+East of England,2020-12-11,,forecast,19,22,14,8,14,17,21,26,43
+East of England,2020-12-12,,forecast,19,22,17,8,13,17,21,26,45
+North East and Yorkshire,2020-12-16,,forecast,19,22,17,8,14,17,22,27,43
+United Kingdom,2020-09-14,,estimate,20,20,5,13,17,19,21,23,29
 Midlands,2020-10-15,,estimate,20,20,5,13,17,19,21,24,29
-South East,2020-11-02,,estimate,20,20,6,11,16,18,21,23,30
-East of England,2020-11-22,,estimate based on partial data,20,20,6,11,16,18,21,24,30
-South East,2020-11-05,,estimate,20,20,6,11,16,18,21,24,30
-East of England,2020-11-23,,estimate based on partial data,20,20,6,11,16,18,21,24,31
-East of England,2020-11-16,,estimate based on partial data,20,20,6,12,16,19,21,24,31
-Wales,2020-11-21,,estimate based on partial data,20,20,7,10,15,18,21,24,32
-London,2020-11-20,,estimate based on partial data,20,20,7,10,15,18,21,24,33
-London,2020-11-12,,estimate based on partial data,20,20,7,10,16,18,21,25,33
-Wales,2020-11-02,,estimate,20,20,7,11,16,18,21,24,32
+South East,2020-11-02,,estimate,20,20,6,11,16,18,21,24,30
+East of England,2020-11-22,,estimate based on partial data,20,20,6,11,16,18,21,24,31
+East of England,2020-11-30,,estimate based on partial data,20,20,6,11,16,18,21,24,31
+East of England,2020-11-16,,estimate based on partial data,20,20,6,11,16,19,22,24,31
+London,2020-11-09,,estimate,20,20,7,10,15,18,22,25,33
 Wales,2020-11-07,,estimate,20,20,7,11,16,18,21,24,33
+Wales,2020-12-01,,estimate based on partial data,20,20,7,11,16,18,22,24,33
 Midlands,2020-10-16,,estimate,20,21,5,13,17,19,22,24,29
-East of England,2020-11-10,,estimate,20,21,6,12,17,19,22,25,31
-East of England,2020-12-04,,forecast,20,21,7,10,16,18,22,25,34
+United Kingdom,2020-09-15,,estimate,20,21,5,13,17,19,22,24,29
+Scotland,2020-12-04,,forecast,20,21,6,11,16,19,22,25,32
+Wales,2020-11-02,,estimate,20,21,6,11,16,19,22,25,32
+South East,2020-11-04,,estimate,20,21,6,12,16,19,22,24,31
+South East,2020-11-05,,estimate,20,21,6,12,16,19,22,24,32
+Scotland,2020-10-28,,estimate,20,21,6,12,17,19,22,24,30
+East of England,2020-11-23,,estimate based on partial data,20,21,6,12,17,19,22,24,31
+London,2020-11-12,,estimate,20,21,7,10,16,18,22,25,33
+London,2020-11-20,,estimate based on partial data,20,21,7,10,16,18,22,25,33
 South West,2020-11-13,,estimate based on partial data,20,21,7,11,16,18,22,25,32
-East of England,2020-12-01,,estimate based on partial data,20,21,7,11,16,19,22,25,33
-East of England,2020-12-03,,forecast,20,21,7,11,16,19,22,25,33
-Scotland,2020-12-04,,forecast,20,21,7,11,16,19,22,25,33
+Wales,2020-11-21,,estimate based on partial data,20,21,7,11,16,18,22,25,32
 South West,2020-11-16,,estimate based on partial data,20,21,7,11,16,19,22,25,33
-East of England,2020-12-05,,forecast,20,21,8,10,15,18,22,25,34
-Scotland,2020-12-07,,forecast,20,21,11,10,15,18,22,25,36
-North West,2020-12-15,,forecast,20,22,19,9,15,18,23,27,40
-England,2020-09-16,,estimate,21,21,5,13,17,19,22,24,29
-North West,2020-10-03,,estimate,21,21,5,13,18,19,22,24,29
-England,2020-09-17,,estimate,21,21,5,14,18,20,22,25,30
-Scotland,2020-10-24,,estimate,21,21,6,12,17,19,22,25,31
-North East and Yorkshire,2020-10-08,,estimate,21,21,6,13,17,19,22,25,31
-London,2020-11-21,,estimate based on partial data,21,21,7,10,16,19,22,26,35
-East of England,2020-12-02,,forecast,21,21,7,11,17,19,23,26,34
-South East,2020-11-04,,estimate,21,22,6,12,17,20,23,25,32
-East of England,2020-11-13,,estimate based on partial data,21,22,6,12,17,20,23,25,33
-East of England,2020-11-12,,estimate based on partial data,21,22,6,12,17,20,23,26,32
-East of England,2020-11-27,,estimate based on partial data,21,22,6,12,17,20,23,26,33
-East of England,2020-11-28,,estimate based on partial data,21,22,6,12,17,20,23,26,33
-South East,2020-11-07,,estimate,21,22,6,12,18,20,23,26,32
-Scotland,2020-10-28,,estimate,21,22,6,13,18,20,23,25,32
-East of England,2020-11-11,,estimate,21,22,6,13,18,20,23,26,33
-East of England,2020-11-14,,estimate based on partial data,21,22,6,13,18,20,23,26,33
-Wales,2020-11-06,,estimate,21,22,7,11,17,19,23,26,33
-Wales,2020-11-03,,estimate,21,22,7,11,17,19,23,26,34
-London,2020-11-15,,estimate based on partial data,21,22,7,11,17,19,23,26,35
-South West,2020-11-18,,estimate based on partial data,21,22,7,11,17,19,23,26,35
-Wales,2020-10-29,,estimate,21,22,7,11,17,20,23,26,34
+Wales,2020-11-04,,estimate,20,21,7,11,16,19,22,25,33
+North West,2020-12-14,,forecast,20,21,9,10,15,18,22,25,36
+East of England,2020-12-08,,forecast,20,21,9,10,15,18,22,25,37
+East of England,2020-12-09,,forecast,20,22,10,10,15,18,22,26,39
+England,2020-09-16,,estimate,21,21,5,13,17,20,22,24,29
+North West,2020-10-03,,estimate,21,21,5,13,17,20,22,24,30
+North East and Yorkshire,2020-10-08,,estimate,21,21,5,13,17,20,22,25,31
+East of England,2020-11-10,,estimate,21,21,6,12,17,19,22,25,32
+East of England,2020-11-12,,estimate,21,21,6,12,17,20,23,25,32
+Scotland,2020-10-24,,estimate,21,21,6,13,17,19,22,25,31
+London,2020-11-21,,estimate based on partial data,21,21,7,10,16,19,22,26,34
+South West,2020-11-18,,estimate based on partial data,21,21,7,11,16,19,22,25,33
+Wales,2020-11-25,,estimate based on partial data,21,21,7,11,16,19,22,26,33
+East of England,2020-12-05,,forecast,21,21,7,11,16,19,22,26,35
+East of England,2020-12-04,,forecast,21,21,7,11,17,19,22,26,34
+Wales,2020-11-06,,estimate,21,21,7,11,17,19,23,26,33
+East of England,2020-12-03,,forecast,21,21,7,12,16,19,22,26,33
+England,2020-09-17,,estimate,21,22,5,14,18,20,23,25,30
+East of England,2020-12-01,,estimate based on partial data,21,22,6,12,17,20,23,26,33
+East of England,2020-11-13,,estimate based on partial data,21,22,6,13,17,20,23,25,33
+London,2020-11-15,,estimate based on partial data,21,22,7,11,17,20,23,26,36
+Scotland,2020-12-05,,forecast,21,22,7,12,17,19,23,26,34
 Wales,2020-11-14,,estimate based on partial data,21,22,7,12,17,19,23,26,34
-South West,2020-11-15,,estimate based on partial data,21,22,7,12,17,20,23,26,34
-Wales,2020-11-04,,estimate,21,22,7,12,17,20,23,26,34
-Wales,2020-11-25,,estimate based on partial data,21,22,7,12,17,20,23,26,34
-Wales,2020-11-20,,estimate based on partial data,21,22,7,12,17,20,23,26,35
-Scotland,2020-12-05,,forecast,21,22,8,11,17,19,23,26,35
-North West,2020-10-04,,estimate,22,22,5,14,18,20,23,25,31
-Midlands,2020-10-17,,estimate,22,22,5,14,18,21,23,26,31
-East of England,2020-11-17,,estimate based on partial data,22,22,6,13,18,20,23,26,33
-East of England,2020-11-24,,estimate based on partial data,22,22,6,13,18,20,23,26,33
-East of England,2020-11-20,,estimate based on partial data,22,22,6,13,18,20,24,26,33
-East of England,2020-11-21,,estimate based on partial data,22,22,6,13,18,20,24,26,33
-East of England,2020-11-26,,estimate based on partial data,22,22,6,13,18,20,24,26,34
-Wales,2020-11-29,,estimate based on partial data,22,22,7,11,17,20,23,27,36
-Wales,2020-11-23,,estimate based on partial data,22,22,7,12,17,20,23,27,34
-Wales,2020-11-01,,estimate,22,22,7,12,17,20,23,27,35
-London,2020-11-11,,estimate,22,22,8,11,17,20,23,27,36
-England,2020-09-18,,estimate,22,23,5,15,19,21,24,26,31
-North West,2020-10-05,,estimate,22,23,5,15,19,21,24,26,32
-East of England,2020-11-25,,estimate based on partial data,22,23,6,13,18,21,24,27,34
-Wales,2020-11-24,,estimate based on partial data,22,23,7,12,18,20,24,27,36
-Wales,2020-11-13,,estimate based on partial data,22,23,7,12,18,21,24,27,36
-South West,2020-11-19,,estimate based on partial data,22,23,7,12,18,21,24,28,36
+Wales,2020-10-29,,estimate,21,22,7,12,17,20,23,26,34
+North West,2020-12-13,,forecast,21,22,9,11,17,19,23,27,37
+North East and Yorkshire,2020-12-15,,forecast,21,23,15,9,15,19,23,29,45
+South West,2020-12-15,,forecast,21,25,25,5,13,18,24,32,56
+South West,2020-12-16,,forecast,21,27,45,5,13,18,25,33,60
+North West,2020-10-04,,estimate,22,22,5,14,18,20,23,25,30
+Midlands,2020-10-17,,estimate,22,22,5,14,19,21,23,25,31
+East of England,2020-11-11,,estimate,22,22,6,13,18,20,23,26,33
+East of England,2020-11-14,,estimate based on partial data,22,22,6,13,18,20,23,26,33
+East of England,2020-11-19,,estimate based on partial data,22,22,6,13,18,20,23,26,33
+East of England,2020-11-26,,estimate based on partial data,22,22,6,13,18,20,23,26,33
+East of England,2020-11-27,,estimate based on partial data,22,22,6,13,18,20,23,26,33
+East of England,2020-11-28,,estimate based on partial data,22,22,6,13,18,20,23,26,33
+South East,2020-11-07,,estimate,22,22,6,13,18,20,23,26,33
+Wales,2020-11-03,,estimate,22,22,7,12,17,20,23,26,34
+Wales,2020-11-20,,estimate based on partial data,22,22,7,12,17,20,23,27,34
+South West,2020-11-15,,estimate based on partial data,22,22,7,12,17,20,24,27,35
+Wales,2020-11-01,,estimate,22,22,7,12,18,20,23,27,35
+London,2020-11-11,,estimate,22,22,8,11,17,20,23,27,35
+London,2020-11-27,,estimate based on partial data,22,22,8,11,17,20,24,27,37
+Scotland,2020-12-06,,forecast,22,22,8,12,17,20,24,27,36
+East of England,2020-11-17,,estimate based on partial data,22,23,6,13,18,21,24,26,34
+East of England,2020-11-20,,estimate based on partial data,22,23,6,13,18,21,24,27,34
+East of England,2020-11-24,,estimate based on partial data,22,23,6,13,18,21,24,27,34
+East of England,2020-12-02,,estimate based on partial data,22,23,7,12,18,20,24,27,34
+Wales,2020-11-23,,estimate based on partial data,22,23,7,12,18,20,24,27,36
+Wales,2020-11-29,,estimate based on partial data,22,23,7,12,18,20,24,27,36
 Scotland,2020-12-03,,forecast,22,23,7,13,18,21,24,27,35
-South West,2020-11-24,,estimate based on partial data,22,23,7,13,18,21,24,28,36
-London,2020-11-17,,estimate based on partial data,22,23,8,11,17,20,24,27,36
-London,2020-11-27,,estimate based on partial data,22,23,8,11,17,20,24,27,37
-Wales,2020-12-03,,forecast,22,23,8,11,17,20,24,27,37
-Scotland,2020-12-06,,forecast,22,23,9,11,17,20,24,27,37
-North West,2020-12-14,,forecast,22,24,15,10,17,20,24,29,42
-North East and Yorkshire,2020-12-14,,forecast,22,25,29,10,16,20,25,30,48
+Wales,2020-11-13,,estimate based on partial data,22,23,7,13,18,21,24,27,36
+London,2020-11-28,,estimate based on partial data,22,23,8,11,18,21,25,28,37
+London,2020-11-17,,estimate based on partial data,22,23,8,12,17,20,24,27,36
+Wales,2020-12-03,,forecast,22,23,8,12,18,20,24,28,38
+South West,2020-11-19,,estimate based on partial data,22,23,8,12,18,21,24,27,36
+South East,2020-12-15,,forecast,22,25,16,8,15,19,25,31,52
+England,2020-09-18,,estimate,23,23,5,15,19,21,24,26,32
 United Kingdom,2020-09-16,,estimate,23,23,5,15,19,21,24,26,32
-East of England,2020-11-19,,estimate based on partial data,23,23,6,13,18,21,24,27,34
-Scotland,2020-12-01,,estimate based on partial data,23,23,6,13,18,21,24,27,34
+North West,2020-10-05,,estimate,23,23,5,15,19,21,24,27,32
+East of England,2020-11-21,,estimate based on partial data,23,23,6,13,18,21,24,27,34
 Scotland,2020-10-27,,estimate,23,23,6,14,19,21,24,27,34
-Scotland,2020-10-26,,estimate,23,23,6,14,19,21,25,27,34
-South East,2020-11-10,,estimate,23,23,6,14,19,21,25,27,35
-East of England,2020-11-18,,estimate based on partial data,23,23,7,13,19,21,24,27,35
-Scotland,2020-10-25,,estimate,23,24,6,14,19,22,25,28,34
-North East and Yorkshire,2020-10-09,,estimate,23,24,6,15,20,22,25,27,34
-London,2020-11-16,,estimate based on partial data,23,24,8,12,18,21,25,28,38
-London,2020-11-28,,estimate based on partial data,23,24,8,12,18,21,25,29,37
+Scotland,2020-12-01,,estimate based on partial data,23,23,6,14,19,21,24,27,34
+East of England,2020-11-25,,estimate based on partial data,23,23,6,14,19,21,25,27,34
+Scotland,2020-10-26,,estimate,23,23,6,14,19,22,25,27,34
+North East and Yorkshire,2020-10-09,,estimate,23,23,6,15,20,22,25,27,33
+South West,2020-11-24,,estimate based on partial data,23,23,7,12,18,21,24,28,37
+Wales,2020-11-24,,estimate based on partial data,23,23,7,13,18,21,25,28,36
+East of England,2020-11-18,,estimate based on partial data,23,23,7,14,19,21,25,27,35
+Scotland,2020-11-25,,estimate based on partial data,23,24,6,14,19,22,25,28,35
+Wales,2020-11-18,,estimate based on partial data,23,24,7,13,18,21,25,28,36
+Wales,2020-11-11,,estimate,23,24,7,13,18,21,25,28,37
+Wales,2020-11-09,,estimate,23,24,7,13,19,22,25,28,37
 London,2020-11-19,,estimate based on partial data,23,24,8,12,18,21,25,29,38
-Wales,2020-11-09,,estimate,23,24,8,13,19,21,25,28,37
-Wales,2020-11-11,,estimate,23,24,8,13,19,22,25,29,38
-North East and Yorkshire,2020-12-13,,forecast,23,26,18,11,17,21,26,31,48
-North West,2020-10-06,,estimate,24,24,5,16,20,23,25,28,34
-United Kingdom,2020-09-17,,estimate,24,24,5,16,21,23,25,28,34
-Wales,2020-11-16,,estimate based on partial data,24,24,8,13,19,22,26,29,38
-Wales,2020-11-18,,estimate based on partial data,24,24,8,13,19,22,26,29,38
+London,2020-12-04,,forecast,23,24,9,11,17,21,25,29,40
+London,2020-12-05,,forecast,23,24,10,11,17,21,25,29,42
+South West,2020-12-08,,forecast,23,25,11,10,17,20,25,30,44
+London,2020-12-11,,forecast,23,25,12,9,16,20,26,31,48
+South East,2020-12-11,,forecast,23,25,12,11,17,21,26,31,46
+London,2020-12-12,,forecast,23,26,13,9,17,21,27,32,50
+South East,2020-12-16,,forecast,23,28,23,8,15,20,27,35,58
+Scotland,2020-10-25,,estimate,24,24,6,14,20,22,25,28,35
+North West,2020-10-06,,estimate,24,24,6,16,20,23,25,28,34
+London,2020-11-16,,estimate based on partial data,24,24,8,13,18,22,26,29,39
 England,2020-09-19,,estimate,24,25,5,16,21,23,26,28,34
-Scotland,2020-11-25,,estimate based on partial data,24,25,6,15,20,23,26,28,35
-South East,2020-11-08,,estimate,24,25,7,15,20,23,26,29,36
-Wales,2020-11-17,,estimate based on partial data,24,25,8,13,20,22,26,29,38
+United Kingdom,2020-09-17,,estimate,24,25,5,16,21,23,26,28,34
+Wales,2020-11-16,,estimate based on partial data,24,25,7,13,19,22,26,29,37
+South East,2020-11-10,,estimate,24,25,7,14,20,22,26,29,37
+South East,2020-11-08,,estimate,24,25,7,15,20,23,26,29,37
+South West,2020-11-25,,estimate based on partial data,24,25,8,13,19,22,26,29,38
+South West,2020-12-01,,estimate based on partial data,24,25,8,13,19,22,26,29,39
+London,2020-11-22,,estimate based on partial data,24,25,8,13,19,22,26,30,39
 South West,2020-11-21,,estimate based on partial data,24,25,8,13,20,22,26,29,39
-Wales,2020-11-10,,estimate,24,25,8,14,19,22,26,30,38
-Wales,2020-11-22,,estimate based on partial data,24,25,8,14,20,23,26,30,39
-London,2020-12-04,,forecast,24,25,10,12,18,22,26,31,43
-North West,2020-12-13,,forecast,24,25,13,12,18,22,26,30,43
-United Kingdom,2020-09-18,,estimate,25,25,5,17,22,24,26,29,34
-Scotland,2020-11-30,,estimate based on partial data,25,25,7,15,20,23,26,29,37
-Scotland,2020-11-27,,estimate based on partial data,25,25,7,15,21,23,27,29,37
-London,2020-11-22,,estimate based on partial data,25,25,8,13,19,23,27,30,40
+North West,2020-12-12,,forecast,24,25,9,13,19,22,26,30,40
+South West,2020-12-09,,forecast,24,26,12,10,17,21,27,32,46
+North East and Yorkshire,2020-12-14,,forecast,24,27,14,12,18,22,27,32,48
+South West,2020-12-14,,forecast,24,28,25,7,15,20,28,35,59
+United Kingdom,2020-09-18,,estimate,25,25,5,17,22,24,27,29,34
+Scotland,2020-11-30,,estimate based on partial data,25,25,7,15,21,23,27,30,37
+South East,2020-11-13,,estimate based on partial data,25,25,7,15,21,23,27,30,37
 London,2020-11-24,,estimate based on partial data,25,25,8,13,20,23,27,30,40
-North East and Yorkshire,2020-10-10,,estimate,25,26,6,16,22,24,27,30,37
-North East and Yorkshire,2020-10-11,,estimate,25,26,6,16,22,24,27,30,37
-South East,2020-11-13,,estimate based on partial data,25,26,7,16,21,24,27,30,37
-South West,2020-11-20,,estimate based on partial data,25,26,8,14,20,23,27,31,40
-South West,2020-11-23,,estimate based on partial data,25,26,8,14,20,23,27,31,40
-Wales,2020-11-26,,estimate based on partial data,25,26,8,14,20,23,27,31,40
-Wales,2020-11-08,,estimate,25,26,8,14,20,24,28,31,40
-South West,2020-12-01,,estimate based on partial data,25,26,9,14,20,23,27,31,42
-London,2020-12-05,,forecast,25,26,10,12,19,22,27,32,45
-South East,2020-12-15,,forecast,25,30,23,9,17,22,29,37,61
-Scotland,2020-10-30,,estimate,26,26,6,16,22,24,27,30,37
+Wales,2020-11-10,,estimate,25,25,8,14,20,23,27,30,39
+Wales,2020-11-17,,estimate based on partial data,25,25,8,14,20,23,27,30,39
+Scotland,2020-10-30,,estimate,25,26,6,16,21,24,27,30,37
+Scotland,2020-11-27,,estimate based on partial data,25,26,7,16,21,24,27,30,37
+South West,2020-11-23,,estimate based on partial data,25,26,8,14,20,23,27,30,39
+London,2020-11-18,,estimate based on partial data,25,26,9,13,20,23,27,31,41
+South West,2020-12-02,,estimate based on partial data,25,26,9,13,20,23,27,31,41
+South East,2020-12-12,,forecast,25,28,14,11,18,22,28,34,52
+South West,2020-12-10,,forecast,25,28,15,10,18,22,28,34,53
+South West,2020-12-12,,forecast,25,28,18,9,17,22,29,36,57
+North East and Yorkshire,2020-10-10,,estimate,26,26,6,16,22,24,27,30,36
 Midlands,2020-10-18,,estimate,26,26,6,17,22,24,27,30,36
-England,2020-09-20,,estimate,26,26,6,17,23,25,27,30,36
-South West,2020-11-25,,estimate based on partial data,26,26,8,14,21,24,28,31,41
-Scotland,2020-10-29,,estimate,26,27,7,16,22,25,28,31,38
-Scotland,2020-11-28,,estimate based on partial data,26,27,7,16,22,25,28,31,38
-South West,2020-11-22,,estimate based on partial data,26,27,8,15,21,24,28,32,42
-London,2020-11-18,,estimate based on partial data,26,27,9,14,20,24,28,32,42
-London,2020-11-26,,estimate based on partial data,26,27,9,14,21,24,28,32,42
+North East and Yorkshire,2020-10-11,,estimate,26,26,6,17,22,24,27,30,36
+England,2020-09-20,,estimate,26,26,6,18,22,25,27,30,36
+Scotland,2020-11-04,,estimate,26,26,7,16,22,24,27,30,37
+Scotland,2020-10-29,,estimate,26,26,7,16,22,24,28,30,37
+South West,2020-11-20,,estimate based on partial data,26,26,8,14,21,24,28,31,41
+Wales,2020-11-22,,estimate based on partial data,26,26,8,15,21,24,27,31,40
+Wales,2020-11-08,,estimate,26,26,8,15,21,24,28,31,40
+London,2020-11-26,,estimate based on partial data,26,26,9,14,20,23,28,32,42
+South West,2020-11-26,,estimate based on partial data,26,27,8,14,21,24,28,31,41
+Wales,2020-11-26,,estimate based on partial data,26,27,8,15,21,24,28,32,41
+London,2020-11-29,,estimate based on partial data,26,27,9,14,20,24,28,32,42
+London,2020-12-01,,estimate based on partial data,26,27,9,14,20,24,28,32,44
 London,2020-11-23,,estimate based on partial data,26,27,9,14,21,24,29,33,43
-North West,2020-12-12,,forecast,26,28,12,14,21,24,28,33,45
-London,2020-12-11,,forecast,26,28,15,11,18,23,29,35,54
-United Kingdom,2020-09-19,,estimate,27,27,6,18,23,25,28,31,37
-Scotland,2020-11-04,,estimate,27,27,7,17,22,25,28,31,39
-Scotland,2020-11-29,,estimate based on partial data,27,27,7,17,23,25,29,32,39
-Wales,2020-11-15,,estimate based on partial data,27,27,8,15,22,25,29,32,42
-South West,2020-11-26,,estimate based on partial data,27,27,9,15,21,24,29,33,43
-Midlands,2020-10-19,,estimate,27,28,6,18,23,26,29,32,38
-Midlands,2020-10-20,,estimate,27,28,6,18,24,26,29,31,38
-Scotland,2020-11-24,,estimate based on partial data,27,28,7,17,23,26,29,32,39
-South East,2020-11-12,,estimate based on partial data,27,28,7,17,23,26,29,32,40
-Wales,2020-11-05,,estimate,27,28,8,15,22,25,29,33,42
-London,2020-11-29,,estimate based on partial data,27,28,9,14,21,25,29,33,44
-London,2020-12-01,,estimate based on partial data,27,28,10,14,21,25,30,34,47
-South West,2020-12-08,,forecast,27,29,12,12,20,24,30,35,51
-South East,2020-12-11,,forecast,27,29,14,12,20,24,30,36,53
-North East and Yorkshire,2020-12-12,,forecast,27,29,16,14,21,24,30,36,52
-London,2020-12-12,,forecast,27,30,17,10,19,24,31,37,57
-England,2020-09-21,,estimate,28,28,6,19,24,26,29,32,38
-England,2020-09-22,,estimate,28,28,6,19,24,26,29,32,38
+North West,2020-12-11,,forecast,26,27,9,15,21,24,28,32,42
+South West,2020-12-07,,forecast,26,27,11,12,19,23,29,33,48
+London,2020-12-08,,forecast,26,28,12,12,20,24,29,34,50
+North East and Yorkshire,2020-12-13,,forecast,26,28,13,13,20,23,28,33,49
+South East,2020-12-13,,forecast,26,29,16,11,19,23,29,36,57
+Midlands,2020-10-20,,estimate,27,27,6,18,23,26,29,31,37
+United Kingdom,2020-09-19,,estimate,27,27,6,18,23,26,29,31,37
+Midlands,2020-10-19,,estimate,27,27,6,18,23,26,29,31,38
+Scotland,2020-11-28,,estimate based on partial data,27,27,7,17,22,25,29,31,39
+Scotland,2020-11-18,,estimate based on partial data,27,27,7,17,23,25,29,32,39
+North West,2020-12-10,,forecast,27,27,8,15,22,25,29,32,42
+Scotland,2020-11-29,,estimate based on partial data,27,28,7,17,23,26,29,32,40
+Wales,2020-11-05,,estimate,27,28,8,15,22,25,29,32,42
+South West,2020-11-22,,estimate based on partial data,27,28,8,15,22,25,29,33,42
+Wales,2020-11-15,,estimate based on partial data,27,28,8,16,22,25,29,32,43
+South West,2020-11-30,,estimate based on partial data,27,28,9,15,21,25,29,33,43
+South West,2020-11-28,,estimate based on partial data,27,28,9,15,22,25,29,33,43
+South West,2020-12-03,,forecast,27,28,10,14,21,24,29,33,46
+South West,2020-12-05,,forecast,27,28,10,14,21,25,30,34,47
+London,2020-12-03,,forecast,27,28,11,13,21,24,29,34,47
+London,2020-12-06,,forecast,27,28,11,13,21,24,30,35,48
+South East,2020-12-08,,forecast,27,29,11,14,22,25,30,35,48
+London,2020-12-10,,forecast,27,29,13,12,20,24,30,36,53
+London,2020-12-13,,forecast,27,29,15,10,19,23,30,37,57
+London,2020-12-15,,forecast,27,30,18,10,18,23,31,38,62
+South West,2020-12-11,,forecast,27,30,18,10,18,24,31,38,59
+South East,2020-12-14,,forecast,27,31,19,11,19,24,31,38,63
+South West,2020-12-13,,forecast,27,31,23,8,17,23,31,39,65
+North West,2020-10-07,,estimate,28,28,6,19,24,26,29,32,38
 North West,2020-10-08,,estimate,28,28,6,19,24,26,29,32,38
-Scotland,2020-11-26,,estimate based on partial data,28,28,7,17,23,26,29,32,40
-Scotland,2020-11-18,,estimate based on partial data,28,28,7,17,23,26,30,32,40
-South East,2020-11-09,,estimate,28,28,7,17,23,26,30,33,41
-Scotland,2020-10-31,,estimate,28,29,7,18,24,26,30,33,41
-North East and Yorkshire,2020-10-12,,estimate,28,29,7,19,24,27,30,33,40
-South West,2020-11-28,,estimate based on partial data,28,29,9,16,23,26,30,34,45
-South West,2020-11-30,,estimate based on partial data,28,29,9,16,23,26,31,35,47
-Wales,2020-11-19,,estimate based on partial data,28,29,9,17,23,26,31,35,45
-South West,2020-12-02,,forecast,28,29,10,15,22,26,31,35,48
-North West,2020-12-11,,forecast,28,29,11,16,22,26,30,34,47
-South West,2020-12-15,,forecast,28,33,24,8,18,24,32,41,74
-North West,2020-10-07,,estimate,29,29,6,19,25,27,30,33,39
-South East,2020-11-14,,estimate based on partial data,29,29,7,18,24,27,30,34,42
-North East and Yorkshire,2020-10-13,,estimate,29,29,7,19,24,27,31,33,41
-Scotland,2020-11-03,,estimate,29,29,7,19,25,27,31,34,41
-Scotland,2020-11-11,,estimate,29,30,7,19,24,27,31,34,42
-South East,2020-11-17,,estimate based on partial data,29,30,7,19,24,27,31,34,43
-Scotland,2020-11-20,,estimate based on partial data,29,30,7,19,25,28,31,34,42
-South East,2020-11-11,,estimate,29,30,8,18,25,28,31,34,43
-Wales,2020-11-12,,estimate based on partial data,29,30,9,17,24,27,31,35,46
-North West,2020-12-10,,forecast,29,30,10,16,23,27,31,35,46
-London,2020-11-25,,estimate based on partial data,29,30,10,16,23,27,31,36,47
-London,2020-11-30,,estimate based on partial data,29,30,10,16,23,27,31,36,49
-London,2020-12-03,,forecast,29,30,11,15,22,26,31,36,49
-South West,2020-12-03,,forecast,29,31,11,15,23,27,32,37,51
-London,2020-12-06,,forecast,29,31,12,14,22,27,32,38,52
-North East and Yorkshire,2020-12-11,,forecast,29,31,14,15,22,26,32,38,54
-London,2020-12-08,,forecast,29,32,14,14,22,26,33,38,57
-South West,2020-12-09,,forecast,29,32,16,13,21,26,33,40,61
-South East,2020-12-12,,forecast,29,32,17,12,21,25,32,39,61
+North East and Yorkshire,2020-10-12,,estimate,28,28,6,19,24,26,30,33,40
+England,2020-09-21,,estimate,28,28,6,19,24,27,29,32,38
+Scotland,2020-11-11,,estimate,28,28,7,18,23,26,29,32,40
+Scotland,2020-11-26,,estimate based on partial data,28,28,7,18,23,26,30,33,41
+Scotland,2020-11-24,,estimate based on partial data,28,28,7,18,24,26,29,32,40
+South East,2020-11-09,,estimate,28,28,8,17,23,26,30,33,42
+South East,2020-11-11,,estimate,28,28,8,17,23,26,30,33,42
+South East,2020-11-12,,estimate,28,28,8,17,23,26,30,33,42
+North East and Yorkshire,2020-10-13,,estimate,28,29,6,19,24,27,30,33,40
+England,2020-09-22,,estimate,28,29,6,20,25,27,30,32,38
+Scotland,2020-10-31,,estimate,28,29,7,18,24,27,30,33,41
+London,2020-11-25,,estimate based on partial data,28,29,9,15,22,26,30,34,45
+South East,2020-12-04,,forecast,28,29,9,16,23,26,30,34,45
+London,2020-11-30,,estimate based on partial data,28,29,10,15,22,26,30,35,47
+South East,2020-12-10,,forecast,28,30,13,13,21,25,31,36,53
+Scotland,2020-11-03,,estimate,29,29,7,18,24,27,31,34,41
+Wales,2020-11-19,,estimate based on partial data,29,29,9,17,23,27,31,35,45
+South East,2020-11-14,,estimate based on partial data,29,30,8,18,24,27,31,35,44
+South West,2020-11-27,,estimate based on partial data,29,30,9,16,23,27,31,35,46
+Wales,2020-11-12,,estimate,29,30,9,17,24,27,31,35,45
+South West,2020-11-29,,estimate based on partial data,29,30,9,17,24,27,31,36,47
+London,2020-12-02,,estimate based on partial data,29,30,10,16,23,27,32,36,50
+London,2020-12-07,,forecast,29,30,12,14,22,26,31,37,53
+South West,2020-12-04,,forecast,29,31,11,16,23,27,32,37,50
+South West,2020-12-06,,forecast,29,31,12,14,22,26,32,37,53
+London,2020-12-14,,forecast,29,32,18,10,20,25,33,41,64
 United Kingdom,2020-09-20,,estimate,30,30,6,21,26,28,31,34,40
-Scotland,2020-11-23,,estimate based on partial data,30,30,7,19,25,28,32,35,43
-Scotland,2020-11-02,,estimate,30,31,7,19,25,28,32,35,43
-Midlands,2020-10-21,,estimate,30,31,7,21,26,29,32,35,42
-South East,2020-11-20,,estimate based on partial data,30,31,8,19,25,28,32,36,44
-South East,2020-12-04,,forecast,30,31,9,18,25,28,33,37,48
-South West,2020-11-27,,estimate based on partial data,30,31,10,16,24,27,32,36,47
-South East,2020-12-08,,forecast,30,31,12,15,23,27,32,37,52
-South West,2020-12-05,,forecast,30,32,12,15,23,28,33,38,54
-South West,2020-12-07,,forecast,30,32,13,15,23,28,33,39,57
-South West,2020-12-10,,forecast,30,34,18,13,22,27,34,42,65
-South East,2020-12-13,,forecast,30,34,19,12,21,27,34,42,66
+Scotland,2020-11-20,,estimate based on partial data,30,30,7,19,25,28,32,35,43
+Scotland,2020-11-02,,estimate,30,30,7,19,26,28,32,35,43
+Scotland,2020-11-23,,estimate based on partial data,30,31,7,20,26,29,32,35,44
+North West,2020-12-08,,forecast,30,31,8,19,25,28,32,35,44
+South East,2020-11-20,,estimate based on partial data,30,31,8,19,25,28,32,36,45
+South East,2020-12-09,,forecast,30,32,12,16,23,27,33,38,53
+North East and Yorkshire,2020-12-12,,forecast,30,32,12,16,23,27,33,38,55
+London,2020-12-09,,forecast,30,32,13,14,22,27,33,39,57
+London,2020-12-16,,forecast,30,34,21,10,20,26,34,42,70
+Midlands,2020-10-21,,estimate,31,31,6,21,26,29,32,35,41
 North West,2020-10-09,,estimate,31,31,6,22,27,29,33,35,42
-North East and Yorkshire,2020-10-14,,estimate,31,31,7,20,26,29,33,36,43
-Scotland,2020-11-01,,estimate,31,31,7,20,26,29,33,36,44
-Scotland,2020-11-06,,estimate,31,31,7,20,26,29,33,36,44
-Scotland,2020-11-21,,estimate based on partial data,31,31,7,20,26,29,33,36,44
-United Kingdom,2020-09-21,,estimate,31,32,6,22,27,30,33,36,42
-Scotland,2020-11-17,,estimate based on partial data,31,32,7,20,27,30,33,36,45
-South West,2020-11-29,,estimate based on partial data,31,32,10,17,25,28,33,37,49
-North East and Yorkshire,2020-12-10,,forecast,31,32,12,16,24,28,33,38,54
-London,2020-12-07,,forecast,31,33,14,15,24,28,35,41,59
-South East,2020-12-10,,forecast,31,33,15,15,23,28,34,40,59
-London,2020-12-10,,forecast,31,33,16,13,22,27,34,41,60
-United Kingdom,2020-09-22,,estimate,32,32,6,22,28,30,33,36,42
-England,2020-09-23,,estimate,32,32,6,23,28,31,34,36,43
-Scotland,2020-11-05,,estimate,32,32,8,20,27,30,34,37,45
-Scotland,2020-11-13,,estimate based on partial data,32,32,8,20,27,30,34,37,46
-South East,2020-11-15,,estimate based on partial data,32,32,8,20,27,30,34,37,47
-Scotland,2020-11-10,,estimate,32,32,8,21,27,30,34,37,46
-North East and Yorkshire,2020-10-15,,estimate,32,33,7,22,28,31,34,37,45
-South East,2020-11-27,,estimate based on partial data,32,33,8,20,27,30,34,38,47
+Scotland,2020-11-06,,estimate,31,31,7,20,26,29,32,36,44
+North East and Yorkshire,2020-10-14,,estimate,31,31,7,21,26,29,33,36,43
+North West,2020-12-09,,forecast,31,31,8,19,25,28,33,36,46
+South East,2020-11-17,,estimate based on partial data,31,31,8,19,26,29,33,37,46
+Scotland,2020-11-01,,estimate,31,32,7,20,26,29,33,36,44
+South East,2020-11-27,,estimate based on partial data,31,32,8,20,26,30,34,37,47
+Scotland,2020-11-17,,estimate based on partial data,31,32,8,20,27,30,33,37,45
+South East,2020-12-05,,forecast,31,32,10,18,25,29,34,38,50
+United Kingdom,2020-09-21,,estimate,32,32,6,22,28,30,33,36,43
+England,2020-09-23,,estimate,32,32,6,23,28,30,34,36,43
+United Kingdom,2020-09-22,,estimate,32,32,6,23,28,30,34,36,43
+Scotland,2020-11-05,,estimate,32,32,8,21,27,30,34,37,45
+Scotland,2020-11-13,,estimate based on partial data,32,32,8,21,27,30,34,37,46
+Scotland,2020-11-21,,estimate based on partial data,32,32,8,21,27,30,34,37,46
 Scotland,2020-11-19,,estimate based on partial data,32,33,8,21,27,30,34,37,46
-Scotland,2020-11-22,,estimate based on partial data,32,33,8,21,28,30,34,38,46
-North West,2020-12-08,,forecast,32,33,9,20,27,30,34,38,48
-South East,2020-12-01,,estimate based on partial data,32,33,9,20,27,30,35,38,49
-London,2020-12-02,,forecast,32,33,12,17,25,29,35,40,55
-South West,2020-12-04,,forecast,32,34,12,17,25,29,35,41,56
-South West,2020-12-06,,forecast,32,34,13,16,25,30,36,42,59
-South West,2020-12-12,,forecast,32,35,20,11,22,27,36,44,70
-London,2020-12-13,,forecast,32,35,21,12,23,28,36,43,66
-London,2020-12-15,,forecast,32,36,28,11,22,28,36,45,74
-South East,2020-12-14,,forecast,32,37,25,12,22,28,37,46,76
-South West,2020-12-14,,forecast,32,37,26,10,21,27,37,46,79
-England,2020-09-24,,estimate,33,33,6,23,29,31,35,37,44
-North West,2020-10-10,,estimate,33,33,7,23,29,31,34,37,44
-South East,2020-11-24,,estimate based on partial data,33,33,8,21,28,31,35,38,47
-Scotland,2020-11-07,,estimate,33,34,8,21,28,31,35,39,47
-South East,2020-12-05,,forecast,33,34,11,19,27,31,36,40,52
-North East and Yorkshire,2020-12-09,,forecast,33,35,12,19,27,31,36,41,57
-Midlands,2020-10-22,,estimate,34,34,7,23,29,32,36,39,46
-Midlands,2020-10-23,,estimate,34,34,7,24,29,32,36,39,46
-North West,2020-10-11,,estimate,34,34,7,24,30,32,36,38,46
-South East,2020-11-19,,estimate based on partial data,34,34,8,21,28,32,36,39,49
-Scotland,2020-11-16,,estimate based on partial data,34,34,8,22,28,32,36,39,48
-Scotland,2020-11-12,,estimate based on partial data,34,34,8,22,29,32,36,39,48
-Scotland,2020-11-14,,estimate based on partial data,34,34,8,22,29,32,36,39,48
-South East,2020-11-21,,estimate based on partial data,34,34,8,22,29,32,36,40,49
-Scotland,2020-11-09,,estimate,34,34,8,23,29,32,36,39,48
-North West,2020-12-07,,forecast,34,35,9,22,29,32,37,40,50
-North West,2020-12-09,,forecast,34,35,10,20,27,31,36,40,52
-London,2020-12-09,,forecast,34,37,17,16,25,31,38,45,67
-South West,2020-12-11,,forecast,34,38,20,13,24,30,38,47,74
-London,2020-12-14,,forecast,34,39,25,13,24,30,39,48,77
-South West,2020-12-13,,forecast,34,39,26,12,23,29,39,49,84
-England,2020-09-25,,estimate,35,35,7,24,30,33,36,39,46
-North West,2020-10-12,,estimate,35,36,7,25,31,34,37,40,47
-South East,2020-11-28,,estimate based on partial data,35,36,9,22,30,33,37,41,52
-South East,2020-12-03,,forecast,35,36,10,21,28,32,37,42,54
-South East,2020-12-06,,forecast,35,37,12,20,28,32,38,43,58
-South East,2020-12-09,,forecast,35,37,15,18,27,31,39,45,65
-United Kingdom,2020-09-23,,estimate,36,36,6,25,31,34,37,40,46
-Midlands,2020-10-24,,estimate,36,36,7,25,32,34,38,41,48
-North East and Yorkshire,2020-10-16,,estimate,36,36,8,24,31,34,38,41,50
-Scotland,2020-11-08,,estimate,36,36,8,24,31,34,38,41,50
-Scotland,2020-11-15,,estimate based on partial data,36,36,8,24,31,34,38,41,51
-South East,2020-11-18,,estimate based on partial data,36,37,9,23,31,34,38,42,52
-South East,2020-11-26,,estimate based on partial data,36,37,9,23,31,34,39,42,53
-South East,2020-11-16,,estimate based on partial data,36,37,9,24,31,34,38,42,52
-North East and Yorkshire,2020-12-08,,forecast,36,37,12,21,29,33,39,44,58
-England,2020-09-26,,estimate,37,37,7,27,33,35,39,42,49
-North West,2020-10-13,,estimate,37,37,7,27,33,36,39,42,50
-North West,2020-12-06,,forecast,37,38,9,24,32,35,39,43,52
-South East,2020-11-22,,estimate based on partial data,37,38,9,24,32,35,40,43,53
-United Kingdom,2020-09-24,,estimate,38,38,7,27,33,36,39,42,49
+Scotland,2020-11-10,,estimate,32,33,8,21,27,31,34,37,46
+South East,2020-11-15,,estimate based on partial data,32,33,9,20,27,30,35,38,48
+South East,2020-12-01,,estimate based on partial data,32,33,9,20,27,30,35,39,48
+South East,2020-12-06,,forecast,32,34,11,18,26,30,35,40,53
+North East and Yorkshire,2020-12-11,,forecast,32,34,12,18,25,29,34,40,56
+North West,2020-10-10,,estimate,33,33,6,23,28,31,34,37,44
+England,2020-09-24,,estimate,33,33,6,24,29,32,35,38,44
+North East and Yorkshire,2020-10-15,,estimate,33,33,7,22,28,31,35,38,46
+North West,2020-12-07,,forecast,33,33,8,21,28,31,34,38,47
+Scotland,2020-11-22,,estimate based on partial data,33,33,8,21,28,31,35,38,47
+North East and Yorkshire,2020-12-10,,forecast,33,35,11,19,27,31,36,41,56
+Midlands,2020-10-22,,estimate,34,34,7,23,29,32,36,38,46
+Midlands,2020-10-23,,estimate,34,34,7,23,29,32,36,39,46
+North West,2020-10-11,,estimate,34,34,7,24,29,32,35,38,45
+Scotland,2020-11-07,,estimate,34,34,8,22,29,32,35,39,48
+Scotland,2020-11-12,,estimate,34,34,8,22,29,32,36,39,48
+Scotland,2020-11-16,,estimate based on partial data,34,34,8,22,29,32,36,39,48
+Scotland,2020-11-09,,estimate,34,34,8,22,29,32,36,39,49
+Scotland,2020-11-14,,estimate based on partial data,34,35,8,22,29,33,36,40,49
+South East,2020-11-24,,estimate based on partial data,34,35,9,21,29,32,36,40,50
+South East,2020-11-19,,estimate based on partial data,34,35,9,21,29,32,37,40,51
+South East,2020-11-21,,estimate based on partial data,34,35,9,22,29,32,37,41,51
+South East,2020-12-03,,forecast,34,35,10,20,28,31,36,40,52
+South East,2020-12-07,,forecast,34,36,12,19,27,32,37,43,58
+England,2020-09-25,,estimate,35,35,6,24,31,33,36,39,46
+North West,2020-12-06,,forecast,35,35,8,23,30,33,37,40,49
+United Kingdom,2020-09-23,,estimate,35,36,6,25,31,34,37,40,47
+South East,2020-11-28,,estimate based on partial data,35,36,9,22,30,33,38,42,52
+South East,2020-11-18,,estimate based on partial data,35,36,9,23,30,33,38,41,51
+North West,2020-10-12,,estimate,36,36,7,25,31,34,37,40,48
+Midlands,2020-10-24,,estimate,36,36,7,25,31,34,38,41,49
+North East and Yorkshire,2020-10-16,,estimate,36,36,8,24,31,34,38,41,49
+Scotland,2020-11-08,,estimate,36,37,8,24,31,34,38,42,51
+South East,2020-11-16,,estimate based on partial data,36,37,9,23,31,34,39,43,53
+South East,2020-11-26,,estimate based on partial data,36,37,9,23,31,34,39,43,54
+Scotland,2020-11-15,,estimate based on partial data,36,37,9,24,31,34,39,42,52
+South East,2020-12-02,,estimate based on partial data,36,37,10,22,30,34,38,42,54
+North East and Yorkshire,2020-12-09,,forecast,36,37,11,22,29,33,38,44,57
+North West,2020-10-13,,estimate,37,37,7,26,33,35,39,42,50
+England,2020-09-26,,estimate,37,38,7,27,33,36,39,42,49
+South East,2020-11-22,,estimate based on partial data,37,38,9,23,31,35,40,44,54
+South East,2020-11-29,,estimate based on partial data,37,38,10,23,31,35,40,44,55
+United Kingdom,2020-09-24,,estimate,38,38,7,27,33,36,40,42,50
 North East and Yorkshire,2020-10-18,,estimate,38,39,8,26,33,37,40,44,53
-South East,2020-11-29,,estimate based on partial data,38,39,9,24,32,36,40,44,55
-South East,2020-12-07,,forecast,38,40,13,21,30,35,41,47,63
-United Kingdom,2020-09-25,,estimate,39,39,7,28,35,38,41,44,51
-North East and Yorkshire,2020-10-17,,estimate,39,39,8,27,33,36,41,44,53
-South East,2020-12-02,,forecast,39,40,11,24,32,37,42,47,59
-England,2020-09-27,,estimate,40,40,7,29,35,38,42,45,52
-North West,2020-12-05,,forecast,40,41,9,27,35,38,43,46,56
-South East,2020-11-25,,estimate based on partial data,40,41,10,26,34,38,43,47,57
-South East,2020-11-23,,estimate based on partial data,41,42,10,27,35,38,43,48,59
-South East,2020-11-30,,estimate based on partial data,41,42,10,27,35,39,44,48,61
-North East and Yorkshire,2020-12-07,,forecast,41,42,12,25,34,39,44,49,64
+South East,2020-11-25,,estimate based on partial data,38,39,9,25,32,36,41,45,55
+North East and Yorkshire,2020-12-08,,forecast,38,40,11,24,32,36,41,46,59
+United Kingdom,2020-09-25,,estimate,39,39,7,29,35,37,41,44,51
+North West,2020-12-05,,forecast,39,39,8,26,33,37,41,44,54
+North East and Yorkshire,2020-10-17,,estimate,39,39,8,27,34,37,41,44,53
+England,2020-09-27,,estimate,40,40,7,29,36,38,42,45,53
+South East,2020-11-30,,estimate based on partial data,40,41,10,26,34,38,43,47,59
+South East,2020-11-23,,estimate based on partial data,41,42,10,27,35,39,44,48,60
 United Kingdom,2020-09-26,,estimate,42,42,7,31,37,40,44,47,54
-Midlands,2020-10-25,,estimate,42,42,8,30,37,40,44,47,56
+North West,2020-12-03,,forecast,42,42,8,29,36,40,44,47,56
+North West,2020-12-04,,forecast,42,42,8,29,36,40,44,47,56
+Midlands,2020-10-25,,estimate,42,42,8,30,37,40,44,47,55
 North East and Yorkshire,2020-10-19,,estimate,42,42,9,29,36,40,44,48,57
-North West,2020-10-15,,estimate,42,43,7,31,37,40,44,48,55
-North East and Yorkshire,2020-10-20,,estimate,42,43,9,29,36,40,44,49,57
-England,2020-09-28,,estimate,43,43,7,31,38,41,45,48,56
-England,2020-09-29,,estimate,43,43,7,31,38,41,45,48,56
-North West,2020-12-04,,forecast,43,43,9,29,37,41,45,49,59
-North West,2020-12-03,,forecast,43,44,9,30,38,41,46,49,59
-North East and Yorkshire,2020-12-06,,forecast,43,44,12,27,36,40,46,51,64
-North West,2020-10-14,,estimate,44,44,8,32,39,42,46,49,57
-Midlands,2020-10-27,,estimate,44,44,8,32,39,42,46,49,58
+North East and Yorkshire,2020-10-20,,estimate,42,42,9,29,36,40,44,48,57
+North West,2020-10-15,,estimate,42,43,8,31,38,40,44,48,56
+England,2020-09-28,,estimate,43,43,7,31,38,41,44,48,55
+England,2020-09-29,,estimate,43,43,7,32,38,41,45,48,55
+North West,2020-10-14,,estimate,43,43,8,31,38,41,45,48,56
+North East and Yorkshire,2020-12-07,,forecast,43,45,12,28,36,41,46,52,65
+Midlands,2020-10-27,,estimate,44,44,8,31,38,42,45,49,58
 Midlands,2020-10-26,,estimate,44,45,8,32,39,42,46,50,58
-North East and Yorkshire,2020-10-21,,estimate,45,45,9,31,39,42,47,51,60
-United Kingdom,2020-09-27,,estimate,46,46,7,34,41,44,48,51,58
-North East and Yorkshire,2020-10-22,,estimate,46,47,9,33,40,44,49,53,63
-North West,2020-10-16,,estimate,47,47,8,34,42,45,49,52,61
-North West,2020-12-01,,estimate based on partial data,47,48,9,34,42,45,50,53,62
-Midlands,2020-10-28,,estimate,48,48,9,35,42,46,50,54,63
-United Kingdom,2020-09-28,,estimate,48,49,8,37,43,47,50,54,62
-North West,2020-10-17,,estimate,49,49,8,36,43,47,51,55,63
-England,2020-09-30,,estimate,49,49,8,37,44,47,51,54,62
-United Kingdom,2020-09-29,,estimate,49,49,8,37,44,47,51,54,62
-North East and Yorkshire,2020-12-05,,forecast,49,50,12,32,41,46,52,57,71
-North West,2020-10-18,,estimate,50,50,8,37,44,48,52,56,64
-England,2020-10-01,,estimate,50,50,8,38,45,48,52,55,64
-North West,2020-12-02,,forecast,50,51,9,36,44,48,52,57,66
-North West,2020-11-30,,estimate based on partial data,50,51,9,37,45,48,52,56,66
-North East and Yorkshire,2020-10-23,,estimate,51,51,10,36,45,48,53,57,68
-North East and Yorkshire,2020-12-04,,forecast,51,52,12,34,44,48,54,60,73
-North West,2020-10-19,,estimate,52,52,8,39,47,50,54,58,67
-Midlands,2020-10-30,,estimate,52,52,9,38,46,50,54,58,68
-Midlands,2020-10-29,,estimate,52,53,9,39,46,50,54,58,68
-North East and Yorkshire,2020-12-03,,forecast,52,53,12,35,45,49,55,60,73
-England,2020-10-02,,estimate,53,53,8,40,47,51,55,58,67
-North West,2020-11-29,,estimate based on partial data,53,54,9,40,48,51,56,60,69
-North East and Yorkshire,2020-10-25,,estimate,53,54,10,39,47,51,56,60,71
-North West,2020-10-20,,estimate,54,54,9,41,48,52,56,60,69
-North East and Yorkshire,2020-10-24,,estimate,54,55,10,39,48,52,57,61,73
-United Kingdom,2020-09-30,,estimate,55,55,8,42,49,53,57,61,70
-Midlands,2020-10-31,,estimate,55,55,9,40,49,52,57,61,71
-England,2020-10-03,,estimate,56,57,9,43,51,54,59,62,71
-North East and Yorkshire,2020-12-02,,forecast,56,57,12,39,49,54,60,65,79
-North East and Yorkshire,2020-10-27,,estimate,57,58,11,40,50,55,60,64,76
-North West,2020-11-28,,estimate based on partial data,58,58,9,44,52,56,60,64,74
-United Kingdom,2020-10-01,,estimate,58,58,9,44,53,56,60,64,73
-North East and Yorkshire,2020-10-26,,estimate,58,59,11,42,51,55,61,65,78
-Midlands,2020-12-15,,forecast,59,66,39,30,45,53,66,78,121
-North West,2020-10-22,,estimate,60,60,9,46,54,57,62,66,76
-North East and Yorkshire,2020-12-01,,estimate based on partial data,60,60,11,42,52,57,62,67,80
-England,2020-10-04,,estimate,61,61,9,47,55,58,63,67,76
-United Kingdom,2020-10-02,,estimate,61,61,9,47,55,58,63,67,76
-North West,2020-11-26,,estimate based on partial data,61,61,10,46,54,58,63,67,77
-North West,2020-11-27,,estimate based on partial data,61,61,10,46,55,58,63,67,78
-North East and Yorkshire,2020-10-28,,estimate,61,61,11,44,54,58,63,68,81
+North East and Yorkshire,2020-10-21,,estimate,45,45,9,32,39,42,47,51,60
+United Kingdom,2020-09-27,,estimate,46,46,8,34,41,44,48,51,59
+North East and Yorkshire,2020-12-06,,forecast,46,46,11,29,38,43,48,53,66
+North West,2020-12-01,,estimate based on partial data,46,47,8,34,41,44,48,52,61
+North West,2020-10-16,,estimate,47,47,8,35,42,45,49,52,60
+North East and Yorkshire,2020-10-22,,estimate,47,47,9,33,41,45,49,53,63
+Midlands,2020-10-28,,estimate,48,48,8,35,43,46,50,54,62
+North West,2020-12-02,,estimate based on partial data,48,48,9,35,42,46,50,53,63
+England,2020-09-30,,estimate,48,49,8,36,43,46,51,54,62
+North West,2020-10-17,,estimate,49,49,8,36,44,47,51,55,63
+United Kingdom,2020-09-28,,estimate,49,49,8,37,44,47,51,54,62
+United Kingdom,2020-09-29,,estimate,49,50,8,37,44,47,51,55,63
+North West,2020-10-18,,estimate,50,50,8,37,45,48,52,55,64
+North West,2020-11-30,,estimate based on partial data,50,50,9,37,44,48,52,56,65
+England,2020-10-01,,estimate,50,51,8,38,45,48,52,56,64
+North East and Yorkshire,2020-10-23,,estimate,51,51,9,37,45,48,53,57,67
+Midlands,2020-10-30,,estimate,52,52,9,39,46,50,54,58,67
+North West,2020-10-19,,estimate,52,53,9,39,47,50,54,58,67
+North West,2020-11-29,,estimate based on partial data,52,53,9,39,47,50,55,59,68
+North East and Yorkshire,2020-12-05,,forecast,52,53,12,35,45,49,55,60,74
+England,2020-10-02,,estimate,53,53,8,39,47,51,55,59,67
+Midlands,2020-10-29,,estimate,53,53,9,39,47,50,55,58,68
+North East and Yorkshire,2020-10-25,,estimate,53,54,10,38,47,51,56,60,71
+North West,2020-10-20,,estimate,54,54,9,40,48,52,56,60,70
+United Kingdom,2020-09-30,,estimate,54,55,8,41,49,52,57,60,68
+Midlands,2020-10-31,,estimate,54,55,9,41,49,52,57,60,70
+North East and Yorkshire,2020-12-04,,forecast,54,55,12,37,47,51,58,63,76
+North East and Yorkshire,2020-10-24,,estimate,55,55,10,40,48,52,57,62,72
+North East and Yorkshire,2020-12-03,,forecast,56,56,12,39,48,53,59,64,76
+England,2020-10-03,,estimate,57,57,9,43,51,55,59,63,71
+North East and Yorkshire,2020-10-27,,estimate,57,57,11,41,50,54,59,64,75
+North West,2020-11-28,,estimate based on partial data,57,58,9,43,51,55,60,64,73
+Midlands,2020-12-16,,forecast,57,63,40,28,43,52,63,75,114
+United Kingdom,2020-10-01,,estimate,58,58,8,45,53,56,60,64,73
+North East and Yorkshire,2020-10-26,,estimate,58,58,10,42,51,55,60,65,76
+Midlands,2020-12-15,,forecast,58,63,33,29,45,52,63,74,111
+North East and Yorkshire,2020-12-02,,estimate based on partial data,59,60,12,41,52,56,62,67,80
+North West,2020-10-22,,estimate,60,60,9,46,54,58,62,67,77
+North East and Yorkshire,2020-10-28,,estimate,60,60,11,44,53,57,63,67,79
+North West,2020-11-26,,estimate based on partial data,60,61,9,46,54,58,62,67,77
+United Kingdom,2020-10-02,,estimate,61,61,9,47,55,58,63,66,76
+England,2020-10-04,,estimate,61,61,9,47,55,59,63,67,77
+North West,2020-11-27,,estimate based on partial data,61,61,10,46,54,58,63,67,77
+North West,2020-10-21,,estimate,61,62,10,46,55,59,64,68,78
+North East and Yorkshire,2020-12-01,,estimate based on partial data,62,62,12,45,54,59,65,70,82
 Midlands,2020-11-01,,estimate,62,63,10,47,56,60,65,69,80
-North East and Yorkshire,2020-10-29,,estimate,62,63,11,45,55,59,65,70,83
-Midlands,2020-11-03,,estimate,63,63,10,47,56,60,65,70,81
-North West,2020-10-21,,estimate,63,63,10,48,57,61,66,70,80
-England,2020-10-05,,estimate,65,65,9,50,59,63,67,71,81
+Midlands,2020-11-03,,estimate,63,63,10,47,56,60,65,69,80
+North East and Yorkshire,2020-10-29,,estimate,63,63,11,45,56,60,66,71,83
+Midlands,2020-12-12,,forecast,64,67,24,37,52,59,69,78,107
+Midlands,2020-12-14,,forecast,64,69,33,35,51,59,70,81,117
+United Kingdom,2020-10-03,,estimate,65,65,9,50,59,62,67,71,80
+England,2020-10-05,,estimate,65,65,9,50,59,62,67,71,81
 England,2020-10-06,,estimate,65,65,9,50,59,63,67,71,81
-United Kingdom,2020-10-03,,estimate,65,65,9,51,58,62,67,71,81
-Midlands,2020-11-02,,estimate,65,65,10,49,58,62,67,72,82
-North West,2020-11-24,,estimate based on partial data,65,65,10,50,58,62,67,71,82
-North West,2020-10-23,,estimate,65,66,10,50,59,63,68,72,82
-North East and Yorkshire,2020-11-30,,estimate based on partial data,66,67,12,48,58,63,69,74,88
-Midlands,2020-12-12,,forecast,66,70,28,38,53,60,72,82,117
-Midlands,2020-12-14,,forecast,66,72,37,35,51,60,72,84,127
-North West,2020-10-24,,estimate,67,68,10,52,61,65,70,74,85
-North East and Yorkshire,2020-11-29,,estimate based on partial data,67,68,12,48,59,64,70,76,89
-Midlands,2020-12-11,,forecast,67,71,24,40,55,62,72,82,112
-North West,2020-10-25,,estimate,68,68,10,52,61,65,70,75,85
+North West,2020-11-24,,estimate based on partial data,65,65,10,49,58,62,67,72,82
+Midlands,2020-11-02,,estimate,65,65,10,49,58,63,67,72,83
+North West,2020-10-23,,estimate,66,66,10,50,59,63,68,72,83
+Midlands,2020-11-04,,estimate,67,68,11,51,61,65,70,75,85
+Midlands,2020-12-11,,forecast,67,69,22,41,55,62,72,80,106
+Midlands,2020-12-13,,forecast,67,72,30,38,54,62,73,83,117
+North West,2020-10-24,,estimate,68,68,10,52,61,65,70,74,84
+North West,2020-11-25,,estimate based on partial data,68,68,10,52,61,65,70,75,85
 North East and Yorkshire,2020-10-30,,estimate,68,68,12,49,60,65,71,76,89
-North West,2020-11-23,,estimate based on partial data,68,69,10,52,62,66,71,76,86
-Midlands,2020-11-04,,estimate,68,69,11,51,61,66,71,76,87
-Midlands,2020-12-13,,forecast,68,74,34,38,54,63,75,87,125
-North West,2020-10-26,,estimate,70,70,10,54,63,67,72,77,87
-North West,2020-11-25,,estimate based on partial data,70,70,10,54,63,67,72,77,87
-North East and Yorkshire,2020-11-01,,estimate,70,71,13,51,62,67,74,79,92
-United Kingdom,2020-10-04,,estimate,71,71,10,55,64,68,73,78,88
-North West,2020-11-22,,estimate based on partial data,71,71,10,55,64,68,74,78,89
-Midlands,2020-11-06,,estimate,71,71,11,53,63,68,74,78,90
-North West,2020-10-27,,estimate,71,71,11,54,64,68,74,78,89
-North East and Yorkshire,2020-10-31,,estimate,72,73,13,52,63,69,75,81,95
-Midlands,2020-11-05,,estimate,73,73,11,56,65,70,76,80,92
-Midlands,2020-11-07,,estimate,73,74,11,56,66,71,76,81,93
-England,2020-10-07,,estimate,74,75,10,59,68,72,77,81,93
-Midlands,2020-12-08,,forecast,74,76,19,49,63,70,78,86,108
-Midlands,2020-12-09,,forecast,74,77,21,48,62,69,79,88,113
-Midlands,2020-12-10,,forecast,74,77,24,46,62,69,80,90,117
-North East and Yorkshire,2020-11-03,,estimate,75,75,13,55,66,72,78,84,98
-North East and Yorkshire,2020-11-28,,estimate based on partial data,75,76,14,55,67,72,78,85,99
-United Kingdom,2020-10-05,,estimate,76,76,10,60,69,73,78,82,92
-United Kingdom,2020-10-06,,estimate,76,76,10,60,69,73,78,83,93
-North West,2020-11-21,,estimate based on partial data,76,76,11,59,69,73,79,83,95
-England,2020-10-08,,estimate,76,77,10,61,70,74,79,84,94
-North West,2020-10-29,,estimate,76,77,11,59,69,74,79,84,96
-North East and Yorkshire,2020-11-02,,estimate,76,77,13,56,67,72,79,85,100
-North West,2020-11-19,,estimate based on partial data,77,78,11,60,70,75,80,85,97
-North East and Yorkshire,2020-11-26,,estimate based on partial data,77,78,14,57,69,74,81,87,101
-North East and Yorkshire,2020-11-27,,estimate based on partial data,78,78,14,57,69,74,81,87,101
-North East and Yorkshire,2020-11-04,,estimate,78,79,14,57,69,74,81,87,102
-North West,2020-11-20,,estimate based on partial data,79,79,11,61,71,76,81,86,98
-North East and Yorkshire,2020-11-05,,estimate,79,80,14,59,70,76,83,89,104
-Midlands,2020-12-05,,forecast,79,81,16,57,70,76,83,90,108
-North West,2020-11-17,,estimate based on partial data,80,80,11,62,73,77,83,88,99
-England,2020-10-09,,estimate,80,81,11,64,74,78,83,88,99
-Midlands,2020-11-10,,estimate,81,81,12,62,73,77,84,89,102
-North East and Yorkshire,2020-11-25,,estimate based on partial data,81,82,14,60,72,78,84,91,105
-Midlands,2020-12-04,,forecast,81,82,15,60,72,78,85,91,109
-Midlands,2020-12-07,,forecast,81,83,18,57,70,77,86,93,116
-North West,2020-10-28,,estimate,82,82,11,64,74,79,85,90,102
-North West,2020-10-30,,estimate,82,82,11,65,74,79,85,90,102
-Midlands,2020-11-08,,estimate,82,83,13,63,75,79,85,91,105
-North West,2020-11-16,,estimate based on partial data,83,83,11,66,75,80,86,91,102
-North West,2020-11-01,,estimate,83,83,12,65,75,80,86,91,103
-North East and Yorkshire,2020-11-24,,estimate based on partial data,83,83,14,61,73,79,86,92,108
-North West,2020-11-02,,estimate,83,84,11,65,76,81,86,91,103
-North West,2020-10-31,,estimate,83,84,11,66,76,81,86,91,103
-North West,2020-11-03,,estimate,84,84,11,66,76,81,87,91,103
-Midlands,2020-11-09,,estimate,84,85,12,65,76,81,87,93,105
-Midlands,2020-12-06,,forecast,84,86,17,60,74,81,89,96,116
-North West,2020-11-15,,estimate based on partial data,85,85,11,68,77,82,88,93,105
-United Kingdom,2020-10-07,,estimate,86,86,11,69,79,83,88,93,104
-Midlands,2020-11-11,,estimate,86,86,13,66,78,83,89,94,108
-Midlands,2020-11-13,,estimate based on partial data,86,87,13,67,79,83,90,95,109
-North East and Yorkshire,2020-11-06,,estimate,86,87,15,64,77,82,90,96,112
-England,2020-10-10,,estimate,87,87,11,69,79,84,90,95,106
-North West,2020-11-10,,estimate,87,87,12,68,79,84,90,95,108
-North West,2020-11-05,,estimate,87,87,12,69,79,84,90,95,107
-North West,2020-11-12,,estimate based on partial data,87,87,12,69,79,84,90,95,107
-Midlands,2020-12-01,,estimate based on partial data,87,87,13,66,78,83,90,95,109
-North West,2020-11-18,,estimate based on partial data,87,88,12,69,79,84,90,95,107
-North East and Yorkshire,2020-11-08,,estimate,87,88,15,65,78,83,91,98,114
-Midlands,2020-11-14,,estimate based on partial data,88,89,13,68,80,85,91,97,111
-Midlands,2020-12-02,,forecast,88,89,14,67,80,85,92,98,114
-North West,2020-11-09,,estimate,89,89,12,70,81,86,92,97,109
-North West,2020-11-14,,estimate based on partial data,89,89,12,71,81,86,92,97,110
-North West,2020-11-08,,estimate,89,90,12,71,81,86,92,97,109
-Midlands,2020-12-03,,forecast,89,90,15,66,79,85,93,99,117
-North East and Yorkshire,2020-11-22,,estimate based on partial data,89,90,15,66,80,86,93,99,114
-Midlands,2020-11-12,,estimate based on partial data,90,91,13,70,81,87,94,99,113
-North East and Yorkshire,2020-11-23,,estimate based on partial data,90,91,15,67,81,87,94,100,118
-North East and Yorkshire,2020-11-10,,estimate,90,91,15,68,80,86,94,100,116
-North East and Yorkshire,2020-11-07,,estimate,90,91,15,68,81,86,94,101,118
-United Kingdom,2020-10-08,,estimate,91,91,11,73,84,88,94,98,109
-North West,2020-11-13,,estimate based on partial data,91,91,12,72,82,88,94,99,111
-North West,2020-11-06,,estimate,91,92,12,73,84,88,95,100,114
-Midlands,2020-11-28,,estimate based on partial data,91,92,14,70,82,88,95,100,115
-North West,2020-11-07,,estimate,92,92,12,73,84,89,95,100,112
-Midlands,2020-11-27,,estimate based on partial data,92,93,13,71,84,89,95,101,116
-England,2020-10-11,,estimate,93,93,12,75,85,90,96,101,113
-Midlands,2020-11-17,,estimate based on partial data,93,93,13,72,84,89,96,102,115
-North East and Yorkshire,2020-11-11,,estimate,93,94,15,70,83,89,97,104,120
-North East and Yorkshire,2020-11-09,,estimate,94,94,15,70,84,90,97,104,121
-North East and Yorkshire,2020-11-19,,estimate based on partial data,94,94,16,70,84,90,97,104,120
-United Kingdom,2020-10-09,,estimate,94,95,11,77,87,92,97,102,115
-North West,2020-11-04,,estimate,94,95,12,76,86,91,98,103,116
-Midlands,2020-11-24,,estimate based on partial data,94,95,13,74,85,91,97,103,117
-Midlands,2020-11-20,,estimate based on partial data,94,95,14,73,86,91,98,104,118
-North East and Yorkshire,2020-11-12,,estimate based on partial data,94,95,16,70,84,90,98,105,123
-Midlands,2020-11-30,,estimate based on partial data,95,96,14,73,86,91,98,105,120
-Midlands,2020-11-21,,estimate based on partial data,95,96,14,74,86,92,99,105,118
-North East and Yorkshire,2020-11-17,,estimate based on partial data,95,96,16,72,85,91,99,106,124
-North West,2020-11-11,,estimate,96,97,13,77,88,93,100,105,118
-North East and Yorkshire,2020-11-18,,estimate based on partial data,96,97,16,71,86,92,100,107,124
-Midlands,2020-11-18,,estimate based on partial data,97,97,14,76,88,93,100,106,122
-North East and Yorkshire,2020-11-15,,estimate based on partial data,97,97,16,73,87,93,101,107,124
-Midlands,2020-11-25,,estimate based on partial data,97,98,14,76,88,94,101,107,122
-North East and Yorkshire,2020-11-20,,estimate based on partial data,97,98,16,73,87,93,101,108,125
-North East and Yorkshire,2020-11-21,,estimate based on partial data,97,98,16,73,87,93,101,108,126
-Midlands,2020-11-15,,estimate based on partial data,98,98,14,77,89,95,101,107,122
-Midlands,2020-11-29,,estimate based on partial data,98,99,14,76,89,94,102,107,124
-Midlands,2020-11-16,,estimate based on partial data,98,99,14,76,89,95,102,108,122
-Midlands,2020-11-26,,estimate based on partial data,99,100,14,78,90,95,103,109,124
-North East and Yorkshire,2020-11-13,,estimate based on partial data,99,100,17,75,88,95,103,111,129
-England,2020-10-13,,estimate,100,100,12,81,92,97,103,109,121
-England,2020-10-12,,estimate,100,100,13,81,92,97,103,109,121
-Midlands,2020-11-19,,estimate based on partial data,100,101,14,78,91,96,103,110,125
-North East and Yorkshire,2020-11-16,,estimate based on partial data,101,101,17,75,90,97,105,112,129
-United Kingdom,2020-10-10,,estimate,101,102,12,83,93,98,104,110,122
-North East and Yorkshire,2020-11-14,,estimate based on partial data,102,103,17,77,91,98,106,113,131
-Midlands,2020-11-23,,estimate based on partial data,103,103,14,80,93,99,106,112,126
-Midlands,2020-11-22,,estimate based on partial data,103,104,14,81,94,99,107,113,128
-United Kingdom,2020-10-11,,estimate,112,112,13,92,103,108,115,120,133
-England,2020-10-14,,estimate,115,115,14,94,106,112,118,124,139
-England,2020-10-15,,estimate,118,118,14,97,109,114,122,128,142
-United Kingdom,2020-10-12,,estimate,118,119,13,98,110,115,122,127,140
-United Kingdom,2020-10-13,,estimate,120,120,13,99,111,116,123,129,143
-England,2020-10-16,,estimate,124,125,14,102,115,121,128,134,150
-England,2020-10-17,,estimate,134,134,15,110,123,130,138,144,159
-United Kingdom,2020-10-14,,estimate,135,135,14,112,125,131,138,144,159
-United Kingdom,2020-10-15,,estimate,142,143,15,120,133,139,146,153,168
-England,2020-10-18,,estimate,143,144,16,119,133,139,147,154,171
-United Kingdom,2020-10-16,,estimate,148,149,15,124,139,144,152,159,175
-England,2020-10-20,,estimate,153,153,16,127,142,148,157,163,181
-England,2020-10-19,,estimate,153,153,16,127,142,149,157,164,181
-England,2020-12-15,,forecast,157,164,58,89,126,145,170,195,261
-United Kingdom,2020-10-17,,estimate,158,159,16,134,148,154,162,169,185
-England,2020-10-21,,estimate,173,173,18,144,161,168,178,185,203
-United Kingdom,2020-10-18,,estimate,174,174,17,147,163,169,178,185,202
-England,2020-10-22,,estimate,176,177,18,148,164,172,181,189,208
-England,2020-12-14,,forecast,176,183,57,106,144,163,189,214,280
-United Kingdom,2020-10-19,,estimate,184,184,18,156,172,179,188,195,213
-United Kingdom,2020-10-20,,estimate,184,185,18,156,173,180,188,196,214
-England,2020-10-23,,estimate,185,185,19,155,172,180,190,198,217
-England,2020-12-13,,forecast,186,191,54,117,152,172,199,221,285
-United Kingdom,2020-12-15,,forecast,191,197,60,114,155,177,205,230,296
-England,2020-12-12,,forecast,193,198,50,127,162,181,207,227,289
-England,2020-10-24,,estimate,197,197,20,166,184,192,202,210,229
-England,2020-12-11,,forecast,202,206,48,137,172,191,214,236,288
-United Kingdom,2020-10-21,,estimate,206,206,19,177,194,201,211,219,239
-England,2020-10-25,,estimate,208,209,20,177,195,203,213,222,243
-United Kingdom,2020-12-14,,forecast,212,218,60,132,176,199,226,251,318
-England,2020-12-10,,forecast,215,218,46,150,186,203,226,247,299
-England,2020-10-27,,estimate,217,217,21,184,203,212,222,231,253
-United Kingdom,2020-10-22,,estimate,217,218,20,187,204,212,222,231,250
-England,2020-10-26,,estimate,219,220,21,186,206,214,225,234,257
-United Kingdom,2020-10-23,,estimate,223,223,20,192,210,218,228,237,255
-United Kingdom,2020-12-13,,forecast,225,229,58,146,189,211,238,263,330
-England,2020-12-08,,forecast,228,231,40,169,203,218,238,256,301
-United Kingdom,2020-12-12,,forecast,228,233,53,156,195,215,241,264,321
-England,2020-12-09,,forecast,234,237,45,170,205,223,245,264,316
-United Kingdom,2020-10-24,,estimate,236,236,21,203,221,231,241,249,271
-United Kingdom,2020-12-11,,forecast,240,243,50,169,208,228,253,272,329
-England,2020-10-28,,estimate,243,244,24,206,228,237,249,259,284
-England,2020-10-29,,estimate,246,246,23,210,231,240,251,261,284
-England,2020-12-07,,forecast,251,254,39,195,226,242,262,280,323
-England,2020-10-30,,estimate,254,254,24,216,237,248,260,270,294
-United Kingdom,2020-10-25,,estimate,255,255,22,220,241,249,260,270,292
-United Kingdom,2020-12-10,,forecast,258,261,49,186,227,246,270,291,344
-England,2020-12-06,,forecast,262,264,37,206,239,254,270,287,326
-United Kingdom,2020-10-27,,estimate,264,264,23,227,249,258,269,279,302
-England,2020-10-31,,estimate,265,266,24,227,249,259,271,281,307
-United Kingdom,2020-10-26,,estimate,266,266,22,231,251,260,272,281,304
-United Kingdom,2020-12-08,,forecast,268,270,40,209,241,258,279,295,340
-England,2020-12-05,,forecast,271,273,36,217,248,262,280,296,334
-United Kingdom,2020-12-09,,forecast,272,274,46,202,242,261,284,303,352
-England,2020-11-01,,estimate,278,279,25,239,261,272,284,294,321
-England,2020-12-04,,forecast,279,281,34,229,257,271,288,304,341
-England,2020-11-03,,estimate,282,282,26,241,265,275,288,298,326
-England,2020-11-02,,estimate,289,290,26,249,272,283,295,306,334
-United Kingdom,2020-10-28,,estimate,290,291,24,252,275,285,296,307,332
-England,2020-12-03,,forecast,293,294,32,245,272,285,302,316,349
-United Kingdom,2020-12-07,,forecast,296,298,40,236,271,287,306,323,365
-England,2020-12-01,,estimate based on partial data,301,302,30,256,282,294,308,321,354
-United Kingdom,2020-10-29,,estimate,302,303,25,262,286,296,309,319,347
-United Kingdom,2020-10-30,,estimate,307,308,26,267,290,301,314,325,350
-United Kingdom,2020-12-06,,forecast,310,311,38,251,285,301,319,336,376
-England,2020-11-05,,estimate,311,312,28,269,293,304,318,330,359
-England,2020-11-04,,estimate,313,313,29,268,293,305,320,332,361
-England,2020-12-02,,forecast,313,314,33,262,292,305,322,336,371
-United Kingdom,2020-12-05,,forecast,313,314,36,258,289,304,322,338,376
-England,2020-11-06,,estimate,317,318,28,273,299,310,325,337,366
-United Kingdom,2020-10-31,,estimate,319,320,26,278,302,313,326,337,363
-United Kingdom,2020-12-04,,forecast,325,327,35,272,303,316,334,349,386
-England,2020-11-07,,estimate,327,329,29,282,309,321,335,347,378
-England,2020-11-30,,estimate based on partial data,329,331,31,282,310,322,337,350,383
-England,2020-11-10,,estimate,335,336,30,289,316,328,342,355,387
-England,2020-11-29,,estimate based on partial data,336,337,30,289,316,329,344,357,387
-England,2020-11-08,,estimate,339,340,30,292,319,332,346,358,390
-United Kingdom,2020-11-01,,estimate,341,341,27,298,323,334,347,358,388
-United Kingdom,2020-11-03,,estimate,342,343,27,300,325,335,348,361,388
-England,2020-11-28,,estimate based on partial data,343,345,31,295,324,336,351,364,397
-United Kingdom,2020-12-03,,forecast,346,347,34,293,324,337,354,368,406
-England,2020-11-27,,estimate based on partial data,348,349,30,300,328,341,356,368,400
-England,2020-11-09,,estimate,348,349,30,302,329,341,356,369,398
-United Kingdom,2020-11-02,,estimate,351,351,29,306,332,344,358,370,399
-United Kingdom,2020-12-01,,estimate based on partial data,351,352,31,302,331,343,358,372,403
-England,2020-11-24,,estimate based on partial data,355,356,31,306,336,348,363,376,409
-England,2020-11-26,,estimate based on partial data,358,359,31,309,338,350,365,378,411
-United Kingdom,2020-12-02,,forecast,360,361,32,309,339,351,368,381,417
-England,2020-11-12,,estimate based on partial data,363,363,31,315,342,355,370,383,415
-England,2020-11-13,,estimate based on partial data,364,365,32,314,344,356,372,386,419
-England,2020-11-17,,estimate based on partial data,365,366,32,313,346,358,374,387,419
-England,2020-11-11,,estimate,368,369,32,317,347,360,375,388,423
-England,2020-11-14,,estimate based on partial data,372,373,32,322,352,365,381,393,428
-United Kingdom,2020-11-04,,estimate,373,373,29,328,354,366,379,392,422
-England,2020-11-25,,estimate based on partial data,376,377,33,325,354,367,384,398,434
-England,2020-11-20,,estimate based on partial data,379,380,33,327,358,371,388,402,435
-England,2020-11-15,,estimate based on partial data,380,380,33,329,358,371,388,401,435
-United Kingdom,2020-11-06,,estimate,381,383,30,336,362,374,390,402,434
-United Kingdom,2020-11-05,,estimate,382,382,30,336,362,374,389,402,433
-United Kingdom,2020-11-30,,estimate based on partial data,382,383,32,334,362,374,390,403,437
-England,2020-11-22,,estimate based on partial data,382,383,33,329,361,374,391,405,438
-England,2020-11-23,,estimate based on partial data,382,383,33,330,360,373,390,404,438
-England,2020-11-21,,estimate based on partial data,382,383,33,331,360,374,390,404,438
-England,2020-11-19,,estimate based on partial data,383,383,33,330,360,375,391,405,440
-England,2020-11-16,,estimate based on partial data,385,386,33,332,364,377,393,407,442
-United Kingdom,2020-11-07,,estimate,391,391,30,342,371,383,399,411,440
-United Kingdom,2020-11-28,,estimate based on partial data,393,394,31,343,373,386,400,414,444
-England,2020-11-18,,estimate based on partial data,395,396,33,341,374,387,403,417,452
-United Kingdom,2020-11-29,,estimate based on partial data,396,397,31,346,376,388,404,417,450
-United Kingdom,2020-11-10,,estimate,403,404,31,354,382,395,411,424,456
-United Kingdom,2020-11-27,,estimate based on partial data,404,404,31,354,384,396,411,424,455
-United Kingdom,2020-11-08,,estimate,413,414,32,363,392,405,421,435,469
-United Kingdom,2020-11-24,,estimate based on partial data,414,414,32,363,392,405,422,436,469
-United Kingdom,2020-11-09,,estimate,419,420,32,369,399,411,426,440,474
-United Kingdom,2020-11-26,,estimate based on partial data,421,422,32,371,400,413,429,442,476
-United Kingdom,2020-11-25,,estimate based on partial data,430,431,33,377,409,422,438,452,485
-United Kingdom,2020-11-17,,estimate based on partial data,432,433,33,381,411,425,440,454,488
-United Kingdom,2020-11-13,,estimate based on partial data,433,432,33,379,410,424,440,453,489
-United Kingdom,2020-11-11,,estimate,435,435,33,382,412,426,443,456,489
-United Kingdom,2020-11-14,,estimate based on partial data,438,438,33,386,416,430,446,459,493
-United Kingdom,2020-11-12,,estimate based on partial data,438,439,34,386,416,429,446,461,497
-United Kingdom,2020-11-21,,estimate based on partial data,440,441,33,387,418,431,449,462,495
-United Kingdom,2020-11-23,,estimate based on partial data,442,443,33,388,420,435,451,465,498
-United Kingdom,2020-11-20,,estimate based on partial data,442,443,33,391,421,434,451,465,498
-United Kingdom,2020-11-22,,estimate based on partial data,450,451,34,397,428,442,459,473,509
-United Kingdom,2020-11-19,,estimate based on partial data,455,456,34,401,433,447,463,478,512
-United Kingdom,2020-11-15,,estimate based on partial data,455,456,35,399,433,446,464,478,514
-United Kingdom,2020-11-16,,estimate based on partial data,456,456,34,403,434,447,464,479,512
-United Kingdom,2020-11-18,,estimate based on partial data,458,458,35,403,434,449,466,480,516
+North West,2020-10-25,,estimate,68,69,10,52,62,66,71,75,85
+North West,2020-11-23,,estimate based on partial data,69,69,10,53,62,66,71,75,86
+North East and Yorkshire,2020-11-30,,estimate based on partial data,69,69,13,50,61,65,72,77,91
+North West,2020-10-26,,estimate,70,70,10,54,63,68,73,77,88
+North East and Yorkshire,2020-11-01,,estimate,70,70,12,51,62,67,73,78,91
+North East and Yorkshire,2020-11-29,,estimate based on partial data,70,70,12,51,62,67,73,79,92
+North West,2020-10-27,,estimate,71,71,10,55,64,68,74,78,89
+United Kingdom,2020-10-04,,estimate,71,71,10,56,65,69,73,78,87
+Midlands,2020-11-06,,estimate,71,71,11,54,64,68,74,78,90
+North West,2020-11-22,,estimate based on partial data,72,72,10,55,65,69,74,79,89
+North East and Yorkshire,2020-10-31,,estimate,72,73,13,53,64,69,75,81,94
+Midlands,2020-11-05,,estimate,73,74,11,56,66,70,76,81,93
+Midlands,2020-11-07,,estimate,73,74,11,56,66,70,76,81,93
+North East and Yorkshire,2020-11-03,,estimate,73,74,13,54,65,70,76,82,96
+Midlands,2020-12-08,,forecast,73,75,17,49,63,69,77,84,104
+England,2020-10-07,,estimate,74,74,10,59,67,72,76,81,91
+Midlands,2020-12-09,,forecast,74,75,19,49,63,69,78,86,108
+Midlands,2020-12-10,,forecast,74,76,21,47,62,69,79,87,112
+United Kingdom,2020-10-05,,estimate,75,76,10,60,69,73,78,82,92
+North East and Yorkshire,2020-11-02,,estimate,75,76,13,55,67,72,78,84,98
+North West,2020-11-21,,estimate based on partial data,76,76,11,59,69,74,79,83,94
+United Kingdom,2020-10-06,,estimate,76,77,10,61,70,74,79,83,94
+England,2020-10-08,,estimate,77,77,10,61,70,74,79,84,94
+North West,2020-10-29,,estimate,77,77,11,60,69,74,79,84,95
+North West,2020-11-19,,estimate based on partial data,77,78,11,61,71,75,80,85,97
+North East and Yorkshire,2020-11-04,,estimate,77,78,13,57,69,74,81,86,100
+North East and Yorkshire,2020-11-28,,estimate based on partial data,78,79,14,58,70,75,81,87,103
+North West,2020-11-20,,estimate based on partial data,79,79,11,62,72,76,82,87,98
+Midlands,2020-12-05,,forecast,80,80,15,58,70,76,83,89,106
+North West,2020-10-28,,estimate,80,81,11,63,73,78,83,88,100
+North West,2020-11-17,,estimate based on partial data,80,81,11,63,73,78,83,88,100
+North East and Yorkshire,2020-11-05,,estimate,80,81,13,60,71,77,84,89,104
+North East and Yorkshire,2020-11-27,,estimate based on partial data,80,81,13,60,72,77,84,89,104
+North East and Yorkshire,2020-11-26,,estimate based on partial data,80,81,14,59,71,77,84,89,103
+England,2020-10-09,,estimate,81,81,11,64,74,78,84,88,100
+Midlands,2020-11-10,,estimate,81,81,12,63,73,78,84,89,101
+Midlands,2020-12-07,,forecast,81,83,17,58,71,78,85,92,111
+Midlands,2020-12-04,,forecast,82,83,14,60,73,79,86,92,107
+North West,2020-10-30,,estimate,83,83,11,65,75,80,85,90,102
+North West,2020-11-01,,estimate,83,83,11,65,76,80,86,91,103
+Midlands,2020-11-08,,estimate,83,83,12,64,75,80,85,91,104
+North West,2020-11-16,,estimate based on partial data,83,84,12,65,76,80,86,91,104
+North East and Yorkshire,2020-11-25,,estimate based on partial data,83,84,14,62,74,80,86,92,108
+North West,2020-11-03,,estimate,84,84,12,65,76,81,87,92,104
+North West,2020-10-31,,estimate,84,84,12,66,76,81,87,92,104
+North West,2020-11-02,,estimate,84,84,12,66,76,81,87,92,104
+United Kingdom,2020-10-07,,estimate,84,85,11,68,77,82,87,91,102
+Midlands,2020-11-09,,estimate,84,85,12,65,76,81,87,92,106
+North East and Yorkshire,2020-11-24,,estimate based on partial data,84,85,14,63,75,81,88,94,109
+North West,2020-11-15,,estimate based on partial data,85,86,12,67,78,82,88,93,105
+Midlands,2020-12-06,,forecast,85,86,17,60,74,81,89,96,115
+Midlands,2020-11-11,,estimate,86,86,12,66,78,83,89,94,106
+North West,2020-11-18,,estimate based on partial data,86,86,12,67,78,83,89,94,106
+North East and Yorkshire,2020-11-06,,estimate,86,86,14,65,77,82,89,95,111
+North West,2020-11-05,,estimate,87,87,12,68,79,84,90,95,108
+Midlands,2020-11-13,,estimate based on partial data,87,87,13,68,79,84,90,95,109
+England,2020-10-10,,estimate,87,88,11,70,80,85,90,95,106
+North West,2020-11-10,,estimate,87,88,12,68,80,85,91,96,109
+Midlands,2020-12-01,,estimate based on partial data,87,88,13,67,79,84,91,96,111
+North East and Yorkshire,2020-11-08,,estimate,87,88,15,65,77,83,90,97,112
+North West,2020-11-12,,estimate,88,88,12,70,80,85,91,96,108
+Midlands,2020-11-14,,estimate based on partial data,88,89,13,69,80,85,91,97,111
+Midlands,2020-12-02,,estimate based on partial data,88,89,14,68,80,85,92,98,114
+North West,2020-11-09,,estimate,89,90,12,71,81,86,92,97,110
+North East and Yorkshire,2020-11-10,,estimate,89,90,15,66,80,85,93,99,115
+North West,2020-11-08,,estimate,90,90,12,70,82,87,93,98,110
+North West,2020-11-14,,estimate based on partial data,90,90,12,71,82,86,93,98,111
+Midlands,2020-12-03,,forecast,90,91,15,68,80,86,93,100,116
+North East and Yorkshire,2020-11-22,,estimate based on partial data,90,91,15,68,81,87,94,101,117
+United Kingdom,2020-10-08,,estimate,91,91,11,74,84,88,94,99,110
+North West,2020-11-13,,estimate based on partial data,91,91,12,72,83,88,94,99,113
+Midlands,2020-11-12,,estimate,91,91,13,71,82,88,94,100,113
+North East and Yorkshire,2020-11-07,,estimate,91,91,14,69,81,87,94,101,116
+Midlands,2020-11-28,,estimate based on partial data,91,92,13,72,83,88,95,100,115
+North West,2020-11-06,,estimate,92,92,12,73,84,89,95,101,113
+North East and Yorkshire,2020-11-23,,estimate based on partial data,92,92,15,69,82,88,96,102,117
+North West,2020-11-07,,estimate,92,93,12,74,84,89,95,101,114
+Midlands,2020-11-17,,estimate based on partial data,92,93,13,71,84,89,96,101,115
+North East and Yorkshire,2020-11-09,,estimate,92,93,15,70,83,89,96,102,118
+North East and Yorkshire,2020-11-11,,estimate,92,93,15,70,83,89,96,103,120
+North West,2020-11-04,,estimate,93,94,12,74,85,90,96,102,114
+England,2020-10-11,,estimate,93,94,12,75,85,90,96,101,113
+Midlands,2020-11-27,,estimate based on partial data,94,94,13,73,85,91,97,103,117
+North East and Yorkshire,2020-11-12,,estimate,94,95,15,71,84,90,98,105,121
+United Kingdom,2020-10-09,,estimate,95,95,11,77,87,92,97,102,114
+North West,2020-11-11,,estimate,95,96,13,75,87,92,98,104,118
+Midlands,2020-11-24,,estimate based on partial data,95,96,13,75,87,92,99,104,118
+North East and Yorkshire,2020-11-17,,estimate based on partial data,95,96,15,71,86,92,99,105,122
+Midlands,2020-11-21,,estimate based on partial data,96,96,13,75,87,92,99,105,119
+Midlands,2020-11-20,,estimate based on partial data,96,96,14,75,87,93,99,105,120
+North East and Yorkshire,2020-11-19,,estimate based on partial data,96,96,15,73,86,92,100,106,123
+North East and Yorkshire,2020-11-18,,estimate based on partial data,96,97,15,73,86,92,100,106,123
+Midlands,2020-11-30,,estimate based on partial data,97,97,14,75,88,93,100,106,120
+Midlands,2020-11-18,,estimate based on partial data,97,97,14,76,88,94,101,106,121
+North East and Yorkshire,2020-11-15,,estimate based on partial data,97,98,16,73,87,93,101,108,124
+Midlands,2020-11-25,,estimate based on partial data,98,98,13,77,89,95,101,107,121
+Midlands,2020-11-15,,estimate based on partial data,98,99,13,77,89,95,101,107,122
+Midlands,2020-11-29,,estimate based on partial data,98,99,14,78,89,95,102,108,122
+North East and Yorkshire,2020-11-20,,estimate based on partial data,98,99,16,74,88,94,102,109,126
+Midlands,2020-11-16,,estimate based on partial data,99,99,14,78,90,95,102,108,122
+North East and Yorkshire,2020-11-21,,estimate based on partial data,99,100,16,74,89,95,103,110,127
+North East and Yorkshire,2020-11-13,,estimate based on partial data,99,100,16,75,89,95,103,109,126
+England,2020-10-12,,estimate,100,100,12,80,92,97,103,108,120
+England,2020-10-13,,estimate,100,101,12,81,93,97,103,108,122
+United Kingdom,2020-10-10,,estimate,101,102,12,82,94,98,104,109,122
+Midlands,2020-11-26,,estimate based on partial data,101,102,14,79,92,98,105,111,125
+North East and Yorkshire,2020-11-16,,estimate based on partial data,101,102,16,77,90,97,105,112,129
+Midlands,2020-11-19,,estimate based on partial data,102,102,14,80,93,98,105,112,126
+Midlands,2020-11-23,,estimate based on partial data,103,104,14,82,94,100,106,113,127
+North East and Yorkshire,2020-11-14,,estimate based on partial data,103,104,16,78,92,99,107,115,132
+Midlands,2020-11-22,,estimate based on partial data,105,105,14,83,95,101,108,114,129
+United Kingdom,2020-10-11,,estimate,111,112,12,92,103,108,114,120,132
+England,2020-10-14,,estimate,114,114,13,93,105,110,117,123,137
+United Kingdom,2020-10-12,,estimate,118,118,13,98,109,115,121,127,141
+England,2020-10-15,,estimate,118,118,14,96,109,115,121,127,141
+United Kingdom,2020-10-13,,estimate,120,121,13,99,112,117,123,129,143
+England,2020-10-16,,estimate,124,125,14,102,116,121,128,133,148
+United Kingdom,2020-10-14,,estimate,133,133,14,111,124,130,137,142,157
+England,2020-10-17,,estimate,134,134,15,111,124,130,138,144,160
+England,2020-12-16,,forecast,135,140,55,63,102,122,149,171,236
+England,2020-12-15,,forecast,137,141,51,65,105,125,149,170,229
+England,2020-10-18,,estimate,143,143,16,119,132,139,147,154,169
+United Kingdom,2020-10-15,,estimate,143,144,15,120,134,140,147,153,168
+United Kingdom,2020-10-16,,estimate,149,149,15,125,138,145,152,159,174
+England,2020-10-19,,estimate,152,153,16,127,142,148,156,163,180
+England,2020-10-20,,estimate,153,154,17,127,143,149,157,164,181
+England,2020-12-14,,forecast,154,158,52,81,122,142,167,190,247
+United Kingdom,2020-10-17,,estimate,159,159,16,134,149,155,163,170,185
+England,2020-12-13,,forecast,165,168,49,94,132,153,177,199,253
+United Kingdom,2020-12-16,,forecast,169,176,52,101,138,157,183,207,269
+England,2020-10-21,,estimate,172,172,17,144,160,167,176,184,201
+United Kingdom,2020-10-18,,estimate,174,174,17,148,163,170,178,185,202
+England,2020-12-12,,forecast,174,177,48,107,143,162,186,207,260
+United Kingdom,2020-12-15,,forecast,174,179,49,108,144,162,186,209,266
+England,2020-10-22,,estimate,177,178,18,150,166,173,182,189,209
+United Kingdom,2020-10-19,,estimate,183,184,17,157,172,179,188,196,212
+England,2020-12-11,,forecast,184,186,45,116,154,172,196,214,267
+England,2020-10-23,,estimate,185,186,18,157,173,180,190,198,217
+United Kingdom,2020-10-20,,estimate,186,186,18,158,174,182,191,198,215
+United Kingdom,2020-12-14,,forecast,196,200,50,126,163,184,209,230,289
+England,2020-10-24,,estimate,198,198,19,167,185,193,202,211,230
+England,2020-12-10,,forecast,198,199,44,130,168,186,209,228,275
+United Kingdom,2020-10-21,,estimate,204,204,18,175,192,199,208,216,235
+United Kingdom,2020-12-13,,forecast,208,213,49,139,179,197,221,243,298
+England,2020-10-25,,estimate,209,210,20,178,196,204,214,223,243
+England,2020-12-08,,forecast,214,215,39,151,189,205,225,241,279
+England,2020-12-09,,forecast,215,217,42,151,186,204,226,245,289
+United Kingdom,2020-12-12,,forecast,215,218,45,148,187,204,227,246,297
+United Kingdom,2020-10-22,,estimate,217,217,20,187,204,212,221,230,249
+England,2020-10-27,,estimate,219,219,21,185,205,213,224,233,254
+England,2020-10-26,,estimate,220,220,21,187,207,215,225,234,255
+United Kingdom,2020-10-23,,estimate,224,224,20,191,210,218,228,236,259
+United Kingdom,2020-12-11,,forecast,227,229,43,164,198,216,237,257,305
+United Kingdom,2020-10-24,,estimate,236,237,20,203,223,231,241,250,271
+England,2020-12-07,,forecast,239,240,39,178,212,229,248,265,307
+England,2020-10-28,,estimate,244,244,23,208,228,238,249,259,281
+United Kingdom,2020-12-10,,forecast,246,249,43,182,219,236,257,275,323
+England,2020-10-29,,estimate,247,248,23,211,233,242,253,263,285
+England,2020-12-06,,forecast,251,252,36,197,226,241,261,275,314
+England,2020-10-30,,estimate,254,254,23,217,239,248,260,270,292
+United Kingdom,2020-10-25,,estimate,256,256,22,221,241,250,261,271,292
+United Kingdom,2020-12-09,,forecast,257,259,40,197,231,248,267,284,326
+United Kingdom,2020-12-08,,forecast,261,263,37,205,238,252,270,287,326
+England,2020-12-05,,forecast,262,264,34,213,239,253,270,285,322
+United Kingdom,2020-10-27,,estimate,266,267,23,230,252,261,272,282,304
+United Kingdom,2020-10-26,,estimate,268,268,23,231,252,262,273,283,307
+England,2020-10-31,,estimate,268,268,24,230,252,262,274,284,309
+England,2020-12-04,,forecast,270,272,32,223,249,262,279,293,328
+England,2020-11-01,,estimate,279,279,25,239,263,273,285,296,321
+England,2020-11-03,,estimate,283,284,25,244,267,277,289,300,326
+England,2020-12-03,,forecast,285,288,31,241,267,278,293,308,341
+United Kingdom,2020-10-28,,estimate,288,288,24,249,272,282,294,303,328
+United Kingdom,2020-12-07,,forecast,288,290,37,232,264,279,297,313,351
+England,2020-11-02,,estimate,289,289,25,249,272,283,295,306,332
+England,2020-12-01,,estimate based on partial data,300,302,29,257,282,293,307,320,351
+United Kingdom,2020-10-29,,estimate,302,303,25,264,287,296,309,319,345
+United Kingdom,2020-12-06,,forecast,303,305,35,250,281,295,313,328,364
+United Kingdom,2020-10-30,,estimate,307,307,25,268,290,300,313,324,351
+England,2020-12-02,,estimate based on partial data,307,308,30,263,287,299,314,327,358
+England,2020-11-04,,estimate,309,310,27,267,291,303,316,328,354
+England,2020-11-05,,estimate,310,311,27,268,293,304,317,329,357
+United Kingdom,2020-12-05,,forecast,310,311,33,258,288,301,318,332,366
+England,2020-11-06,,estimate,316,316,27,272,298,309,322,333,361
+United Kingdom,2020-10-31,,estimate,320,320,26,279,302,313,327,338,364
+United Kingdom,2020-12-04,,forecast,322,322,32,272,300,313,329,343,376
+England,2020-11-07,,estimate,328,329,28,283,309,322,335,348,375
+England,2020-11-30,,estimate based on partial data,328,330,29,284,310,321,335,348,379
+England,2020-11-10,,estimate,335,336,29,290,316,328,342,356,385
+England,2020-11-08,,estimate,337,338,28,294,319,331,344,356,386
+England,2020-11-29,,estimate based on partial data,340,340,30,292,321,332,347,358,389
+United Kingdom,2020-11-01,,estimate,341,342,28,298,323,335,348,360,389
+United Kingdom,2020-12-03,,forecast,343,344,33,293,323,335,351,365,400
+United Kingdom,2020-11-03,,estimate,345,345,27,301,327,338,352,362,391
+England,2020-11-09,,estimate,345,347,30,301,326,338,352,365,399
+England,2020-11-28,,estimate based on partial data,347,347,31,298,327,339,355,368,399
+United Kingdom,2020-11-02,,estimate,350,351,28,307,333,344,357,369,398
+England,2020-11-27,,estimate based on partial data,351,351,29,304,332,344,359,370,400
+United Kingdom,2020-12-02,,estimate based on partial data,352,354,30,306,333,345,360,373,407
+United Kingdom,2020-12-01,,estimate based on partial data,353,354,29,307,334,346,360,372,404
+England,2020-11-12,,estimate,360,361,31,314,340,352,367,381,415
+England,2020-11-13,,estimate based on partial data,362,363,30,317,342,354,370,382,415
+England,2020-11-24,,estimate based on partial data,362,363,31,314,343,355,369,382,416
+England,2020-11-11,,estimate,362,364,30,315,343,356,370,382,416
+England,2020-11-26,,estimate based on partial data,363,364,31,312,344,356,371,384,415
+United Kingdom,2020-11-04,,estimate,366,367,28,323,348,359,374,386,416
+England,2020-11-17,,estimate based on partial data,369,369,31,321,348,360,376,390,423
+England,2020-11-14,,estimate based on partial data,374,375,32,324,354,366,381,396,428
+England,2020-11-15,,estimate based on partial data,380,381,32,329,359,372,387,401,435
+England,2020-11-25,,estimate based on partial data,380,381,33,327,358,372,388,402,436
+United Kingdom,2020-11-05,,estimate,380,382,30,335,362,373,389,402,432
+United Kingdom,2020-11-06,,estimate,381,381,29,333,362,374,388,400,430
+United Kingdom,2020-11-30,,estimate based on partial data,383,384,30,337,364,376,390,403,437
+England,2020-11-20,,estimate based on partial data,383,384,32,332,363,375,391,405,436
+England,2020-11-16,,estimate based on partial data,385,387,32,337,365,377,394,408,443
+England,2020-11-23,,estimate based on partial data,387,387,33,335,366,379,394,408,441
+England,2020-11-21,,estimate based on partial data,388,389,33,335,367,381,397,412,444
+England,2020-11-19,,estimate based on partial data,389,389,32,338,368,381,396,409,442
+England,2020-11-22,,estimate based on partial data,390,389,33,335,366,381,398,412,444
+United Kingdom,2020-11-07,,estimate,391,392,30,344,372,383,398,412,441
+England,2020-11-18,,estimate based on partial data,396,396,32,344,375,388,404,417,449
+United Kingdom,2020-11-28,,estimate based on partial data,396,398,30,350,377,389,404,417,448
+United Kingdom,2020-11-29,,estimate based on partial data,398,398,31,348,377,390,405,418,452
+United Kingdom,2020-11-27,,estimate based on partial data,405,406,31,356,384,397,413,426,457
+United Kingdom,2020-11-10,,estimate,406,407,31,358,386,398,414,427,459
+United Kingdom,2020-11-08,,estimate,412,412,32,361,391,404,419,433,466
+United Kingdom,2020-11-09,,estimate,419,419,32,367,398,411,427,440,473
+United Kingdom,2020-11-24,,estimate based on partial data,422,422,32,371,401,414,430,444,475
+United Kingdom,2020-11-26,,estimate based on partial data,425,425,32,373,403,417,433,447,479
+United Kingdom,2020-11-11,,estimate,427,427,33,374,405,418,435,448,481
+United Kingdom,2020-11-25,,estimate based on partial data,429,430,33,378,408,422,437,451,484
+United Kingdom,2020-11-13,,estimate based on partial data,432,432,32,381,411,425,439,454,486
+United Kingdom,2020-11-17,,estimate based on partial data,438,439,32,387,417,430,446,459,493
+United Kingdom,2020-11-12,,estimate,438,439,33,386,417,430,447,460,493
+United Kingdom,2020-11-14,,estimate based on partial data,439,440,33,387,418,431,447,461,495
+United Kingdom,2020-11-21,,estimate based on partial data,446,446,34,391,424,437,455,469,502
+United Kingdom,2020-11-20,,estimate based on partial data,446,447,33,395,424,438,454,469,502
+United Kingdom,2020-11-23,,estimate based on partial data,448,449,33,395,427,440,457,470,503
+United Kingdom,2020-11-18,,estimate based on partial data,454,455,34,401,432,446,462,477,514
+United Kingdom,2020-11-22,,estimate based on partial data,456,457,34,401,434,448,464,478,513
+United Kingdom,2020-11-15,,estimate based on partial data,456,457,34,402,434,448,465,479,515
+United Kingdom,2020-11-16,,estimate based on partial data,458,458,34,403,436,449,466,480,514
+United Kingdom,2020-11-19,,estimate based on partial data,460,460,34,405,437,451,469,483,518
