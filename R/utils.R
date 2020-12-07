@@ -72,7 +72,7 @@ clean_regional_data <- function(cases, truncation = 3, data_window = 12) {
   cases <- cases[, .(region, date = as.Date(date), confirm = cases_new)]
   cases <- cases[date <= Sys.Date()]
   cases <- cases[, .SD[date <= (max(date, na.rm = TRUE) - lubridate::days(truncation))], by = region]
-  if (!is.null(weeks_filter)) {
+  if (!is.infinite(data_window)) {
     cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(data_window))], by = region]
   }
   cases <- cases[!is.na(confirm)]
