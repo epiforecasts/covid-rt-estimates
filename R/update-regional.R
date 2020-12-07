@@ -209,7 +209,7 @@ ur_process_cases <- function(cases, location, max_execution_time, refresh) {
   future::plan("sequential")
 
   futile.logger::flog.trace("generating summary data")
-  try(
+
     futile.logger::ftry(
       EpiNow2::regional_summary(
         reported_cases = cases,
@@ -219,7 +219,7 @@ ur_process_cases <- function(cases, location, max_execution_time, refresh) {
         all_regions = "Region" %in% class(location),
         return_output = FALSE
       )
-    ),
+    ,
     silent = TRUE
   )
   out <- list()
@@ -262,9 +262,9 @@ ur_get_oldest_result <- function(location) {
           min(
             strptime(
               strsplit(
-                system(
+                suppressMessages(system(
                   paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do stat -c %y $f; done'),
-                  intern = TRUE),
+                  intern = TRUE)),
                 '\\+\\d\\d\\d\\d',
                 perl = TRUE
               )[[1]],
