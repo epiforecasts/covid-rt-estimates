@@ -108,7 +108,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     cases <- cases[region %in_ci% include_subregions]
   }
 
-  cases <- clean_regional_data(cases, truncation = location$truncation)
+  cases <- clean_regional_data(cases, truncation = location$truncation,
+                               data_window = location$data_window)
 
   # Check to see if there is data and if the data has been updated  ------------------------------
   if (cases[, .N] > 0 && (force || check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds"))))) {

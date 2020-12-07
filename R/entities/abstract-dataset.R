@@ -24,6 +24,8 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                  region_scale = NA,
                                                                 #' @field truncation Number of days to truncate from the end of the data
                                  truncation = 0,
+                                                                #' @field data_window Number of weeks to use when estimating (referenced from most recent date)
+                                 data_window = 12,
                                                                 #' @field stable Boolean indicating if dataset is stable
                                  stable = TRUE,
                                                                 #' @field target_folder for individual location results
@@ -44,8 +46,10 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                                                 #' @param incubation_period String, optional override line list file
                                                                 #' @param reporting_delay String, optional override line list file
                                                                 #' @param stable Boolean
+                                                                #' @param data_window Number of weeks to use when estimating (referenced from most recent date)
                                                                 #' @param data_args list for passing to getregionaldata as arguments
                                                                 #' @param truncation Integer Number of days to trim off the end of the newest end of the data
+                                                                #' @param regional_epinow_opts List of options to be passed to regional_epinow
                                                                 #' @return A new `AbstractDataset` Object
                                  initialize = function(
                                    name,
@@ -59,6 +63,7 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                    stable = TRUE,
                                    data_args = NULL,
                                    truncation = 0,
+                                   data_window = 12,
                                    regional_epinow_opts = list(rt = rt_opts(prior = list(mean = 1, sd = 0.2)),
                                                                stan = stan_opts(samples = 4000, warmup = 400, cores = no_cores,
                                                                chains = 4, control = list(adapt_delta = 0.95),
