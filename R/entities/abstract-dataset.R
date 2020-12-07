@@ -51,7 +51,7 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                    reporting_delay = NA,
                                    stable = TRUE,
                                    data_args = NULL,
-                                   truncation = 3
+                                   truncation = 0
                                  ) {
 
                                    if (!PublicationMetadata$classname %in% class(publication_metadata)) {
