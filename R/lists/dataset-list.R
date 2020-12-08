@@ -155,7 +155,11 @@ DATASETS <- list(
                          title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for India Based on Test Results",
                          description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in India. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
                          breakdown = "state",
-                         country = "India")),
+                         country = "India"),
+                      case_modifier = function(cases) {
+                        cases <- cases[!region_level_1 %in% "Unknown")]
+                        return(cases)  
+                      }),
   "italy" = Region$new(name = "italy",
                        publication_metadata = PublicationMetadata$new(
                          title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for Italy Based on Test Results",
