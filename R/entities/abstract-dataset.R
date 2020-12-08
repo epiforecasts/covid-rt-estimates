@@ -67,7 +67,7 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                    regional_epinow_opts = list(rt = rt_opts(prior = list(mean = 1, sd = 0.2)),
                                                                stan = stan_opts(samples = 4000, warmup = 400, cores = no_cores,
                                                                chains = 4, control = list(adapt_delta = 0.95),
-                                                               future = FALSE),
+                                                               future = FALSE, init_fit = "cumulative"),
                                                                output = c("plots", "latest"),
                                                                non_zero_points = 14, horizon = 14, logs = NULL)
                                  ) {
