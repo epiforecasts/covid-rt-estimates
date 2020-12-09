@@ -87,5 +87,6 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                    self$region_scale <- region_scale
                                    self$truncation <- truncation
                                    self$regional_epinow_opts <- regional_epinow_opts
+                                   self$data_window <- data_window
                                  }
                                ))
