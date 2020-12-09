@@ -157,7 +157,7 @@ DATASETS <- list(
                          breakdown = "state",
                          country = "India"),
                       case_modifier = function(cases) {
-                        cases <- cases[!region_level_1 %in% "Unknown")]
+                        cases <- cases[!(region_level_1 %in% "Unknown")]
                         return(cases)  
                       }),
   "italy" = Region$new(name = "italy",
