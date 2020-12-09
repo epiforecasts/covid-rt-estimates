@@ -77,6 +77,7 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                    }
                                    self$name <- name
                                    self$publication_metadata <- publication_metadata
+                                   self$data <- data
                                    self$case_modifier <- case_modifier
                                    self$generation_time <- generation_time
                                    self$incubation_period <- incubation_period
@@ -85,5 +86,6 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                    self$data_args <- data_args
                                    self$region_scale <- region_scale
                                    self$truncation <- truncation
+                                   self$regional_epinow_opts <- regional_epinow_opts
                                  }
                                ))
