@@ -3,7 +3,9 @@ on: pull_request
 jobs:
   document:
     name: document
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -28,7 +30,7 @@ jobs:
 
   style:
     name: style
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -58,7 +60,7 @@ jobs:
         shell: Rscript {0}
 
   cmdcheck:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
