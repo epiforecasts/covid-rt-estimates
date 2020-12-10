@@ -130,12 +130,11 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     # Run Rt estimation -------------------------------------------------------
     futile.logger::flog.trace("calling regional_epinow")
     out <- futile.logger::ftry(
-      do.call(regional_epinow, c(reported_cases = cases,
+      do.call(regional_epinow, c(list(reported_cases = cases,
                                  generation_time = location$generation_time,
                                  delays = delay_opts(location$incubation_period, location$reporting_delay),
-                                 target_folder = location$target_folder,
-                                 location$regional_epinow_opts)), silent = TRUE
-    )
+                                 target_folder = location$target_folder),
+                                 location$regional_epinow_opts)), silent = TRUE)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
 
