@@ -125,3 +125,34 @@ jobs:
         with:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
+
+  testthat:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 5
+#      - uses: r-lib/actions/pr-fetch@v1
+#        with:
+#          repo-token: ${{ secrets.GITHUB_TOKEN }}
+#      - uses: r-lib/actions/setup-r@v1
+      - name: Install dependencies
+        run: Rscript -e 'install.packages(c("styler","lintr"))'
+
+      - name: Style
+        run: Rscript -e 'devtools::test()'
+
+      - name: Upload check results
+        if: failure()
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ runner.os }}-r${{ matrix.config.r }}-results
+          path: check
