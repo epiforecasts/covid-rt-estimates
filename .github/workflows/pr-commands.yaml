@@ -1,3 +1,4 @@
+name: AutoPullTidy
 on:
   pull_request:
     branches:
@@ -8,7 +9,6 @@ on:
       -opened
       -synchronize
       -reopened
-name: StyleAndDocument
 jobs:
   document:
     name: document
