@@ -34,6 +34,11 @@ jobs:
   style:
     name: style
     runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -64,6 +69,11 @@ jobs:
 
   cmdcheck:
     runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
