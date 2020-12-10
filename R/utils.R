@@ -9,11 +9,11 @@ setup_log_from_args <- function(args) {
   futile.logger::flog.layout(futile.logger::layout.format("~t ~l ~m"))
   if (args$quiet) {
     futile.logger::flog.threshold(futile.logger::WARN)
-  }else if (args$werbose) {
+  } else if (args$werbose) {
     futile.logger::flog.threshold(futile.logger::TRACE)
-  }else if (args$verbose) {
+  } else if (args$verbose) {
     futile.logger::flog.threshold(futile.logger::DEBUG)
-  }else {
+  } else {
     futile.logger::flog.threshold(futile.logger::INFO)
   }
   return(invisible(NULL))
@@ -29,16 +29,22 @@ setup_future <- function(jobs, min_cores_per_worker = 4) {
   workers <- min(ceiling(future::availableCores() / min_cores_per_worker), jobs)
   cores_per_worker <- max(1, round(future::availableCores() / workers, 0))
 
-  futile.logger::flog.info("Using %s workers with %s cores per worker",
-                           workers, cores_per_worker)
+  futile.logger::flog.info(
+    "Using %s workers with %s cores per worker",
+    workers, cores_per_worker
+  )
 
 
-  future::plan(list(future::tweak(future::multiprocess, workers = workers, gc = TRUE, earlySignal = TRUE),
-                    future::tweak(future::multiprocess, workers = cores_per_worker)))
-  futile.logger::flog.debug("Checking the cores available - %s cores and %s jobs. Using %s workers",
-                            future::availableCores(),
-                            jobs,
-                            min(future::availableCores(), jobs))
+  future::plan(list(
+    future::tweak(future::multiprocess, workers = workers, gc = TRUE, earlySignal = TRUE),
+    future::tweak(future::multiprocess, workers = cores_per_worker)
+  ))
+  futile.logger::flog.debug(
+    "Checking the cores available - %s cores and %s jobs. Using %s workers",
+    future::availableCores(),
+    jobs,
+    min(future::availableCores(), jobs)
+  )
 
   return(cores_per_worker)
 }
@@ -54,9 +60,11 @@ check_for_update <- function(cases, last_run) {
 
     if (current_max_date <= last_run_date) {
       futile.logger::flog.info("Data has not been updated since last run. If wanting to run again then remove %s", last_run)
-      futile.logger::flog.debug("Max date in data - %s, last run date from file - %s",
-                                format(current_max_date, "%Y-%m-%d"),
-                                format(last_run_date, "%Y-%m-%d"))
+      futile.logger::flog.debug(
+        "Max date in data - %s, last run date from file - %s",
+        format(current_max_date, "%Y-%m-%d"),
+        format(last_run_date, "%Y-%m-%d")
+      )
       return(FALSE)
     }
   }
@@ -92,7 +100,9 @@ trim <- function(x) {
 #' @return data.frame of regions / subregions
 parse_cludes <- function(cludes) {
   nrows <- length(regmatches(cludes, gregexpr("/", cludes))[[1]])
-  if (nrows == 0) return(list())
+  if (nrows == 0) {
+    return(list())
+  }
   clude_list <- vector(mode = "list", length = nrows)
   locs <- strsplit(cludes, ",")
   for (loc in locs) {
@@ -103,9 +113,11 @@ parse_cludes <- function(cludes) {
     sub <- trim(region[2])
     if (sub == "*") {
       clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])))
-    }else {
-      clude_list[[i]] <- DatasetLocation$new(dataset = tolower(trim(region[1])),
-                                             sublocation = sub)
+    } else {
+      clude_list[[i]] <- DatasetLocation$new(
+        dataset = tolower(trim(region[1])),
+        sublocation = sub
+      )
     }
     i <- i + 1
   }
@@ -126,8 +138,10 @@ parse_cludes <- function(cludes) {
 collate_estimates <- function(name, target = "rt") {
 
   # Get locations of summary csv
-  sources <- as.list(paste0(list.files(here::here("subnational", name), full.names = TRUE),
-                            "/summary/", target, ".csv"))
+  sources <- as.list(paste0(
+    list.files(here::here("subnational", name), full.names = TRUE),
+    "/summary/", target, ".csv"
+  ))
   names(sources) <- list.files(here::here("subnational", name))
 
   # Read and bind
@@ -142,25 +156,23 @@ collate_estimates <- function(name, target = "rt") {
   }
 
   # Save back to main folder
-  data.table::fwrite(df, here::here("subnational", name, "collated", target, paste0('summary_', Sys.Date(), ".csv")))
-  data.table::fwrite(df, here::here("subnational", name, "collated", target, 'summary_latest.csv'))
+  data.table::fwrite(df, here::here("subnational", name, "collated", target, paste0("summary_", Sys.Date(), ".csv")))
+  data.table::fwrite(df, here::here("subnational", name, "collated", target, "summary_latest.csv"))
 
   return(invisible(NULL))
-
 }
 
-#'generate clean cases
+#' generate clean cases
 #' produce a neat data set for a single region
 #' @param number_of_days - how far back in time should we go
 #' @param regions List Character region names
 #' @param peak_cases What's the last value for number of new cases
 #' @param days_since_peak Which day is the peak (0=today, 20 = 20 days ago)
 generate_clean_cases <- function(
-  number_of_days = 90,
-  regions = list("my_test_region"),
-  peak_cases = 2000,
-  days_since_peak = 0
-) {
+                                 number_of_days = 90,
+                                 regions = list("my_test_region"),
+                                 peak_cases = 2000,
+                                 days_since_peak = 0) {
   today <- Sys.Date()
   df <- data.frame(
     "date" = lubridate::Date(),
@@ -178,21 +190,25 @@ generate_clean_cases <- function(
   for (region in regions) {
     for (n in 1:pre_peak) {
       val <- (cos(0 - n * day_size) + 1) / 2 * peak_cases
-      df <- rbind(df, data.frame(date = today - days_since_peak - n,
-                                 region = region,
-                                 cases_new = round(val),
-                                 cases_total = 500,
-                                 deaths_new = 1,
-                                 deaths_total = 100))
+      df <- rbind(df, data.frame(
+        date = today - days_since_peak - n,
+        region = region,
+        cases_new = round(val),
+        cases_total = 500,
+        deaths_new = 1,
+        deaths_total = 100
+      ))
     }
     for (n in 0:days_since_peak) {
       val <- (cos(n * day_size) + 1) / 2 * peak_cases
-      df <- rbind(df, data.frame(date = today - days_since_peak + n,
-                                 region = region,
-                                 cases_new = round(val),
-                                 cases_total = 500,
-                                 deaths_new = 1,
-                                 deaths_total = 100))
+      df <- rbind(df, data.frame(
+        date = today - days_since_peak + n,
+        region = region,
+        cases_new = round(val),
+        cases_total = 500,
+        deaths_new = 1,
+        deaths_total = 100
+      ))
     }
   }
   return(data.table::as.data.table(df))

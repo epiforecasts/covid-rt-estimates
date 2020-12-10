@@ -71,11 +71,11 @@ test_that(
   {
     test_data <- generate_clean_cases()
     result <- clean_regional_data(test_data)
-    expect_equal(nrow(result), 85) #12 weeks + 1 day
+    expect_equal(nrow(result), 85) # 12 weeks + 1 day
     expect_equal(max(result$date), Sys.Date() - 3) # default trim
     expect_equal(max(result$confirm), max(test_data$cases_new)) # check the col rename
     result <- clean_regional_data(test_data, 10)
-    expect_equal(nrow(result), 85) #12 weeks + 1 day
+    expect_equal(nrow(result), 85) # 12 weeks + 1 day
     expect_equal(max(result$date), Sys.Date() - 10) # custom trim
   }
 )
@@ -85,8 +85,11 @@ test_that(
   {
     result <- parse_cludes("canada/*,belgium/unknown , canada/nova scotia, united-states/Alabama")
     expect_equal(length(result), 4)
-    expect_true(all(lapply(result, function(dl) { dl$dataset }) %in_ci% list("canada", "belgium", "united-states")))
-    expect_true(all(lapply(result, function(dl) { dl$sublocation }) %in_ci% list("unknown", "nova scotia", NULL, "alabama")))
-
+    expect_true(all(lapply(result, function(dl) {
+      dl$dataset
+    }) %in_ci% list("canada", "belgium", "united-states")))
+    expect_true(all(lapply(result, function(dl) {
+      dl$sublocation
+    }) %in_ci% list("unknown", "nova scotia", NULL, "alabama")))
   }
 )
