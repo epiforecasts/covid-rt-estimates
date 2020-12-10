@@ -1,14 +1,5 @@
 name: AutoPullTidy
-on:
-  pull_request:
-    branches:
-      - main
-      - master
-    types:
-      -assigned
-      -opened
-      -synchronize
-      -reopened
+on: pull_request
 jobs:
   document:
     name: document
