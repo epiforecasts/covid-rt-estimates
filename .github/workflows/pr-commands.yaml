@@ -2,7 +2,7 @@ name: PR Housekeeping and Validation
 on: pull_request
 jobs:
   document:
-    name: document
+    name: Regenerate Documentation
     runs-on: ubuntu-latest
     container:
       image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
@@ -32,7 +32,7 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   style:
-    name: style
+    name: Auto style
     runs-on: ubuntu-latest
     container:
       image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
@@ -68,6 +68,7 @@ jobs:
         shell: Rscript {0}
 
   cmdcheck:
+    name: Run CMD Check
     runs-on: ubuntu-latest
     container:
       image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
