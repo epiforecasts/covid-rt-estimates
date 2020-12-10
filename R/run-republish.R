@@ -4,12 +4,12 @@
 #'
 #' For more information on execution run Rscript R/run-republish.R --help
 #'
-#================  INCLUDES ===================#
+# ================  INCLUDES ===================#
 # load the main run regional updates - it has all the requires and several functions we need
 if (!exists("rru_filter_datasets", mode = "function")) source(here::here("R", "run-region-updates.R"))
 
 
-#=============== Main Functions ====================#
+# =============== Main Functions ====================#
 
 #' Run republish
 #' Endpoint to recall the publication of the local results for a particular dataset
@@ -35,7 +35,7 @@ run_republish <- function(datasets, args) {
   futile.logger::flog.info("run complete")
 }
 
-#============= Ancillary Functions ========================#
+# ============= Ancillary Functions ========================#
 
 #' rrp_cli_interface
 #' Define the CLI interface and return the parsed arguments
@@ -55,14 +55,14 @@ rrp_cli_interface <- function(args_string = NA) {
   )
   if (is.character(args_string)) {
     args <- optparse::parse_args(optparse::OptionParser(option_list = option_list), args = args_string)
-  }else {
+  } else {
     args <- optparse::parse_args(optparse::OptionParser(option_list = option_list))
   }
   return(args)
 }
 
 
-#================ Main trigger ================#
+# ================ Main trigger ================#
 # only executes if this is the root of the application, making it source the file in Rstudio and
 # extend / modify it for custom dataset processing. Search "python __main__" for a lot of info about
 # why this is helpful in python (the same concepts are true in R but it's less written about)
@@ -75,9 +75,9 @@ rrp_cli_interface <- function(args_string = NA) {
 if (sys.nframe() == 0) {
   args <- rrp_cli_interface()
   setup_log_from_args(args)
-  if (args$collated){
+  if (args$collated) {
     datasets <- COLLATED_DERIVATIVES
-  }else{
+  } else {
     datasets <- DATASETS
   }
   futile.logger::ftry(
@@ -87,14 +87,14 @@ if (sys.nframe() == 0) {
     )
   )
 }
-#==================== Debug function ======================#
+# ==================== Debug function ======================#
 example_non_cli_republish_trigger <- function() {
   # list is in the format [flag[, value]?,?]+
   args <- rrp_cli_interface(c("-w", "-i", "canada/*"))
   setup_log_from_args(args)
-  if (args$collated){
+  if (args$collated) {
     datasets <- COLLATED_DERIVATIVES
-  }else{
+  } else {
     datasets <- DATASETS
   }
   futile.logger::ftry(run_republish(datasets = datasets, args = args))

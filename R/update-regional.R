@@ -17,7 +17,6 @@ if (!exists("setup_future", mode = "function")) source(here::here("R", "utils.R"
 #' @param includes Dataframe containing the only regions to include
 #' @param max_execution_time Integer specifying the timeout in seconds
 update_regional <- function(location, excludes, includes, force, max_execution_time, refresh) {
-
   futile.logger::flog.info("Processing dataset for %s", location$name)
   futile.logger::flog.trace("loading ancillary data")
   # Update delays -----------------------------------------------------------
@@ -48,11 +47,15 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     }
     futile.logger::flog.info("Getting regional data")
 
-    cases <- do.call(covidregionaldata::get_regional_data, c(list(country = location$covid_regional_data_identifier,
-                                                                  localise_regions = FALSE),
-                                                             location$data_args))
+    cases <- do.call(covidregionaldata::get_regional_data, c(
+      list(
+        country = location$covid_regional_data_identifier,
+        localise_regions = FALSE
+      ),
+      location$data_args
+    ))
     cases <- data.table::setDT(cases)
-  }else if ("SuperRegion" %in% class(location)) {
+  } else if ("SuperRegion" %in% class(location)) {
     futile.logger::flog.info("Getting national data for %s", location$name)
     cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier))
   }
@@ -119,16 +122,21 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     # Run Rt estimation -------------------------------------------------------
     futile.logger::flog.trace("calling regional_epinow")
     out <- futile.logger::ftry(
-      regional_epinow(reported_cases = cases,
-                      generation_time = location$generation_time,
-                      delays = delay_opts(location$incubation_period, location$reporting_delay),
-                      rt = rt_opts(prior = list(mean = 1, sd = 0.2)),
-                      stan = stan_opts(samples = 4000, warmup = 400, cores = no_cores,
-                                       chains = 4, control = list(adapt_delta = 0.95),
-                                       future = FALSE, max_execution_time = max_execution_time),
-                      target_folder = location$target_folder,
-                      output = c("plots", "latest"),
-                      non_zero_points = 14, horizon = 14, logs = NULL), silent = TRUE
+      regional_epinow(
+        reported_cases = cases,
+        generation_time = location$generation_time,
+        delays = delay_opts(location$incubation_period, location$reporting_delay),
+        rt = rt_opts(prior = list(mean = 1, sd = 0.2)),
+        stan = stan_opts(
+          samples = 4000, warmup = 400, cores = no_cores,
+          chains = 4, control = list(adapt_delta = 0.95),
+          future = FALSE, max_execution_time = max_execution_time
+        ),
+        target_folder = location$target_folder,
+        output = c("plots", "latest"),
+        non_zero_points = 14, horizon = 14, logs = NULL
+      ),
+      silent = TRUE
     )
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
@@ -140,7 +148,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       summary_dir = location$summary_dir,
       region_scale = location$region_scale,
       all_regions = "Region" %in% class(location),
-      return_output = FALSE), silent = TRUE)
+      return_output = FALSE
+    ), silent = TRUE)
     out <- list()
     futile.logger::flog.trace("reading runtimes.csv")
     timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
@@ -167,15 +176,17 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
         strsplit(
           suppressMessages(
             system(
-              paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f" 2>/dev/null; done'),
-              intern = TRUE)
+              paste0("for f in ", location$target_folder, '/*/latest/summary.rds; do git log -n 1 --pretty=format:"%ad" --date=iso -- "$f" 2>/dev/null; done'),
+              intern = TRUE
+            )
           ),
-          '\\+\\d\\d\\d\\d',
+          "\\+\\d\\d\\d\\d",
           perl = TRUE
         )[[1]],
-        "%Y-%m-%d %H:%M:%S ")
-    )
-    , error = function(e) {
+        "%Y-%m-%d %H:%M:%S "
+      )
+    ),
+    error = function(e) {
       futile.logger::flog.debug("git not working - try stat")
       tryCatch(
         min(
@@ -183,15 +194,17 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
             strsplit(
               suppressMessages(
                 system(
-                  paste0('for f in ', location$target_folder, '/*/latest/summary.rds; do stat -c %y $f; done'),
-                  intern = TRUE)
+                  paste0("for f in ", location$target_folder, "/*/latest/summary.rds; do stat -c %y $f; done"),
+                  intern = TRUE
+                )
               ),
-              '\\+\\d\\d\\d\\d',
+              "\\+\\d\\d\\d\\d",
               perl = TRUE
             )[[1]],
-            "%Y-%m-%d %H:%M:%S ")
-        )
-        , error = function(e) {
+            "%Y-%m-%d %H:%M:%S "
+          )
+        ),
+        error = function(e) {
           futile.logger::flog.debug("stat failed, just use sys.date")
           Sys.Date()
         }

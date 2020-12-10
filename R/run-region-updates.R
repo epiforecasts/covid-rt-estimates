@@ -9,7 +9,7 @@
 #' logging of run outcomes. The dataset processing itself starts to happen in update-regional.R
 #' which in turn calls on to EpiNow to do the real meat of the processing.
 #'
-#================  INCLUDES ===================#
+# ================  INCLUDES ===================#
 # Packages
 suppressPackageStartupMessages(library(optparse, quietly = TRUE)) # bring this in ready for setting up a proper CLI
 suppressPackageStartupMessages(library(lubridate, quietly = TRUE)) # pull in lubridate for the date handling in the summary
@@ -26,12 +26,14 @@ if (!exists("collate_derivative", mode = "function")) source(here::here("R", "co
 if (!exists("setup_log_from_args", mode = "function")) source(here::here("R", "utils.R"))
 # load config (optional)
 if (!exists("DATAVERSE_KEY", mode = "function")
-  & file.exists(here::here("data/runtime", "config.R"))) source(here::here("data/runtime", "config.R"))
+& file.exists(here::here("data/runtime", "config.R"))) {
+  source(here::here("data/runtime", "config.R"))
+}
 # load utils
 if (!exists("publish_data", mode = "function")) source(here::here("R", "publish-data.R"))
 
 
-#=============== Main Functions ====================#
+# =============== Main Functions ====================#
 
 #' Run Regional Updates
 #' Main function for process - this is probably what you want to call if you are loading a custom
@@ -57,7 +59,9 @@ run_regional_updates <- function(datasets, derivatives, args) {
   futile.logger::flog.trace("process locations")
   outcome <- rru_process_locations(datasets, args, excludes, includes)
 
-  if ("united-kingdom-admissions" %in_ci% lapply(includes, function(dl) { dl$dataset })) { # DEPRECATED
+  if ("united-kingdom-admissions" %in_ci% lapply(includes, function(dl) {
+    dl$dataset
+  })) { # DEPRECATED
     futile.logger::flog.debug("calling collate estimates for UK")
     collate_estimates(name = "united-kingdom", target = "rt")
   }
@@ -89,14 +93,15 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
       futile.logger::ftry(
         withCallingHandlers(
           {
-          outcome[[location$name]] <-
-            update_regional(location,
-                            excludes,
-                            includes,
-                            args$force,
-                            args$timeout,
-                            refresh = args$refresh)
-        },
+            outcome[[location$name]] <-
+              update_regional(location,
+                excludes,
+                includes,
+                args$force,
+                args$timeout,
+                refresh = args$refresh
+              )
+          },
           warning = function(w) {
             futile.logger::flog.warn(w)
             futile.logger::flog.debug(capture.output(rlang::trace_back()))
@@ -114,7 +119,7 @@ rru_process_locations <- function(datasets, args, excludes, includes) {
       if (!args$suppress) {
         futile.logger::ftry(publish_data(location))
       }
-    }else {
+    } else {
       futile.logger::flog.debug("skipping location %s as unstable", location$name)
     }
   }
@@ -147,7 +152,7 @@ rru_log_outcome <- function(outcome) {
       }
       existing <-
         stats[stats$dataset == dataset_name &
-                stats$subregion == subregion,]
+          stats$subregion == subregion, ]
 
       if (is.null(outcome[[dataset_name]][[subregion]])) {
         runtime <- -1
@@ -155,7 +160,7 @@ rru_log_outcome <- function(outcome) {
       } else if (is.finite(outcome[[dataset_name]][[subregion]])) {
         runtime <- outcome[[dataset_name]][[subregion]]
         dataset_counts$successes <- dataset_counts$successes + 1
-      }else {
+      } else {
         runtime <- 999999
         dataset_counts$timeouts <- dataset_counts$timeouts + 1
       }
@@ -194,7 +199,7 @@ rru_log_outcome <- function(outcome) {
     }
 
     status_row <-
-      status[status$dataset == dataset_name,]
+      status[status$dataset == dataset_name, ]
 
     # calculate dataset status
     dataset_completed <- FALSE
@@ -204,19 +209,19 @@ rru_log_outcome <- function(outcome) {
       dataset_counts$successes == 0) {
       futile.logger::flog.trace("dataset %s had no data to process", dataset_name)
       dataset_status <- "No Data To Process"
-    }else if (dataset_counts$failures == 0 && dataset_counts$timeouts == 0) {
+    } else if (dataset_counts$failures == 0 && dataset_counts$timeouts == 0) {
       futile.logger::flog.trace("dataset %s has a complete results set", dataset_name)
       dataset_status <- "Complete"
       dataset_completed <- TRUE
       dataset_processed <- TRUE
-    }else if (dataset_counts$successes > 0) {
+    } else if (dataset_counts$successes > 0) {
       futile.logger::flog.trace("dataset %s has a complete results set", dataset_name)
       dataset_status <- "Partial"
       dataset_processed <- TRUE
-    }else if (dataset_counts$failures == 0) {
+    } else if (dataset_counts$failures == 0) {
       futile.logger::flog.trace("dataset %s has a completely timed out", dataset_name)
       dataset_status <- "Timed Out"
-    }else {
+    } else {
       futile.logger::flog.trace("dataset %s had an error", dataset_name)
       dataset_status <- "Error"
     }
@@ -254,8 +259,8 @@ rru_log_outcome <- function(outcome) {
     }
   }
   futile.logger::flog.trace("writing file")
-  write.csv(stats[order(stats$dataset, stats$subregion),], file = stats_filename, row.names = FALSE)
-  write.csv(status[order(status$dataset),], file = status_filename, row.names = FALSE)
+  write.csv(stats[order(stats$dataset, stats$subregion), ], file = stats_filename, row.names = FALSE)
+  write.csv(status[order(status$dataset), ], file = status_filename, row.names = FALSE)
 }
 
 #' rru_process_derivatives
@@ -265,8 +270,10 @@ rru_log_outcome <- function(outcome) {
 rru_process_derivatives <- function(derivatives, datasets) {
   for (derivative in derivatives) {
     if (
-      (derivative$incremental & any(names(datasets) %in_ci% lapply(derivative$locations, function(dsl) { dsl$dataset })))
-        |
+      (derivative$incremental & any(names(datasets) %in_ci% lapply(derivative$locations, function(dsl) {
+        dsl$dataset
+      })))
+      |
         (!derivative$incremental & tail(derivative$locations, n = 1)[[1]]$dataset %in_ci% names(datasets))
     ) {
       futile.logger::flog.info("calculating derivative for %s", derivative$name)
@@ -274,7 +281,7 @@ rru_process_derivatives <- function(derivatives, datasets) {
     }
   }
 }
-#============= Ancillary Functions ========================#
+# ============= Ancillary Functions ========================#
 
 #' rru_cli_interface
 #' Define the CLI interface and return the parsed arguments
@@ -298,7 +305,7 @@ rru_cli_interface <- function(args_string = NA) {
   )
   if (is.character(args_string)) {
     args <- optparse::parse_args(optparse::OptionParser(option_list = option_list), args = args_string)
-  }else {
+  } else {
     args <- optparse::parse_args(optparse::OptionParser(option_list = option_list))
   }
   return(args)
@@ -320,7 +327,9 @@ rru_filter_datasets <- function(datasets, excludes, includes) {
     }
   }
   if (length(includes) > 0) { # if there are includes filter to only those needed
-    datasets <- datasets[names(datasets) %in_ci% lapply(includes, function(dsl) { dsl$dataset })]
+    datasets <- datasets[names(datasets) %in_ci% lapply(includes, function(dsl) {
+      dsl$dataset
+    })]
   }
   return(datasets)
 }
@@ -331,19 +340,23 @@ rru_filter_datasets <- function(datasets, excludes, includes) {
 loadStatsFile <- function(filename) {
   if (file.exists(filename)) {
     futile.logger::flog.trace("loading the existing file")
-    stats <- read.csv(file = filename,
-                      colClasses = c("dataset" = "character",
-                                     "subregion" = "character",
-                                     "start_date" = "character",
-                                     "runtime" = "double",
-                                     "start_date_1" = "character",
-                                     "runtime_1" = "double",
-                                     "start_date_2" = "character",
-                                     "runtime_2" = "double",
-                                     "start_date_3" = "character",
-                                     "runtime_3" = "double",
-                                     "start_date_4" = "character",
-                                     "runtime_4" = "double"))
+    stats <- read.csv(
+      file = filename,
+      colClasses = c(
+        "dataset" = "character",
+        "subregion" = "character",
+        "start_date" = "character",
+        "runtime" = "double",
+        "start_date_1" = "character",
+        "runtime_1" = "double",
+        "start_date_2" = "character",
+        "runtime_2" = "double",
+        "start_date_3" = "character",
+        "runtime_3" = "double",
+        "start_date_4" = "character",
+        "runtime_4" = "double"
+      )
+    )
     futile.logger::flog.trace("reformatting the dates back to being dates")
     stats$start_date <- as.POSIXct(strptime(stats$start_date, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
     stats$start_date_1 <- as.POSIXct(strptime(stats$start_date_1, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
@@ -378,18 +391,21 @@ loadStatsFile <- function(filename) {
 loadStatusFile <- function(filename) {
   if (file.exists(filename)) {
     futile.logger::flog.trace("loading the existing status file")
-    status <- read.csv(file = filename,
-                       colClasses = c("dataset" = "character",
-                                      "last_attempt" = "character",
-                                      "last_attempt_status" = "character",
-                                      "latest_results" = "character",
-                                      "latest_results_status" = "character",
-                                      "latest_results_data_up_to" = "character",
-                                      "latest_results_successful_regions" = "integer",
-                                      "latest_results_timing_out_regions" = "integer",
-                                      "latest_results_failing_regions" = "integer",
-                                      "oldest_region_results" = "character"
-                       ))
+    status <- read.csv(
+      file = filename,
+      colClasses = c(
+        "dataset" = "character",
+        "last_attempt" = "character",
+        "last_attempt_status" = "character",
+        "latest_results" = "character",
+        "latest_results_status" = "character",
+        "latest_results_data_up_to" = "character",
+        "latest_results_successful_regions" = "integer",
+        "latest_results_timing_out_regions" = "integer",
+        "latest_results_failing_regions" = "integer",
+        "oldest_region_results" = "character"
+      )
+    )
     futile.logger::flog.trace("reformatting the dates back to being dates")
     status$last_attempt <- as.POSIXct(strptime(status$last_attempt, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
     status$latest_results <- as.POSIXct(strptime(status$latest_results, "%Y-%m-%d %H:%M:%OS"), tz = "UTC")
@@ -413,7 +429,7 @@ loadStatusFile <- function(filename) {
   return(status)
 }
 
-#================ Main trigger ================#
+# ================ Main trigger ================#
 # only executes if this is the root of the application, making it source the file in Rstudio and
 # extend / modify it for custom dataset processing. Search "python __main__" for a lot of info about
 # why this is helpful in python (the same concepts are true in R but it's less written about)
@@ -434,7 +450,7 @@ if (sys.nframe() == 0) {
     )
   )
 }
-#==================== Debug function ======================#
+# ==================== Debug function ======================#
 example_non_cli_trigger <- function() {
   # list is in the format [flag[, value]?,?]+
   args <- rru_cli_interface(c("-w", "-i", "canada/*", "-t", "1800", "-s"))

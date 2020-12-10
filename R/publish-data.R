@@ -55,13 +55,13 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
               futile.logger::flog.trace("replacing file %s", file_full_path)
               # try(futile.logger::ftry(dataverse::update_dataset_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
               try(futile.logger::ftry(curl_update_file(file = file_full_path, dataset = dataset_id, id = existing_file_id)), silent = TRUE)
-            }else {
+            } else {
               futile.logger::flog.trace("uploading file %s", file_full_path)
               try(futile.logger::ftry(dataverse::add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
             }
           }
         }
-      }else {
+      } else {
         futile.logger::flog.info("%s: dataverse does not exist so creating a new one", dataset$name)
         metadata <- generate_dataset_metadata(dataset, production_date)
         ds <- dataverse::create_dataset(dataverse = DATAVERSE_VERSEID, body = metadata)
@@ -77,10 +77,10 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
       futile.logger::flog.info("%s: publishing", dataset$name)
       Sys.sleep(30) # sleep for 30 seconds to give dataverse a chance to catch up on the files...
       try(futile.logger::ftry(dataverse::publish_dataset(dataset_id, minor = FALSE)), silent = TRUE)
-    }else {
+    } else {
       futile.logger::flog.debug("Dataverse not enabled, no attempt to publish")
     }
-  }else {
+  } else {
     futile.logger::flog.debug("No dataverse credentials loaded, no attempt to publish")
   }
   return()
@@ -96,9 +96,9 @@ check_for_existing_id <- function(dataset_name) {
     # for them from the data returned in the contents. Best I can find is they just 404 when you
     # load them. :(
     full_dataset <- tryCatch(dataverse::get_dataset(existing_dataset$id),
-                             error = function(c) {
-                               NA
-                             }
+      error = function(c) {
+        NA
+      }
     )
     if (!is.list(full_dataset)) {
       next
@@ -121,7 +121,6 @@ check_for_existing_id <- function(dataset_name) {
 }
 # top level function for producing metadata
 generate_dataset_metadata <- function(dataset, production_date = NA) {
-
   desc_file <- desc::description$new()
   dataset_meta <- list(
     datasetVersion = list(
@@ -142,9 +141,8 @@ generate_dataset_metadata <- function(dataset, production_date = NA) {
 
   return(dataset_meta)
 }
-#===== Here begins all the helper functions to produce sub-parts of the metadata =====#
+# ===== Here begins all the helper functions to produce sub-parts of the metadata =====#
 get_fields_list <- function(dataset, desc_file, production_date = NA) {
-
   futile.logger::flog.trace("get_fields_list_fn")
   if (is.na(production_date)) {
     production_date <- Sys.Date()
@@ -190,18 +188,23 @@ get_geographic_metadata_list <- function(dataset) {
   meta <- list()
   locations <- list()
   if ("Region" %in% class(dataset)) {
-    locations <- append(locations,
-                        list(
-                          list(
-                            country = get_country_list(dataset$publication_metadata$country)
-                          )
-                        )
+    locations <- append(
+      locations,
+      list(
+        list(
+          country = get_country_list(dataset$publication_metadata$country)
+        )
+      )
     )
   }
   summary_table <- tryCatch(
     read.csv(paste(dataset$summary_dir, "summary_table.csv", sep = "/")),
-    warning = function(w) { NA },
-    error = function(e) { NA }
+    warning = function(w) {
+      NA
+    },
+    error = function(e) {
+      NA
+    }
   )
   if (is.list(summary_table)) {
     if (dataset$publication_metadata$breakdown_unit %in% c("state", "region")) {
@@ -218,62 +221,67 @@ get_geographic_metadata_list <- function(dataset) {
             typeClass = "primitive",
             value = region
           )
-        locations <- append(locations,
-                            list(location_list)
+        locations <- append(
+          locations,
+          list(location_list)
         )
       }
-    }else if (dataset$publication_metadata$breakdown_unit == "continent") {
+    } else if (dataset$publication_metadata$breakdown_unit == "continent") {
       for (region in unique(summary_table[[dataset$region_scale]])) {
-        locations <- append(locations,
-                            list(
-                              list(
-                                otherGeographicCoverage = list(
-                                  typeName = "otherGeographicCoverage",
-                                  multiple = FALSE,
-                                  typeClass = "primitive",
-                                  value = region
-                                )
-                              )
-                            )
+        locations <- append(
+          locations,
+          list(
+            list(
+              otherGeographicCoverage = list(
+                typeName = "otherGeographicCoverage",
+                multiple = FALSE,
+                typeClass = "primitive",
+                value = region
+              )
+            )
+          )
         )
       }
-    }else if (dataset$publication_metadata$breakdown_unit == "country") {
+    } else if (dataset$publication_metadata$breakdown_unit == "country") {
       for (country in unique(summary_table$Country)) {
         if (country %in% DATAVERSE_COUNTRIES) {
-          locations <- append(locations,
-                              list(
-                                list(
-                                  country = get_country_list(country)
-                                )
-                              )
+          locations <- append(
+            locations,
+            list(
+              list(
+                country = get_country_list(country)
+              )
+            )
           )
         }
       }
     }
   }
   if (length(locations) > 0) {
-    meta <- append(meta,
-                   list(
-                     list(
-                       typeName = "geographicCoverage",
-                       multiple = TRUE,
-                       typeClass = "compound",
-                       value = locations
-                     )
-                   )
+    meta <- append(
+      meta,
+      list(
+        list(
+          typeName = "geographicCoverage",
+          multiple = TRUE,
+          typeClass = "compound",
+          value = locations
+        )
+      )
     )
   }
-  meta <- append(meta,
-                 list(
-                   list(
-                     typeName = "geographicUnit",
-                     multiple = TRUE,
-                     typeClass = "primitive",
-                     value = list(
-                       dataset$publication_metadata$breakdown_unit
-                     )
-                   )
-                 )
+  meta <- append(
+    meta,
+    list(
+      list(
+        typeName = "geographicUnit",
+        multiple = TRUE,
+        typeClass = "primitive",
+        value = list(
+          dataset$publication_metadata$breakdown_unit
+        )
+      )
+    )
   )
   return(meta)
 }
@@ -292,7 +300,7 @@ get_author_list <- function(desc_file) {
       )
     )
     if (!is.null(desc_author$email) && strsplit(desc_author$email, "@", perl = TRUE)[[1]][[2]] %in% names(affiliations)) {
-      author$authorAffiliation = list(
+      author$authorAffiliation <- list(
         typeName = "authorAffiliation",
         multiple = FALSE,
         typeClass = "primitive",
@@ -300,13 +308,13 @@ get_author_list <- function(desc_file) {
       )
     }
     if ("ORCID" %in% names(desc_author$comment)) {
-      author$authorIdentifierScheme = list(
+      author$authorIdentifierScheme <- list(
         typeName = "authorIdentifierScheme",
         multiple = FALSE,
         typeClass = "controlledVocabulary",
         value = "ORCID"
       )
-      author$authorIdentifier = list(
+      author$authorIdentifier <- list(
         typeName = "authorIdentifier",
         multiple = FALSE,
         typeClass = "primitive",
@@ -403,8 +411,14 @@ get_dataset_description_list <- function(publication_meta) {
 
 get_software_list <- function(desc_file) {
   futile.logger::flog.trace("get_software_list function")
-  epinow2_version <- tryCatch(toString(packageVersion("EpiNow2")), error = function(c) { NA })
-  git_build_version <- suppressMessages(tryCatch(system("git rev-parse HEAD", intern = TRUE), error = function(c) { NA }, warning = function(w) { NA }))
+  epinow2_version <- tryCatch(toString(packageVersion("EpiNow2")), error = function(c) {
+    NA
+  })
+  git_build_version <- suppressMessages(tryCatch(system("git rev-parse HEAD", intern = TRUE), error = function(c) {
+    NA
+  }, warning = function(w) {
+    NA
+  }))
   return(
     list(
       typeName = "software",
@@ -459,7 +473,7 @@ curl_update_file <- function(file, dataset, id, description = NULL) {
     bod2$description <- description
   }
   jsondata <- as.character(jsonlite::toJSON(bod2, auto_unbox = TRUE))
-  curlcomm <- paste0('curl -H "X-Dataverse-key: ', DATAVERSE_KEY, '" -X POST -F \'file=@', file, '\' -F \'jsonData=', jsondata, '\' ', DATAVERSE_SERVER, '/api/files/', id, '/replace')
+  curlcomm <- paste0('curl -H "X-Dataverse-key: ', DATAVERSE_KEY, '" -X POST -F \'file=@', file, "' -F 'jsonData=", jsondata, "' ", DATAVERSE_SERVER, "/api/files/", id, "/replace")
   futile.logger::flog.trace(curlcomm)
   suppressMessages(futile.logger::ftry(futile.logger::flog.trace(system(curlcomm, intern = TRUE))))
 }

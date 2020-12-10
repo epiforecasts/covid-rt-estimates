@@ -1,0 +1,162 @@
+name: PR Housekeeping and Validation
+on: pull_request
+jobs:
+  document:
+    name: Regenerate Documentation
+    runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 5
+#      - uses: r-lib/actions/pr-fetch@v1
+#        with:
+#          repo-token: ${{ secrets.GITHUB_TOKEN }}
+#      - uses: r-lib/actions/setup-r@v1
+      - name: Install dependencies
+        run: Rscript -e 'install.packages(c("remotes", "roxygen2"))' -e 'remotes::install_deps(dependencies = TRUE)'
+      - name: Document
+        run: Rscript -e 'roxygen2::roxygenise()'
+      - name: commit
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add man/\* NAMESPACE
+          git commit -m 'Document' | true
+      - uses: r-lib/actions/pr-push@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  style:
+    name: Auto style
+    runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 5
+#      - uses: r-lib/actions/pr-fetch@v1
+#        with:
+#          repo-token: ${{ secrets.GITHUB_TOKEN }}
+#      - uses: r-lib/actions/setup-r@v1
+      - name: Install dependencies
+        run: Rscript -e 'install.packages(c("styler","lintr"))'
+
+      - name: Style
+        run: Rscript -e 'styler::style_pkg()'
+
+      - name: commit
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add \*.R
+          git commit -m 'Style' | true
+      - uses: r-lib/actions/pr-push@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint
+        run: lintr::lint_package()
+        shell: Rscript {0}
+
+  cmdcheck:
+    name: Run CMD Check
+    runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+#      - uses: r-lib/actions/setup-r@v1
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Install dependencies
+        run: |
+          install.packages(c("remotes"))
+          remotes::install_deps(dependencies = TRUE)
+          remotes::install_cran("rcmdcheck")
+        shell: Rscript {0}
+
+      - name: Install package
+        run: R CMD INSTALL .
+
+      - name: Session info
+        run: |
+          options(width = 100)
+          pkgs <- installed.packages()[, "Package"]
+          sessioninfo::session_info(pkgs, include_base = TRUE)
+        shell: Rscript {0}
+
+      - name: Check
+        env:
+          _R_CHECK_CRAN_INCOMING_: false
+        run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"), error_on = "warning", check_dir = "check")
+        shell: Rscript {0}
+
+      - name: Show testthat output
+        if: always()
+        run: find check -name 'testthat.Rout*' -exec cat '{}' \; || true
+        shell: bash
+
+      - name: Upload check results
+        if: failure()
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ runner.os }}-r${{ matrix.config.r }}-results
+          path: check
+
+  testthat:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 5
+#      - uses: r-lib/actions/pr-fetch@v1
+#        with:
+#          repo-token: ${{ secrets.GITHUB_TOKEN }}
+#      - uses: r-lib/actions/setup-r@v1
+      - name: Install dependencies
+        run: |
+          install.packages(c("remotes"))
+          remotes::install_deps(dependencies = TRUE)
+          remotes::install_cran("rcmdcheck")
+        shell: Rscript {0}
+
+      - name: Test
+        run: Rscript -e 'devtools::test()'
+
+      - name: Upload check results
+        if: failure()
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ runner.os }}-r${{ matrix.config.r }}-results
+          path: check

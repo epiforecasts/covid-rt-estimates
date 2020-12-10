@@ -9,7 +9,7 @@ require(lubridate)
 generation_time <- get_generation_time(disease = "SARS-CoV-2", source = "ganyani")
 incubation_period <- get_incubation_period(disease = "SARS-CoV-2", source = "lauer")
 
-saveRDS(generation_time , here::here("data", "generation_time.rds"))
+saveRDS(generation_time, here::here("data", "generation_time.rds"))
 saveRDS(incubation_period, here::here("data", "incubation_period.rds"))
 
 # Set up parallel ---------------------------------------------------------
@@ -24,8 +24,10 @@ plan(multiprocess)
 report_delay <- covidregionaldata::get_linelist(report_delay_only = TRUE)
 report_delay <- data.table::as.data.table(report_delay)[!(country %in% c("Mexico", "Phillipines"))]
 
-onset_to_admission_delay <- EpiNow2::bootstrapped_dist_fit(report_delay$days_onset_to_report, bootstraps = 100, 
-                                                           bootstrap_samples = 250, max_value = 30)
+onset_to_admission_delay <- EpiNow2::bootstrapped_dist_fit(report_delay$days_onset_to_report,
+  bootstraps = 100,
+  bootstrap_samples = 250, max_value = 30
+)
 
 saveRDS(onset_to_admission_delay, here::here("data", "onset_to_admission_delay.rds"))
 
@@ -33,13 +35,13 @@ saveRDS(onset_to_admission_delay, here::here("data", "onset_to_admission_delay.r
 # Not used as of the 28th of July the linelist only contains 6 complete records.
 # death_delay <- data.table::setDT(covidregionaldata::get_linelist(clean = FALSE))
 # death_delay <- death_delay[outcome %in% "death"][!is.na(date_death_or_discharge)][!is.na(date_onset_symptoms)]
-# death_delay <- death_delay[, .(date_death = lubridate::dmy(date_death_or_discharge), 
+# death_delay <- death_delay[, .(date_death = lubridate::dmy(date_death_or_discharge),
 #                                date_onset = lubridate::dmy(date_onset_symptoms))][,
 #                                delay := as.numeric(date_death - date_onset)]
-# 
+#
 # onset_to_death_delay <- EpiNow2::bootstrapped_dist_fit(deaths, bootstraps = 100, bootstrap_samples = 250)
-# 
+#
 # ## Set max allowed delay to 30 days to truncate computation
 # onset_to_death_delay$max <- 30
-# 
+#
 # saveRDS(onset_to_death_delay, here::here("data", "onset_to_death_delay.rds"))

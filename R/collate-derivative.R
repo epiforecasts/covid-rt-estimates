@@ -7,7 +7,9 @@ if (!exists("publish_data", mode = "function")) source(here::here("R", "publish-
 #' collate_derivative
 #' @param derivative `CollatedDerivative` object to calculate
 collate_derivative <- function(derivative) {
-  datasets <- DATASETS[names(DATASETS) %in_ci% lapply(derivative$locations, function(dsl) { dsl$dataset })]
+  datasets <- DATASETS[names(DATASETS) %in_ci% lapply(derivative$locations, function(dsl) {
+    dsl$dataset
+  })]
   for (target in derivative$targets) {
     futile.logger::flog.debug("process target file %s", target)
     sources <- cd_prime_sources(datasets, target)
@@ -18,7 +20,7 @@ collate_derivative <- function(derivative) {
       dir.create(here::here(derivative$summary_dir), recursive = TRUE)
     }
     futile.logger::flog.trace("writing collated file to disk")
-    data.table::fwrite(df, here::here(derivative$summary_dir, paste0(target, '.csv')))
+    data.table::fwrite(df, here::here(derivative$summary_dir, paste0(target, ".csv")))
     # tidy up
     rm(df)
   }
@@ -49,7 +51,7 @@ cd_prime_sources <- function(datasets, target) {
       full_dataset <- check_for_existing_id(dataset_name)
       if (is.list(full_dataset)) {
         futile.logger::flog.trace("dataset found, checking for files")
-        files <- na.omit(full_dataset$files[full_dataset$files$originalFileName == paste0(target, ".csv"),])
+        files <- na.omit(full_dataset$files[full_dataset$files$originalFileName == paste0(target, ".csv"), ])
         if (nrow(files) == 1) {
           tmpfile <- tempfile()
           futile.logger::flog.debug("%s file found for dataset %s - downloading to %s", target, dataset_name, tmpfile)

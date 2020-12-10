@@ -247,4 +247,5 @@ DATAVERSE_COUNTRIES <- c(
   "Yemen",
   "Zambia",
   "Zimbabwe",
-  "Åland Islands")
+  "Åland Islands"
+)
