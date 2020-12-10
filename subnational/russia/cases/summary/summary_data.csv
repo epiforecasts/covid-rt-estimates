@@ -1,171 +1,167 @@
-region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,point,lower,upper,mid_lower,mid_upper,central_lower,central_upper,metric,Expected change in daily cases
-Saint Petersburg,786 (486 -- 1197),,,,,,,,,,786,486,1197,580,844,668,766,New confirmed cases by infection date,Increasing
-Saint Petersburg,1.2 (1.1 -- 1.5),,,,,,,,,,1.2,1.1,1.5,1.1,1.3,1.2,1.2,Effective reproduction no.,Increasing
-Moscow,6350 (4154 -- 10186),6350,6666,1940,4154,5339,5968,6795,7615,10186,,,,,,,,New confirmed cases by infection date,Unsure
-Moscow Oblast,693 (436 -- 876),693,680,131,436,601,661,722,767,876,,,,,,,,New confirmed cases by infection date,Unsure
-Nizhny Novgorod Oblast,429 (312 -- 580),429,435,83,312,378,409,448,483,580,,,,,,,,New confirmed cases by infection date,Unsure
-Zabaykalsky Krai,407 (280 -- 637),407,426,114,280,345,383,435,484,637,,,,,,,,New confirmed cases by infection date,Likely increasing
-Rostov Oblast,357 (308 -- 415),357,359,32,308,337,349,365,378,415,,,,,,,,New confirmed cases by infection date,Unsure
-Arkhangelsk Oblast,346 (253 -- 458),346,350,64,253,308,332,361,387,458,,,,,,,,New confirmed cases by infection date,Unsure
-Irkutsk Oblast,296 (220 -- 398),296,300,53,220,265,284,309,331,398,,,,,,,,New confirmed cases by infection date,Unsure
-Krasnoyarsk Krai,294 (226 -- 375),294,296,45,226,266,283,304,324,375,,,,,,,,New confirmed cases by infection date,Unsure
-Sverdlovsk Oblast,283 (226 -- 350),283,285,37,226,261,275,292,307,350,,,,,,,,New confirmed cases by infection date,Unsure
-Altai Krai,281 (209 -- 400),281,290,60,209,249,269,295,321,400,,,,,,,,New confirmed cases by infection date,Unsure
-Khanty-Mansi Autonomous Okrug,269 (189 -- 440),269,285,80,189,231,253,285,320,440,,,,,,,,New confirmed cases by infection date,Unsure
-Penza Oblast,241 (162 -- 383),241,253,72,162,203,225,258,288,383,,,,,,,,New confirmed cases by infection date,Unsure
-Voronezh Oblast,238 (198 -- 282),238,239,26,198,222,232,244,255,282,,,,,,,,New confirmed cases by infection date,Likely increasing
-Tomsk Oblast,237 (174 -- 328),237,242,47,174,210,227,246,267,328,,,,,,,,New confirmed cases by infection date,Unsure
-Volgograd Oblast,222 (182 -- 274),222,224,28,182,204,215,229,240,274,,,,,,,,New confirmed cases by infection date,Unsure
-Ulyanovsk Oblast,208 (154 -- 286),208,213,41,154,185,200,218,237,286,,,,,,,,New confirmed cases by infection date,Unsure
-Omsk Oblast,207 (68 -- 569),207,250,174,68,136,177,245,313,569,,,,,,,,New confirmed cases by infection date,Unsure
-Komi Republic,204 (109 -- 355),204,215,81,109,162,188,220,252,355,,,,,,,,New confirmed cases by infection date,Unsure
-Murmansk Oblast,204 (111 -- 308),204,207,60,111,164,189,219,246,308,,,,,,,,New confirmed cases by infection date,Unsure
-Orenburg Oblast,186 (152 -- 255),186,192,32,152,170,180,193,208,255,,,,,,,,New confirmed cases by infection date,Unsure
-Saratov Oblast,186 (154 -- 229),186,188,23,154,173,181,191,202,229,,,,,,,,New confirmed cases by infection date,Unsure
-Tyumen Oblast,181 (144 -- 231),181,184,26,144,165,175,188,200,231,,,,,,,,New confirmed cases by infection date,Unsure
-Kemerovo Oblast,177 (133 -- 231),177,179,30,133,159,170,184,197,231,,,,,,,,New confirmed cases by infection date,Unsure
-Sakha (Yakutiya) Republic,173 (120 -- 255),173,178,42,120,150,164,182,199,255,,,,,,,,New confirmed cases by infection date,Unsure
-Novosibirsk Oblast,172 (114 -- 302),172,186,62,114,144,161,185,212,302,,,,,,,,New confirmed cases by infection date,Unsure
-Smolensk Oblast,172 (110 -- 263),172,178,49,110,143,160,184,206,263,,,,,,,,New confirmed cases by infection date,Unsure
-Republic of Crimea,165 (139 -- 224),165,171,28,139,153,160,170,183,224,,,,,,,,New confirmed cases by infection date,Increasing
-Stavropol Krai,164 (148 -- 183),164,165,11,148,158,162,166,171,183,,,,,,,,New confirmed cases by infection date,Likely increasing
-Samara Oblast,156 (115 -- 223),156,161,33,115,138,149,165,180,223,,,,,,,,New confirmed cases by infection date,Unsure
-Orel Oblast,154 (66 -- 281),154,162,70,66,114,139,170,199,281,,,,,,,,New confirmed cases by infection date,Unsure
-Ryazan Oblast,152 (113 -- 224),152,158,35,113,133,144,161,176,224,,,,,,,,New confirmed cases by infection date,Unsure
-Khabarovsk Krai,150 (115 -- 211),150,155,30,115,134,144,158,171,211,,,,,,,,New confirmed cases by infection date,Unsure
-Tver Oblast,150 (106 -- 201),150,152,29,106,132,143,157,169,201,,,,,,,,New confirmed cases by infection date,Unsure
-Kursk Oblast,145 (98 -- 203),145,147,32,98,125,138,153,167,203,,,,,,,,New confirmed cases by infection date,Unsure
-Bryansk Oblast,137 (85 -- 190),137,138,31,85,119,130,144,156,190,,,,,,,,New confirmed cases by infection date,Unsure
-Leningrad Oblast,137 (98 -- 178),137,137,25,98,120,131,143,152,178,,,,,,,,New confirmed cases by infection date,Unsure
-Yamalo-Nenets Autonomous Okrug,137 (78 -- 240),137,146,54,78,110,126,148,170,240,,,,,,,,New confirmed cases by infection date,Unsure
-Kaluga Oblast,126 (95 -- 160),126,126,19,95,113,121,131,138,160,,,,,,,,New confirmed cases by infection date,Likely increasing
-Perm Krai,126 (102 -- 154),126,127,15,102,116,122,129,136,154,,,,,,,,New confirmed cases by infection date,Unsure
-Kabardino-Balkarian Republic,122 (85 -- 179),122,125,29,85,105,115,129,142,179,,,,,,,,New confirmed cases by infection date,Likely increasing
-Ivanovo Oblast,118 (68 -- 199),118,124,42,68,97,109,128,145,199,,,,,,,,New confirmed cases by infection date,Unsure
-Chelyabinsk Oblast,117 (93 -- 150),117,119,18,93,106,113,122,129,150,,,,,,,,New confirmed cases by infection date,Unsure
-Kirov Oblast,112 (89 -- 149),112,114,19,89,101,107,116,124,149,,,,,,,,New confirmed cases by infection date,Likely increasing
-Kurgan Oblast,109 (64 -- 164),109,111,30,64,91,102,117,128,164,,,,,,,,New confirmed cases by infection date,Unsure
-Yaroslavl Oblast,109 (86 -- 150),109,112,20,86,99,105,114,123,150,,,,,,,,New confirmed cases by infection date,Unsure
-Primorsky Krai,108 (87 -- 141),108,110,16,87,98,104,112,119,141,,,,,,,,New confirmed cases by infection date,Unsure
-Karelia Republic,106 (49 -- 219),106,116,60,49,78,95,117,139,219,,,,,,,,New confirmed cases by infection date,Unsure
-Kaliningrad Oblast,102 (74 -- 129),102,102,16,74,91,98,106,113,129,,,,,,,,New confirmed cases by infection date,Likely increasing
-Krasnodar Krai,102 (74 -- 132),102,102,17,74,91,98,106,113,132,,,,,,,,New confirmed cases by infection date,Unsure
-Buryatia Republic,101 (57 -- 153),101,102,29,57,83,94,108,120,153,,,,,,,,New confirmed cases by infection date,Unsure
-Kalmykia Republic,101 (63 -- 207),101,113,50,63,82,93,110,129,207,,,,,,,,New confirmed cases by infection date,Unsure
-Udmurt Republic,99 (59 -- 141),99,99,25,59,83,93,105,115,141,,,,,,,,New confirmed cases by infection date,Unsure
-Kostroma Oblast,96 (55 -- 163),96,100,35,55,77,88,103,118,163,,,,,,,,New confirmed cases by infection date,Unsure
-Mordovia Republic,96 (70 -- 142),96,99,22,70,84,91,101,111,142,,,,,,,,New confirmed cases by infection date,Unsure
-Vladimir Oblast,95 (61 -- 137),95,96,23,61,81,90,100,110,137,,,,,,,,New confirmed cases by infection date,Unsure
-Belgorod Oblast,94 (71 -- 121),94,95,15,71,85,90,97,103,121,,,,,,,,New confirmed cases by infection date,Unsure
-Khakassia Republic,94 (70 -- 136),94,97,20,70,83,90,99,108,136,,,,,,,,New confirmed cases by infection date,Unsure
-Pskov Oblast,89 (50 -- 170),89,97,41,50,71,82,98,113,170,,,,,,,,New confirmed cases by infection date,Unsure
-Amur Oblast,88 (49 -- 154),88,93,33,49,71,81,96,111,154,,,,,,,,New confirmed cases by infection date,Unsure
-Altai Republic,84 (34 -- 170),84,91,47,34,60,75,94,112,170,,,,,,,,New confirmed cases by infection date,Unsure
-Tambov Oblast,84 (60 -- 117),84,85,17,60,74,80,88,95,117,,,,,,,,New confirmed cases by infection date,Unsure
-Tula Oblast,83 (62 -- 119),83,86,18,62,73,79,88,95,119,,,,,,,,New confirmed cases by infection date,Unsure
-Vologda Oblast,82 (68 -- 108),82,84,13,68,76,79,85,90,108,,,,,,,,New confirmed cases by infection date,Increasing
-Dagestan Republic,80 (65 -- 98),80,80,10,65,74,77,82,86,98,,,,,,,,New confirmed cases by infection date,Unsure
-Novgorod Oblast,79 (51 -- 104),79,78,15,51,68,75,83,89,104,,,,,,,,New confirmed cases by infection date,Likely increasing
-Lipetsk Oblast,76 (49 -- 114),76,78,21,49,64,71,81,90,114,,,,,,,,New confirmed cases by infection date,Likely increasing
-Sakhalin Oblast,75 (43 -- 114),75,76,22,43,60,69,81,91,114,,,,,,,,New confirmed cases by infection date,Unsure
-Karachay-Cherkess Republic,73 (40 -- 128),73,77,28,40,58,67,79,91,128,,,,,,,,New confirmed cases by infection date,Unsure
-Bashkortostan Republic,64 (50 -- 82),64,65,10,50,58,61,66,71,82,,,,,,,,New confirmed cases by infection date,Unsure
-Astrakhan Oblast,63 (53 -- 89),63,66,12,53,59,62,66,70,89,,,,,,,,New confirmed cases by infection date,Likely increasing
-Magadan Oblast,59 (35 -- 114),59,65,26,35,48,55,65,75,114,,,,,,,,New confirmed cases by infection date,Unsure
-Ingushetia Republic,53 (38 -- 75),53,54,12,38,46,50,56,60,75,,,,,,,,New confirmed cases by infection date,Unsure
-Kamchatka Krai,53 (29 -- 132),53,64,40,29,41,48,59,72,132,,,,,,,,New confirmed cases by infection date,Unsure
-Mari El Republic,53 (35 -- 91),53,56,17,35,45,50,57,65,91,,,,,,,,New confirmed cases by infection date,Unsure
-Adygea Republic,52 (31 -- 74),52,52,13,31,43,48,55,60,74,,,,,,,,New confirmed cases by infection date,Unsure
-Jewish Autonomous Okrug,45 (28 -- 64),45,46,11,28,39,43,47,52,64,,,,,,,,New confirmed cases by infection date,Likely increasing
-North Ossetia - Alania Republic,45 (22 -- 90),45,49,22,22,34,41,49,59,90,,,,,,,,New confirmed cases by infection date,Unsure
-Tatarstan Republic,43 (31 -- 66),43,45,11,31,37,41,46,51,66,,,,,,,,New confirmed cases by infection date,Unsure
-Tyva Republic,43 (26 -- 104),43,52,38,26,35,39,47,58,104,,,,,,,,New confirmed cases by infection date,Unsure
-Sevastopol,41 (18 -- 79),41,43,20,18,30,36,44,52,79,,,,,,,,New confirmed cases by infection date,Likely increasing
-Chuvashia Republic,39 (28 -- 60),39,41,10,28,34,37,42,46,60,,,,,,,,New confirmed cases by infection date,Unsure
-Nenets Autonomous Okrug,13 (2 -- 130),13,36,97,2,6,10,18,30,130,,,,,,,,New confirmed cases by infection date,Unsure
-Chechen Republic,6 (3 -- 11),6,6,3,3,4,5,6,7,11,,,,,,,,New confirmed cases by infection date,Unsure
-Chukotka Autonomous Okrug,2 (0 -- 6),2,2,3,0,1,1,2,3,6,,,,,,,,New confirmed cases by infection date,Unsure
-Nenets Autonomous Okrug,1.7 (1.1 -- 3.3),1.7,1.9,0.8,1.1,1.4,1.5,1.8,2.1,3.3,,,,,,,,Effective reproduction no.,Unsure
-Zabaykalsky Krai,1.5 (1.3 -- 1.8),1.5,1.5,0.2,1.3,1.4,1.5,1.6,1.6,1.8,,,,,,,,Effective reproduction no.,Likely increasing
-Smolensk Oblast,1.4 (1.2 -- 1.7),1.4,1.5,0.2,1.2,1.3,1.4,1.5,1.6,1.7,,,,,,,,Effective reproduction no.,Unsure
-Irkutsk Oblast,1.3 (1.1 -- 1.4),1.3,1.3,0.1,1.1,1.2,1.3,1.3,1.3,1.4,,,,,,,,Effective reproduction no.,Unsure
-Penza Oblast,1.3 (1.1 -- 1.7),1.3,1.3,0.2,1.1,1.2,1.3,1.4,1.4,1.7,,,,,,,,Effective reproduction no.,Unsure
-Ryazan Oblast,1.3 (1.2 -- 1.5),1.3,1.3,0.1,1.2,1.2,1.3,1.3,1.4,1.5,,,,,,,,Effective reproduction no.,Unsure
-Altai Krai,1.2 (1.1 -- 1.5),1.2,1.3,0.1,1.1,1.2,1.2,1.3,1.3,1.5,,,,,,,,Effective reproduction no.,Unsure
-Amur Oblast,1.2 (0.9 -- 1.5),1.2,1.2,0.2,0.9,1.1,1.1,1.2,1.3,1.5,,,,,,,,Effective reproduction no.,Unsure
-Arkhangelsk Oblast,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.2,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Bryansk Oblast,1.2 (0.9 -- 1.3),1.2,1.1,0.1,0.9,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Ivanovo Oblast,1.2 (0.9 -- 1.5),1.2,1.2,0.2,0.9,1,1.1,1.2,1.3,1.5,,,,,,,,Effective reproduction no.,Unsure
-Jewish Autonomous Okrug,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Likely increasing
-Kabardino-Balkarian Republic,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.4,,,,,,,,Effective reproduction no.,Likely increasing
-Kamchatka Krai,1.2 (0.9 -- 1.7),1.2,1.2,0.3,0.9,1.1,1.1,1.2,1.3,1.7,,,,,,,,Effective reproduction no.,Unsure
-Karelia Republic,1.2 (0.8 -- 1.6),1.2,1.2,0.2,0.8,1,1.1,1.2,1.3,1.6,,,,,,,,Effective reproduction no.,Unsure
-Khabarovsk Krai,1.2 (1.1 -- 1.3),1.2,1.2,0.1,1.1,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Khakassia Republic,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Krasnoyarsk Krai,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.2,1.2,1.2,1.3,1.4,,,,,,,,Effective reproduction no.,Unsure
-Kurgan Oblast,1.2 (0.9 -- 1.4),1.2,1.2,0.2,0.9,1.1,1.2,1.2,1.3,1.4,,,,,,,,Effective reproduction no.,Unsure
-Kursk Oblast,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.4,,,,,,,,Effective reproduction no.,Unsure
-Mari El Republic,1.2 (1 -- 1.5),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.5,,,,,,,,Effective reproduction no.,Unsure
-Mordovia Republic,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.2,1.2,1.2,1.3,1.4,,,,,,,,Effective reproduction no.,Unsure
-Moscow,1.2 (0.9 -- 1.5),1.2,1.2,0.2,0.9,1.1,1.1,1.2,1.3,1.5,,,,,,,,Effective reproduction no.,Unsure
-Moscow Oblast,1.2 (0.9 -- 1.3),1.2,1.1,0.1,0.9,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Nizhny Novgorod Oblast,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.4,,,,,,,,Effective reproduction no.,Unsure
-Novosibirsk Oblast,1.2 (1 -- 1.6),1.2,1.3,0.2,1,1.1,1.2,1.3,1.4,1.6,,,,,,,,Effective reproduction no.,Unsure
-Pskov Oblast,1.2 (0.9 -- 1.5),1.2,1.2,0.2,0.9,1.1,1.1,1.2,1.3,1.5,,,,,,,,Effective reproduction no.,Unsure
-Sakha (Yakutiya) Republic,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.1,1.2,1.2,1.4,,,,,,,,Effective reproduction no.,Unsure
-Tomsk Oblast,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.2,1.2,1.2,1.3,1.4,,,,,,,,Effective reproduction no.,Unsure
-Tula Oblast,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.1,1.2,1.2,1.2,1.4,,,,,,,,Effective reproduction no.,Unsure
-Tver Oblast,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.2,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Tyumen Oblast,1.2 (1.1 -- 1.3),1.2,1.2,0.1,1.1,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Adygea Republic,1.1 (0.8 -- 1.2),1.1,1,0.1,0.8,1,1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Bashkortostan Republic,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Belgorod Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Chelyabinsk Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Chukotka Autonomous Okrug,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1.1,1.1,1.2,1.5,,,,,,,,Effective reproduction no.,Unsure
-Chuvashia Republic,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1,1.1,1.1,1.1,1.3,,,,,,,,Effective reproduction no.,Unsure
-Kaliningrad Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.2,,,,,,,,Effective reproduction no.,Likely increasing
-Kalmykia Republic,1.1 (0.9 -- 1.4),1.1,1.1,0.1,0.9,1,1,1.1,1.1,1.4,,,,,,,,Effective reproduction no.,Unsure
-Kaluga Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.2,1.2,1.2,,,,,,,,Effective reproduction no.,Likely increasing
-Khanty-Mansi Autonomous Okrug,1.1 (1 -- 1.5),1.1,1.2,0.2,1,1.1,1.1,1.2,1.2,1.5,,,,,,,,Effective reproduction no.,Unsure
-Kirov Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Likely increasing
-Komi Republic,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1.1,1.2,1.3,1.5,,,,,,,,Effective reproduction no.,Unsure
-Kostroma Oblast,1.1 (0.9 -- 1.3),1.1,1.1,0.1,0.9,1,1.1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Leningrad Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.2,,,,,,,,Effective reproduction no.,Unsure
-Lipetsk Oblast,1.1 (0.9 -- 1.3),1.1,1.1,0.1,0.9,1.1,1.1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Likely increasing
-Magadan Oblast,1.1 (0.9 -- 1.5),1.1,1.1,0.2,0.9,1,1.1,1.2,1.2,1.5,,,,,,,,Effective reproduction no.,Unsure
-Murmansk Oblast,1.1 (0.8 -- 1.3),1.1,1.1,0.2,0.8,1,1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-North Ossetia - Alania Republic,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,0.9,1,1.1,1.2,1.5,,,,,,,,Effective reproduction no.,Unsure
-Novgorod Oblast,1.1 (0.9 -- 1.2),1.1,1.1,0.1,0.9,1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Likely increasing
-Omsk Oblast,1.1 (0.5 -- 2),1.1,1.1,0.5,0.5,0.8,1,1.2,1.4,2,,,,,,,,Effective reproduction no.,Unsure
-Orel Oblast,1.1 (0.7 -- 1.5),1.1,1.1,0.2,0.7,0.9,1,1.1,1.2,1.5,,,,,,,,Effective reproduction no.,Unsure
-Orenburg Oblast,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Perm Krai,1.1 (1 -- 1.2),1.1,1.1,0,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Primorsky Krai,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Republic of Crimea,1.1 (1.1 -- 1.2),1.1,1.1,0,1.1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Increasing
-Rostov Oblast,1.1 (1 -- 1.2),1.1,1.1,0,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Sakhalin Oblast,1.1 (0.8 -- 1.3),1.1,1,0.1,0.8,1,1,1.1,1.1,1.3,,,,,,,,Effective reproduction no.,Unsure
-Samara Oblast,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1,1.1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Saratov Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Sevastopol,1.1 (0.8 -- 1.3),1.1,1.1,0.2,0.8,1,1,1.1,1.1,1.3,,,,,,,,Effective reproduction no.,Likely increasing
-Sverdlovsk Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.2,,,,,,,,Effective reproduction no.,Unsure
-Tambov Oblast,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Tatarstan Republic,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Tyva Republic,1.1 (0.9 -- 1.6),1.1,1.1,0.3,0.9,1,1,1.1,1.2,1.6,,,,,,,,Effective reproduction no.,Unsure
-Ulyanovsk Oblast,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Vladimir Oblast,1.1 (0.9 -- 1.3),1.1,1.1,0.1,0.9,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Volgograd Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.2,,,,,,,,Effective reproduction no.,Unsure
-Vologda Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,,,,,,,,Effective reproduction no.,Increasing
-Voronezh Oblast,1.1 (1 -- 1.1),1.1,1.1,0,1,1,1,1.1,1.1,1.1,,,,,,,,Effective reproduction no.,Likely increasing
-Yaroslavl Oblast,1.1 (1.1 -- 1.3),1.1,1.2,0.1,1.1,1.1,1.1,1.2,1.2,1.3,,,,,,,,Effective reproduction no.,Unsure
-Altai Republic,1 (0.6 -- 1.3),1,1,0.2,0.6,0.8,0.9,1,1.1,1.3,,,,,,,,Effective reproduction no.,Unsure
-Astrakhan Oblast,1 (1 -- 1.2),1,1.1,0.1,1,1,1,1,1.1,1.2,,,,,,,,Effective reproduction no.,Likely increasing
-Buryatia Republic,1 (0.7 -- 1.2),1,1,0.1,0.7,0.9,1,1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Chechen Republic,1 (0.8 -- 1.3),1,1,0.1,0.8,1,1,1.1,1.1,1.3,,,,,,,,Effective reproduction no.,Unsure
-Dagestan Republic,1 (0.9 -- 1.1),1,1,0,0.9,1,1,1,1,1.1,,,,,,,,Effective reproduction no.,Unsure
-Ingushetia Republic,1 (0.9 -- 1.2),1,1,0.1,0.9,1,1,1,1.1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Kemerovo Oblast,1 (0.9 -- 1.1),1,1,0.1,0.9,0.9,1,1,1,1.1,,,,,,,,Effective reproduction no.,Unsure
-Krasnodar Krai,1 (0.9 -- 1.1),1,1,0.1,0.9,1,1,1,1,1.1,,,,,,,,Effective reproduction no.,Unsure
-Stavropol Krai,1 (1 -- 1.1),1,1,0,1,1,1,1,1,1.1,,,,,,,,Effective reproduction no.,Likely increasing
-Karachay-Cherkess Republic,0.9 (0.7 -- 1.2),0.9,0.9,0.2,0.7,0.8,0.9,1,1,1.2,,,,,,,,Effective reproduction no.,Unsure
-Udmurt Republic,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.9,0.9,1,1,1.1,,,,,,,,Effective reproduction no.,Unsure
-Yamalo-Nenets Autonomous Okrug,0.9 (0.7 -- 1.3),0.9,1,0.2,0.7,0.8,0.9,1,1,1.3,,,,,,,,Effective reproduction no.,Unsure
+region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
+Moscow,6272 (4071 -- 10075),6272,6582,1887,4071,5265,5875,6727,7588,10075,New confirmed cases by infection date,Unsure
+Moscow Oblast,694 (449 -- 875),694,682,131,449,604,661,724,771,875,New confirmed cases by infection date,Unsure
+Nizhny Novgorod Oblast,429 (310 -- 574),429,435,81,310,379,410,450,485,574,New confirmed cases by infection date,Unsure
+Zabaykalsky Krai,405 (276 -- 632),405,424,114,276,344,381,431,483,632,New confirmed cases by infection date,Likely increasing
+Rostov Oblast,357 (309 -- 417),357,359,33,309,337,349,365,378,417,New confirmed cases by infection date,Unsure
+Arkhangelsk Oblast,347 (256 -- 463),347,352,63,256,310,334,361,389,463,New confirmed cases by infection date,Unsure
+Irkutsk Oblast,297 (223 -- 397),297,302,54,223,266,285,310,334,397,New confirmed cases by infection date,Unsure
+Krasnoyarsk Krai,294 (227 -- 377),294,296,46,227,265,283,305,324,377,New confirmed cases by infection date,Unsure
+Sverdlovsk Oblast,284 (228 -- 347),284,285,37,228,262,275,292,308,347,New confirmed cases by infection date,Unsure
+Altai Krai,283 (209 -- 397),283,291,60,209,251,270,298,322,397,New confirmed cases by infection date,Unsure
+Khanty-Mansi Autonomous Okrug,271 (190 -- 442),271,288,83,190,233,256,288,324,442,New confirmed cases by infection date,Unsure
+Penza Oblast,241 (160 -- 386),241,252,71,160,203,225,258,288,386,New confirmed cases by infection date,Unsure
+Voronezh Oblast,237 (197 -- 283),237,238,26,197,222,231,243,254,283,New confirmed cases by infection date,Likely increasing
+Tomsk Oblast,235 (176 -- 329),235,242,48,176,208,225,247,267,329,New confirmed cases by infection date,Unsure
+Volgograd Oblast,222 (181 -- 274),222,224,28,181,205,215,230,241,274,New confirmed cases by infection date,Unsure
+Ulyanovsk Oblast,209 (152 -- 287),209,213,41,152,185,200,219,238,287,New confirmed cases by infection date,Unsure
+Murmansk Oblast,206 (109 -- 311),206,207,61,109,165,190,220,246,311,New confirmed cases by infection date,Unsure
+Komi Republic,199 (108 -- 361),199,213,81,108,158,183,218,253,361,New confirmed cases by infection date,Unsure
+Saratov Oblast,187 (156 -- 230),187,189,23,156,174,182,193,203,230,New confirmed cases by infection date,Unsure
+Orenburg Oblast,185 (152 -- 252),185,191,31,152,170,179,192,206,252,New confirmed cases by infection date,Unsure
+Tyumen Oblast,182 (141 -- 230),182,184,27,141,165,176,189,201,230,New confirmed cases by infection date,Unsure
+Kemerovo Oblast,176 (133 -- 230),176,178,29,133,158,169,184,195,230,New confirmed cases by infection date,Unsure
+Novosibirsk Oblast,173 (117 -- 312),173,188,62,117,146,163,186,212,312,New confirmed cases by infection date,Unsure
+Sakha (Yakutiya) Republic,171 (122 -- 250),171,177,41,122,150,162,181,199,250,New confirmed cases by infection date,Unsure
+Smolensk Oblast,170 (111 -- 260),170,176,48,111,144,160,181,202,260,New confirmed cases by infection date,Unsure
+Republic of Crimea,166 (140 -- 231),166,174,31,140,154,161,172,185,231,New confirmed cases by infection date,Increasing
+Stavropol Krai,164 (149 -- 183),164,165,10,149,158,162,166,171,183,New confirmed cases by infection date,Likely increasing
+Samara Oblast,163 (116 -- 262),163,171,43,116,141,154,172,192,262,New confirmed cases by infection date,Unsure
+Orel Oblast,157 (67 -- 281),157,164,67,67,116,142,174,203,281,New confirmed cases by infection date,Unsure
+Ryazan Oblast,152 (113 -- 224),152,158,36,113,133,144,160,176,224,New confirmed cases by infection date,Unsure
+Khabarovsk Krai,151 (115 -- 213),151,156,31,115,134,144,158,172,213,New confirmed cases by infection date,Unsure
+Tver Oblast,150 (107 -- 201),150,151,28,107,132,143,156,168,201,New confirmed cases by infection date,Unsure
+Kursk Oblast,146 (100 -- 202),146,148,31,100,127,139,153,167,202,New confirmed cases by infection date,Unsure
+Leningrad Oblast,136 (98 -- 179),136,137,25,98,120,130,142,152,179,New confirmed cases by infection date,Unsure
+Bryansk Oblast,135 (77 -- 188),135,135,33,77,117,129,142,154,188,New confirmed cases by infection date,Unsure
+Yamalo-Nenets Autonomous Okrug,135 (80 -- 244),135,145,54,80,110,125,147,168,244,New confirmed cases by infection date,Unsure
+Kaluga Oblast,126 (96 -- 160),126,127,19,96,114,122,131,140,160,New confirmed cases by infection date,Likely increasing
+Perm Krai,126 (104 -- 154),126,127,15,104,117,122,130,137,154,New confirmed cases by infection date,Unsure
+Kabardino-Balkarian Republic,122 (84 -- 181),122,126,29,84,105,115,129,142,181,New confirmed cases by infection date,Likely increasing
+Chelyabinsk Oblast,117 (91 -- 149),117,118,18,91,106,112,121,129,149,New confirmed cases by infection date,Unsure
+Ivanovo Oblast,117 (68 -- 202),117,124,43,68,95,109,126,144,202,New confirmed cases by infection date,Unsure
+Kirov Oblast,111 (89 -- 151),111,114,19,89,101,107,115,125,151,New confirmed cases by infection date,Likely increasing
+Yaroslavl Oblast,110 (87 -- 153),110,114,21,87,99,105,115,124,153,New confirmed cases by infection date,Unsure
+Kurgan Oblast,109 (62 -- 166),109,111,31,62,90,102,116,129,166,New confirmed cases by infection date,Unsure
+Primorsky Krai,108 (88 -- 141),108,111,16,88,99,105,112,120,141,New confirmed cases by infection date,Unsure
+Karelia Republic,107 (51 -- 222),107,119,60,51,81,97,119,141,222,New confirmed cases by infection date,Unsure
+Krasnodar Krai,104 (80 -- 133),104,105,16,80,95,101,108,113,133,New confirmed cases by infection date,Unsure
+Buryatia Republic,102 (58 -- 153),102,103,29,58,83,95,110,121,153,New confirmed cases by infection date,Unsure
+Kaliningrad Oblast,102 (75 -- 129),102,102,16,75,92,99,106,113,129,New confirmed cases by infection date,Likely increasing
+Kalmykia Republic,102 (62 -- 214),102,115,54,62,83,94,112,131,214,New confirmed cases by infection date,Unsure
+Udmurt Republic,100 (60 -- 143),100,100,25,60,83,94,106,116,143,New confirmed cases by infection date,Unsure
+Mordovia Republic,97 (71 -- 142),97,100,23,71,84,92,102,112,142,New confirmed cases by infection date,Unsure
+Khakassia Republic,95 (70 -- 135),95,98,21,70,83,90,100,108,135,New confirmed cases by infection date,Unsure
+Kostroma Oblast,95 (54 -- 161),95,100,35,54,77,88,102,117,161,New confirmed cases by infection date,Unsure
+Vladimir Oblast,95 (61 -- 137),95,96,23,61,81,90,100,110,137,New confirmed cases by infection date,Unsure
+Belgorod Oblast,93 (71 -- 121),93,94,15,71,84,90,97,103,121,New confirmed cases by infection date,Unsure
+Pskov Oblast,90 (49 -- 182),90,100,49,49,71,82,98,115,182,New confirmed cases by infection date,Unsure
+Amur Oblast,88 (48 -- 149),88,92,32,48,70,81,96,110,149,New confirmed cases by infection date,Unsure
+Altai Republic,87 (37 -- 168),87,93,44,37,64,78,96,114,168,New confirmed cases by infection date,Unsure
+Tambov Oblast,83 (60 -- 115),83,85,16,60,74,80,88,94,115,New confirmed cases by infection date,Unsure
+Tula Oblast,83 (62 -- 120),83,86,17,62,73,79,87,96,120,New confirmed cases by infection date,Unsure
+Vologda Oblast,82 (68 -- 105),82,83,11,68,75,79,85,90,105,New confirmed cases by infection date,Increasing
+Dagestan Republic,80 (65 -- 98),80,80,10,65,74,77,82,86,98,New confirmed cases by infection date,Unsure
+Novgorod Oblast,79 (51 -- 104),79,79,16,51,69,75,84,90,104,New confirmed cases by infection date,Likely increasing
+Sakhalin Oblast,74 (41 -- 115),74,76,22,41,60,69,80,90,115,New confirmed cases by infection date,Unsure
+Karachay-Cherkess Republic,72 (39 -- 128),72,76,28,39,56,65,79,91,128,New confirmed cases by infection date,Unsure
+Lipetsk Oblast,72 (47 -- 114),72,75,21,47,61,67,77,86,114,New confirmed cases by infection date,Likely increasing
+Astrakhan Oblast,64 (53 -- 91),64,67,11,53,59,62,66,71,91,New confirmed cases by infection date,Likely increasing
+Bashkortostan Republic,64 (49 -- 83),64,65,10,49,58,61,66,70,83,New confirmed cases by infection date,Unsure
+Magadan Oblast,59 (35 -- 111),59,65,28,35,48,54,64,75,111,New confirmed cases by infection date,Unsure
+Kamchatka Krai,54 (28 -- 132),54,64,37,28,41,49,60,74,132,New confirmed cases by infection date,Unsure
+Mari El Republic,53 (35 -- 89),53,57,18,35,44,50,57,65,89,New confirmed cases by infection date,Unsure
+Adygea Republic,52 (31 -- 74),52,52,13,31,43,49,55,60,74,New confirmed cases by infection date,Unsure
+Ingushetia Republic,52 (37 -- 75),52,54,11,37,46,50,55,60,75,New confirmed cases by infection date,Unsure
+Jewish Autonomous Okrug,45 (29 -- 64),45,45,10,29,38,42,47,51,64,New confirmed cases by infection date,Likely increasing
+Tyva Republic,44 (26 -- 112),44,54,37,26,35,40,48,61,112,New confirmed cases by infection date,Unsure
+North Ossetia - Alania Republic,43 (22 -- 93),43,49,24,22,33,39,48,58,93,New confirmed cases by infection date,Unsure
+Tatarstan Republic,43 (31 -- 65),43,45,11,31,37,41,46,50,65,New confirmed cases by infection date,Unsure
+Sevastopol,41 (19 -- 80),41,45,24,19,30,37,45,53,80,New confirmed cases by infection date,Likely increasing
+Chuvashia Republic,40 (28 -- 60),40,41,10,28,34,38,42,47,60,New confirmed cases by infection date,Unsure
+Nenets Autonomous Okrug,13 (2 -- 125),13,36,110,2,6,10,17,30,125,New confirmed cases by infection date,Unsure
+Chechen Republic,6 (3 -- 12),6,6,3,3,4,5,6,8,12,New confirmed cases by infection date,Unsure
+Chukotka Autonomous Okrug,2 (0 -- 6),2,2,3,0,1,1,2,3,6,New confirmed cases by infection date,Unsure
+Nenets Autonomous Okrug,1.7 (1.1 -- 3.2),1.7,1.8,0.7,1.1,1.3,1.5,1.8,2.1,3.2,Effective reproduction no.,Unsure
+Zabaykalsky Krai,1.5 (1.3 -- 1.8),1.5,1.5,0.2,1.3,1.4,1.5,1.5,1.6,1.8,Effective reproduction no.,Likely increasing
+Smolensk Oblast,1.4 (1.2 -- 1.7),1.4,1.4,0.2,1.2,1.3,1.4,1.5,1.5,1.7,Effective reproduction no.,Unsure
+Altai Krai,1.3 (1.1 -- 1.5),1.3,1.3,0.1,1.1,1.2,1.2,1.3,1.3,1.5,Effective reproduction no.,Unsure
+Irkutsk Oblast,1.3 (1.1 -- 1.5),1.3,1.3,0.1,1.1,1.2,1.3,1.3,1.3,1.5,Effective reproduction no.,Unsure
+Penza Oblast,1.3 (1.1 -- 1.7),1.3,1.3,0.2,1.1,1.2,1.3,1.4,1.4,1.7,Effective reproduction no.,Unsure
+Ryazan Oblast,1.3 (1.2 -- 1.5),1.3,1.3,0.1,1.2,1.2,1.3,1.3,1.4,1.5,Effective reproduction no.,Unsure
+Amur Oblast,1.2 (0.9 -- 1.5),1.2,1.2,0.2,0.9,1.1,1.1,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Arkhangelsk Oblast,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.2,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Bryansk Oblast,1.2 (0.8 -- 1.3),1.2,1.1,0.1,0.8,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Jewish Autonomous Okrug,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Likely increasing
+Kabardino-Balkarian Republic,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.4,Effective reproduction no.,Likely increasing
+Kamchatka Krai,1.2 (0.9 -- 1.7),1.2,1.2,0.3,0.9,1.1,1.1,1.2,1.3,1.7,Effective reproduction no.,Unsure
+Karelia Republic,1.2 (0.8 -- 1.6),1.2,1.2,0.3,0.8,1,1.1,1.2,1.3,1.6,Effective reproduction no.,Unsure
+Khabarovsk Krai,1.2 (1.1 -- 1.3),1.2,1.2,0.1,1.1,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Khakassia Republic,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Krasnoyarsk Krai,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.2,1.2,1.2,1.3,1.4,Effective reproduction no.,Unsure
+Kurgan Oblast,1.2 (0.9 -- 1.4),1.2,1.2,0.2,0.9,1.1,1.2,1.2,1.3,1.4,Effective reproduction no.,Unsure
+Kursk Oblast,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.4,Effective reproduction no.,Unsure
+Mari El Republic,1.2 (1 -- 1.5),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Mordovia Republic,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.2,1.2,1.2,1.3,1.4,Effective reproduction no.,Unsure
+Moscow,1.2 (0.9 -- 1.5),1.2,1.2,0.2,0.9,1.1,1.1,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Moscow Oblast,1.2 (0.9 -- 1.3),1.2,1.1,0.1,0.9,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Nizhny Novgorod Oblast,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.2,1.2,1.3,1.4,Effective reproduction no.,Unsure
+Novosibirsk Oblast,1.2 (1 -- 1.6),1.2,1.3,0.2,1,1.1,1.2,1.3,1.4,1.6,Effective reproduction no.,Unsure
+Pskov Oblast,1.2 (0.9 -- 1.5),1.2,1.2,0.2,0.9,1.1,1.1,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Sakha (Yakutiya) Republic,1.2 (1 -- 1.4),1.2,1.2,0.1,1,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Unsure
+Tomsk Oblast,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.2,1.2,1.2,1.3,1.4,Effective reproduction no.,Unsure
+Tula Oblast,1.2 (1.1 -- 1.4),1.2,1.2,0.1,1.1,1.1,1.2,1.2,1.2,1.4,Effective reproduction no.,Unsure
+Tver Oblast,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.2,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Tyumen Oblast,1.2 (1 -- 1.3),1.2,1.2,0.1,1,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Yaroslavl Oblast,1.2 (1.1 -- 1.3),1.2,1.2,0.1,1.1,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Adygea Republic,1.1 (0.8 -- 1.2),1.1,1,0.1,0.8,1,1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Bashkortostan Republic,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Belgorod Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1,1.1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Chelyabinsk Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1,1.1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Chukotka Autonomous Okrug,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1.1,1.1,1.2,1.5,Effective reproduction no.,Unsure
+Chuvashia Republic,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1,1.1,1.1,1.1,1.3,Effective reproduction no.,Unsure
+Ivanovo Oblast,1.1 (0.9 -- 1.5),1.1,1.2,0.2,0.9,1,1.1,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Kaliningrad Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.2,Effective reproduction no.,Likely increasing
+Kalmykia Republic,1.1 (0.9 -- 1.4),1.1,1.1,0.1,0.9,1,1,1.1,1.1,1.4,Effective reproduction no.,Unsure
+Kaluga Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.2,1.2,1.2,Effective reproduction no.,Likely increasing
+Khanty-Mansi Autonomous Okrug,1.1 (1 -- 1.5),1.1,1.2,0.2,1,1.1,1.1,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Kirov Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing
+Komi Republic,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1.1,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Kostroma Oblast,1.1 (0.9 -- 1.3),1.1,1.1,0.2,0.9,1,1.1,1.1,1.2,1.3,Effective reproduction no.,Unsure
+Leningrad Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1,1.1,1.1,1.2,1.2,Effective reproduction no.,Unsure
+Lipetsk Oblast,1.1 (0.9 -- 1.4),1.1,1.1,0.1,0.9,1.1,1.1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing
+Magadan Oblast,1.1 (0.9 -- 1.5),1.1,1.1,0.2,0.9,1,1.1,1.2,1.2,1.5,Effective reproduction no.,Unsure
+Murmansk Oblast,1.1 (0.8 -- 1.3),1.1,1.1,0.2,0.8,1,1,1.1,1.2,1.3,Effective reproduction no.,Unsure
+North Ossetia - Alania Republic,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,0.9,1,1.1,1.2,1.5,Effective reproduction no.,Unsure
+Novgorod Oblast,1.1 (0.9 -- 1.2),1.1,1.1,0.1,0.9,1,1.1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing
+Orel Oblast,1.1 (0.7 -- 1.5),1.1,1.1,0.2,0.7,0.9,1,1.2,1.3,1.5,Effective reproduction no.,Unsure
+Orenburg Oblast,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.3,Effective reproduction no.,Unsure
+Perm Krai,1.1 (1 -- 1.2),1.1,1.1,0,1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Primorsky Krai,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Republic of Crimea,1.1 (1.1 -- 1.2),1.1,1.1,0.1,1.1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Increasing
+Rostov Oblast,1.1 (1 -- 1.2),1.1,1.1,0,1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Samara Oblast,1.1 (1 -- 1.4),1.1,1.1,0.1,1,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Unsure
+Saratov Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Unsure
+Sevastopol,1.1 (0.8 -- 1.3),1.1,1.1,0.2,0.8,1,1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing
+Sverdlovsk Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.2,Effective reproduction no.,Unsure
+Tambov Oblast,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.3,Effective reproduction no.,Unsure
+Tatarstan Republic,1.1 (1 -- 1.3),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.3,Effective reproduction no.,Unsure
+Tyva Republic,1.1 (0.9 -- 1.7),1.1,1.2,0.3,0.9,1,1,1.1,1.2,1.7,Effective reproduction no.,Unsure
+Ulyanovsk Oblast,1.1 (0.9 -- 1.3),1.1,1.1,0.1,0.9,1.1,1.1,1.1,1.2,1.3,Effective reproduction no.,Unsure
+Vladimir Oblast,1.1 (0.9 -- 1.3),1.1,1.1,0.1,0.9,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Unsure
+Volgograd Oblast,1.1 (1 -- 1.2),1.1,1.1,0.1,1,1.1,1.1,1.1,1.2,1.2,Effective reproduction no.,Unsure
+Vologda Oblast,1.1 (1 -- 1.2),1.1,1.1,0,1,1.1,1.1,1.1,1.1,1.2,Effective reproduction no.,Increasing
+Voronezh Oblast,1.1 (1 -- 1.1),1.1,1.1,0,1,1,1,1.1,1.1,1.1,Effective reproduction no.,Likely increasing
+Altai Republic,1 (0.7 -- 1.3),1,1,0.2,0.7,0.9,0.9,1,1.1,1.3,Effective reproduction no.,Unsure
+Astrakhan Oblast,1 (1 -- 1.2),1,1.1,0.1,1,1,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing
+Buryatia Republic,1 (0.7 -- 1.2),1,1,0.1,0.7,0.9,1,1,1.1,1.2,Effective reproduction no.,Unsure
+Chechen Republic,1 (0.8 -- 1.3),1,1,0.1,0.8,1,1,1.1,1.1,1.3,Effective reproduction no.,Unsure
+Dagestan Republic,1 (0.9 -- 1.1),1,1,0,0.9,1,1,1,1,1.1,Effective reproduction no.,Unsure
+Ingushetia Republic,1 (0.9 -- 1.2),1,1,0.1,0.9,1,1,1,1.1,1.2,Effective reproduction no.,Unsure
+Kemerovo Oblast,1 (0.9 -- 1.1),1,1,0.1,0.9,0.9,1,1,1,1.1,Effective reproduction no.,Unsure
+Krasnodar Krai,1 (0.9 -- 1.1),1,1,0.1,0.9,1,1,1,1,1.1,Effective reproduction no.,Unsure
+Sakhalin Oblast,1 (0.8 -- 1.3),1,1,0.1,0.8,0.9,1,1.1,1.1,1.3,Effective reproduction no.,Unsure
+Stavropol Krai,1 (1 -- 1.1),1,1,0,1,1,1,1,1,1.1,Effective reproduction no.,Likely increasing
+Karachay-Cherkess Republic,0.9 (0.7 -- 1.2),0.9,0.9,0.2,0.7,0.8,0.9,1,1,1.2,Effective reproduction no.,Unsure
+Udmurt Republic,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.9,0.9,1,1,1.1,Effective reproduction no.,Unsure
+Yamalo-Nenets Autonomous Okrug,0.9 (0.7 -- 1.3),0.9,0.9,0.2,0.7,0.8,0.9,1,1,1.3,Effective reproduction no.,Unsure
