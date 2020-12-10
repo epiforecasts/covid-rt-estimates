@@ -123,8 +123,10 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       }
     }
     
-    # Add in maximum execution time to opts
+    # Add in set stan options
     location$regional_epinow_opts$stan$max_execution_time <- max_execution_time
+    location$regional_epinow_opts$stan$cores <- no_cores
+    
     # Run Rt estimation -------------------------------------------------------
     futile.logger::flog.trace("calling regional_epinow")
     out <- futile.logger::ftry(
