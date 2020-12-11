@@ -1,69 +1,71 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
-Kerala,4240 (2714 -- 6071),4240,4297,1044,2714,3610,3995,4469,4892,6071,New confirmed cases by infection date,Unsure
-Maharashtra,4106 (1904 -- 12826),4106,5363,4145,1904,2922,3631,4828,6297,12826,New confirmed cases by infection date,Unsure
-West Bengal,2291 (1877 -- 2718),2291,2296,259,1877,2124,2225,2356,2464,2718,New confirmed cases by infection date,Unsure
-Chhattisgarh,1226 (633 -- 1782),1226,1215,362,633,950,1129,1309,1446,1782,New confirmed cases by infection date,Likely decreasing
-Karnataka,1170 (675 -- 2298),1170,1289,548,675,935,1076,1272,1501,2298,New confirmed cases by infection date,Unsure
-Uttar Pradesh,1057 (720 -- 1483),1057,1072,236,720,910,1000,1113,1215,1483,New confirmed cases by infection date,Unsure
-NCT of Delhi,986 (564 -- 1547),986,1012,314,564,799,913,1063,1182,1547,New confirmed cases by infection date,Unsure
-Tamil Nadu,981 (684 -- 1347),981,996,207,684,857,935,1028,1114,1347,New confirmed cases by infection date,Likely decreasing
-Haryana,958 (650 -- 1458),958,999,270,650,814,903,1022,1134,1458,New confirmed cases by infection date,Unsure
-Gujarat,943 (709 -- 1256),943,956,169,709,839,902,981,1054,1256,New confirmed cases by infection date,Unsure
-Telangana,911 (413 -- 3103),911,1227,1013,413,610,762,1081,1485,3103,New confirmed cases by infection date,Unsure
-Madhya Pradesh,876 (343 -- 2228),876,1044,875,343,608,763,996,1231,2228,New confirmed cases by infection date,Unsure
-Uttarakhand,655 (392 -- 1160),655,704,260,392,538,611,711,820,1160,New confirmed cases by infection date,Unsure
-Bihar,624 (425 -- 926),624,644,162,425,539,592,661,725,926,New confirmed cases by infection date,Unsure
-Himachal Pradesh,587 (285 -- 1112),587,625,272,285,441,527,643,747,1112,New confirmed cases by infection date,Unsure
-Andhra Pradesh,491 (335 -- 794),491,517,147,335,414,460,526,588,794,New confirmed cases by infection date,Likely decreasing
-Punjab,487 (308 -- 768),487,506,148,308,405,453,521,582,768,New confirmed cases by infection date,Unsure
-Jammu and Kashmir,364 (268 -- 487),364,369,68,268,325,348,380,408,487,New confirmed cases by infection date,Unsure
-Odisha,275 (195 -- 708),275,344,196,195,232,255,303,383,708,New confirmed cases by infection date,Likely decreasing
-Jharkhand,156 (115 -- 221),156,160,33,115,141,150,163,176,221,New confirmed cases by infection date,Likely decreasing
-Manipur,139 (85 -- 206),139,141,37,85,117,131,148,162,206,New confirmed cases by infection date,Unsure
-Chandigarh,111 (57 -- 248),111,126,63,57,84,99,123,151,248,New confirmed cases by infection date,Unsure
-Assam,110 (36 -- 193),110,113,47,36,82,100,122,141,193,New confirmed cases by infection date,Likely decreasing
-Goa,110 (60 -- 162),110,110,30,60,92,103,117,128,162,New confirmed cases by infection date,Likely decreasing
-Meghalaya,95 (52 -- 296),95,127,154,52,71,85,107,134,296,New confirmed cases by infection date,Unsure
-Ladakh,66 (32 -- 101),66,66,21,32,53,61,70,77,101,New confirmed cases by infection date,Unsure
-Puducherry,28 (18 -- 52),28,31,11,18,23,26,31,36,52,New confirmed cases by infection date,Likely decreasing
-Nagaland,22 (3 -- 273),22,78,285,3,11,17,28,47,273,New confirmed cases by infection date,Unsure
-Sikkim,13 (4 -- 29),13,14,8,4,8,11,14,18,29,New confirmed cases by infection date,Unsure
-Tripura,13 (5 -- 23),13,13,5,5,9,11,14,17,23,New confirmed cases by infection date,Decreasing
-Arunachal Pradesh,12 (7 -- 26),12,13,7,7,9,11,13,15,26,New confirmed cases by infection date,Likely decreasing
-Andaman and Nicobar,5 (3 -- 9),5,5,2,3,4,5,6,7,9,New confirmed cases by infection date,Likely decreasing
-Mizoram,5 (0 -- 70),5,20,70,0,2,4,8,14,70,New confirmed cases by infection date,Unsure
-Telangana,1.2 (0.8 -- 2.3),1.2,1.3,0.5,0.8,1,1.1,1.3,1.5,2.3,Effective reproduction no.,Unsure
-Chandigarh,1.1 (0.8 -- 1.5),1.1,1.1,0.2,0.8,1,1,1.1,1.2,1.5,Effective reproduction no.,Unsure
-Meghalaya,1.1 (0.9 -- 1.6),1.1,1.1,0.3,0.9,1,1,1.1,1.2,1.6,Effective reproduction no.,Unsure
-Uttarakhand,1.1 (0.9 -- 1.3),1.1,1.1,0.1,0.9,1,1,1.1,1.1,1.3,Effective reproduction no.,Unsure
-Andhra Pradesh,1 (0.8 -- 1.3),1,1,0.1,0.8,0.9,1,1,1.1,1.3,Effective reproduction no.,Likely decreasing
+Kerala,3917 (2450 -- 5625),3917,3948,958,2450,3297,3675,4130,4530,5625,New confirmed cases by infection date,Unsure
+Maharashtra,2787 (1357 -- 6298),2787,3173,1775,1357,2106,2492,3097,3727,6298,New confirmed cases by infection date,Likely decreasing
+West Bengal,2247 (1858 -- 2677),2247,2256,248,1858,2097,2188,2308,2408,2677,New confirmed cases by infection date,Unsure
+Chhattisgarh,1207 (684 -- 1768),1207,1212,335,684,975,1125,1293,1430,1768,New confirmed cases by infection date,Likely decreasing
+Uttar Pradesh,1059 (733 -- 1503),1059,1083,240,733,920,1010,1118,1212,1503,New confirmed cases by infection date,Unsure
+Rajasthan,1055 (520 -- 1903),1055,1113,454,520,812,959,1154,1327,1903,New confirmed cases by infection date,Unsure
+Karnataka,1044 (648 -- 1902),1044,1132,397,648,885,984,1123,1292,1902,New confirmed cases by infection date,Unsure
+Tamil Nadu,925 (641 -- 1294),925,938,198,641,802,876,969,1054,1294,New confirmed cases by infection date,Likely decreasing
+Madhya Pradesh,908 (381 -- 2443),908,1103,764,381,653,810,1033,1303,2443,New confirmed cases by infection date,Unsure
+Haryana,892 (601 -- 1365),892,925,246,601,764,838,949,1047,1365,New confirmed cases by infection date,Unsure
+Gujarat,856 (645 -- 1124),856,868,152,645,767,823,893,954,1124,New confirmed cases by infection date,Unsure
+Uttarakhand,821 (496 -- 1465),821,883,340,496,667,758,894,1016,1465,New confirmed cases by infection date,Unsure
+Telangana,683 (360 -- 1725),683,822,496,360,513,605,767,987,1725,New confirmed cases by infection date,Unsure
+Bihar,611 (435 -- 910),611,635,152,435,532,579,645,717,910,New confirmed cases by infection date,Unsure
+NCT of Delhi,571 (277 -- 993),571,596,222,277,437,517,627,729,993,New confirmed cases by infection date,Unsure
+Himachal Pradesh,553 (273 -- 1059),553,601,269,273,423,503,612,719,1059,New confirmed cases by infection date,Unsure
+Andhra Pradesh,463 (320 -- 713),463,483,122,320,398,436,494,547,713,New confirmed cases by infection date,Likely decreasing
+Punjab,462 (289 -- 730),462,481,142,289,387,431,494,556,730,New confirmed cases by infection date,Unsure
+Jammu and Kashmir,306 (199 -- 413),306,306,65,199,266,291,320,347,413,New confirmed cases by infection date,Likely decreasing
+Odisha,248 (181 -- 418),248,269,81,181,216,234,265,303,418,New confirmed cases by infection date,Decreasing
+Jharkhand,155 (107 -- 215),155,158,34,107,136,148,163,177,215,New confirmed cases by infection date,Likely decreasing
+Nagaland,146 (18 -- 2545),146,598,1295,18,44,81,248,602,2545,New confirmed cases by infection date,Unsure
+Manipur,137 (85 -- 201),137,140,36,85,117,130,146,160,201,New confirmed cases by infection date,Unsure
+Assam,116 (53 -- 196),116,119,47,53,89,106,126,145,196,New confirmed cases by infection date,Likely decreasing
+Chandigarh,98 (51 -- 201),98,108,48,51,76,89,108,130,201,New confirmed cases by infection date,Unsure
+Goa,96 (46 -- 142),96,95,29,46,77,89,103,114,142,New confirmed cases by infection date,Likely decreasing
+Meghalaya,89 (48 -- 233),89,108,79,48,68,79,98,123,233,New confirmed cases by infection date,Unsure
+Ladakh,55 (21 -- 89),55,55,22,21,41,50,61,68,89,New confirmed cases by infection date,Unsure
+Puducherry,24 (16 -- 41),24,26,8,16,20,22,26,29,41,New confirmed cases by infection date,Decreasing
+Sikkim,13 (3 -- 30),13,15,8,3,8,11,15,19,30,New confirmed cases by infection date,Unsure
+Tripura,13 (6 -- 24),13,14,6,6,9,11,14,16,24,New confirmed cases by infection date,Decreasing
+Arunachal Pradesh,11 (6 -- 25),11,13,8,6,9,10,12,15,25,New confirmed cases by infection date,Likely decreasing
+Andaman and Nicobar,5 (3 -- 9),5,6,2,3,4,5,6,7,9,New confirmed cases by infection date,Likely decreasing
+Mizoram,4 (0 -- 45),4,12,44,0,1,2,5,10,45,New confirmed cases by infection date,Unsure
+Nagaland,1.7 (0.7 -- 5.6),1.7,2.3,1.6,0.7,1,1.4,2.1,3.1,5.6,Effective reproduction no.,Unsure
+Telangana,1.1 (0.8 -- 1.7),1.1,1.1,0.3,0.8,0.9,1,1.1,1.3,1.7,Effective reproduction no.,Unsure
+Uttarakhand,1.1 (0.9 -- 1.4),1.1,1.1,0.1,0.9,1,1.1,1.1,1.2,1.4,Effective reproduction no.,Unsure
+Andhra Pradesh,1 (0.8 -- 1.2),1,1,0.1,0.8,0.9,1,1,1.1,1.2,Effective reproduction no.,Likely decreasing
 Bihar,1 (0.9 -- 1.2),1,1,0.1,0.9,1,1,1,1.1,1.2,Effective reproduction no.,Unsure
-Dadra and Nagar Haveli,1 (0 -- 6),1,2,4,0,1,1,2,3,6,New confirmed cases by infection date,Likely decreasing
-Dadra and Nagar Haveli,1 (0.8 -- 1.4),1,1,0.3,0.8,0.9,0.9,1,1.1,1.4,Effective reproduction no.,Likely decreasing
-Goa,1 (0.7 -- 1.1),1,0.9,0.1,0.7,0.9,0.9,1,1,1.1,Effective reproduction no.,Likely decreasing
-Jharkhand,1 (0.9 -- 1.1),1,1,0.1,0.9,0.9,1,1,1,1.1,Effective reproduction no.,Likely decreasing
-Karnataka,1 (0.7 -- 1.4),1,1,0.2,0.7,0.9,1,1,1.1,1.4,Effective reproduction no.,Unsure
-Ladakh,1 (0.8 -- 1.1),1,1,0.1,0.8,0.9,1,1,1,1.1,Effective reproduction no.,Unsure
-Maharashtra,1 (0.7 -- 1.8),1,1.1,0.4,0.7,0.8,0.9,1.1,1.3,1.8,Effective reproduction no.,Unsure
-Andaman and Nicobar,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Likely decreasing
+Chandigarh,1 (0.8 -- 1.4),1,1.1,0.2,0.8,0.9,1,1.1,1.2,1.4,Effective reproduction no.,Unsure
+Dadra and Nagar Haveli,1 (0 -- 4),1,2,2,0,1,1,1,2,4,New confirmed cases by infection date,Likely decreasing
+Jharkhand,1 (0.8 -- 1.1),1,1,0.1,0.8,0.9,0.9,1,1,1.1,Effective reproduction no.,Likely decreasing
+Karnataka,1 (0.7 -- 1.3),1,1,0.2,0.7,0.9,0.9,1,1.1,1.3,Effective reproduction no.,Unsure
+Ladakh,1 (0.7 -- 1.1),1,0.9,0.1,0.7,0.9,0.9,1,1,1.1,Effective reproduction no.,Unsure
+Meghalaya,1 (0.8 -- 1.5),1,1.1,0.2,0.8,1,1,1.1,1.2,1.5,Effective reproduction no.,Unsure
+Andaman and Nicobar,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1.1,Effective reproduction no.,Likely decreasing
 Arunachal Pradesh,0.9 (0.7 -- 1.2),0.9,0.9,0.2,0.7,0.8,0.9,0.9,1,1.2,Effective reproduction no.,Likely decreasing
-Assam,0.9 (0.5 -- 1.1),0.9,0.9,0.2,0.5,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Likely decreasing
+Assam,0.9 (0.6 -- 1.1),0.9,0.9,0.2,0.6,0.8,0.9,1,1,1.1,Effective reproduction no.,Likely decreasing
 Chhattisgarh,0.9 (0.7 -- 1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1,Effective reproduction no.,Likely decreasing
-Haryana,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
-Himachal Pradesh,0.9 (0.7 -- 1.2),0.9,0.9,0.2,0.7,0.8,0.9,1,1,1.2,Effective reproduction no.,Unsure
-Jammu and Kashmir,0.9 (0.8 -- 1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1,Effective reproduction no.,Unsure
-Kerala,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.9,0.9,1,1,1.1,Effective reproduction no.,Unsure
-Manipur,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
-Nagaland,0.9 (0.4 -- 2.7),0.9,1.1,0.9,0.4,0.7,0.8,0.9,1.2,2.7,Effective reproduction no.,Unsure
-Odisha,0.9 (0.8 -- 1.5),0.9,1,0.3,0.8,0.8,0.9,1,1.1,1.5,Effective reproduction no.,Likely decreasing
-Puducherry,0.9 (0.8 -- 1.1),0.9,1,0.1,0.8,0.9,0.9,1,1,1.1,Effective reproduction no.,Likely decreasing
+Dadra and Nagar Haveli,0.9 (0.7 -- 1.3),0.9,1,0.2,0.7,0.9,0.9,1,1,1.3,Effective reproduction no.,Likely decreasing
+Goa,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.9,0.9,1,1,1.1,Effective reproduction no.,Likely decreasing
+Haryana,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
+Himachal Pradesh,0.9 (0.7 -- 1.2),0.9,0.9,0.2,0.7,0.8,0.9,0.9,1,1.2,Effective reproduction no.,Unsure
+Jammu and Kashmir,0.9 (0.7 -- 1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,0.9,1,Effective reproduction no.,Likely decreasing
+Kerala,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
+Madhya Pradesh,0.9 (0.6 -- 1.4),0.9,0.9,0.3,0.6,0.7,0.8,0.9,1,1.4,Effective reproduction no.,Unsure
+Manipur,0.9 (0.8 -- 1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1,Effective reproduction no.,Unsure
+Odisha,0.9 (0.8 -- 1.2),0.9,0.9,0.1,0.8,0.8,0.9,0.9,1,1.2,Effective reproduction no.,Decreasing
+Puducherry,0.9 (0.8 -- 1.1),0.9,0.9,0.1,0.8,0.9,0.9,0.9,1,1.1,Effective reproduction no.,Decreasing
 Punjab,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Unsure
-Tamil Nadu,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.9,0.9,1,1.1,Effective reproduction no.,Likely decreasing
+Tamil Nadu,0.9 (0.7 -- 1.1),0.9,0.9,0.1,0.7,0.8,0.8,0.9,0.9,1.1,Effective reproduction no.,Likely decreasing
 West Bengal,0.9 (0.8 -- 1),0.9,0.9,0,0.8,0.9,0.9,0.9,0.9,1,Effective reproduction no.,Unsure
-Gujarat,0.8 (0.7 -- 1),0.8,0.8,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
-Madhya Pradesh,0.8 (0.5 -- 1.3),0.8,0.9,0.3,0.5,0.7,0.8,0.9,1,1.3,Effective reproduction no.,Unsure
-Mizoram,0.8 (0.2 -- 2.2),0.8,0.9,0.7,0.2,0.5,0.7,0.9,1.1,2.2,Effective reproduction no.,Unsure
-Sikkim,0.8 (0.5 -- 1),0.8,0.8,0.2,0.5,0.7,0.8,0.8,0.9,1,Effective reproduction no.,Unsure
+Gujarat,0.8 (0.7 -- 0.9),0.8,0.8,0.1,0.7,0.8,0.8,0.8,0.9,0.9,Effective reproduction no.,Unsure
+Maharashtra,0.8 (0.6 -- 1.3),0.8,0.9,0.2,0.6,0.7,0.8,0.9,1,1.3,Effective reproduction no.,Likely decreasing
+Rajasthan,0.8 (0.5 -- 1.2),0.8,0.9,0.2,0.5,0.7,0.8,0.9,1,1.2,Effective reproduction no.,Unsure
+Sikkim,0.8 (0.5 -- 1.1),0.8,0.8,0.2,0.5,0.7,0.8,0.9,0.9,1.1,Effective reproduction no.,Unsure
 Tripura,0.8 (0.6 -- 1),0.8,0.8,0.1,0.6,0.7,0.8,0.8,0.9,1,Effective reproduction no.,Decreasing
-Uttar Pradesh,0.8 (0.7 -- 1),0.8,0.8,0.1,0.7,0.8,0.8,0.8,0.9,1,Effective reproduction no.,Unsure
-NCT of Delhi,0.7 (0.5 -- 0.8),0.7,0.7,0.1,0.5,0.6,0.6,0.7,0.7,0.8,Effective reproduction no.,Unsure
+Uttar Pradesh,0.8 (0.7 -- 1),0.8,0.8,0.1,0.7,0.8,0.8,0.9,0.9,1,Effective reproduction no.,Unsure
+Mizoram,0.7 (0.2 -- 2),0.7,0.8,0.6,0.2,0.4,0.6,0.8,1,2,Effective reproduction no.,Unsure
+NCT of Delhi,0.5 (0.4 -- 0.7),0.5,0.5,0.1,0.4,0.5,0.5,0.6,0.6,0.7,Effective reproduction no.,Unsure
