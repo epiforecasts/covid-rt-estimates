@@ -1,9 +1,9 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
-Flanders,335 (69 -- 1165),335,449,412,69,190,271,412,578,1165,New confirmed cases by infection date,Unsure
-Wallonia,119 (21 -- 462),119,167,168,21,63,94,148,215,462,New confirmed cases by infection date,Unsure
-Brussels,33 (9 -- 93),33,40,33,9,20,28,39,51,93,New confirmed cases by infection date,Unsure
-Unknown,24 (9 -- 59),24,28,17,9,17,21,27,35,59,New confirmed cases by infection date,Unsure
-Unknown,1 (0.6 -- 1.4),1,1,0.2,0.6,0.8,0.9,1,1.1,1.4,Effective reproduction no.,Unsure
-Brussels,0.6 (0.3 -- 0.9),0.6,0.6,0.2,0.3,0.4,0.5,0.6,0.7,0.9,Effective reproduction no.,Unsure
-Flanders,0.6 (0.3 -- 1.1),0.6,0.6,0.2,0.3,0.5,0.6,0.7,0.8,1.1,Effective reproduction no.,Unsure
-Wallonia,0.6 (0.2 -- 1),0.6,0.6,0.3,0.2,0.4,0.5,0.6,0.7,1,Effective reproduction no.,Unsure
+Wallonia,456 (156 -- 1232),456,543,365,156,299,391,533,678,1232,New confirmed cases by infection date,Unsure
+Flanders,319 (62 -- 1103),319,413,367,62,172,255,383,537,1103,New confirmed cases by infection date,Unsure
+Brussels,66 (22 -- 174),66,78,52,22,44,57,77,97,174,New confirmed cases by infection date,Unsure
+Unknown,39 (16 -- 97),39,46,29,16,27,34,45,56,97,New confirmed cases by infection date,Unsure
+Unknown,1.1 (0.74 -- 1.6),1.1,1.1,0.26,0.74,0.95,1,1.2,1.3,1.6,Effective reproduction no.,Unsure
+Wallonia,0.86 (0.49 -- 1.4),0.86,0.89,0.28,0.49,0.71,0.8,0.94,1.1,1.4,Effective reproduction no.,Unsure
+Brussels,0.74 (0.41 -- 1.2),0.74,0.77,0.25,0.41,0.6,0.69,0.81,0.9,1.2,Effective reproduction no.,Unsure
+Flanders,0.58 (0.22 -- 1),0.58,0.59,0.25,0.22,0.42,0.51,0.63,0.74,1,Effective reproduction no.,Unsure
