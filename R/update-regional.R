@@ -23,38 +23,43 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   # Update delays -----------------------------------------------------------
   if (!is.list(location$generation_time)) {
     futile.logger::flog.trace("loading generation_time.rds")
-    location$generation_time <- readRDS(here::here("data", "generation_time.rds"))
+    location$generation_time <- readRDS(here::here("data", "generation_time.rds")) #suggest moving into list def
   }
   if (!is.list(location$incubation_period)) {
     futile.logger::flog.trace("loading incubation_period.rds")
-    location$incubation_period <- readRDS(here::here("data", "incubation_period.rds"))
+    location$incubation_period <- readRDS(here::here("data", "incubation_period.rds")) #suggest moving into list def
   }
   if (!is.list(location$reporting_delay)) {
     if (location$name %in% c("deaths", "regional-deaths")) {
       futile.logger::flog.trace("loading onset_to_death_delay.rds")
-      location$reporting_delay <- readRDS(here::here("data", "onset_to_death_delay.rds"))
+      location$reporting_delay <- readRDS(here::here("data", "onset_to_death_delay.rds")) #suggest moving into list def
     }
     else {
       futile.logger::flog.trace("loading onset_to_admission_delay.rds")
-      location$reporting_delay <- readRDS(here::here("data", "onset_to_admission_delay.rds"))
+      location$reporting_delay <- readRDS(here::here("data", "onset_to_admission_delay.rds")) #suggest moving into list def
     }
   }
 
   # Get cases  ---------------------------------------------------------------
   futile.logger::flog.trace("loading cases")
-  if ("Region" %in% class(location)) {
-    if (is.na(location$covid_regional_data_identifier)) {
-      location$covid_regional_data_identifier <- location$name
+  if (is.na(location$data)) {
+    if ("Region" %in% class(location)) {
+      if (is.na(location$covid_regional_data_identifier)) {
+        location$covid_regional_data_identifier <- location$name
+      }
+      futile.logger::flog.info("Getting regional data")
+      
+      cases <- do.call(covidregionaldata::get_regional_data, c(list(country = location$covid_regional_data_identifier,
+                                                                    localise_regions = FALSE), #suggest moving into list def
+                                                               location$data_args))
+      cases <- data.table::setDT(cases)
+    }else if ("SuperRegion" %in% class(location)) {
+      futile.logger::flog.info("Getting national data for %s", location$name)
+      cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier)) #suggest moving into list def
     }
-    futile.logger::flog.info("Getting regional data")
-
-    cases <- do.call(covidregionaldata::get_regional_data, c(list(country = location$covid_regional_data_identifier,
-                                                                  localise_regions = FALSE),
-                                                             location$data_args))
-    cases <- data.table::setDT(cases)
-  }else if ("SuperRegion" %in% class(location)) {
-    futile.logger::flog.info("Getting national data for %s", location$name)
-    cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier))
+  }else{
+    futile.logger::flog.info("Getting data")
+    cases <- location$data()
   }
 
   if (typeof(location$case_modifier) == "closure") {
@@ -77,7 +82,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   # Exclude unwanted locations and clean data -------------------------------------------------
   # filter a list of excluded sublocations within the current dataset
   # if sublocation = * the dataset wouldn't have been included.
-  exclude_subregions <- lapply(
+  exclude_subregions <- lapply( #suggest moving into a funciton code for readability/brevity etc
     excludes,
     function(dsl) {
       if (dsl$dataset == location$name) {
@@ -103,7 +108,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     cases <- cases[region %in_ci% include_subregions]
   }
 
-  cases <- clean_regional_data(cases, truncation = location$truncation)
+  cases <- clean_regional_data(cases, truncation = location$truncation,
+                               data_window = location$data_window)
 
   # Check to see if there is data and if the data has been updated  ------------------------------
   if (cases[, .N] > 0 && (force || check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds"))))) {
@@ -116,20 +122,19 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
         unlink(location$target_folder, recursive = TRUE)
       }
     }
+    
+    # Add in set stan options
+    location$regional_epinow_opts$stan$max_execution_time <- max_execution_time
+    location$regional_epinow_opts$stan$cores <- no_cores
+    
     # Run Rt estimation -------------------------------------------------------
     futile.logger::flog.trace("calling regional_epinow")
     out <- futile.logger::ftry(
-      regional_epinow(reported_cases = cases,
-                      generation_time = location$generation_time,
-                      delays = delay_opts(location$incubation_period, location$reporting_delay),
-                      rt = rt_opts(prior = list(mean = 1, sd = 0.2)),
-                      stan = stan_opts(samples = 4000, warmup = 400, cores = no_cores,
-                                       chains = 4, control = list(adapt_delta = 0.95),
-                                       future = FALSE, max_execution_time = max_execution_time),
-                      target_folder = location$target_folder,
-                      output = c("plots", "latest"),
-                      non_zero_points = 14, horizon = 14, logs = NULL), silent = TRUE
-    )
+      do.call(regional_epinow, c(list(reported_cases = cases,
+                                 generation_time = location$generation_time,
+                                 delays = delay_opts(location$incubation_period, location$reporting_delay),
+                                 target_folder = location$target_folder),
+                                 location$regional_epinow_opts)), silent = TRUE)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
 
@@ -161,7 +166,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
   # add some stats
   futile.logger::flog.debug("add stats to output")
   out$max_data_date <- max(cases$date, na.rm = TRUE)
-  out$oldest_results <- tryCatch(
+  out$oldest_results <- tryCatch( #suggest moving into a function though I imagine this will break post git
     min(
       strptime(
         strsplit(
@@ -198,6 +203,5 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       )
     }
   )
-
   return(out)
 }
