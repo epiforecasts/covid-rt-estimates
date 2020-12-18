@@ -1,25 +1,25 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
-Ontario,2392 (1926 -- 2777),2392,2382,264,1926,2234,2343,2446,2528,2777,New confirmed cases by infection date,Increasing
-Alberta,2350 (1019 -- 3729),2350,2372,890,1019,1787,2129,2560,2917,3729,New confirmed cases by infection date,Likely increasing
-Quebec,1976 (1207 -- 3073),1976,2044,598,1207,1629,1844,2125,2377,3073,New confirmed cases by infection date,Unsure
-British Columbia,634 (295 -- 1238),634,684,313,295,474,569,702,824,1238,New confirmed cases by infection date,Unsure
-Manitoba,255 (137 -- 494),255,278,119,137,200,234,279,326,494,New confirmed cases by infection date,Unsure
-Saskatchewan,191 (86 -- 345),191,200,81,86,142,171,211,246,345,New confirmed cases by infection date,Unsure
-Alberta,1.1 (0.82 -- 1.2),1.1,1,0.11,0.82,0.99,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing
-Ontario,1.1 (0.99 -- 1.1),1.1,1.1,0.036,0.99,1,1.1,1.1,1.1,1.1,Effective reproduction no.,Increasing
-Prince Edward Island,1.1 (0.52 -- 1.6),1.1,1.1,0.34,0.52,0.95,1.1,1.2,1.3,1.6,Effective reproduction no.,Unsure
-New Brunswick,1 (0 -- 92),1,19,76,0,0,0,2,8,92,New confirmed cases by infection date,Unsure
-Newfoundland and Labrador,1 (0 -- 10),1,3,12,0,0,1,2,3,10,New confirmed cases by infection date,Unsure
-Newfoundland and Labrador,1 (0.49 -- 2),1,1.1,0.58,0.49,0.79,0.92,1.1,1.2,2,Effective reproduction no.,Unsure
-Prince Edward Island,1 (0 -- 7),1,2,7,0,0,1,1,2,7,New confirmed cases by infection date,Unsure
-Quebec,1 (0.77 -- 1.3),1,1,0.15,0.77,0.91,0.97,1,1.1,1.3,Effective reproduction no.,Unsure
-British Columbia,0.95 (0.75 -- 1.1),0.95,0.95,0.13,0.75,0.88,0.92,0.98,1,1.1,Effective reproduction no.,Unsure
-Manitoba,0.95 (0.75 -- 1.2),0.95,0.96,0.15,0.75,0.87,0.92,0.98,1,1.2,Effective reproduction no.,Unsure
-Saskatchewan,0.9 (0.65 -- 1.1),0.9,0.88,0.14,0.65,0.8,0.86,0.93,0.97,1.1,Effective reproduction no.,Unsure
-New Brunswick,0.88 (0.058 -- 5.2),0.88,1.5,1.7,0.058,0.35,0.64,1.2,2,5.2,Effective reproduction no.,Unsure
-Nunavut,0.52 (0.012 -- 1.9),0.52,0.69,0.88,0.012,0.2,0.4,0.64,0.87,1.9,Effective reproduction no.,Unsure
-Nova Scotia,0.5 (0.13 -- 1.4),0.5,0.61,0.58,0.13,0.32,0.42,0.57,0.72,1.4,Effective reproduction no.,Unsure
-Yukon,0.27 (0.0059 -- 1.3),0.27,0.45,0.64,0.0059,0.076,0.18,0.38,0.61,1.3,Effective reproduction no.,Unsure
-Nova Scotia,0 (0 -- 7),0,2,11,0,0,0,1,2,7,New confirmed cases by infection date,Unsure
-Nunavut,0 (0 -- 17),0,6,54,0,0,0,1,2,17,New confirmed cases by infection date,Unsure
-Yukon,0 (0 -- 1),0,0,3,0,0,0,0,0,1,New confirmed cases by infection date,Unsure
+Ontario,2490 (2079 -- 2909),2490,2492,257,2079,2353,2439,2537,2615,2909,New confirmed cases by infection date,Increasing
+Alberta,2246 (928 -- 3744),2246,2288,868,928,1668,2030,2475,2851,3744,New confirmed cases by infection date,Likely increasing
+Quebec,1861 (1145 -- 2906),1861,1930,566,1145,1551,1740,1997,2227,2906,New confirmed cases by infection date,Unsure
+British Columbia,636 (297 -- 1220),636,685,309,297,479,573,705,830,1220,New confirmed cases by infection date,Unsure
+Manitoba,217 (116 -- 395),217,231,91,116,170,198,237,274,395,New confirmed cases by infection date,Unsure
+Saskatchewan,190 (92 -- 336),190,200,77,92,147,172,210,242,336,New confirmed cases by infection date,Unsure
+New Brunswick,10 (0 -- 312),10,63,157,0,2,5,20,49,312,New confirmed cases by infection date,Unsure
+Newfoundland and Labrador,2 (0 -- 16),2,5,15,0,1,1,2,4,16,New confirmed cases by infection date,Unsure
+New Brunswick,1.8 (0.19 -- 7.1),1.8,2.5,2.1,0.19,0.87,1.4,2.4,3.5,7.1,Effective reproduction no.,Unsure
+Alberta,1.1 (0.8 -- 1.2),1.1,1,0.11,0.8,0.97,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing
+Newfoundland and Labrador,1.1 (0.59 -- 2.4),1.1,1.2,0.65,0.59,0.88,0.99,1.1,1.2,2.4,Effective reproduction no.,Unsure
+Ontario,1.1 (1 -- 1.1),1.1,1.1,0.032,1,1,1.1,1.1,1.1,1.1,Effective reproduction no.,Increasing
+Prince Edward Island,1.1 (0.53 -- 1.6),1.1,1.1,0.35,0.53,0.95,1.1,1.2,1.3,1.6,Effective reproduction no.,Unsure
+Nova Scotia,1 (0 -- 20),1,6,22,0,0,1,2,4,20,New confirmed cases by infection date,Unsure
+Prince Edward Island,1 (0 -- 9),1,3,64,0,0,1,2,3,9,New confirmed cases by infection date,Unsure
+Quebec,0.98 (0.76 -- 1.2),0.98,0.98,0.14,0.76,0.89,0.95,1,1.1,1.2,Effective reproduction no.,Unsure
+British Columbia,0.96 (0.76 -- 1.1),0.96,0.95,0.12,0.76,0.88,0.93,0.98,1,1.1,Effective reproduction no.,Unsure
+Manitoba,0.91 (0.72 -- 1.1),0.91,0.92,0.13,0.72,0.84,0.88,0.95,0.99,1.1,Effective reproduction no.,Unsure
+Saskatchewan,0.9 (0.67 -- 1.1),0.9,0.89,0.13,0.67,0.82,0.87,0.93,0.98,1.1,Effective reproduction no.,Unsure
+Nova Scotia,0.64 (0.22 -- 2),0.64,0.81,0.68,0.22,0.45,0.57,0.73,0.91,2,Effective reproduction no.,Unsure
+Nunavut,0.52 (0.015 -- 2.2),0.52,0.74,1,0.015,0.21,0.38,0.65,0.89,2.2,Effective reproduction no.,Unsure
+Yukon,0.23 (0.0041 -- 1.3),0.23,0.42,0.58,0.0041,0.064,0.15,0.35,0.57,1.3,Effective reproduction no.,Unsure
+Nunavut,0 (0 -- 19),0,7,44,0,0,0,0,2,19,New confirmed cases by infection date,Unsure
+Yukon,0 (0 -- 0),0,0,1,0,0,0,0,0,0,New confirmed cases by infection date,Unsure
