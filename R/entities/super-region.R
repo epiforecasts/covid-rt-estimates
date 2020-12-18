@@ -25,7 +25,7 @@ SuperRegion <- R6::R6Class("SuperRegion",
                                                                #' folder_name = "united-kingdom"
                                                                #' @return a new `SuperRegion` object
                                          initialize = function(...,
-                                                               covid_national_data_identifier = "ecdc",
+                                                               covid_national_data_identifier = "who",
                                                                region_scale = "Country",
                                                                folder_name = NA) {
                                            super$initialize(..., region_scale)
