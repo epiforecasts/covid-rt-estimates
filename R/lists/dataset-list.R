@@ -20,7 +20,7 @@ DATASETS <- list(
                                   cases <- add_uk(cases)
                                   return(cases) },
                                 data_args = list(nhsregions = TRUE),
-                                truncation = 5),
+                                truncation = 3),
   "united-kingdom-deaths" = Region$new(name = "united-kingdom-deaths",
                                        publication_metadata = PublicationMetadata$new(
                                          title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Deaths",
@@ -36,7 +36,7 @@ DATASETS <- list(
                                          deaths <- add_uk(deaths)
                                          return(deaths) },
                                        data_args = list(nhsregions = TRUE),
-                                       truncation = 3),
+                                       truncation = 4),
   "united-kingdom-admissions" = Region$new(name = "united-kingdom-admissions",
                                            publication_metadata = PublicationMetadata$new(
                                              title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Hospital Admissions",
@@ -49,8 +49,7 @@ DATASETS <- list(
                                            case_modifier = function(admissions) {
                                              admissions <- admissions[, cases_new := hosp_new_blend]
                                              return(admissions) },
-                                           data_args = list(nhsregions = TRUE),
-                                           truncation = 3),
+                                           data_args = list(nhsregions = TRUE)),
   "united-states" = Region$new(name = "united-states",
                                publication_metadata = PublicationMetadata$new(
                                  title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United States of America Based on Test Results",
