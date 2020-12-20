@@ -37,10 +37,10 @@ To confirm the latest version check the production date in the metadata tab on t
 
 ## Updating the estimates
 
-1. Clone the repository.
+1. Clone the repository (*This results in shallow clone with just the HEAD commit, remove the `--depth` flag for a full clone but note that this will take some time as the full history is large*).
 
 ```bash
-git clone https://github.com/epiforecasts/covid-rt-estimates.git
+git clone --depth 1 https://github.com/epiforecasts/covid-rt-estimates.git
 ```
 
 ### Using a remote server

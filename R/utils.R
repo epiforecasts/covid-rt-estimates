@@ -67,15 +67,16 @@ check_for_update <- function(cases, last_run) {
 }
 
 #' Clean regional data
-clean_regional_data <- function(cases, truncation = 3) {
+clean_regional_data <- function(cases, truncation = 3, data_window = 12) {
   futile.logger::flog.trace("starting to clean the cases")
   cases <- cases[, .(region, date = as.Date(date), confirm = cases_new)]
   cases <- cases[date <= Sys.Date()]
   cases <- cases[, .SD[date <= (max(date, na.rm = TRUE) - lubridate::days(truncation))], by = region]
-  cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(12))], by = region]
+  if (!is.infinite(data_window)) {
+    cases <- cases[, .SD[date >= (max(date) - lubridate::weeks(data_window))], by = region]
+  }
   cases <- cases[!is.na(confirm)]
   data.table::setorder(cases, date)
-
   return(cases)
 }
 

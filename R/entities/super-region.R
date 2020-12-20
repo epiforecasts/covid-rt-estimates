@@ -4,7 +4,7 @@ if (!exists("AbstractDataset", mode = "function")) source(here::here("R/entities
 #' SuperRegion class. So called because its bigger than a region and calling it "global" seemed like a programmers idea of a bad joke...
 SuperRegion <- R6::R6Class("SuperRegion",
                            inherit = AbstractDataset,
-                           public = list(covid_national_data_identifier = "ecdc",
+                           public = list(covid_national_data_identifier = "who",
 
                                                                #' @description
                                                                #' Initialise a new `Region` object
@@ -25,7 +25,7 @@ SuperRegion <- R6::R6Class("SuperRegion",
                                                                #' folder_name = "united-kingdom"
                                                                #' @return a new `SuperRegion` object
                                          initialize = function(...,
-                                                               covid_national_data_identifier = "ecdc",
+                                                               covid_national_data_identifier = "who",
                                                                region_scale = "Country",
                                                                folder_name = NA) {
                                            super$initialize(..., region_scale)
