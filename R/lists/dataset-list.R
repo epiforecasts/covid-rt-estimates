@@ -50,6 +50,16 @@ DATASETS <- list(
                                              admissions <- admissions[, cases_new := hosp_new_blend]
                                              return(admissions) },
                                            data_args = list(nhsregions = TRUE)),
+  "united-kingdom-local" = Region$new(name = "united-kingdom-local",
+                                      publication_metadata = PublicationMetadata$new(
+                                      title = "Local Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Test Results",
+                                      description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting at the local authority level in the United Kingdom. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
+                                      breakdown = "authority",
+                                      country = "United Kingdom"),
+                                      cases_subregion_source = "region_level_2",
+                                      covid_regional_data_identifier = "UK",
+                                      data_args = list(include_level_2_regions = TRUE),
+                                      truncation = 3),
   "united-states" = Region$new(name = "united-states",
                                publication_metadata = PublicationMetadata$new(
                                  title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United States of America Based on Test Results",
