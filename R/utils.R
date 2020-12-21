@@ -20,7 +20,7 @@ setup_log_from_args <- function(args) {
 }
 
 #' Set up parallel processing on all available cores
-setup_future <- function(jobs, min_cores_per_worker = 2) {
+setup_future <- function(jobs, min_cores_per_worker = 4) {
   if (!interactive()) {
     ## If running as a script enable this
     options(future.fork.enable = TRUE)
