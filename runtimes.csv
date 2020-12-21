@@ -637,19 +637,233 @@
 "united-kingdom-admissions","South East",2020-12-21 01:15:47,9.8,2020-12-20 00:59:14,10.8,2020-12-19 00:56:48,9.8,2020-12-18 01:00:19,9.7,2020-12-17 01:00:24,10.1
 "united-kingdom-admissions","South West",2020-12-21 01:15:47,13.7,2020-12-20 00:59:14,10.5,2020-12-19 00:56:48,12.8,2020-12-18 01:00:19,14.9,2020-12-17 01:00:24,13.2
 "united-kingdom-admissions","United Kingdom",2020-10-09 02:46:29,994.1,2020-10-08 00:52:51,867.772,2020-10-07 07:43:07,1245.721,2020-10-06 13:24:57,1006.251,NA,NA
-"united-kingdom-admissions","Wales",2020-12-21 01:15:47,6.6,2020-12-20 00:59:14,7.7,2020-12-19 00:56:48,5.4,2020-12-18 01:00:19,5.2,2020-12-17 01:00:24,6.6
-"united-kingdom-deaths","East of England",2020-12-21 01:00:03,9.1,2020-12-19 00:38:13,9.4,2020-12-18 00:40:14,9.1,2020-12-17 00:40:29,9.7,2020-12-16 00:41:14,7.9
-"united-kingdom-deaths","England",2020-12-21 01:00:03,12.2,2020-12-19 00:38:13,12.3,2020-12-18 00:40:14,16.8,2020-12-17 00:40:29,16.5,2020-12-16 00:41:14,13.3
-"united-kingdom-deaths","London",2020-12-21 01:00:03,4.8,2020-12-19 00:38:13,6.6,2020-12-18 00:40:14,5.3,2020-12-17 00:40:29,7.1,2020-12-16 00:41:14,7.1
-"united-kingdom-deaths","Midlands",2020-12-21 01:00:03,10.1,2020-12-19 00:38:13,15.1,2020-12-18 00:40:14,11.3,2020-12-17 00:40:29,15.2,2020-12-16 00:41:14,14.8
-"united-kingdom-deaths","North East and Yorkshire",2020-12-21 01:00:03,9.5,2020-12-19 00:38:13,8.6,2020-12-18 00:40:14,10.9,2020-12-17 00:40:29,10.3,2020-12-16 00:41:14,10
-"united-kingdom-deaths","North West",2020-12-21 01:00:03,9.4,2020-12-19 00:38:13,8.3,2020-12-18 00:40:14,10.4,2020-12-17 00:40:29,8.9,2020-12-16 00:41:14,10.5
-"united-kingdom-deaths","Northern Ireland",2020-12-21 01:00:03,6.7,2020-12-19 00:38:13,7.9,2020-12-18 00:40:14,6.8,2020-12-17 00:40:29,6.7,2020-12-16 00:41:14,8.4
-"united-kingdom-deaths","Scotland",2020-12-21 01:00:03,7.5,2020-12-19 00:38:13,9.9,2020-12-18 00:40:14,10.3,2020-12-17 00:40:29,11.6,2020-12-16 00:41:14,11
-"united-kingdom-deaths","South East",2020-12-21 01:00:03,10.2,2020-12-19 00:38:13,7.5,2020-12-18 00:40:14,9.7,2020-12-17 00:40:29,7.9,2020-12-16 00:41:14,8.5
-"united-kingdom-deaths","South West",2020-12-21 01:00:03,7,2020-12-19 00:38:13,9,2020-12-18 00:40:14,9.2,2020-12-17 00:40:29,9.1,2020-12-16 00:41:14,12.8
-"united-kingdom-deaths","United Kingdom",2020-12-21 01:00:03,11.9,2020-12-19 00:38:13,13.8,2020-12-18 00:40:14,12.9,2020-12-17 00:40:29,13.2,2020-12-16 00:41:14,14.4
-"united-kingdom-deaths","Wales",2020-12-21 01:00:03,8.6,2020-12-19 00:38:13,7.7,2020-12-18 00:40:14,6.7,2020-12-17 00:40:29,7.7,2020-12-16 00:41:14,7.1
+"united-kingdom-admissions","Wales",2020-12-20 00:59:14,7.7,2020-12-19 00:56:48,5.4,2020-12-18 01:00:19,5.2,2020-12-17 01:00:24,6.6,2020-12-16 00:59:11,6.8
+"united-kingdom-deaths","East of England",2020-12-19 00:38:13,9.4,2020-12-18 00:40:14,9.1,2020-12-17 00:40:29,9.7,2020-12-16 00:41:14,7.9,2020-12-15 00:38:41,9.3
+"united-kingdom-deaths","England",2020-12-19 00:38:13,12.3,2020-12-18 00:40:14,16.8,2020-12-17 00:40:29,16.5,2020-12-16 00:41:14,13.3,2020-12-15 00:38:41,17.2
+"united-kingdom-deaths","London",2020-12-19 00:38:13,6.6,2020-12-18 00:40:14,5.3,2020-12-17 00:40:29,7.1,2020-12-16 00:41:14,7.1,2020-12-15 00:38:41,5.7
+"united-kingdom-deaths","Midlands",2020-12-19 00:38:13,15.1,2020-12-18 00:40:14,11.3,2020-12-17 00:40:29,15.2,2020-12-16 00:41:14,14.8,2020-12-15 00:38:41,17.1
+"united-kingdom-deaths","North East and Yorkshire",2020-12-19 00:38:13,8.6,2020-12-18 00:40:14,10.9,2020-12-17 00:40:29,10.3,2020-12-16 00:41:14,10,2020-12-15 00:38:41,10.8
+"united-kingdom-deaths","North West",2020-12-19 00:38:13,8.3,2020-12-18 00:40:14,10.4,2020-12-17 00:40:29,8.9,2020-12-16 00:41:14,10.5,2020-12-15 00:38:41,10.1
+"united-kingdom-deaths","Northern Ireland",2020-12-19 00:38:13,7.9,2020-12-18 00:40:14,6.8,2020-12-17 00:40:29,6.7,2020-12-16 00:41:14,8.4,2020-12-15 00:38:41,7.1
+"united-kingdom-deaths","Scotland",2020-12-19 00:38:13,9.9,2020-12-18 00:40:14,10.3,2020-12-17 00:40:29,11.6,2020-12-16 00:41:14,11,2020-12-15 00:38:41,10.4
+"united-kingdom-deaths","South East",2020-12-19 00:38:13,7.5,2020-12-18 00:40:14,9.7,2020-12-17 00:40:29,7.9,2020-12-16 00:41:14,8.5,2020-12-15 00:38:41,7.8
+"united-kingdom-deaths","South West",2020-12-19 00:38:13,9,2020-12-18 00:40:14,9.2,2020-12-17 00:40:29,9.1,2020-12-16 00:41:14,12.8,2020-12-15 00:38:41,8.4
+"united-kingdom-deaths","United Kingdom",2020-12-19 00:38:13,13.8,2020-12-18 00:40:14,12.9,2020-12-17 00:40:29,13.2,2020-12-16 00:41:14,14.4,2020-12-15 00:38:41,14.1
+"united-kingdom-deaths","Wales",2020-12-19 00:38:13,7.7,2020-12-18 00:40:14,6.7,2020-12-17 00:40:29,7.7,2020-12-16 00:41:14,7.1,2020-12-15 00:38:41,6.9
+"united-kingdom-local","Aberdeen City",2020-12-21 00:44:55,5.9,2020-12-20 23:44:54,29.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Aberdeenshire",2020-12-21 00:44:55,5.2,2020-12-20 23:44:54,57.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Angus",2020-12-21 00:44:55,2.7,2020-12-20 23:44:54,26.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Antrim and Newtownabbey",2020-12-21 00:44:55,6.8,2020-12-20 23:44:54,16.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Ards and North Down",2020-12-21 00:44:55,5.9,2020-12-20 23:44:54,20.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Argyll and Bute",2020-12-21 00:44:55,4.8,2020-12-20 23:44:54,20.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Armagh City, Banbridge and Craigavon",2020-12-21 00:44:55,3.8,2020-12-20 23:44:54,33.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Barking and Dagenham",2020-12-21 00:44:55,10.3,2020-12-20 23:44:54,24.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Barnet",2020-12-21 00:44:55,9.7,2020-12-20 23:44:54,59.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Barnsley",2020-12-21 00:44:55,12.4,2020-12-20 23:44:54,45.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bath and North East Somerset",2020-12-21 00:44:55,10.1,2020-12-20 23:44:54,30.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bedford",2020-12-21 00:44:55,9.8,2020-12-20 23:44:54,38.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Belfast",2020-12-21 00:44:55,7.7,2020-12-20 23:44:54,21.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bexley",2020-12-21 00:44:55,10.9,2020-12-20 23:44:54,39.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Birmingham",2020-12-21 00:44:55,21.7,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Blackburn with Darwen",2020-12-21 00:44:55,8,2020-12-20 23:44:54,27.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Blackpool",2020-12-21 00:44:55,15.1,2020-12-20 23:44:54,49.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Blaenau Gwent",2020-12-21 00:44:55,8.8,2020-12-20 23:44:54,28.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bolton",2020-12-21 00:44:55,12,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bournemouth, Christchurch and Poole",2020-12-21 00:44:55,19,2020-12-20 23:44:54,51.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bracknell Forest",2020-12-21 00:44:55,4.8,2020-12-20 23:44:54,28.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bradford",2020-12-21 00:44:55,15.3,2020-12-20 23:44:54,50.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Brent",2020-12-21 00:44:55,13.8,2020-12-20 23:44:54,38.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bridgend",2020-12-21 00:44:55,6,2020-12-20 23:44:54,25.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Brighton and Hove",2020-12-21 00:44:55,11.7,2020-12-20 23:44:54,27.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bristol, City of",2020-12-21 00:44:55,24.6,2020-12-20 23:44:54,36.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bromley",2020-12-21 00:44:55,12.5,2020-12-20 23:44:54,48,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Buckinghamshire",2020-12-21 00:44:55,9.7,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Bury",2020-12-21 00:44:55,9.5,2020-12-20 23:44:54,55.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Caerphilly",2020-12-21 00:44:55,6.7,2020-12-20 23:44:54,27.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Calderdale",2020-12-21 00:44:55,16.9,2020-12-20 23:44:54,46.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Cambridgeshire",2020-12-21 00:44:55,12.5,2020-12-20 23:44:54,43.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Camden",2020-12-21 00:44:55,10.9,2020-12-20 23:44:54,40.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Cardiff",2020-12-21 00:44:55,5.5,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Carmarthenshire",2020-12-21 00:44:55,5.5,2020-12-20 23:44:54,28.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Causeway Coast and Glens",2020-12-21 00:44:55,3.2,2020-12-20 23:44:54,17.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Central Bedfordshire",2020-12-21 00:44:55,13.4,2020-12-20 23:44:54,43.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Ceredigion",2020-12-21 00:44:55,3.2,2020-12-20 23:44:54,39.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Cheshire East",2020-12-21 00:44:55,11,2020-12-20 23:44:54,45.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Cheshire West and Chester",2020-12-21 00:44:55,19.8,2020-12-20 23:44:54,44.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","City of Edinburgh",2020-12-21 00:44:55,4.4,2020-12-20 23:44:54,29.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Clackmannanshire",2020-12-21 00:44:55,6.1,2020-12-20 23:44:54,20.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Comhairle nan Eilean Siar",2020-12-21 00:44:55,2,2020-12-20 23:44:54,22.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Conwy",2020-12-21 00:44:55,4.4,2020-12-20 23:44:54,24.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Cornwall and Isles of Scilly",2020-12-21 00:44:55,10.5,2020-12-20 23:44:54,35.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","County Durham",2020-12-21 00:44:55,21.1,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Coventry",2020-12-21 00:44:55,13.9,2020-12-20 23:44:54,58.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Croydon",2020-12-21 00:44:55,22.7,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Cumbria",2020-12-21 00:44:55,23.9,2020-12-20 23:44:54,36.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Darlington",2020-12-21 00:44:55,8.3,2020-12-20 23:44:54,59.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Denbighshire",2020-12-21 00:44:55,5.7,2020-12-20 23:44:54,22.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Derby",2020-12-21 00:44:55,16.7,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Derbyshire",2020-12-21 00:44:55,21.6,2020-12-20 23:44:54,52.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Derry City and Strabane",2020-12-21 00:44:55,4.7,2020-12-20 23:44:54,20.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Devon",2020-12-21 00:44:55,16.4,2020-12-20 23:44:54,59.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Doncaster",2020-12-21 00:44:55,10.2,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Dorset",2020-12-21 00:44:55,9.8,2020-12-20 23:44:54,31.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Dudley",2020-12-21 00:44:55,16.8,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Dumfries and Galloway",2020-12-21 00:44:55,3.4,2020-12-20 23:44:54,19.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Dundee City",2020-12-21 00:44:55,4.8,2020-12-20 23:44:54,27.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Ealing",2020-12-21 00:44:55,11.8,2020-12-20 23:44:54,41.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","East Ayrshire",2020-12-21 00:44:55,5.6,2020-12-20 23:44:54,51.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","East Dunbartonshire",2020-12-21 00:44:55,2.8,2020-12-20 23:44:54,18.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","East Lothian",2020-12-21 00:44:55,3.5,2020-12-20 23:44:54,26.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","East Renfrewshire",2020-12-21 00:44:55,2.9,2020-12-20 23:44:54,46.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","East Riding of Yorkshire",2020-12-21 00:44:55,13.9,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","East Sussex",2020-12-21 00:44:55,16.5,2020-12-20 23:44:54,59.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Enfield",2020-12-21 00:44:55,25.6,2020-12-20 23:44:54,38.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Essex",2020-12-21 00:44:55,20.9,2020-12-20 23:44:54,53.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Falkirk",2020-12-21 00:44:55,3.3,2020-12-20 23:44:54,1.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Fermanagh and Omagh",2020-12-21 00:44:55,6,2020-12-20 23:44:54,22.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Fife",2020-12-21 00:44:55,3,2020-12-20 23:44:54,57.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Flintshire",2020-12-21 00:44:55,3.6,2020-12-20 23:44:54,51.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Gateshead",2020-12-21 00:44:55,12.9,2020-12-20 23:44:54,1.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Glasgow City",2020-12-21 00:44:55,3.2,2020-12-20 23:44:54,43.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Gloucestershire",2020-12-21 00:44:55,13.6,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Greenwich",2020-12-21 00:44:55,15,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Gwynedd",2020-12-21 00:44:55,4.1,2020-12-20 23:44:54,45.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Hackney and City of London",2020-12-21 00:44:55,8.6,2020-12-20 23:44:54,46.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Halton",2020-12-21 00:44:55,7.5,2020-12-20 23:44:54,35.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Hammersmith and Fulham",2020-12-21 00:44:55,17.6,2020-12-20 23:44:54,54,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Hampshire",2020-12-21 00:44:55,18.5,2020-12-20 23:44:54,59.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Haringey",2020-12-21 00:44:55,10.2,2020-12-20 23:44:54,46.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Harrow",2020-12-21 00:44:55,15.7,2020-12-20 23:44:54,1.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Hartlepool",2020-12-21 00:44:55,17.2,2020-12-20 23:44:54,43.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Havering",2020-12-21 00:44:55,14.8,2020-12-20 23:44:54,35.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Herefordshire, County of",2020-12-21 00:44:55,13.4,2020-12-20 23:44:54,30.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Hertfordshire",2020-12-21 00:44:55,29.8,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Highland",2020-12-21 00:44:55,1.8,2020-12-20 23:44:54,28.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Hillingdon",2020-12-21 00:44:55,15,2020-12-20 23:44:54,40.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Hounslow",2020-12-21 00:44:55,16.3,2020-12-20 23:44:54,44.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Inverclyde",2020-12-21 00:44:55,3.2,2020-12-20 23:44:54,36.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Isle of Anglesey",2020-12-21 00:44:55,5.7,2020-12-20 23:44:54,33.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Isle of Wight",2020-12-21 00:44:55,7.7,2020-12-20 23:44:54,23.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Islington",2020-12-21 00:44:55,14,2020-12-20 23:44:54,34,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Kensington and Chelsea",2020-12-21 00:44:55,10.8,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Kent",2020-12-21 00:44:55,17.4,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Kingston upon Hull, City of",2020-12-21 00:44:55,17.3,2020-12-20 23:44:54,35.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Kingston upon Thames",2020-12-21 00:44:55,8.4,2020-12-20 23:44:54,46.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Kirklees",2020-12-21 00:44:55,16.8,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Knowsley",2020-12-21 00:44:55,8.6,2020-12-20 23:44:54,36.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Lambeth",2020-12-21 00:44:55,18.7,2020-12-20 23:44:54,35.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Lancashire",2020-12-21 00:44:55,22.2,2020-12-20 23:44:54,1.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Leeds",2020-12-21 00:44:55,17.9,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Leicester",2020-12-21 00:44:55,16.7,2020-12-20 23:44:54,51.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Leicestershire",2020-12-21 00:44:55,17.3,2020-12-20 23:44:54,46.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Lewisham",2020-12-21 00:44:55,12.6,2020-12-20 23:44:54,43.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Lincolnshire",2020-12-21 00:44:55,15.7,2020-12-20 23:44:54,58.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Lisburn and Castlereagh",2020-12-21 00:44:55,4.8,2020-12-20 23:44:54,31.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Liverpool",2020-12-21 00:44:55,15.7,2020-12-20 23:44:54,47.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Luton",2020-12-21 00:44:55,5.5,2020-12-20 23:44:54,31.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Manchester",2020-12-21 00:44:55,17.3,2020-12-20 23:44:54,1.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Medway",2020-12-21 00:44:55,6.3,2020-12-20 23:44:54,49.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Merthyr Tydfil",2020-12-21 00:44:55,6.4,2020-12-20 23:44:54,41.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Merton",2020-12-21 00:44:55,12,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Mid and East Antrim",2020-12-21 00:44:55,3.7,2020-12-20 23:44:54,32.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Mid Ulster",2020-12-21 00:44:55,4.2,2020-12-20 23:44:54,15,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Middlesbrough",2020-12-21 00:44:55,13.6,2020-12-20 23:44:54,38.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Midlothian",2020-12-21 00:44:55,2.4,2020-12-20 23:44:54,24.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Milton Keynes",2020-12-21 00:44:55,9.4,2020-12-20 23:44:54,43.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Monmouthshire",2020-12-21 00:44:55,3.3,2020-12-20 23:44:54,29,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Moray",2020-12-21 00:44:55,2.4,2020-12-20 23:44:54,28.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Neath Port Talbot",2020-12-21 00:44:55,5,2020-12-20 23:44:54,38.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Newcastle upon Tyne",2020-12-21 00:44:55,29,2020-12-20 23:44:54,47.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Newham",2020-12-21 00:44:55,11.3,2020-12-20 23:44:54,53.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Newport",2020-12-21 00:44:55,2.9,2020-12-20 23:44:54,25.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Newry, Mourne and Down",2020-12-21 00:44:55,5.5,2020-12-20 23:44:54,19.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Norfolk",2020-12-21 00:44:55,14.2,2020-12-20 23:44:54,34,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","North Ayrshire",2020-12-21 00:44:55,3.5,2020-12-20 23:44:54,29,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","North East Lincolnshire",2020-12-21 00:44:55,15.1,2020-12-20 23:44:54,35.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","North Lanarkshire",2020-12-21 00:44:55,5.8,2020-12-20 23:44:54,48.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","North Lincolnshire",2020-12-21 00:44:55,16.3,2020-12-20 23:44:54,29.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","North Somerset",2020-12-21 00:44:55,10.8,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","North Tyneside",2020-12-21 00:44:55,10.9,2020-12-20 23:44:54,41.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","North Yorkshire",2020-12-21 00:44:55,14.7,2020-12-20 23:44:54,52.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Northamptonshire",2020-12-21 00:44:55,19,2020-12-20 23:44:54,38.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Northumberland",2020-12-21 00:44:55,17.3,2020-12-20 23:44:54,49.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Nottingham",2020-12-21 00:44:55,30.2,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Nottinghamshire",2020-12-21 00:44:55,27.6,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Oldham",2020-12-21 00:44:55,13.2,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Orkney Islands",2020-12-21 00:44:55,1.8,2020-12-20 23:44:54,18.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Oxfordshire",2020-12-21 00:44:55,13.8,2020-12-20 23:44:54,38.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Pembrokeshire",2020-12-21 00:44:55,3.5,2020-12-20 23:44:54,37.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Perth and Kinross",2020-12-21 00:44:55,3.1,2020-12-20 23:44:54,52.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Peterborough",2020-12-21 00:44:55,8.8,2020-12-20 23:44:54,36.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Plymouth",2020-12-21 00:44:55,11,2020-12-20 23:44:54,31.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Portsmouth",2020-12-21 00:44:55,15.3,2020-12-20 23:44:54,27.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Powys",2020-12-21 00:44:55,4,2020-12-20 23:44:54,26.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Reading",2020-12-21 00:44:55,6.6,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Redbridge",2020-12-21 00:44:55,8,2020-12-20 23:44:54,40.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Redcar and Cleveland",2020-12-21 00:44:55,13.4,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Renfrewshire",2020-12-21 00:44:55,5,2020-12-20 23:44:54,29.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Rhondda Cynon Taf",2020-12-21 00:44:55,4.6,2020-12-20 23:44:54,47.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Richmond upon Thames",2020-12-21 00:44:55,12.5,2020-12-20 23:44:54,1.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Rochdale",2020-12-21 00:44:55,14.4,2020-12-20 23:44:54,46.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Rotherham",2020-12-21 00:44:55,9.2,2020-12-20 23:44:54,56.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Rutland",2020-12-21 00:44:55,7.2,2020-12-20 23:44:54,25,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Salford",2020-12-21 00:44:55,12.4,2020-12-20 23:44:54,38.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Sandwell",2020-12-21 00:44:55,11.4,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Scottish Borders",2020-12-21 00:44:55,4.8,2020-12-20 23:44:54,1.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Sefton",2020-12-21 00:44:55,13.4,2020-12-20 23:44:54,37.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Sheffield",2020-12-21 00:44:55,15.6,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Shetland Islands",2020-12-21 00:44:55,1.6,2020-12-20 23:44:54,19.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Shropshire",2020-12-21 00:44:55,9.2,2020-12-20 23:44:54,43.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Slough",2020-12-21 00:44:55,11.7,2020-12-20 23:44:54,33,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Solihull",2020-12-21 00:44:55,9.2,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Somerset",2020-12-21 00:44:55,14.1,2020-12-20 23:44:54,37.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","South Ayrshire",2020-12-21 00:44:55,3.6,2020-12-20 23:44:54,22,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","South Gloucestershire",2020-12-21 00:44:55,13.4,2020-12-20 23:44:54,1.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","South Lanarkshire",2020-12-21 00:44:55,5.9,2020-12-20 23:44:54,27.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","South Tyneside",2020-12-21 00:44:55,18.2,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Southampton",2020-12-21 00:44:55,10.4,2020-12-20 23:44:54,51.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Southend-on-Sea",2020-12-21 00:44:55,15.5,2020-12-20 23:44:54,39.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Southwark",2020-12-21 00:44:55,22,2020-12-20 23:44:54,29.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","St. Helens",2020-12-21 00:44:55,6.6,2020-12-20 23:44:54,41,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Staffordshire",2020-12-21 00:44:55,24,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Stirling",2020-12-21 00:44:55,3.2,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Stockport",2020-12-21 00:44:55,10,2020-12-20 23:44:54,1.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Stockton-on-Tees",2020-12-21 00:44:55,12.4,2020-12-20 23:44:54,25.8,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Stoke-on-Trent",2020-12-21 00:44:55,8,2020-12-20 23:44:54,47.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Suffolk",2020-12-21 00:44:55,8.5,2020-12-20 23:44:54,38.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Sunderland",2020-12-21 00:44:55,15.5,2020-12-20 23:44:54,41.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Surrey",2020-12-21 00:44:55,24.5,2020-12-20 23:44:54,1.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Sutton",2020-12-21 00:44:55,10.7,2020-12-20 23:44:54,33.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Swansea",2020-12-21 00:44:55,3.6,2020-12-20 23:44:54,29.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Swindon",2020-12-21 00:44:55,7.2,2020-12-20 23:44:54,33.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Tameside",2020-12-21 00:44:55,10.7,2020-12-20 23:44:54,58,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Telford and Wrekin",2020-12-21 00:44:55,12.8,2020-12-20 23:44:54,39.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Thurrock",2020-12-21 00:44:55,16.3,2020-12-20 23:44:54,38.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Torbay",2020-12-21 00:44:55,9.2,2020-12-20 23:44:54,37.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Torfaen",2020-12-21 00:44:55,5.8,2020-12-20 23:44:54,32.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Tower Hamlets",2020-12-21 00:44:55,15.7,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Trafford",2020-12-21 00:44:55,12.6,2020-12-20 23:44:54,25.9,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Vale of Glamorgan",2020-12-21 00:44:55,4.7,2020-12-20 23:44:54,40,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wakefield",2020-12-21 00:44:55,12.1,2020-12-20 23:44:54,46.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Walsall",2020-12-21 00:44:55,12.3,2020-12-20 23:44:54,44.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Waltham Forest",2020-12-21 00:44:55,10,2020-12-20 23:44:54,1.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wandsworth",2020-12-21 00:44:55,33.1,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Warrington",2020-12-21 00:44:55,13.9,2020-12-20 23:44:54,42.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Warwickshire",2020-12-21 00:44:55,14.2,2020-12-20 23:44:54,1.2,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","West Berkshire",2020-12-21 00:44:55,17.4,2020-12-20 23:44:54,33.5,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","West Dunbartonshire",2020-12-21 00:44:55,3.6,2020-12-20 23:44:54,27.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","West Lothian",2020-12-21 00:44:55,2.1,2020-12-20 23:44:54,36,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","West Sussex",2020-12-21 00:44:55,16.3,2020-12-20 23:44:54,53.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Westminster",2020-12-21 00:44:55,9.5,2020-12-20 23:44:54,1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wigan",2020-12-21 00:44:55,14.7,2020-12-20 23:44:54,39.6,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wiltshire",2020-12-21 00:44:55,11.9,2020-12-20 23:44:54,41.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Windsor and Maidenhead",2020-12-21 00:44:55,10.7,2020-12-20 23:44:54,55.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wirral",2020-12-21 00:44:55,10,2020-12-20 23:44:54,42.7,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wokingham",2020-12-21 00:44:55,9.6,2020-12-20 23:44:54,27.4,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wolverhampton",2020-12-21 00:44:55,14.8,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Worcestershire",2020-12-21 00:44:55,13.4,2020-12-20 23:44:54,1.1,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","Wrexham",2020-12-21 00:44:55,3.9,2020-12-20 23:44:54,41.3,NA,NA,NA,NA,NA,NA
+"united-kingdom-local","York",2020-12-21 00:44:55,9.8,2020-12-20 23:44:54,47.1,NA,NA,NA,NA,NA,NA
 "united-states","",2020-09-26 01:28:13,-1,NA,NA,NA,NA,NA,NA,NA,NA
 "united-states","Alabama",2020-12-21 01:48:04,4.4,2020-12-20 01:25:56,5,2020-12-19 01:27:26,4.3,2020-12-18 01:28:28,6.1,2020-12-17 01:40:51,4.8
 "united-states","Alaska",2020-12-21 01:48:04,9.6,2020-12-20 01:25:56,9.9,2020-12-19 01:27:26,7.5,2020-12-18 01:28:28,7.8,2020-12-17 01:40:51,15.9
