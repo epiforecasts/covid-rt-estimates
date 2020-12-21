@@ -24,7 +24,7 @@ PublicationMetadata <- R6::R6Class("PublicationMetadata",
                                                            country = NA) {
                                        self$title <- title
                                        self$description <- description
-                                       if (breakdown_unit %in% c("continent", "country", "region", "state")) {
+                                       if (breakdown_unit %in% c("continent", "country", "region", "state", "authority")) {
                                          self$breakdown_unit <- breakdown_unit
                                        }else {
                                          stop(paste("invalid breakdown unit", breakdown_unit))
