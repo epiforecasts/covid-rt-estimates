@@ -20,7 +20,7 @@ DATASETS <- list(
                                   cases <- add_uk(cases)
                                   return(cases) },
                                 data_args = list(nhsregions = TRUE),
-                                truncation = 5),
+                                truncation = 4),
   "united-kingdom-deaths" = Region$new(name = "united-kingdom-deaths",
                                        publication_metadata = PublicationMetadata$new(
                                          title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Deaths",
@@ -59,7 +59,7 @@ DATASETS <- list(
                                       cases_subregion_source = "region_level_2",
                                       covid_regional_data_identifier = "UK",
                                       data_args = list(include_level_2_regions = TRUE),
-                                      truncation = 5),
+                                      truncation = 4),
   "united-states" = Region$new(name = "united-states",
                                publication_metadata = PublicationMetadata$new(
                                  title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United States of America Based on Test Results",
