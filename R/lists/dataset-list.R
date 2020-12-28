@@ -24,7 +24,7 @@ DATASETS <- list(
   "united-kingdom-deaths" = Region$new(name = "united-kingdom-deaths",
                                        publication_metadata = PublicationMetadata$new(
                                          title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Deaths",
-                                         description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the United Kingdom. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
+                                         description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the United Kingdom.",
                                          breakdown = "region",
                                          country = "United Kingdom"),
                                        covid_regional_data_identifier = "UK",
@@ -40,7 +40,7 @@ DATASETS <- list(
   "united-kingdom-admissions" = Region$new(name = "united-kingdom-admissions",
                                            publication_metadata = PublicationMetadata$new(
                                              title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Hospital Admissions",
-                                             description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the United Kingdom. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
+                                             description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in the United Kingdom.",
                                              breakdown = "region",
                                              country = "United Kingdom"),
                                            covid_regional_data_identifier = "UK",
@@ -59,6 +59,36 @@ DATASETS <- list(
                                       cases_subregion_source = "region_level_2",
                                       covid_regional_data_identifier = "UK",
                                       data_args = list(include_level_2_regions = TRUE),
+                                      truncation = 4),
+  "united-kingdom-local-admissions" = Region$new(name = "united-kingdom-local-admissions",
+                                      publication_metadata = PublicationMetadata$new(
+                                        title = "Local Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Hospital Admissions",
+                                        description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting at the local authority level in the United Kingdom.",
+                                        breakdown = "authority",
+                                        country = "United Kingdom"),
+                                      cases_subregion_source = "region_level_2",
+                                      covid_regional_data_identifier = "UK",
+                                      data_args = list(include_level_2_regions = TRUE),
+                                      folder_name = "united-kingdom-local",
+                                      dataset_folder_name = "admissions",
+                                      case_modifier = function(admissions) {
+                                        admissions <- admissions[, cases_new := hosp_new]
+                                        return(admissions)}),
+  "united-kingdom-local-deaths" = Region$new(name = "united-kingdom-local-deaths",
+                                      publication_metadata = PublicationMetadata$new(
+                                        title = "Local Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Deaths",
+                                        description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting at the local authority level in the United Kingdom.",
+                                        breakdown = "authority",
+                                        country = "United Kingdom"),
+                                      cases_subregion_source = "region_level_2",
+                                      covid_regional_data_identifier = "UK",
+                                      data_args = list(include_level_2_regions = TRUE),
+                                      folder_name = "united-kingdom-local",
+                                      dataset_folder_name = "deaths",
+                                      reporting_delay = readRDS(here::here("data", "cocin_onset_to_death_delay.rds")),
+                                      case_modifier = function(deaths) {
+                                        deaths <- deaths[, cases_new := deaths_new]
+                                        return(deaths) },
                                       truncation = 4),
   "united-states" = Region$new(name = "united-states",
                                publication_metadata = PublicationMetadata$new(
