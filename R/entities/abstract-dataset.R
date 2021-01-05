@@ -25,7 +25,7 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                                                 #' @field truncation Number of days to truncate from the end of the data
                                  truncation = 0,
                                                                 #' @field data_window Number of weeks to use when estimating (referenced from most recent date)
-                                 data_window = 12,
+                                 data_window = 16,
                                                                 #' @field stable Boolean indicating if dataset is stable
                                  stable = TRUE,
                                                                 #' @field target_folder for individual location results
