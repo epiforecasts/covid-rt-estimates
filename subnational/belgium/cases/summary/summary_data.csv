@@ -1,9 +1,9 @@
-region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases
-Wallonia,637 (218 -- 2072),637,843,774,218,413,538,760,1033,2072,New confirmed cases by infection date,Stable
-Brussels,521 (188 -- 1613),521,663,570,188,339,444,606,798,1613,New confirmed cases by infection date,Stable
-Flanders,338 (105 -- 1024),338,423,327,105,214,286,403,529,1024,New confirmed cases by infection date,Likely decreasing
-Unknown,50 (23 -- 125),50,59,36,23,36,44,57,71,125,New confirmed cases by infection date,Stable
-Brussels,1.4 (0.89 -- 2.2),1.4,1.5,0.41,0.89,1.2,1.3,1.5,1.7,2.2,Effective reproduction no.,Stable
-Wallonia,1.2 (0.71 -- 2),1.2,1.2,0.41,0.71,0.97,1.1,1.3,1.5,2,Effective reproduction no.,Stable
-Unknown,1.1 (0.82 -- 1.6),1.1,1.2,0.26,0.82,0.99,1.1,1.2,1.3,1.6,Effective reproduction no.,Stable
-Flanders,0.72 (0.41 -- 1.2),0.72,0.74,0.23,0.41,0.59,0.67,0.78,0.87,1.2,Effective reproduction no.,Likely decreasing
+region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases,prob_control
+Wallonia,540 (180 -- 1662),540,687,554,180,349,464,635,845,1662,New confirmed cases by infection date,Stable,0.43
+Flanders,305 (85 -- 890),305,381,295,85,189,256,367,486,890,New confirmed cases by infection date,Likely decreasing,0.9
+Brussels,112 (30 -- 331),112,138,102,30,69,95,134,178,331,New confirmed cases by infection date,Likely decreasing,0.79
+Unknown,51 (22 -- 126),51,60,34,22,37,45,58,73,126,New confirmed cases by infection date,Likely increasing,0.33
+Unknown,1.1 (0.78 -- 1.6),1.1,1.1,0.24,0.78,0.95,1,1.1,1.3,1.6,Effective reproduction no.,Likely increasing,0.33
+Wallonia,1.1 (0.63 -- 1.7),1.1,1.1,0.34,0.63,0.87,0.98,1.1,1.3,1.7,Effective reproduction no.,Stable,0.43
+Brussels,0.81 (0.41 -- 1.2),0.81,0.81,0.25,0.41,0.64,0.75,0.87,0.97,1.2,Effective reproduction no.,Likely decreasing,0.79
+Flanders,0.69 (0.35 -- 1.1),0.69,0.7,0.23,0.35,0.54,0.63,0.75,0.84,1.1,Effective reproduction no.,Likely decreasing,0.9
