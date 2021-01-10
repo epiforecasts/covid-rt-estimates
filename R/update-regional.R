@@ -145,7 +145,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       summary_dir = location$summary_dir,
       region_scale = location$region_scale,
       all_regions = "Region" %in% class(location),
-      return_output = FALSE), silent = TRUE)
+      return_output = FALSE,
+      max_plot = 2), silent = TRUE)
     out <- list()
     futile.logger::flog.trace("reading runtimes.csv")
     timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
