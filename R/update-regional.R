@@ -133,7 +133,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       do.call(regional_epinow, c(list(reported_cases = cases,
                                  generation_time = location$generation_time,
                                  delays = delay_opts(location$incubation_period, location$reporting_delay),
-                                 target_folder = location$target_folder),
+                                 target_folder = location$target_folder,
+                                 summary_args = list(max_plot = 2)),
                                  location$regional_epinow_opts)), silent = TRUE)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
