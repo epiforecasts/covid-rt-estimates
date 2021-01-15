@@ -42,7 +42,8 @@ Suggests:
 Remotes:
   joeHickson/futile.logger,
   epiforecasts/EpiNow2@v1.3.3,
-  epiforecasts/covidregionaldata@v0.8.1
+  epiforecasts/covidregionaldata@v0.8.3
+  epiforecasts/covid19.england.hospitalisations@package
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Biarch: true

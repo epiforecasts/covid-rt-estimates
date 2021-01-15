@@ -76,6 +76,22 @@ DATASETS <- list(
                                         deaths <- deaths[, cases_new := deaths_new]
                                         return(deaths) },
                                       truncation = 4),
+  "united-kingdom-local-admissions" = Region$new(name = "united-kingdom-local-admissions",
+                                             publication_metadata = PublicationMetadata$new(
+                                               title = "Local Estimates of the Covid 19 Reproduction Number (R) for the United Kingdom Based on Admissions",
+                                               description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting at the local authority level in the United Kingdom.",
+                                               breakdown = "authority",
+                                               country = "United Kingdom"),
+                                             folder_name = "united-kingdom-local",
+                                             dataset_folder_name = "admissions",
+                                             cases_subregion_source = "region_level_2",
+                                             data = function() {
+                                               admissions <- covid19.england.hospitalisations::get_admissions(level = "utla")
+                                               admissions <- data.table::setDT(admissions)
+                                               admissions <- admissions[, .(region_level_2 = geo_name, date, cases_new = admissions)]
+                                               admissions <- admissions[!is.na(region_level_2)]
+                                               return(admissions)
+                                             }),
   "united-states" = Region$new(name = "united-states",
                                publication_metadata = PublicationMetadata$new(
                                  title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for the United States of America Based on Test Results",
