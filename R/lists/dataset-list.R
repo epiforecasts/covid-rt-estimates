@@ -180,6 +180,15 @@ DATASETS <- list(
                          description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in Italy. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
                          breakdown = "state",
                          country = "Italy")),
+   "south-africa" = Region$new(name = "south-africa",
+                        publication_metadata = PublicationMetadata$new(
+                         title = "National and Subnational Estimates of the Covid 19 Reproduction Number (R) for South Africa Based on Test Results",
+                         description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting both nationally and subnationally in South Africa. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
+                         breakdown = "province",
+                         case_modifier = function(cases) {
+                                  cases <- cases[!is.na(region_level_1)]
+                                  return(cases) },
+                         country = "South Africa")),
   "test" = Region$new(name = "test",
                       covid_regional_data_identifier = "belgium",
                       cases_subregion_source = "region",
