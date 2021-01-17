@@ -1,405 +1,405 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases,prob_control
-United States,178753 (82857 -- 316944),178753,186891,72866,82857,132701,160882,198878,232280,316944,New confirmed cases by infection date,Likely decreasing,0.82
-Brazil,74615 (45214 -- 138161),74615,81296,31164,45214,60517,68751,81335,94740,138161,New confirmed cases by infection date,Likely increasing,0.088
-Lesotho,65361 (1274 -- 901602),65361,220137,540338,1274,12111,35278,116573,240917,901602,New confirmed cases by infection date,Increasing,0.012
-United Kingdom,29809 (14010 -- 52963),29809,31312,12119,14010,22803,27225,32860,38119,52963,New confirmed cases by infection date,Likely decreasing,0.94
-Spain,27373 (14000 -- 49455),27373,28987,11389,14000,20899,24784,30055,34969,49455,New confirmed cases by infection date,Likely increasing,0.35
-France,22970 (8626 -- 63145),22970,27680,18513,8626,15569,19822,26635,35238,63145,New confirmed cases by infection date,Likely increasing,0.33
-Colombia,21349 (11825 -- 40894),21349,23359,9369,11825,17777,19853,23084,26990,40894,New confirmed cases by infection date,Likely increasing,0.22
-Germany,20984 (11491 -- 35758),20984,21983,7550,11491,16745,19263,22953,26143,35758,New confirmed cases by infection date,Stable,0.43
-South Africa,18652 (11345 -- 26987),18652,18900,4731,11345,15733,17488,19967,22029,26987,New confirmed cases by infection date,Stable,0.58
-Portugal,18126 (9816 -- 30642),18126,18902,6633,9816,14292,16594,19718,22327,30642,New confirmed cases by infection date,Likely increasing,0.067
-Argentina,17198 (11807 -- 24000),17198,17410,3750,11807,14858,16295,18051,19624,24000,New confirmed cases by infection date,Likely increasing,0.07
-Mexico,17085 (10511 -- 35376),17085,19297,8502,10511,13655,15614,18884,22427,35376,New confirmed cases by infection date,Likely increasing,0.11
+United States,146293 (66754 -- 277126),146293,156054,64791,66754,107405,131032,162635,194705,277126,New confirmed cases by infection date,Likely decreasing,0.89
+Brazil,73291 (45513 -- 131509),73291,79111,28491,45513,59805,67465,79911,91588,131509,New confirmed cases by infection date,Likely increasing,0.096
+United Kingdom,33261 (17854 -- 59668),33261,35315,13522,17854,25893,30147,36514,42488,59668,New confirmed cases by infection date,Likely decreasing,0.9
+Spain,22731 (10380 -- 42292),22731,24140,10132,10380,17064,20508,25268,29648,42292,New confirmed cases by infection date,Stable,0.5
+France,22425 (8364 -- 59498),22425,26899,19099,8364,15366,19233,25560,32713,59498,New confirmed cases by infection date,Likely increasing,0.36
+Lesotho,21616 (829 -- 1103570),21616,214591,639198,829,6626,13756,36067,109881,1103570,New confirmed cases by infection date,Increasing,0.031
+Colombia,18484 (8027 -- 26118),18484,18198,5490,8027,15520,17558,19446,21116,26118,New confirmed cases by infection date,Likely increasing,0.3
+Mexico,16941 (10570 -- 32924),16941,18748,7543,10570,13633,15574,18524,21705,32924,New confirmed cases by infection date,Likely increasing,0.12
+Germany,16868 (8793 -- 28694),16868,17605,6273,8793,13294,15535,18427,21095,28694,New confirmed cases by infection date,Likely decreasing,0.65
+Portugal,16625 (8633 -- 28740),16625,17376,6258,8633,13146,15351,18090,20608,28740,New confirmed cases by infection date,Likely increasing,0.11
+Argentina,16351 (11001 -- 22747),16351,16517,3623,11001,14030,15420,17169,18584,22747,New confirmed cases by infection date,Likely increasing,0.11
 Ireland,16086 (4209 -- 37533),16086,17936,10773,4209,10201,13809,18600,23488,37533,New confirmed cases by infection date,Likely increasing,0.25
 Russia,15827 (12492 -- 19130),15827,15815,2019,12492,14443,15272,16378,17155,19130,New confirmed cases by infection date,,0.36
-Italy,15444 (9243 -- 22606),15444,15581,4050,9243,12809,14411,16405,18109,22606,New confirmed cases by infection date,Likely decreasing,0.72
-India,15425 (11400 -- 19491),15425,15441,2509,11400,13848,14830,16055,17025,19491,New confirmed cases by infection date,Likely decreasing,0.82
-Indonesia,13758 (10999 -- 18172),13758,14096,2271,10999,12538,13274,14325,15334,18172,New confirmed cases by infection date,Increasing,0.0085
-Israel,10473 (5080 -- 19674),10473,11223,4876,5080,7917,9426,11576,13480,19674,New confirmed cases by infection date,Likely increasing,0.38
-Canada,8317 (6477 -- 10755),8317,8429,1362,6477,7519,7997,8622,9187,10755,New confirmed cases by infection date,Likely increasing,0.29
-Japan,7302 (4108 -- 11377),7302,7529,2217,4108,6054,6698,7937,8995,11377,New confirmed cases by infection date,Stable,0.48
-Ukraine,7241 (5210 -- 11854),7241,7744,2234,5210,6274,6854,7712,8682,11854,New confirmed cases by infection date,Likely increasing,0.11
-Poland,7171 (4135 -- 12787),7171,7674,2798,4135,5765,6619,7831,9043,12787,New confirmed cases by infection date,Likely decreasing,0.68
-Lebanon,6896 (4263 -- 9522),6896,6885,1593,4263,5831,6460,7296,7924,9522,New confirmed cases by infection date,Likely increasing,0.17
-Chile,6234 (5120 -- 7858),6234,6319,855,5120,5735,6041,6440,6780,7858,New confirmed cases by infection date,Increasing,0.002
-Czechia,5919 (2248 -- 13049),5919,6578,3510,2248,4067,5111,6766,8388,13049,New confirmed cases by infection date,Likely decreasing,0.88
+Indonesia,15094 (11822 -- 20222),15094,15458,2584,11822,13647,14544,15750,16924,20222,New confirmed cases by infection date,Increasing,0.0078
+South Africa,14846 (7999 -- 22489),14846,14978,4384,7999,11926,13733,15887,17711,22489,New confirmed cases by infection date,Likely decreasing,0.82
+India,13660 (9636 -- 17423),13660,13618,2382,9636,12090,13091,14241,15145,17423,New confirmed cases by infection date,Likely decreasing,0.94
+Italy,12446 (6784 -- 19359),12446,12651,3813,6784,9955,11460,13396,14983,19359,New confirmed cases by infection date,Likely decreasing,0.87
+Israel,8994 (4248 -- 16809),8994,9594,4042,4248,6843,8115,9919,11702,16809,New confirmed cases by infection date,Stable,0.51
+Ukraine,8977 (6192 -- 14879),8977,9534,2767,6192,7622,8443,9557,10787,14879,New confirmed cases by infection date,Increasing,0.026
+Canada,8204 (6299 -- 10491),8204,8295,1337,6299,7438,7922,8516,9080,10491,New confirmed cases by infection date,Likely increasing,0.32
+Lebanon,7104 (4670 -- 9711),7104,7142,1550,4670,6070,6719,7517,8164,9711,New confirmed cases by infection date,Likely increasing,0.15
+Peru,6995 (3907 -- 15150),6995,7939,3897,3907,5329,6279,7776,9393,15150,New confirmed cases by infection date,Increasing,0.002
+Poland,6786 (3575 -- 11888),6786,7174,2669,3575,5347,6232,7358,8570,11888,New confirmed cases by infection date,Likely decreasing,0.7
+Japan,6157 (2846 -- 10043),6157,6260,2199,2846,4684,5607,6751,7679,10043,New confirmed cases by infection date,Likely decreasing,0.66
+Chile,5989 (4909 -- 7390),5989,6042,757,4909,5535,5810,6161,6487,7390,New confirmed cases by infection date,Increasing,0.0068
 Netherlands,5466 (2635 -- 11876),5466,6107,3095,2635,4054,4871,6091,7308,11876,New confirmed cases by infection date,,0.55
-United Arab Emirates,5255 (3465 -- 7207),5255,5296,1147,3465,4497,4974,5565,6055,7207,New confirmed cases by infection date,Likely increasing,0.089
-Peru,4811 (2896 -- 9745),4811,5379,2516,2896,3783,4364,5311,6283,9745,New confirmed cases by infection date,Increasing,0.006
+Czechia,5185 (1939 -- 11558),5185,5777,3251,1939,3510,4518,5936,7195,11558,New confirmed cases by infection date,Likely decreasing,0.91
+United Arab Emirates,4715 (3042 -- 6598),4715,4750,1077,3042,4002,4448,4993,5440,6598,New confirmed cases by infection date,Likely increasing,0.19
 Turkey,4662 (1219 -- 14760),4662,5861,4730,1219,2818,3872,5565,7385,14760,New confirmed cases by infection date,,0.54
-Malaysia,4517 (2809 -- 7744),4517,4798,1597,2809,3700,4201,4887,5549,7744,New confirmed cases by infection date,Likely increasing,0.078
-Sweden,4445 (2476 -- 8197),4445,4775,1866,2476,3504,4056,4889,5643,8197,New confirmed cases by infection date,Likely decreasing,0.66
+Malaysia,4568 (2807 -- 7464),4568,4805,1535,2807,3771,4263,4904,5598,7464,New confirmed cases by infection date,Likely increasing,0.077
+Zambia,4305 (1615 -- 12341),4305,5401,4430,1615,2954,3725,5020,6442,12341,New confirmed cases by infection date,Increasing,0.024
 Iran,4300 (2826 -- 7547),4300,4641,1587,2826,3585,3984,4654,5306,7547,New confirmed cases by infection date,,0.41
-Zambia,4172 (1631 -- 11401),4172,5168,3851,1631,2861,3632,4895,6339,11401,New confirmed cases by infection date,Increasing,0.013
-Tunisia,3837 (2186 -- 7240),3837,4149,1650,2186,3037,3511,4191,4878,7240,New confirmed cases by infection date,Likely increasing,0.11
-Aruba,3808 (681 -- 30249),3808,9821,72394,681,1827,2848,5053,8185,30249,New confirmed cases by infection date,Increasing,0.024
-Romania,3745 (2370 -- 6018),3745,3902,1144,2370,3128,3487,4006,4485,6018,New confirmed cases by infection date,Stable,0.48
-Congo - Brazzaville,3386 (48 -- 531097),3386,170388,1002110,48,617,1588,7113,29357,531097,New confirmed cases by infection date,Likely increasing,0.31
-Panama,3382 (2453 -- 4564),3382,3441,648,2453,3015,3237,3547,3820,4564,New confirmed cases by infection date,Stable,0.54
-Pakistan,3357 (2347 -- 4757),3357,3428,751,2347,2905,3174,3542,3866,4757,New confirmed cases by infection date,Likely increasing,0.089
-Slovakia,2804 (1241 -- 6324),2804,3193,1869,1241,2021,2503,3143,3831,6324,New confirmed cases by infection date,Stable,0.53
-Zimbabwe,2677 (816 -- 7550),2677,3238,2372,816,1728,2300,3143,4077,7550,New confirmed cases by infection date,Likely increasing,0.14
+Tunisia,4172 (2389 -- 7502),4172,4468,1710,2389,3340,3818,4545,5190,7502,New confirmed cases by infection date,Likely increasing,0.087
+Sweden,3732 (2015 -- 6701),3732,3972,1577,2015,2933,3412,4063,4745,6701,New confirmed cases by infection date,Likely decreasing,0.78
+Romania,3360 (2086 -- 5225),3360,3459,968,2086,2812,3140,3595,3979,5225,New confirmed cases by infection date,Likely decreasing,0.61
+Pakistan,3087 (2136 -- 4460),3087,3165,713,2136,2672,2929,3266,3581,4460,New confirmed cases by infection date,Likely increasing,0.17
+Panama,3070 (2146 -- 4181),3070,3109,624,2146,2681,2925,3219,3484,4181,New confirmed cases by infection date,Likely decreasing,0.69
 Egypt,2654 (1460 -- 3690),2654,2631,668,1460,2210,2496,2821,3077,3690,New confirmed cases by infection date,Increasing,0.045
-Philippines,2206 (1521 -- 4115),2206,2446,890,1521,1829,2041,2420,2816,4115,New confirmed cases by infection date,Increasing,0.032
-Malawi,2112 (662 -- 7562),2112,2920,2940,662,1341,1786,2539,3468,7562,New confirmed cases by infection date,Increasing,0.015
-Nigeria,2079 (963 -- 4129),2079,2250,1045,963,1574,1870,2301,2701,4129,New confirmed cases by infection date,Likely increasing,0.29
-Mozambique,2054 (1015 -- 4682),2054,2374,1341,1015,1532,1831,2311,2854,4682,New confirmed cases by infection date,Increasing,0.0048
-Belarus,1963 (1487 -- 2854),1963,2042,434,1487,1753,1885,2063,2251,2854,New confirmed cases by infection date,Likely increasing,0.34
-Bolivia,1941 (998 -- 3435),1941,2060,843,998,1482,1784,2114,2468,3435,New confirmed cases by infection date,Stable,0.49
-Dominican Republic,1830 (1263 -- 2868),1830,1906,512,1263,1566,1718,1931,2134,2868,New confirmed cases by infection date,Likely increasing,0.07
-Switzerland,1779 (673 -- 4730),1779,2123,1395,673,1193,1535,2068,2643,4730,New confirmed cases by infection date,Likely decreasing,0.75
-Ecuador,1766 (857 -- 4097),1766,2042,1231,857,1310,1574,2000,2442,4097,New confirmed cases by infection date,Likely increasing,0.091
-Georgia,1748 (849 -- 3749),1748,1955,1007,849,1291,1558,1954,2348,3749,New confirmed cases by infection date,Likely increasing,0.22
-Serbia,1688 (913 -- 3086),1688,1813,731,913,1309,1531,1852,2150,3086,New confirmed cases by infection date,Likely decreasing,0.63
-Guatemala,1437 (770 -- 3265),1437,1655,882,770,1077,1286,1609,1960,3265,New confirmed cases by infection date,Increasing,0.02
-Honduras,1393 (699 -- 3860),1393,1729,1264,699,1004,1215,1578,2011,3860,New confirmed cases by infection date,Increasing,0.048
-Paraguay,1392 (885 -- 2494),1392,1498,529,885,1137,1291,1513,1726,2494,New confirmed cases by infection date,Likely increasing,0.053
-Hungary,1363 (532 -- 2921),1363,1503,780,532,979,1206,1532,1845,2921,New confirmed cases by infection date,Likely decreasing,0.67
-Austria,1319 (656 -- 2380),1319,1401,561,656,1028,1208,1440,1685,2380,New confirmed cases by infection date,Likely decreasing,0.85
-Mayotte,1194 (39 -- 81080),1194,18620,74758,39,123,467,2745,8869,81080,New confirmed cases by infection date,Likely increasing,0.1
-Slovenia,1114 (334 -- 2908),1114,1306,860,334,695,936,1317,1696,2908,New confirmed cases by infection date,Likely decreasing,0.83
-Cuba,1109 (492 -- 3085),1109,1387,1050,492,798,974,1284,1636,3085,New confirmed cases by infection date,Likely increasing,0.058
-Costa Rica,1071 (699 -- 1760),1071,1128,337,699,903,1000,1143,1292,1760,New confirmed cases by infection date,Stable,0.4
-Uruguay,1014 (664 -- 1656),1014,1071,323,664,858,956,1086,1218,1656,New confirmed cases by infection date,Likely increasing,0.16
-Norway,1003 (386 -- 2186),1003,1107,590,386,706,883,1127,1372,2186,New confirmed cases by infection date,Stable,0.51
-Latvia,997 (659 -- 1420),997,1013,238,659,859,944,1049,1144,1420,New confirmed cases by infection date,Stable,0.41
-Albania,857 (453 -- 1460),857,895,312,453,685,783,932,1070,1460,New confirmed cases by infection date,Likely increasing,0.24
-Jordan,857 (527 -- 1329),857,886,254,527,716,802,919,1025,1329,New confirmed cases by infection date,Likely decreasing,0.83
+Slovakia,2291 (932 -- 5437),2291,2647,1525,932,1641,2045,2629,3243,5437,New confirmed cases by infection date,Likely decreasing,0.65
+Philippines,2278 (1581 -- 4015),2278,2468,832,1581,1912,2116,2454,2777,4015,New confirmed cases by infection date,Increasing,0.023
+Belarus,2086 (1513 -- 2646),2086,2073,373,1513,1813,1980,2174,2276,2646,New confirmed cases by infection date,Likely increasing,0.26
+Zimbabwe,2072 (493 -- 5896),2072,2505,1899,493,1282,1754,2423,3168,5896,New confirmed cases by infection date,Likely increasing,0.23
+Nigeria,2015 (936 -- 3968),2015,2185,1048,936,1500,1800,2228,2633,3968,New confirmed cases by infection date,Likely increasing,0.33
+Malawi,1985 (575 -- 6836),1985,2719,2673,575,1264,1676,2397,3291,6836,New confirmed cases by infection date,Increasing,0.032
+Mozambique,1971 (998 -- 4287),1971,2218,1150,998,1472,1752,2180,2649,4287,New confirmed cases by infection date,Increasing,0.0098
+Aruba,1916 (357 -- 13239),1916,4189,11546,357,929,1467,2456,3977,13239,New confirmed cases by infection date,Likely increasing,0.073
+Bolivia,1855 (968 -- 3304),1855,1971,762,968,1443,1685,2042,2370,3304,New confirmed cases by infection date,Stable,0.53
+Dominican Republic,1809 (1260 -- 2794),1809,1890,500,1260,1566,1713,1913,2107,2794,New confirmed cases by infection date,Likely increasing,0.086
+Switzerland,1705 (633 -- 4670),1705,2059,1404,633,1151,1467,1973,2547,4670,New confirmed cases by infection date,Likely decreasing,0.76
+Ecuador,1603 (821 -- 3494),1603,1819,978,821,1190,1439,1787,2158,3494,New confirmed cases by infection date,Likely increasing,0.12
+Georgia,1590 (770 -- 3505),1590,1798,911,770,1193,1429,1788,2169,3505,New confirmed cases by infection date,Likely increasing,0.28
+Honduras,1474 (764 -- 4063),1474,1828,1337,764,1090,1302,1672,2093,4063,New confirmed cases by infection date,Increasing,0.046
+Serbia,1435 (760 -- 2631),1435,1527,596,760,1114,1299,1578,1821,2631,New confirmed cases by infection date,Likely decreasing,0.75
+Mayotte,1428 (45 -- 120120),1428,22456,72710,45,130,620,2866,11555,120120,New confirmed cases by infection date,Likely increasing,0.053
+Uruguay,1350 (882 -- 2332),1350,1445,479,882,1126,1258,1454,1649,2332,New confirmed cases by infection date,Increasing,0.045
+Paraguay,1341 (853 -- 2332),1341,1441,477,853,1111,1253,1453,1678,2332,New confirmed cases by infection date,Likely increasing,0.075
+Congo - Brazzaville,1314 (18 -- 137089),1314,90402,1241020,18,347,757,2380,7678,137089,New confirmed cases by infection date,Likely increasing,0.32
+Guatemala,1155 (662 -- 2456),1155,1306,636,662,902,1048,1279,1532,2456,New confirmed cases by infection date,Increasing,0.042
+Hungary,1122 (395 -- 2367),1122,1224,630,395,781,986,1281,1567,2367,New confirmed cases by infection date,Likely decreasing,0.76
+Austria,1059 (515 -- 1938),1059,1125,451,515,812,956,1167,1371,1938,New confirmed cases by infection date,Likely decreasing,0.92
+Costa Rica,1046 (685 -- 1696),1046,1104,333,685,898,984,1111,1247,1696,New confirmed cases by infection date,Stable,0.42
+Cuba,1045 (471 -- 2808),1045,1268,889,471,766,922,1187,1494,2808,New confirmed cases by infection date,Likely increasing,0.084
+Latvia,1007 (693 -- 1408),1007,1023,222,693,870,949,1062,1157,1408,New confirmed cases by infection date,Stable,0.4
+Slovenia,850 (242 -- 2249),850,1002,686,242,526,718,989,1282,2249,New confirmed cases by infection date,Likely decreasing,0.9
+Côte d’Ivoire,849 (250 -- 4017),849,1426,2556,250,498,692,1048,1541,4017,New confirmed cases by infection date,Increasing,0.018
+Norway,848 (303 -- 1884),848,948,530,303,584,742,966,1204,1884,New confirmed cases by infection date,Likely decreasing,0.61
 Denmark,821 (390 -- 1768),821,912,456,390,603,735,913,1112,1768,New confirmed cases by infection date,Likely decreasing,0.78
+Iraq,793 (552 -- 1196),793,826,208,552,685,751,843,932,1196,New confirmed cases by infection date,Likely increasing,0.37
+Albania,787 (384 -- 1370),787,819,304,384,612,716,858,988,1370,New confirmed cases by infection date,Likely increasing,0.35
 Sri Lanka,771 (69 -- 12354),771,2865,6856,69,343,570,1122,2225,12354,New confirmed cases by infection date,Stable,0.43
-Liberia,763 (18 -- 8218),763,2075,3590,18,176,453,1278,2526,8218,New confirmed cases by infection date,Increasing,0.01
-Iraq,754 (497 -- 1142),754,782,205,497,644,709,803,889,1142,New confirmed cases by infection date,Stable,0.43
-Kazakhstan,745 (434 -- 1233),745,777,249,434,607,695,803,908,1233,New confirmed cases by infection date,Likely decreasing,0.63
-Bangladesh,715 (531 -- 934),715,721,123,531,636,683,746,796,934,New confirmed cases by infection date,Likely decreasing,0.76
-Libya,692 (489 -- 1221),692,751,249,489,588,647,742,845,1221,New confirmed cases by infection date,Likely increasing,0.21
-Kuwait,681 (295 -- 1265),681,722,302,295,503,606,759,904,1265,New confirmed cases by infection date,Stable,0.43
-Belgium,675 (147 -- 2253),675,880,796,147,380,555,817,1123,2253,New confirmed cases by infection date,Likely decreasing,0.88
-Morocco,650 (469 -- 907),650,664,138,469,568,618,684,740,907,New confirmed cases by infection date,Decreasing,0.97
-Côte d’Ivoire,612 (193 -- 3279),612,1228,9768,193,369,502,759,1119,3279,New confirmed cases by infection date,Increasing,0.022
-Croatia,597 (257 -- 1734),597,755,585,257,424,523,696,889,1734,New confirmed cases by infection date,Likely decreasing,0.65
-Puerto Rico,590 (280 -- 894),590,588,196,280,449,533,642,716,894,New confirmed cases by infection date,Likely decreasing,0.71
-Greece,584 (309 -- 1052),584,618,228,309,454,537,640,739,1052,New confirmed cases by infection date,Likely decreasing,0.6
-Lithuania,564 (287 -- 1077),564,605,249,287,432,509,620,725,1077,New confirmed cases by infection date,Decreasing,0.96
-Venezuela,544 (323 -- 1100),544,606,260,323,429,496,599,705,1100,New confirmed cases by infection date,Likely increasing,0.092
-Armenia,512 (248 -- 1099),512,577,302,248,379,456,571,693,1099,New confirmed cases by infection date,Likely increasing,0.37
-Myanmar (Burma),507 (326 -- 878),507,542,181,326,421,473,547,624,878,New confirmed cases by infection date,Stable,0.56
+Jordan,762 (475 -- 1224),762,792,229,475,635,715,812,914,1224,New confirmed cases by infection date,Likely decreasing,0.88
+Venezuela,736 (410 -- 1530),736,820,365,410,572,669,822,962,1530,New confirmed cases by infection date,Increasing,0.032
+Morocco,723 (528 -- 1027),723,745,157,528,639,690,761,826,1027,New confirmed cases by infection date,Likely decreasing,0.91
+Libya,702 (503 -- 1190),702,756,230,503,601,663,748,850,1190,New confirmed cases by infection date,Likely increasing,0.19
+Bangladesh,679 (506 -- 887),679,685,119,506,601,649,709,756,887,New confirmed cases by infection date,Likely decreasing,0.82
+Kazakhstan,610 (331 -- 1021),610,635,221,331,485,561,659,748,1021,New confirmed cases by infection date,Likely decreasing,0.79
+Puerto Rico,597 (296 -- 902),597,598,190,296,467,551,645,721,902,New confirmed cases by infection date,Likely decreasing,0.71
+Croatia,565 (245 -- 1607),565,700,499,245,396,493,658,841,1607,New confirmed cases by infection date,Likely decreasing,0.67
+Belgium,549 (108 -- 1948),549,731,681,108,297,439,672,963,1948,New confirmed cases by infection date,Likely decreasing,0.92
+Kuwait,539 (225 -- 1046),539,578,255,225,393,484,605,723,1046,New confirmed cases by infection date,Likely decreasing,0.6
+Moldova,528 (285 -- 1167),528,602,305,285,401,473,590,721,1167,New confirmed cases by infection date,Likely increasing,0.33
+Greece,515 (259 -- 963),515,548,219,259,397,470,566,658,963,New confirmed cases by infection date,Likely decreasing,0.69
+Palestinian Territories,514 (296 -- 909),514,548,200,296,415,475,557,641,909,New confirmed cases by infection date,Likely decreasing,0.83
+Estonia,509 (226 -- 1194),509,586,331,226,370,453,577,718,1194,New confirmed cases by infection date,Stable,0.55
+Lithuania,505 (256 -- 950),505,543,234,256,383,456,555,649,950,New confirmed cases by infection date,Decreasing,0.97
 Namibia,499 (255 -- 1124),499,581,346,255,378,452,561,685,1124,New confirmed cases by infection date,,0.41
-Moldova,494 (273 -- 1119),494,572,368,273,375,446,551,666,1119,New confirmed cases by infection date,Likely increasing,0.38
-Estonia,488 (207 -- 1170),488,561,326,207,352,429,555,686,1170,New confirmed cases by infection date,Stable,0.59
-Palestinian Territories,478 (269 -- 817),478,501,168,269,386,439,518,586,817,New confirmed cases by infection date,Likely decreasing,0.91
-Mauritania,470 (50 -- 3611),470,1038,3387,50,201,350,641,1061,3611,New confirmed cases by infection date,Stable,0.56
-El Salvador,463 (304 -- 650),463,469,111,304,399,440,486,528,650,New confirmed cases by infection date,Likely increasing,0.21
-Bahrain,389 (270 -- 512),389,389,74,270,338,370,407,438,512,New confirmed cases by infection date,Likely increasing,0.2
-Ghana,375 (149 -- 1841),375,610,815,149,246,315,454,643,1841,New confirmed cases by infection date,Likely increasing,0.16
-Senegal,367 (119 -- 1207),367,483,450,119,236,311,435,583,1207,New confirmed cases by infection date,Likely increasing,0.27
-Kosovo,357 (161 -- 680),357,383,165,161,268,322,396,465,680,New confirmed cases by infection date,Likely increasing,0.38
-Bulgaria,350 (180 -- 679),350,381,170,180,270,318,387,453,679,New confirmed cases by infection date,Likely decreasing,0.83
-Seychelles,339 (62 -- 2493),339,787,2641,62,163,256,446,730,2493,New confirmed cases by infection date,Likely increasing,0.054
-Nepal,335 (203 -- 585),335,357,126,203,271,308,362,413,585,New confirmed cases by infection date,Likely decreasing,0.68
-Ethiopia,324 (206 -- 522),324,339,102,206,269,304,348,391,522,New confirmed cases by infection date,Likely decreasing,0.76
-Botswana,313 (111 -- 1021),313,441,676,111,214,274,364,469,1021,New confirmed cases by infection date,Stable,0.42
-Congo - Kinshasa,310 (109 -- 644),310,335,174,109,209,270,356,431,644,New confirmed cases by infection date,Likely increasing,0.35
-North Macedonia,307 (169 -- 718),307,356,193,169,235,277,337,413,718,New confirmed cases by infection date,Stable,0.52
-Azerbaijan,303 (106 -- 804),303,360,234,106,200,260,355,454,804,New confirmed cases by infection date,Stable,0.59
-Rwanda,300 (141 -- 506),300,307,114,141,228,272,326,368,506,New confirmed cases by infection date,Likely increasing,0.15
-Bosnia & Herzegovina,281 (135 -- 584),281,308,145,135,212,252,312,370,584,New confirmed cases by infection date,Likely decreasing,0.68
-Comoros,267 (51 -- 1939),267,633,1946,51,134,204,348,567,1939,New confirmed cases by infection date,Likely increasing,0.057
-French Guiana,257 (96 -- 628),257,303,267,96,177,224,290,358,628,New confirmed cases by infection date,Likely increasing,0.19
-Montenegro,255 (95 -- 536),255,276,139,95,175,223,289,349,536,New confirmed cases by infection date,Likely decreasing,0.85
-Barbados,252 (51 -- 1124),252,377,442,51,143,205,307,444,1124,New confirmed cases by infection date,Likely increasing,0.08
-South Korea,243 (133 -- 421),243,256,91,133,192,223,265,303,421,New confirmed cases by infection date,Decreasing,0.97
-Malta,233 (95 -- 448),233,247,112,95,166,207,261,311,448,New confirmed cases by infection date,Stable,0.44
-St. Vincent & Grenadines,208 (48 -- 1617),208,517,1633,48,109,163,267,435,1617,New confirmed cases by infection date,Increasing,0.007
-Niger,194 (34 -- 745),194,272,291,34,99,150,245,358,745,New confirmed cases by infection date,Likely increasing,0.32
-Finland,185 (102 -- 375),185,205,96,102,145,170,203,236,375,New confirmed cases by infection date,Likely decreasing,0.77
-Thailand,179 (6 -- 816),179,267,298,6,86,140,231,338,816,New confirmed cases by infection date,Likely decreasing,0.81
-Burkina Faso,175 (38 -- 852),175,302,647,38,97,140,220,330,852,New confirmed cases by infection date,Stable,0.57
-Oman,174 (113 -- 407),174,207,113,113,142,160,193,231,407,New confirmed cases by infection date,Likely decreasing,0.6
-Eswatini,167 (59 -- 423),167,196,135,59,110,141,193,241,423,New confirmed cases by infection date,Likely decreasing,0.73
-Qatar,167 (106 -- 247),167,171,44,106,140,157,178,197,247,New confirmed cases by infection date,Likely decreasing,0.81
-Cyprus,163 (33 -- 490),163,203,161,33,92,132,200,271,490,New confirmed cases by infection date,Likely decreasing,0.9
-Algeria,143 (47 -- 360),143,167,109,47,94,124,165,210,360,New confirmed cases by infection date,Likely decreasing,0.89
-São Tomé & Príncipe,131 (15 -- 1628),131,444,1380,15,55,95,188,334,1628,New confirmed cases by infection date,Increasing,0.026
-Cameroon,130 (25 -- 419),130,168,166,25,69,104,158,217,419,New confirmed cases by infection date,Stable,0.55
-Kyrgyzstan,125 (76 -- 212),125,132,43,76,103,116,135,153,212,New confirmed cases by infection date,Stable,0.42
-Chad,124 (45 -- 332),124,151,112,45,85,108,144,184,332,New confirmed cases by infection date,Likely increasing,0.094
-Andorra,117 (45 -- 331),117,148,121,45,79,101,137,176,331,New confirmed cases by infection date,Likely increasing,0.21
+Myanmar (Burma),487 (312 -- 814),487,515,161,312,406,454,522,590,814,New confirmed cases by infection date,Likely decreasing,0.61
+El Salvador,451 (277 -- 638),451,455,113,277,385,428,476,519,638,New confirmed cases by infection date,Likely increasing,0.27
+Congo - Kinshasa,434 (212 -- 827),434,468,222,212,333,396,478,554,827,New confirmed cases by infection date,Likely increasing,0.13
+Liberia,418 (9 -- 11345),418,2367,5995,9,85,237,753,1824,11345,New confirmed cases by infection date,Increasing,0.024
+Senegal,370 (127 -- 1161),370,483,466,127,244,317,435,578,1161,New confirmed cases by infection date,Likely increasing,0.27
+Ghana,360 (145 -- 1500),360,561,743,145,243,306,438,609,1500,New confirmed cases by infection date,Likely increasing,0.17
+Bulgaria,354 (184 -- 707),354,387,167,184,277,324,391,458,707,New confirmed cases by infection date,Likely decreasing,0.8
+Mauritania,347 (30 -- 2396),347,723,1469,30,138,244,480,815,2396,New confirmed cases by infection date,Likely decreasing,0.64
+Armenia,342 (149 -- 711),342,373,180,149,250,304,378,454,711,New confirmed cases by infection date,Likely decreasing,0.64
+Ethiopia,333 (217 -- 526),333,347,98,217,279,312,357,397,526,New confirmed cases by infection date,Likely decreasing,0.74
+North Macedonia,320 (175 -- 713),320,367,190,175,249,289,354,430,713,New confirmed cases by infection date,Stable,0.49
+Rwanda,320 (150 -- 535),320,327,123,150,240,293,348,396,535,New confirmed cases by infection date,Likely increasing,0.12
+Bahrain,314 (187 -- 434),314,311,75,187,259,293,333,361,434,New confirmed cases by infection date,Stable,0.51
+Kosovo,306 (138 -- 584),306,325,142,138,221,272,342,400,584,New confirmed cases by infection date,Stable,0.52
+Montenegro,291 (111 -- 593),291,315,156,111,204,257,326,395,593,New confirmed cases by infection date,Likely decreasing,0.79
+Botswana,287 (94 -- 936),287,396,561,94,195,249,335,438,936,New confirmed cases by infection date,Stable,0.46
+South Korea,280 (164 -- 504),280,301,114,164,225,257,306,351,504,New confirmed cases by infection date,Likely decreasing,0.93
+Nepal,278 (164 -- 480),278,294,104,164,224,257,298,341,480,New confirmed cases by infection date,Likely decreasing,0.81
+Bosnia & Herzegovina,276 (137 -- 555),276,302,138,137,209,249,305,365,555,New confirmed cases by infection date,Likely decreasing,0.68
+Comoros,267 (52 -- 1685),267,580,3189,52,138,208,341,546,1685,New confirmed cases by infection date,Likely increasing,0.068
+Seychelles,259 (41 -- 1899),259,563,1382,41,127,194,342,564,1899,New confirmed cases by infection date,Likely increasing,0.082
+French Guiana,243 (94 -- 620),243,287,195,94,170,214,276,350,620,New confirmed cases by infection date,Likely increasing,0.23
+Azerbaijan,239 (77 -- 615),239,277,179,77,155,202,275,349,615,New confirmed cases by infection date,Likely decreasing,0.72
+Barbados,214 (31 -- 884),214,309,381,31,118,173,261,367,884,New confirmed cases by infection date,Likely increasing,0.12
+Finland,204 (113 -- 403),204,225,105,113,161,186,224,261,403,New confirmed cases by infection date,Likely decreasing,0.71
+St. Vincent & Grenadines,193 (46 -- 1323),193,412,1096,46,102,152,254,396,1323,New confirmed cases by infection date,Increasing,0.013
+Malta,191 (77 -- 385),191,207,99,77,135,170,216,262,385,New confirmed cases by infection date,Stable,0.59
+Thailand,183 (36 -- 728),183,259,288,36,96,145,226,323,728,New confirmed cases by infection date,Likely decreasing,0.81
+Oman,175 (112 -- 411),175,209,128,112,143,162,193,233,411,New confirmed cases by infection date,Likely decreasing,0.62
+Niger,169 (27 -- 704),169,260,499,27,87,133,213,319,704,New confirmed cases by infection date,Likely increasing,0.37
+Burkina Faso,168 (39 -- 781),168,267,396,39,96,136,209,302,781,New confirmed cases by infection date,Stable,0.57
+Qatar,168 (107 -- 251),168,172,45,107,142,158,179,198,251,New confirmed cases by infection date,Likely decreasing,0.78
+Eswatini,161 (58 -- 416),161,193,142,58,109,140,187,238,416,New confirmed cases by infection date,Likely decreasing,0.73
+Kyrgyzstan,133 (82 -- 218),133,139,43,82,110,124,143,161,218,New confirmed cases by infection date,Likely increasing,0.35
+Cyprus,131 (23 -- 422),131,164,133,23,70,105,160,219,422,New confirmed cases by infection date,Likely decreasing,0.92
+Uzbekistan,128 (41 -- 409),128,165,140,41,80,108,153,200,409,New confirmed cases by infection date,Likely increasing,0.097
+Cameroon,124 (26 -- 423),124,167,191,26,69,100,154,212,423,New confirmed cases by infection date,Stable,0.56
+Algeria,122 (42 -- 298),122,140,87,42,80,105,140,176,298,New confirmed cases by infection date,Likely decreasing,0.93
+Chad,112 (39 -- 294),112,133,88,39,75,97,129,164,294,New confirmed cases by infection date,Likely increasing,0.13
+St. Lucia,112 (20 -- 897),112,266,651,20,55,86,149,254,897,New confirmed cases by infection date,Likely increasing,0.068
 Syria,110 (61 -- 193),110,117,42,61,89,102,121,139,193,New confirmed cases by infection date,Likely increasing,0.36
-Uzbekistan,105 (33 -- 361),105,140,127,33,64,87,126,174,361,New confirmed cases by infection date,Likely increasing,0.13
-Luxembourg,104 (41 -- 354),104,141,131,41,70,90,123,163,354,New confirmed cases by infection date,Stable,0.58
-Cape Verde,102 (38 -- 441),102,166,326,38,63,85,125,173,441,New confirmed cases by infection date,Likely increasing,0.17
-Angola,101 (52 -- 202),101,111,52,52,77,91,112,133,202,New confirmed cases by infection date,Stable,0.41
+Andorra,106 (35 -- 311),106,132,104,35,72,91,122,157,311,New confirmed cases by infection date,Likely increasing,0.27
+Cape Verde,104 (39 -- 452),104,160,206,39,65,87,127,178,452,New confirmed cases by infection date,Likely increasing,0.17
+Angola,102 (52 -- 202),102,112,50,52,79,93,113,133,202,New confirmed cases by infection date,Likely increasing,0.39
+Luxembourg,101 (39 -- 332),101,133,115,39,68,86,119,157,332,New confirmed cases by infection date,Stable,0.59
 China,98 (34 -- 326),98,129,115,34,64,83,118,156,326,New confirmed cases by infection date,Stable,0.48
-Jamaica,92 (53 -- 206),92,106,55,53,72,84,102,122,206,New confirmed cases by infection date,Likely increasing,0.26
-Maldives,80 (30 -- 205),80,95,67,30,55,69,91,116,205,New confirmed cases by infection date,Likely increasing,0.19
-Haiti,79 (24 -- 348),79,122,170,24,49,66,95,130,348,New confirmed cases by infection date,Likely increasing,0.17
-Burundi,78 (22 -- 440),78,146,383,22,45,62,98,146,440,New confirmed cases by infection date,Increasing,0.015
-Kenya,77 (40 -- 150),77,84,36,40,59,70,85,100,150,New confirmed cases by infection date,Likely decreasing,0.93
-Sierra Leone,76 (22 -- 324),76,113,140,22,47,63,93,129,324,New confirmed cases by infection date,Likely increasing,0.074
-Suriname,71 (15 -- 288),71,101,112,15,40,58,88,123,288,New confirmed cases by infection date,Stable,0.59
-Uganda,70 (25 -- 173),70,81,48,25,48,61,81,102,173,New confirmed cases by infection date,Decreasing,0.97
-Eritrea,68 (7 -- 356),68,114,187,7,30,52,89,138,356,New confirmed cases by infection date,Stable,0.46
-French Polynesia,55 (22 -- 161),55,70,59,22,38,48,63,81,161,New confirmed cases by infection date,Stable,0.52
-Madagascar,53 (5 -- 1242),53,653,4905,5,20,37,78,155,1242,New confirmed cases by infection date,Likely increasing,0.17
-St. Lucia,50 (7 -- 402),50,125,454,7,23,38,65,108,402,New confirmed cases by infection date,Likely increasing,0.15
-Singapore,49 (24 -- 85),49,51,19,24,38,44,53,61,85,New confirmed cases by infection date,Likely increasing,0.16
+São Tomé & Príncipe,98 (12 -- 1203),98,338,1129,12,41,70,140,253,1203,New confirmed cases by infection date,Likely increasing,0.054
+Burundi,95 (27 -- 502),95,168,316,27,54,76,117,179,502,New confirmed cases by infection date,Increasing,0.022
+Jamaica,91 (53 -- 189),91,102,49,53,72,83,100,119,189,New confirmed cases by infection date,Likely increasing,0.28
+Kenya,81 (44 -- 163),81,90,42,44,63,75,89,106,163,New confirmed cases by infection date,Likely decreasing,0.9
+Haiti,80 (27 -- 320),80,136,520,27,51,67,96,132,320,New confirmed cases by infection date,Likely increasing,0.17
+Maldives,72 (26 -- 191),72,85,57,26,49,63,83,104,191,New confirmed cases by infection date,Likely increasing,0.27
+Sierra Leone,69 (19 -- 278),69,100,111,19,42,57,84,117,278,New confirmed cases by infection date,Likely increasing,0.12
+Eritrea,68 (7 -- 351),68,122,585,7,30,51,89,135,351,New confirmed cases by infection date,Stable,0.45
+Uganda,64 (22 -- 148),64,72,46,22,44,55,73,91,148,New confirmed cases by infection date,Decreasing,0.97
+Afghanistan,53 (26 -- 104),53,57,27,26,41,48,58,67,104,New confirmed cases by infection date,Likely decreasing,0.9
+French Polynesia,50 (20 -- 145),50,63,68,20,34,43,57,73,145,New confirmed cases by infection date,Stable,0.57
+Togo,50 (22 -- 199),50,78,123,22,36,44,59,80,199,New confirmed cases by infection date,Likely increasing,0.15
+Singapore,47 (23 -- 83),47,49,18,23,37,43,51,59,83,New confirmed cases by infection date,Likely increasing,0.2
+Guyana,45 (19 -- 353),45,104,231,19,27,35,61,102,353,New confirmed cases by infection date,Likely increasing,0.29
+Suriname,45 (9 -- 191),45,67,75,9,24,36,57,83,191,New confirmed cases by infection date,Likely decreasing,0.73
 Saudi Arabia,40 (20 -- 86),40,45,21,20,30,36,45,53,86,New confirmed cases by infection date,Likely decreasing,0.78
-Guyana,39 (18 -- 380),39,107,248,18,25,31,51,94,380,New confirmed cases by infection date,Likely increasing,0.33
-Togo,36 (16 -- 118),36,49,61,16,26,32,41,52,118,New confirmed cases by infection date,Likely increasing,0.28
-Afghanistan,35 (14 -- 71),35,38,18,14,25,31,39,47,71,New confirmed cases by infection date,Decreasing,0.97
-Gibraltar,35 (6 -- 153),35,52,70,6,18,27,43,61,153,New confirmed cases by infection date,Likely decreasing,0.84
-Cambodia,32 (4 -- 479),32,106,284,4,13,23,44,79,479,New confirmed cases by infection date,Increasing,0.04
-Mali,32 (7 -- 114),32,43,43,7,18,26,39,54,114,New confirmed cases by infection date,Likely decreasing,0.82
-Belize,31 (6 -- 148),31,49,71,6,16,24,39,58,148,New confirmed cases by infection date,Likely decreasing,0.64
-Réunion,23 (4 -- 158),23,54,231,4,12,18,29,46,158,New confirmed cases by infection date,Likely decreasing,0.61
-Gambia,22 (3 -- 232),22,61,155,3,10,16,31,53,232,New confirmed cases by infection date,Likely increasing,0.18
-Guinea,21 (10 -- 76),21,30,36,10,15,19,24,32,76,New confirmed cases by infection date,Stable,0.56
-Iceland,19 (7 -- 60),19,25,22,7,13,17,23,30,60,New confirmed cases by infection date,Likely increasing,0.29
-Gabon,17 (6 -- 51),17,22,25,6,12,15,19,25,51,New confirmed cases by infection date,Likely increasing,0.28
-Monaco,17 (5 -- 56),17,23,19,5,11,15,21,28,56,New confirmed cases by infection date,Likely decreasing,0.6
-Isle of Man,16 (3 -- 91),16,30,65,3,8,12,20,30,91,New confirmed cases by infection date,Likely increasing,0.051
-Turks & Caicos Islands,16 (1 -- 79),16,25,36,1,7,12,20,31,79,New confirmed cases by infection date,Stable,0.44
-South Sudan,15 (1 -- 59),15,23,69,1,9,13,18,25,59,New confirmed cases by infection date,Stable,0.44
-U.S. Virgin Islands,15 (4 -- 73),15,26,78,4,8,12,18,26,73,New confirmed cases by infection date,Stable,0.46
-Jersey,14 (1 -- 90),14,29,66,1,6,10,19,30,90,New confirmed cases by infection date,Likely decreasing,0.83
-San Marino,13 (2 -- 63),13,21,31,2,7,11,17,24,63,New confirmed cases by infection date,Likely decreasing,0.72
-Trinidad & Tobago,12 (5 -- 46),12,18,20,5,9,10,14,19,46,New confirmed cases by infection date,Stable,0.56
-Sint Maarten,11 (3 -- 24),11,12,7,3,7,9,12,15,24,New confirmed cases by infection date,Stable,0.51
-Benin,10 (3 -- 86),10,47,427,3,6,8,12,20,86,New confirmed cases by infection date,Likely increasing,0.35
-Guam,10 (3 -- 34),10,14,11,3,7,9,13,17,34,New confirmed cases by infection date,Likely increasing,0.37
-Australia,9 (2 -- 24),9,10,7,2,5,7,10,14,24,New confirmed cases by infection date,Likely decreasing,0.86
-Guadeloupe,9 (0 -- 101),9,40,511,0,4,7,13,23,101,New confirmed cases by infection date,Stable,0.42
-Bahamas,8 (2 -- 24),8,10,9,2,5,7,9,12,24,New confirmed cases by infection date,Likely decreasing,0.67
+Mali,37 (10 -- 123),37,49,45,10,22,31,45,62,123,New confirmed cases by infection date,Likely decreasing,0.78
+Madagascar,36 (3 -- 725),36,383,5532,3,15,26,52,107,725,New confirmed cases by infection date,Likely increasing,0.25
+Cambodia,35 (5 -- 330),35,99,388,5,16,26,48,82,330,New confirmed cases by infection date,Increasing,0.048
+Gibraltar,30 (6 -- 137),30,47,64,6,15,24,37,55,137,New confirmed cases by infection date,Likely decreasing,0.85
+Belize,24 (4 -- 115),24,39,51,4,13,20,31,46,115,New confirmed cases by infection date,Likely decreasing,0.7
+Turks & Caicos Islands,23 (3 -- 92),23,33,45,3,12,19,28,39,92,New confirmed cases by infection date,Likely increasing,0.3
+Réunion,21 (4 -- 149),21,45,115,4,12,17,27,41,149,New confirmed cases by infection date,Likely decreasing,0.63
+Guinea,20 (9 -- 63),20,26,25,9,14,18,23,29,63,New confirmed cases by infection date,Stable,0.59
+Gambia,19 (3 -- 184),19,53,156,3,9,14,26,45,184,New confirmed cases by infection date,Likely increasing,0.17
+Monaco,19 (5 -- 60),19,25,21,5,12,16,23,31,60,New confirmed cases by infection date,Stable,0.54
+Sint Maarten,17 (9 -- 32),17,18,9,9,13,15,18,21,32,New confirmed cases by infection date,Likely increasing,0.18
+South Sudan,17 (3 -- 63),17,24,25,3,11,14,21,28,63,New confirmed cases by infection date,Likely increasing,0.39
+Iceland,16 (5 -- 52),16,21,20,5,11,14,19,25,52,New confirmed cases by infection date,Likely increasing,0.37
+San Marino,16 (3 -- 68),16,24,33,3,9,13,19,29,68,New confirmed cases by infection date,Likely decreasing,0.67
+Gabon,14 (4 -- 40),14,19,35,4,10,13,17,21,40,New confirmed cases by infection date,Likely increasing,0.35
+Isle of Man,14 (3 -- 77),14,25,48,3,7,11,18,27,77,New confirmed cases by infection date,Likely increasing,0.068
+Guam,13 (4 -- 42),13,17,14,4,8,11,15,20,42,New confirmed cases by infection date,Likely increasing,0.27
+Trinidad & Tobago,13 (6 -- 381),13,64,138,6,9,11,16,28,381,New confirmed cases by infection date,Stable,0.51
+U.S. Virgin Islands,12 (3 -- 48),12,18,33,3,7,9,15,20,48,New confirmed cases by infection date,Stable,0.54
+Jersey,11 (1 -- 67),11,21,48,1,5,8,14,22,67,New confirmed cases by infection date,Likely decreasing,0.86
+Benin,10 (3 -- 78),10,28,169,3,6,8,12,19,78,New confirmed cases by infection date,Likely increasing,0.36
+Australia,8 (2 -- 20),8,9,6,2,5,6,9,12,20,New confirmed cases by infection date,Likely decreasing,0.87
+Bahamas,8 (2 -- 25),8,10,8,2,5,7,10,13,25,New confirmed cases by infection date,Likely decreasing,0.64
 Taiwan,8 (2 -- 20),8,9,6,2,5,7,9,12,20,New confirmed cases by infection date,Likely increasing,0.1
-Djibouti,7 (1 -- 65),7,19,59,1,3,5,10,17,65,New confirmed cases by infection date,Likely increasing,0.35
-Bhutan,6 (0 -- 45),6,12,19,0,2,4,9,16,45,New confirmed cases by infection date,Likely decreasing,0.74
-Liberia,5 (1.6 -- 9.4),5,5.2,2.4,1.6,3.2,4.3,5.8,7.2,9.4,Effective reproduction no.,Increasing,0.01
-New Zealand,5 (3 -- 19),5,7,7,3,4,5,6,8,19,New confirmed cases by infection date,Likely increasing,0.21
-Papua New Guinea,5 (0 -- 83),5,28,177,0,2,4,6,11,83,New confirmed cases by infection date,Likely increasing,0.36
-Lesotho,4.8 (1.5 -- 9.4),4.8,5,2.5,1.5,2.8,3.9,5.6,7.1,9.4,Effective reproduction no.,Increasing,0.012
-Antigua & Barbuda,4 (1 -- 19),4,6,10,1,2,3,5,7,19,New confirmed cases by infection date,Likely increasing,0.07
-Equatorial Guinea,4 (1 -- 15),4,6,7,1,2,3,5,7,15,New confirmed cases by infection date,Stable,0.44
-Mongolia,4 (0 -- 46),4,12,25,0,1,3,7,12,46,New confirmed cases by infection date,Likely decreasing,0.81
-Vietnam,4 (1 -- 10),4,5,3,1,3,4,5,6,10,New confirmed cases by infection date,Stable,0.52
-Cayman Islands,3 (1 -- 9),3,3,3,1,2,2,3,4,9,New confirmed cases by infection date,Likely increasing,0.3
-Nicaragua,3 (0 -- 22),3,7,26,0,1,2,5,7,22,New confirmed cases by infection date,Likely decreasing,0.69
-São Tomé & Príncipe,2.2 (1.2 -- 4.2),2.2,2.4,1.1,1.2,1.7,2,2.4,2.8,4.2,Effective reproduction no.,Increasing,0.026
-Aruba,2 (1.2 -- 3.3),2,2.1,0.66,1.2,1.7,1.9,2.1,2.4,3.3,Effective reproduction no.,Increasing,0.024
-Curaçao,2 (0 -- 45),2,12,55,0,0,1,3,7,45,New confirmed cases by infection date,Likely decreasing,0.75
-Dominica,2 (0 -- 36),2,12,75,0,1,1,3,5,36,New confirmed cases by infection date,Likely increasing,0.23
-Liechtenstein,2 (0 -- 23),2,6,17,0,0,1,3,5,23,New confirmed cases by infection date,Likely decreasing,0.88
-Mayotte,2 (0.87 -- 7.4),2,2.8,2.1,0.87,1.1,1.5,2.7,3.9,7.4,Effective reproduction no.,Likely increasing,0.1
-Saint Martin (French part),2 (0 -- 7),2,3,3,0,1,1,2,3,7,New confirmed cases by infection date,Likely decreasing,0.8
-Somalia,2 (0 -- 10),2,3,4,0,1,2,3,4,10,New confirmed cases by infection date,Likely decreasing,0.82
-St. Vincent & Grenadines,2 (1.3 -- 3.5),2,2.1,0.72,1.3,1.7,1.8,2.1,2.4,3.5,Effective reproduction no.,Increasing,0.007
-Cambodia,1.8 (1 -- 4.8),1.8,2.2,1.2,1,1.4,1.7,2,2.5,4.8,Effective reproduction no.,Increasing,0.04
-Malawi,1.7 (1.2 -- 2.3),1.7,1.7,0.36,1.2,1.5,1.6,1.7,1.9,2.3,Effective reproduction no.,Increasing,0.015
-Comoros,1.6 (0.97 -- 2.5),1.6,1.6,0.54,0.97,1.3,1.5,1.7,1.8,2.5,Effective reproduction no.,Likely increasing,0.057
-Isle of Man,1.6 (1 -- 2.6),1.6,1.7,0.55,1,1.4,1.5,1.7,2,2.6,Effective reproduction no.,Likely increasing,0.051
-Mozambique,1.6 (1.2 -- 2),1.6,1.6,0.25,1.2,1.4,1.5,1.6,1.7,2,Effective reproduction no.,Increasing,0.0048
-Seychelles,1.6 (0.98 -- 2.5),1.6,1.7,0.47,0.98,1.4,1.5,1.7,1.9,2.5,Effective reproduction no.,Likely increasing,0.054
-Barbados,1.5 (0.86 -- 2.1),1.5,1.5,0.37,0.86,1.3,1.4,1.6,1.7,2.1,Effective reproduction no.,Likely increasing,0.08
-Congo - Brazzaville,1.5 (0.13 -- 5.5),1.5,1.9,1.7,0.13,0.78,1.3,1.8,2.6,5.5,Effective reproduction no.,Likely increasing,0.31
-Zambia,1.5 (1.1 -- 1.9),1.5,1.5,0.25,1.1,1.3,1.4,1.5,1.6,1.9,Effective reproduction no.,Increasing,0.013
-Burundi,1.4 (1.1 -- 2.1),1.4,1.5,0.36,1.1,1.2,1.3,1.5,1.6,2.1,Effective reproduction no.,Increasing,0.015
-Cuba,1.4 (0.98 -- 2.1),1.4,1.4,0.37,0.98,1.2,1.3,1.5,1.6,2.1,Effective reproduction no.,Likely increasing,0.058
-Côte d’Ivoire,1.4 (1.1 -- 2.1),1.4,1.5,0.34,1.1,1.3,1.4,1.5,1.6,2.1,Effective reproduction no.,Increasing,0.022
-Gambia,1.4 (0.71 -- 2.6),1.4,1.5,0.62,0.71,1.1,1.3,1.5,1.8,2.6,Effective reproduction no.,Likely increasing,0.18
-Madagascar,1.4 (0.71 -- 3.3),1.4,1.6,1,0.71,1.1,1.3,1.5,1.8,3.3,Effective reproduction no.,Likely increasing,0.17
+Guadeloupe,7 (0 -- 70),7,20,72,0,2,5,10,17,70,New confirmed cases by infection date,Stable,0.49
+Djibouti,6 (1 -- 51),6,15,43,1,3,4,8,13,51,New confirmed cases by infection date,Stable,0.41
+New Zealand,5 (2 -- 15),5,6,5,2,3,4,5,7,15,New confirmed cases by infection date,Likely increasing,0.29
+Mongolia,4 (0 -- 44),4,11,27,0,1,2,6,11,44,New confirmed cases by infection date,Likely decreasing,0.81
+Vietnam,4 (2 -- 10),4,5,3,2,3,4,5,6,10,New confirmed cases by infection date,Stable,0.49
+Liberia,3.7 (1.2 -- 8.5),3.7,4.1,2.2,1.2,2.3,3.2,4.4,5.6,8.5,Effective reproduction no.,Increasing,0.024
+Antigua & Barbuda,3 (1 -- 21),3,7,20,1,2,2,4,6,21,New confirmed cases by infection date,Likely increasing,0.11
+Bhutan,3 (0 -- 32),3,8,12,0,0,2,5,9,32,New confirmed cases by infection date,Likely decreasing,0.83
+Cayman Islands,3 (0 -- 7),3,3,2,0,2,2,3,4,7,New confirmed cases by infection date,Likely increasing,0.34
+Equatorial Guinea,3 (0 -- 12),3,5,6,0,2,3,4,6,12,New confirmed cases by infection date,Stable,0.5
+Nicaragua,3 (0 -- 21),3,7,34,0,0,2,4,7,21,New confirmed cases by infection date,Likely decreasing,0.7
+Papua New Guinea,3 (0 -- 43),3,159,2465,0,1,3,5,8,43,New confirmed cases by infection date,Stable,0.44
+Lesotho,2.4 (1.3 -- 7.8),2.4,3.3,2,1.3,1.9,2.1,3,4.3,7.8,Effective reproduction no.,Increasing,0.031
+Curaçao,2 (0 -- 47),2,14,97,0,0,1,3,8,47,New confirmed cases by infection date,Likely decreasing,0.73
+Mayotte,2 (1 -- 6.6),2,2.7,1.9,1,1.2,1.8,2.4,3.9,6.6,Effective reproduction no.,Likely increasing,0.053
+Saint Martin (French part),2 (0 -- 7),2,3,19,0,1,1,2,3,7,New confirmed cases by infection date,Likely decreasing,0.81
+Somalia,2 (0 -- 10),2,3,7,0,1,1,2,4,10,New confirmed cases by infection date,Likely decreasing,0.81
+São Tomé & Príncipe,2 (0.97 -- 3.7),2,2.1,0.9,0.97,1.5,1.8,2.1,2.5,3.7,Effective reproduction no.,Likely increasing,0.054
+St. Vincent & Grenadines,1.9 (1.3 -- 3.1),1.9,2,0.61,1.3,1.6,1.8,2,2.3,3.1,Effective reproduction no.,Increasing,0.013
+Cambodia,1.8 (1 -- 3.6),1.8,2,0.89,1,1.4,1.6,2,2.4,3.6,Effective reproduction no.,Increasing,0.048
+Aruba,1.7 (0.91 -- 2.6),1.7,1.7,0.54,0.91,1.4,1.6,1.8,2,2.6,Effective reproduction no.,Likely increasing,0.073
+St. Lucia,1.7 (0.93 -- 3.1),1.7,1.8,0.7,0.93,1.4,1.5,1.8,2.1,3.1,Effective reproduction no.,Likely increasing,0.068
+Isle of Man,1.6 (0.94 -- 2.4),1.6,1.6,0.48,0.94,1.3,1.5,1.7,1.8,2.4,Effective reproduction no.,Likely increasing,0.068
+Malawi,1.6 (1.1 -- 2.2),1.6,1.6,0.35,1.1,1.4,1.5,1.7,1.8,2.2,Effective reproduction no.,Increasing,0.032
+Comoros,1.5 (0.94 -- 2.4),1.5,1.6,0.48,0.94,1.3,1.4,1.6,1.8,2.4,Effective reproduction no.,Likely increasing,0.068
+Côte d’Ivoire,1.5 (1.1 -- 2.1),1.5,1.5,0.35,1.1,1.3,1.4,1.6,1.7,2.1,Effective reproduction no.,Increasing,0.018
+Mozambique,1.5 (1.2 -- 1.9),1.5,1.5,0.22,1.2,1.4,1.5,1.5,1.6,1.9,Effective reproduction no.,Increasing,0.0098
+Seychelles,1.5 (0.86 -- 2.3),1.5,1.6,0.47,0.86,1.3,1.4,1.6,1.8,2.3,Effective reproduction no.,Likely increasing,0.082
+Uzbekistan,1.5 (0.91 -- 2.4),1.5,1.5,0.49,0.91,1.2,1.4,1.6,1.8,2.4,Effective reproduction no.,Likely increasing,0.097
+Zambia,1.5 (1.1 -- 1.9),1.5,1.5,0.26,1.1,1.3,1.4,1.5,1.6,1.9,Effective reproduction no.,Increasing,0.024
+Barbados,1.4 (0.72 -- 2),1.4,1.4,0.36,0.72,1.2,1.4,1.5,1.6,2,Effective reproduction no.,Likely increasing,0.12
+Burundi,1.4 (1.1 -- 2.2),1.4,1.5,0.37,1.1,1.3,1.4,1.5,1.7,2.2,Effective reproduction no.,Increasing,0.022
 Namibia,1.4 (1.1 -- 1.8),1.4,1.4,0.25,1.1,1.3,1.3,1.4,1.5,1.8,Effective reproduction no.,,0.41
-St. Lucia,1.4 (0.75 -- 2.6),1.4,1.5,0.6,0.75,1.1,1.3,1.6,1.8,2.6,Effective reproduction no.,Likely increasing,0.15
-Uzbekistan,1.4 (0.88 -- 2.4),1.4,1.5,0.49,0.88,1.1,1.3,1.5,1.7,2.4,Effective reproduction no.,Likely increasing,0.13
-Chad,1.3 (0.93 -- 1.6),1.3,1.3,0.21,0.93,1.1,1.2,1.3,1.4,1.6,Effective reproduction no.,Likely increasing,0.094
+Peru,1.4 (1.1 -- 1.9),1.4,1.4,0.23,1.1,1.3,1.3,1.4,1.5,1.9,Effective reproduction no.,Increasing,0.002
+Congo - Brazzaville,1.3 (0.085 -- 3.9),1.3,1.5,1.2,0.085,0.71,1.2,1.5,1.9,3.9,Effective reproduction no.,Likely increasing,0.32
+Cuba,1.3 (0.93 -- 1.9),1.3,1.4,0.32,0.93,1.2,1.3,1.4,1.5,1.9,Effective reproduction no.,Likely increasing,0.084
 Egypt,1.3 (0.91 -- 1.5),1.3,1.3,0.19,0.91,1.2,1.2,1.3,1.4,1.5,Effective reproduction no.,Increasing,0.045
+Gambia,1.3 (0.67 -- 2.4),1.3,1.4,0.53,0.67,1.1,1.2,1.4,1.6,2.4,Effective reproduction no.,Likely increasing,0.17
 Ireland,1.3 (0.6 -- 1.8),1.3,1.2,0.36,0.6,1,1.2,1.3,1.5,1.8,Effective reproduction no.,Likely increasing,0.25
-Peru,1.3 (1.1 -- 1.6),1.3,1.3,0.19,1.1,1.2,1.2,1.3,1.4,1.6,Effective reproduction no.,Increasing,0.006
-Portugal,1.3 (0.97 -- 1.5),1.3,1.3,0.17,0.97,1.1,1.2,1.3,1.4,1.5,Effective reproduction no.,Likely increasing,0.067
-Sierra Leone,1.3 (0.94 -- 1.8),1.3,1.3,0.27,0.94,1.2,1.3,1.4,1.5,1.8,Effective reproduction no.,Likely increasing,0.074
-Zimbabwe,1.3 (0.76 -- 1.8),1.3,1.3,0.31,0.76,1.1,1.3,1.4,1.5,1.8,Effective reproduction no.,Likely increasing,0.14
-Antigua & Barbuda,1.2 (0.97 -- 1.8),1.2,1.3,0.28,0.97,1.1,1.2,1.3,1.4,1.8,Effective reproduction no.,Likely increasing,0.07
-Brazil,1.2 (0.97 -- 1.5),1.2,1.2,0.15,0.97,1.1,1.1,1.2,1.3,1.5,Effective reproduction no.,Likely increasing,0.088
+Madagascar,1.3 (0.64 -- 2.8),1.3,1.4,0.75,0.64,1,1.2,1.4,1.7,2.8,Effective reproduction no.,Likely increasing,0.25
+Sierra Leone,1.3 (0.87 -- 1.8),1.3,1.3,0.27,0.87,1.1,1.2,1.3,1.4,1.8,Effective reproduction no.,Likely increasing,0.12
+Antigua & Barbuda,1.2 (0.93 -- 1.9),1.2,1.3,0.32,0.93,1.1,1.1,1.2,1.3,1.9,Effective reproduction no.,Likely increasing,0.11
 Caribbean Netherlands,1.2 (0.35 -- 2.9),1.2,1.3,0.88,0.35,0.8,1,1.3,1.6,2.9,Effective reproduction no.,,0.54
-Chile,1.2 (1.1 -- 1.3),1.2,1.2,0.058,1.1,1.1,1.2,1.2,1.2,1.3,Effective reproduction no.,Increasing,0.002
-Djibouti,1.2 (0.6 -- 2.5),1.2,1.3,0.69,0.6,0.9,1.1,1.3,1.5,2.5,Effective reproduction no.,Likely increasing,0.35
-Ecuador,1.2 (0.97 -- 1.5),1.2,1.2,0.18,0.97,1.1,1.1,1.2,1.3,1.5,Effective reproduction no.,Likely increasing,0.091
-Guatemala,1.2 (1 -- 1.6),1.2,1.3,0.18,1,1.1,1.2,1.3,1.4,1.6,Effective reproduction no.,Increasing,0.02
-Honduras,1.2 (1 -- 1.7),1.2,1.3,0.24,1,1.1,1.2,1.3,1.4,1.7,Effective reproduction no.,Increasing,0.048
-Malaysia,1.2 (0.97 -- 1.4),1.2,1.2,0.14,0.97,1.1,1.1,1.2,1.3,1.4,Effective reproduction no.,Likely increasing,0.078
-Maldives,1.2 (0.8 -- 1.7),1.2,1.2,0.28,0.8,1,1.1,1.3,1.4,1.7,Effective reproduction no.,Likely increasing,0.19
-Paraguay,1.2 (1 -- 1.4),1.2,1.2,0.14,1,1.1,1.1,1.2,1.3,1.4,Effective reproduction no.,Likely increasing,0.053
-United Arab Emirates,1.2 (0.96 -- 1.4),1.2,1.2,0.12,0.96,1.1,1.2,1.2,1.3,1.4,Effective reproduction no.,Likely increasing,0.089
-Venezuela,1.2 (0.97 -- 1.5),1.2,1.2,0.17,0.97,1.1,1.1,1.2,1.3,1.5,Effective reproduction no.,Likely increasing,0.092
-Albania,1.1 (0.81 -- 1.4),1.1,1.1,0.18,0.81,1,1.1,1.2,1.2,1.4,Effective reproduction no.,Likely increasing,0.24
-Andorra,1.1 (0.84 -- 1.6),1.1,1.2,0.23,0.84,1,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.21
-Argentina,1.1 (0.98 -- 1.3),1.1,1.1,0.089,0.98,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Likely increasing,0.07
-Armenia,1.1 (0.78 -- 1.5),1.1,1.1,0.21,0.78,0.95,1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing,0.37
-Bahrain,1.1 (0.92 -- 1.2),1.1,1.1,0.078,0.92,1,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.2
-Cape Verde,1.1 (0.94 -- 1.7),1.1,1.2,0.25,0.94,1,1.1,1.2,1.3,1.7,Effective reproduction no.,Likely increasing,0.17
+Chad,1.2 (0.87 -- 1.5),1.2,1.2,0.2,0.87,1.1,1.2,1.3,1.3,1.5,Effective reproduction no.,Likely increasing,0.13
+Guatemala,1.2 (1 -- 1.4),1.2,1.2,0.14,1,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Increasing,0.042
+Honduras,1.2 (1 -- 1.7),1.2,1.3,0.24,1,1.1,1.2,1.3,1.4,1.7,Effective reproduction no.,Increasing,0.046
+Malaysia,1.2 (0.97 -- 1.4),1.2,1.2,0.13,0.97,1.1,1.1,1.2,1.3,1.4,Effective reproduction no.,Likely increasing,0.077
+Portugal,1.2 (0.91 -- 1.5),1.2,1.2,0.17,0.91,1.1,1.2,1.2,1.3,1.5,Effective reproduction no.,Likely increasing,0.11
+Ukraine,1.2 (1 -- 1.5),1.2,1.2,0.14,1,1.1,1.2,1.2,1.3,1.5,Effective reproduction no.,Increasing,0.026
+Uruguay,1.2 (1 -- 1.4),1.2,1.2,0.13,1,1.1,1.1,1.2,1.3,1.4,Effective reproduction no.,Increasing,0.045
+Venezuela,1.2 (1 -- 1.6),1.2,1.3,0.19,1,1.1,1.2,1.3,1.4,1.6,Effective reproduction no.,Increasing,0.032
+Zimbabwe,1.2 (0.65 -- 1.7),1.2,1.2,0.3,0.65,1,1.2,1.3,1.4,1.7,Effective reproduction no.,Likely increasing,0.23
+Albania,1.1 (0.75 -- 1.4),1.1,1.1,0.19,0.75,0.95,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.35
+Andorra,1.1 (0.72 -- 1.5),1.1,1.1,0.24,0.72,0.99,1.1,1.2,1.2,1.5,Effective reproduction no.,Likely increasing,0.27
+Argentina,1.1 (0.95 -- 1.2),1.1,1.1,0.088,0.95,1.1,1.1,1.1,1.2,1.2,Effective reproduction no.,Likely increasing,0.11
+Belarus,1.1 (0.93 -- 1.2),1.1,1,0.073,0.93,1,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.26
+Brazil,1.1 (0.96 -- 1.4),1.1,1.2,0.14,0.96,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Likely increasing,0.096
+Cape Verde,1.1 (0.94 -- 1.6),1.1,1.2,0.24,0.94,1,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.17
+Chile,1.1 (1.1 -- 1.2),1.1,1.1,0.052,1.1,1.1,1.1,1.2,1.2,1.2,Effective reproduction no.,Increasing,0.0068
 China,1.1 (0.63 -- 2.1),1.1,1.2,0.45,0.63,0.9,1,1.2,1.4,2.1,Effective reproduction no.,Stable,0.48
-Colombia,1.1 (0.76 -- 1.5),1.1,1.1,0.22,0.76,1,1.1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing,0.22
-Dominica,1.1 (0.8 -- 2.1),1.1,1.3,0.48,0.8,1,1.1,1.2,1.4,2.1,Effective reproduction no.,Likely increasing,0.23
-Dominican Republic,1.1 (0.99 -- 1.2),1.1,1.1,0.078,0.99,1,1.1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.07
-France,1.1 (0.71 -- 1.7),1.1,1.1,0.3,0.71,0.94,1,1.2,1.3,1.7,Effective reproduction no.,Likely increasing,0.33
-French Guiana,1.1 (0.86 -- 1.4),1.1,1.1,0.17,0.86,1,1.1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.19
-Georgia,1.1 (0.85 -- 1.5),1.1,1.2,0.21,0.85,1,1.1,1.2,1.3,1.5,Effective reproduction no.,Likely increasing,0.22
-Ghana,1.1 (0.9 -- 1.9),1.1,1.2,0.34,0.9,1,1.1,1.2,1.4,1.9,Effective reproduction no.,Likely increasing,0.16
-Guadeloupe,1.1 (0.5 -- 2),1.1,1.1,0.5,0.5,0.86,0.98,1.2,1.3,2,Effective reproduction no.,Stable,0.42
-Guam,1.1 (0.73 -- 1.5),1.1,1.1,0.25,0.73,0.93,1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing,0.37
-Guernsey,1.1 (0.72 -- 1.8),1.1,1.2,0.37,0.72,0.98,1,1.2,1.3,1.8,Effective reproduction no.,Likely increasing,0.29
-Guyana,1.1 (0.93 -- 2.3),1.1,1.3,0.53,0.93,0.98,1,1.2,1.5,2.3,Effective reproduction no.,Likely increasing,0.33
-Haiti,1.1 (0.87 -- 1.6),1.1,1.2,0.22,0.87,1,1.1,1.2,1.2,1.6,Effective reproduction no.,Likely increasing,0.17
-Iceland,1.1 (0.77 -- 1.6),1.1,1.1,0.26,0.77,0.98,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.29
-Indonesia,1.1 (1 -- 1.2),1.1,1.1,0.063,1,1.1,1.1,1.1,1.2,1.2,Effective reproduction no.,Increasing,0.0085
-Israel,1.1 (0.76 -- 1.4),1.1,1.1,0.19,0.76,0.94,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.38
-Jamaica,1.1 (0.91 -- 1.4),1.1,1.1,0.15,0.91,1,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.26
-Kosovo,1.1 (0.7 -- 1.4),1.1,1.1,0.22,0.7,0.92,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.38
-Lebanon,1.1 (0.9 -- 1.3),1.1,1.1,0.11,0.9,1,1.1,1.1,1.2,1.3,Effective reproduction no.,Likely increasing,0.17
-Libya,1.1 (0.96 -- 1.3),1.1,1.1,0.11,0.96,1,1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.21
-Mexico,1.1 (0.96 -- 1.5),1.1,1.2,0.16,0.96,1,1.1,1.2,1.2,1.5,Effective reproduction no.,Likely increasing,0.11
-Moldova,1.1 (0.84 -- 1.5),1.1,1.1,0.22,0.84,0.95,1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing,0.38
-Niger,1.1 (0.7 -- 1.4),1.1,1.1,0.22,0.7,0.95,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.32
-Nigeria,1.1 (0.78 -- 1.4),1.1,1.1,0.18,0.78,0.98,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.29
-Pakistan,1.1 (0.97 -- 1.3),1.1,1.1,0.1,0.97,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Likely increasing,0.089
-Papua New Guinea,1.1 (0.66 -- 2.6),1.1,1.3,0.69,0.66,0.94,1,1.1,1.4,2.6,Effective reproduction no.,Likely increasing,0.36
-Philippines,1.1 (1 -- 1.4),1.1,1.2,0.13,1,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Increasing,0.032
-Rwanda,1.1 (0.9 -- 1.2),1.1,1.1,0.1,0.9,1,1.1,1.1,1.2,1.2,Effective reproduction no.,Likely increasing,0.15
-Senegal,1.1 (0.78 -- 1.6),1.1,1.1,0.26,0.78,0.99,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.27
-Singapore,1.1 (0.88 -- 1.3),1.1,1.1,0.14,0.88,1,1.1,1.2,1.2,1.3,Effective reproduction no.,Likely increasing,0.16
-Spain,1.1 (0.77 -- 1.4),1.1,1.1,0.18,0.77,0.95,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.35
+Congo - Kinshasa,1.1 (0.93 -- 1.3),1.1,1.1,0.11,0.93,1,1.1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.13
+Djibouti,1.1 (0.55 -- 2.3),1.1,1.2,0.61,0.55,0.85,0.99,1.2,1.4,2.3,Effective reproduction no.,Stable,0.41
+Dominica,1.1 (0.7 -- 1.9),1.1,1.2,0.39,0.7,0.97,1,1.1,1.3,1.9,Effective reproduction no.,Likely increasing,0.31
+Dominican Republic,1.1 (0.98 -- 1.2),1.1,1.1,0.073,0.98,1,1.1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.086
+Ecuador,1.1 (0.93 -- 1.4),1.1,1.2,0.16,0.93,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Likely increasing,0.12
+France,1.1 (0.69 -- 1.6),1.1,1.1,0.29,0.69,0.92,1,1.1,1.3,1.6,Effective reproduction no.,Likely increasing,0.36
+French Guiana,1.1 (0.85 -- 1.4),1.1,1.1,0.17,0.85,1,1.1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.23
+Georgia,1.1 (0.81 -- 1.5),1.1,1.1,0.2,0.81,0.99,1.1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing,0.28
+Ghana,1.1 (0.9 -- 1.8),1.1,1.2,0.29,0.9,1,1.1,1.2,1.3,1.8,Effective reproduction no.,Likely increasing,0.17
+Guam,1.1 (0.77 -- 1.6),1.1,1.2,0.27,0.77,0.99,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.27
+Guyana,1.1 (0.94 -- 2.1),1.1,1.3,0.43,0.94,0.99,1.1,1.2,1.5,2.1,Effective reproduction no.,Likely increasing,0.29
+Haiti,1.1 (0.87 -- 1.5),1.1,1.2,0.26,0.87,1,1.1,1.2,1.2,1.5,Effective reproduction no.,Likely increasing,0.17
+Iceland,1.1 (0.72 -- 1.5),1.1,1.1,0.25,0.72,0.93,1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing,0.37
+Indonesia,1.1 (1.1 -- 1.3),1.1,1.2,0.068,1.1,1.1,1.1,1.2,1.2,1.3,Effective reproduction no.,Increasing,0.0078
+Jamaica,1.1 (0.91 -- 1.3),1.1,1.1,0.14,0.91,0.99,1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.28
+Lebanon,1.1 (0.93 -- 1.3),1.1,1.1,0.1,0.93,1,1.1,1.1,1.2,1.3,Effective reproduction no.,Likely increasing,0.15
+Libya,1.1 (0.96 -- 1.3),1.1,1.1,0.1,0.96,1,1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.19
+Maldives,1.1 (0.75 -- 1.6),1.1,1.2,0.27,0.75,0.99,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.27
+Mexico,1.1 (0.96 -- 1.4),1.1,1.1,0.14,0.96,1,1.1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.12
+Moldova,1.1 (0.85 -- 1.5),1.1,1.1,0.2,0.85,0.97,1,1.1,1.2,1.5,Effective reproduction no.,Likely increasing,0.33
+Niger,1.1 (0.67 -- 1.4),1.1,1.1,0.25,0.67,0.92,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.37
+Nigeria,1.1 (0.77 -- 1.4),1.1,1.1,0.18,0.77,0.96,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.33
+Pakistan,1.1 (0.93 -- 1.3),1.1,1.1,0.11,0.93,1,1.1,1.1,1.2,1.3,Effective reproduction no.,Likely increasing,0.17
+Paraguay,1.1 (0.97 -- 1.4),1.1,1.2,0.13,0.97,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Likely increasing,0.075
+Philippines,1.1 (1 -- 1.4),1.1,1.1,0.12,1,1.1,1.1,1.1,1.2,1.4,Effective reproduction no.,Increasing,0.023
+Rwanda,1.1 (0.94 -- 1.2),1.1,1.1,0.11,0.94,1.1,1.1,1.1,1.2,1.2,Effective reproduction no.,Likely increasing,0.12
+Senegal,1.1 (0.79 -- 1.6),1.1,1.1,0.25,0.79,0.99,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.27
+Singapore,1.1 (0.87 -- 1.3),1.1,1.1,0.14,0.87,1,1.1,1.1,1.2,1.3,Effective reproduction no.,Likely increasing,0.2
 Sri Lanka,1.1 (0.24 -- 4.2),1.1,1.5,1.3,0.24,0.76,0.96,1.3,1.8,4.2,Effective reproduction no.,Stable,0.43
 Syria,1.1 (0.77 -- 1.4),1.1,1.1,0.2,0.77,0.94,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.36
 Taiwan,1.1 (0.75 -- 1.3),1.1,1.1,0.17,0.75,1,1.1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.1
-Tunisia,1.1 (0.95 -- 1.4),1.1,1.1,0.13,0.95,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Likely increasing,0.11
-Turks & Caicos Islands,1.1 (0.38 -- 1.5),1.1,1,0.37,0.38,0.81,0.97,1.1,1.2,1.5,Effective reproduction no.,Stable,0.44
-Ukraine,1.1 (0.97 -- 1.4),1.1,1.1,0.13,0.97,1,1.1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.11
-Uruguay,1.1 (0.94 -- 1.3),1.1,1.1,0.11,0.94,1,1.1,1.1,1.2,1.3,Effective reproduction no.,Likely increasing,0.16
-Angola,1 (0.81 -- 1.3),1,1,0.16,0.81,0.94,1,1.1,1.1,1.3,Effective reproduction no.,Stable,0.41
-Belarus,1 (0.92 -- 1.2),1,1,0.087,0.92,0.98,1,1,1.1,1.2,Effective reproduction no.,Likely increasing,0.34
-Benin,1 (0.84 -- 1.8),1,1.2,0.4,0.84,0.98,1,1.1,1.2,1.8,Effective reproduction no.,Likely increasing,0.35
-Bermuda,1 (0 -- 14),1,4,13,0,0,1,2,3,14,New confirmed cases by infection date,Likely decreasing,0.83
-Bolivia,1 (0.74 -- 1.3),1,1,0.18,0.74,0.9,0.97,1,1.1,1.3,Effective reproduction no.,Stable,0.49
-Botswana,1 (0.79 -- 1.3),1,1,0.18,0.79,0.95,1,1,1.1,1.3,Effective reproduction no.,Stable,0.42
-Canada,1 (0.95 -- 1.1),1,1,0.048,0.95,1,1,1,1,1.1,Effective reproduction no.,Likely increasing,0.29
+Togo,1.1 (0.94 -- 1.4),1.1,1.1,0.18,0.94,1,1,1.1,1.2,1.4,Effective reproduction no.,Likely increasing,0.15
+Tunisia,1.1 (0.97 -- 1.4),1.1,1.1,0.12,0.97,1.1,1.1,1.2,1.2,1.4,Effective reproduction no.,Likely increasing,0.087
+Turks & Caicos Islands,1.1 (0.61 -- 1.6),1.1,1.1,0.32,0.61,0.95,1.1,1.2,1.3,1.6,Effective reproduction no.,Likely increasing,0.3
+United Arab Emirates,1.1 (0.89 -- 1.3),1.1,1.1,0.12,0.89,1,1.1,1.1,1.2,1.3,Effective reproduction no.,Likely increasing,0.19
+Angola,1 (0.82 -- 1.3),1,1,0.15,0.82,0.95,1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.39
+Bahrain,1 (0.8 -- 1.1),1,0.98,0.098,0.8,0.93,0.97,1,1,1.1,Effective reproduction no.,Stable,0.51
+Benin,1 (0.85 -- 1.7),1,1.1,0.32,0.85,0.97,1,1.1,1.2,1.7,Effective reproduction no.,Likely increasing,0.36
+Bermuda,1 (0 -- 13),1,4,13,0,0,1,2,3,13,New confirmed cases by infection date,Likely decreasing,0.81
+Botswana,1 (0.75 -- 1.3),1,1,0.18,0.75,0.94,0.98,1,1.1,1.3,Effective reproduction no.,Stable,0.46
+Canada,1 (0.94 -- 1.1),1,1,0.049,0.94,0.99,1,1,1,1.1,Effective reproduction no.,Likely increasing,0.32
 Caribbean Netherlands,1 (0 -- 28),1,8,45,0,0,0,2,4,28,New confirmed cases by infection date,,0.54
-Cayman Islands,1 (0.79 -- 1.2),1,1,0.14,0.79,0.98,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.3
-Congo - Kinshasa,1 (0.8 -- 1.2),1,1,0.13,0.8,0.96,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.35
-Costa Rica,1 (0.86 -- 1.2),1,1,0.1,0.86,0.97,1,1,1.1,1.2,Effective reproduction no.,Stable,0.4
-El Salvador,1 (0.95 -- 1.1),1,1,0.049,0.95,1,1,1,1,1.1,Effective reproduction no.,Likely increasing,0.21
-Equatorial Guinea,1 (0.7 -- 1.3),1,1,0.19,0.7,0.92,0.99,1,1.1,1.3,Effective reproduction no.,Stable,0.44
-Eritrea,1 (0.5 -- 1.4),1,1,0.3,0.5,0.83,0.96,1.1,1.2,1.4,Effective reproduction no.,Stable,0.46
-Gabon,1 (0.87 -- 1.3),1,1,0.14,0.87,0.99,1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.28
-Germany,1 (0.75 -- 1.3),1,1,0.17,0.75,0.92,0.99,1.1,1.1,1.3,Effective reproduction no.,Stable,0.43
-Iraq,1 (0.84 -- 1.2),1,1,0.12,0.84,0.95,0.99,1,1.1,1.2,Effective reproduction no.,Stable,0.43
-Japan,1 (0.74 -- 1.2),1,1,0.15,0.74,0.89,0.97,1,1.1,1.2,Effective reproduction no.,Stable,0.48
-Kuwait,1 (0.66 -- 1.4),1,1,0.22,0.66,0.89,0.98,1.1,1.2,1.4,Effective reproduction no.,Stable,0.43
-Kyrgyzstan,1 (0.82 -- 1.3),1,1,0.14,0.82,0.95,0.99,1.1,1.1,1.3,Effective reproduction no.,Stable,0.42
-Latvia,1 (0.9 -- 1.1),1,1,0.067,0.9,0.97,1,1,1,1.1,Effective reproduction no.,Stable,0.41
-Malta,1 (0.67 -- 1.3),1,1,0.2,0.67,0.9,0.98,1.1,1.1,1.3,Effective reproduction no.,Stable,0.44
-New Zealand,1 (0.94 -- 1.4),1,1.1,0.15,0.94,1,1,1.1,1.1,1.4,Effective reproduction no.,Likely increasing,0.21
-Norway,1 (0.67 -- 1.3),1,0.99,0.2,0.67,0.88,0.95,1,1.1,1.3,Effective reproduction no.,Stable,0.51
-Romania,1 (0.84 -- 1.2),1,1,0.11,0.84,0.94,0.98,1,1.1,1.2,Effective reproduction no.,Stable,0.48
-Sint Maarten,1 (0.64 -- 1.1),1,0.94,0.16,0.64,0.84,0.96,1,1,1.1,Effective reproduction no.,Stable,0.51
-South Sudan,1 (0.53 -- 1.2),1,0.98,0.33,0.53,0.9,0.99,1,1.1,1.2,Effective reproduction no.,Stable,0.44
-St. Barthélemy,1 (0 -- 8),1,3,35,0,0,1,1,2,8,New confirmed cases by infection date,Stable,0.48
-St. Barthélemy,1 (0.82 -- 1.6),1,1.1,0.32,0.82,0.95,0.98,1,1.1,1.6,Effective reproduction no.,Stable,0.48
-Togo,1 (0.9 -- 1.3),1,1.1,0.14,0.9,1,1,1,1.1,1.3,Effective reproduction no.,Likely increasing,0.28
-U.S. Virgin Islands,1 (0.72 -- 1.7),1,1.1,0.34,0.72,0.9,0.97,1.1,1.2,1.7,Effective reproduction no.,Stable,0.46
-Vietnam,1 (0.78 -- 1.2),1,0.99,0.13,0.78,0.94,0.98,1,1,1.2,Effective reproduction no.,Stable,0.52
-Yemen,1 (0.74 -- 1.4),1,1,0.21,0.74,0.94,0.99,1.1,1.1,1.4,Effective reproduction no.,Stable,0.41
-French Polynesia,0.99 (0.75 -- 1.4),0.99,1,0.22,0.75,0.89,0.95,1,1.1,1.4,Effective reproduction no.,Stable,0.52
-Guinea,0.99 (0.85 -- 1.3),0.99,1,0.17,0.85,0.95,0.97,1,1.1,1.3,Effective reproduction no.,Stable,0.56
-North Macedonia,0.99 (0.82 -- 1.3),0.99,1,0.16,0.82,0.92,0.96,1,1.1,1.3,Effective reproduction no.,Stable,0.52
-Panama,0.99 (0.89 -- 1.1),0.99,0.99,0.063,0.89,0.96,0.98,1,1,1.1,Effective reproduction no.,Stable,0.54
-Slovakia,0.99 (0.73 -- 1.3),0.99,1,0.19,0.73,0.88,0.95,1,1.1,1.3,Effective reproduction no.,Stable,0.53
-Cameroon,0.98 (0.65 -- 1.2),0.98,0.96,0.19,0.65,0.87,0.95,1,1.1,1.2,Effective reproduction no.,Stable,0.55
-Myanmar (Burma),0.98 (0.82 -- 1.2),0.98,1,0.12,0.82,0.92,0.96,1,1.1,1.2,Effective reproduction no.,Stable,0.56
-Northern Mariana Islands,0.98 (0.69 -- 1.2),0.98,0.98,0.17,0.69,0.91,0.96,1,1,1.2,Effective reproduction no.,Stable,0.59
-Oman,0.98 (0.89 -- 1.2),0.98,1,0.12,0.89,0.94,0.96,1,1,1.2,Effective reproduction no.,Likely decreasing,0.6
-South Africa,0.98 (0.79 -- 1.1),0.98,0.97,0.1,0.79,0.92,0.96,1,1,1.1,Effective reproduction no.,Stable,0.58
-Trinidad & Tobago,0.98 (0.82 -- 1.5),0.98,1.1,0.23,0.82,0.93,0.96,1,1.1,1.5,Effective reproduction no.,Stable,0.56
-Mauritius,0.97 (0.79 -- 1.3),0.97,0.99,0.17,0.79,0.93,0.95,0.99,1,1.3,Effective reproduction no.,Likely decreasing,0.65
-Puerto Rico,0.97 (0.81 -- 1),0.97,0.96,0.078,0.81,0.92,0.96,0.99,1,1,Effective reproduction no.,Likely decreasing,0.71
-Burkina Faso,0.96 (0.59 -- 1.6),0.96,1,0.34,0.59,0.8,0.89,1,1.2,1.6,Effective reproduction no.,Stable,0.57
-Central African Republic,0.96 (0.6 -- 1.2),0.96,0.95,0.2,0.6,0.88,0.94,0.99,1,1.2,Effective reproduction no.,Likely decreasing,0.67
-Estonia,0.96 (0.66 -- 1.3),0.96,0.97,0.21,0.66,0.84,0.91,1,1.1,1.3,Effective reproduction no.,Stable,0.59
-Greece,0.96 (0.7 -- 1.2),0.96,0.96,0.16,0.7,0.86,0.92,1,1.1,1.2,Effective reproduction no.,Likely decreasing,0.6
-Kazakhstan,0.96 (0.76 -- 1.2),0.96,0.96,0.12,0.76,0.89,0.94,0.99,1,1.2,Effective reproduction no.,Likely decreasing,0.63
-Luxembourg,0.96 (0.69 -- 1.5),0.96,1,0.26,0.69,0.84,0.91,1,1.1,1.5,Effective reproduction no.,Stable,0.58
-Bangladesh,0.95 (0.83 -- 1.1),0.95,0.95,0.072,0.83,0.91,0.93,0.97,1,1.1,Effective reproduction no.,Likely decreasing,0.76
-India,0.95 (0.83 -- 1),0.95,0.94,0.067,0.83,0.91,0.94,0.96,0.99,1,Effective reproduction no.,Likely decreasing,0.82
-Mauritania,0.95 (0.48 -- 1.5),0.95,0.97,0.33,0.48,0.76,0.88,1,1.1,1.5,Effective reproduction no.,Stable,0.56
-Nepal,0.95 (0.79 -- 1.2),0.95,0.96,0.12,0.79,0.89,0.93,0.98,1,1.2,Effective reproduction no.,Likely decreasing,0.68
-Serbia,0.95 (0.71 -- 1.2),0.95,0.96,0.17,0.71,0.85,0.91,0.99,1.1,1.2,Effective reproduction no.,Likely decreasing,0.63
-Bahamas,0.94 (0.68 -- 1.2),0.94,0.95,0.17,0.68,0.86,0.91,0.98,1,1.2,Effective reproduction no.,Likely decreasing,0.67
-Italy,0.94 (0.72 -- 1.1),0.94,0.93,0.12,0.72,0.86,0.91,0.97,1,1.1,Effective reproduction no.,Likely decreasing,0.72
-Poland,0.94 (0.75 -- 1.2),0.94,0.95,0.14,0.75,0.85,0.91,0.97,1,1.2,Effective reproduction no.,Likely decreasing,0.68
-Réunion,0.94 (0.54 -- 1.5),0.94,0.98,0.33,0.54,0.8,0.88,0.99,1.1,1.5,Effective reproduction no.,Likely decreasing,0.61
-Sweden,0.94 (0.74 -- 1.2),0.94,0.95,0.14,0.74,0.86,0.91,0.98,1,1.2,Effective reproduction no.,Likely decreasing,0.66
-Azerbaijan,0.93 (0.51 -- 1.5),0.93,0.95,0.3,0.51,0.75,0.86,1,1.1,1.5,Effective reproduction no.,Stable,0.59
-Ethiopia,0.93 (0.79 -- 1.1),0.93,0.94,0.1,0.79,0.87,0.91,0.96,1,1.1,Effective reproduction no.,Likely decreasing,0.76
-Monaco,0.93 (0.52 -- 1.5),0.93,0.96,0.3,0.52,0.76,0.87,1,1.1,1.5,Effective reproduction no.,Likely decreasing,0.6
-Saint Martin (French part),0.93 (0.65 -- 1.1),0.93,0.92,0.16,0.65,0.85,0.91,0.95,0.98,1.1,Effective reproduction no.,Likely decreasing,0.8
-Bosnia & Herzegovina,0.92 (0.64 -- 1.3),0.92,0.93,0.19,0.64,0.8,0.87,0.96,1,1.3,Effective reproduction no.,Likely decreasing,0.68
-Croatia,0.92 (0.66 -- 1.4),0.92,0.96,0.23,0.66,0.81,0.87,0.97,1.1,1.4,Effective reproduction no.,Likely decreasing,0.65
-Hungary,0.92 (0.57 -- 1.2),0.92,0.92,0.2,0.57,0.79,0.87,0.97,1,1.2,Effective reproduction no.,Likely decreasing,0.67
-Finland,0.91 (0.74 -- 1.2),0.91,0.93,0.14,0.74,0.85,0.89,0.94,0.99,1.2,Effective reproduction no.,Likely decreasing,0.77
-Jordan,0.91 (0.75 -- 1.1),0.91,0.91,0.1,0.75,0.85,0.89,0.93,0.97,1.1,Effective reproduction no.,Likely decreasing,0.83
-Qatar,0.91 (0.72 -- 1.1),0.91,0.91,0.11,0.72,0.83,0.88,0.93,0.98,1.1,Effective reproduction no.,Likely decreasing,0.81
-Somalia,0.91 (0.67 -- 1.2),0.91,0.92,0.2,0.67,0.84,0.88,0.93,0.97,1.2,Effective reproduction no.,Likely decreasing,0.82
-Suriname,0.91 (0.39 -- 1.7),0.91,0.97,0.43,0.39,0.68,0.82,1,1.2,1.7,Effective reproduction no.,Stable,0.59
-Nicaragua,0.89 (0.24 -- 1.2),0.89,0.84,0.37,0.24,0.64,0.81,0.96,1,1.2,Effective reproduction no.,Likely decreasing,0.69
-Belize,0.88 (0.39 -- 1.6),0.88,0.93,0.4,0.39,0.68,0.8,0.97,1.1,1.6,Effective reproduction no.,Likely decreasing,0.64
-Bulgaria,0.88 (0.66 -- 1.1),0.88,0.88,0.14,0.66,0.8,0.85,0.91,0.96,1.1,Effective reproduction no.,Likely decreasing,0.83
+Cayman Islands,1 (0.76 -- 1.2),1,1,0.15,0.76,0.96,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.34
+Colombia,1 (0.65 -- 1.2),1,1,0.17,0.65,0.98,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.3
+Costa Rica,1 (0.87 -- 1.2),1,1,0.098,0.87,0.97,1,1,1.1,1.2,Effective reproduction no.,Stable,0.42
+Dominica,1 (0 -- 20),1,6,34,0,0,1,2,3,20,New confirmed cases by infection date,Likely increasing,0.31
+El Salvador,1 (0.92 -- 1.1),1,1,0.055,0.92,1,1,1,1,1.1,Effective reproduction no.,Likely increasing,0.27
+Equatorial Guinea,1 (0.61 -- 1.2),1,0.97,0.21,0.61,0.88,0.96,1,1.1,1.2,Effective reproduction no.,Stable,0.5
+Eritrea,1 (0.51 -- 1.4),1,1,0.29,0.51,0.82,0.96,1.1,1.2,1.4,Effective reproduction no.,Stable,0.45
+Gabon,1 (0.79 -- 1.2),1,1,0.14,0.79,0.97,1,1,1.1,1.2,Effective reproduction no.,Likely increasing,0.35
+Guadeloupe,1 (0.42 -- 1.8),1,1,0.43,0.42,0.77,0.92,1.1,1.3,1.8,Effective reproduction no.,Stable,0.49
+Guernsey,1 (0.66 -- 1.7),1,1.1,0.36,0.66,0.96,1,1.1,1.2,1.7,Effective reproduction no.,Likely increasing,0.36
+Iraq,1 (0.88 -- 1.2),1,1,0.11,0.88,0.97,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.37
+Israel,1 (0.7 -- 1.3),1,1,0.18,0.7,0.88,0.95,1,1.1,1.3,Effective reproduction no.,Stable,0.51
+Kyrgyzstan,1 (0.84 -- 1.3),1,1.1,0.13,0.84,0.97,1,1.1,1.1,1.3,Effective reproduction no.,Likely increasing,0.35
+Latvia,1 (0.91 -- 1.1),1,1,0.06,0.91,0.98,1,1,1,1.1,Effective reproduction no.,Stable,0.4
+Liechtenstein,1 (0 -- 17),1,5,25,0,0,0,2,3,17,New confirmed cases by infection date,Likely decreasing,0.89
+New Zealand,1 (0.92 -- 1.3),1,1.1,0.14,0.92,0.99,1,1,1.1,1.3,Effective reproduction no.,Likely increasing,0.29
+North Macedonia,1 (0.83 -- 1.3),1,1,0.15,0.83,0.93,0.98,1,1.1,1.3,Effective reproduction no.,Stable,0.49
+Papua New Guinea,1 (0.59 -- 2.1),1,1.2,0.7,0.59,0.87,0.98,1.1,1.2,2.1,Effective reproduction no.,Stable,0.44
+Sint Maarten,1 (0.94 -- 1.2),1,1.1,0.087,0.94,1,1,1.1,1.1,1.2,Effective reproduction no.,Likely increasing,0.18
+South Sudan,1 (0.63 -- 1.3),1,1,0.2,0.63,0.93,1,1,1.1,1.3,Effective reproduction no.,Likely increasing,0.39
+Spain,1 (0.67 -- 1.3),1,0.99,0.18,0.67,0.88,0.96,1,1.1,1.3,Effective reproduction no.,Stable,0.5
+St. Barthélemy,1 (0 -- 5),1,2,21,0,0,1,1,2,5,New confirmed cases by infection date,Stable,0.55
+Trinidad & Tobago,1 (0.82 -- 3.8),1,1.4,0.91,0.82,0.93,0.96,1.1,1.3,3.8,Effective reproduction no.,Stable,0.51
+Vietnam,1 (0.81 -- 1.2),1,1,0.12,0.81,0.95,0.98,1,1,1.2,Effective reproduction no.,Stable,0.49
+Yemen,1 (0 -- 3),1,1,2,0,0,0,1,1,3,New confirmed cases by infection date,Likely increasing,0.39
+Yemen,1 (0.74 -- 1.4),1,1.1,0.24,0.74,0.95,1,1.1,1.1,1.4,Effective reproduction no.,Likely increasing,0.39
+Bolivia,0.99 (0.73 -- 1.3),0.99,0.99,0.16,0.73,0.89,0.95,1,1.1,1.3,Effective reproduction no.,Stable,0.53
+Kosovo,0.99 (0.64 -- 1.3),0.99,0.99,0.21,0.64,0.84,0.94,1,1.1,1.3,Effective reproduction no.,Stable,0.52
+St. Barthélemy,0.99 (0.8 -- 1.4),0.99,1,0.22,0.8,0.94,0.97,1,1.1,1.4,Effective reproduction no.,Stable,0.55
+Cameroon,0.98 (0.67 -- 1.2),0.98,0.97,0.18,0.67,0.88,0.94,1,1.1,1.2,Effective reproduction no.,Stable,0.56
+Guinea,0.98 (0.86 -- 1.3),0.98,1,0.14,0.86,0.94,0.96,1,1.1,1.3,Effective reproduction no.,Stable,0.59
+Northern Mariana Islands,0.98 (0.66 -- 1.2),0.98,0.97,0.19,0.66,0.91,0.96,1,1,1.2,Effective reproduction no.,Likely decreasing,0.6
+Puerto Rico,0.98 (0.82 -- 1.1),0.98,0.96,0.077,0.82,0.93,0.96,0.99,1,1.1,Effective reproduction no.,Likely decreasing,0.71
+Romania,0.98 (0.8 -- 1.1),0.98,0.97,0.1,0.8,0.92,0.96,1,1,1.1,Effective reproduction no.,Likely decreasing,0.61
+U.S. Virgin Islands,0.98 (0.7 -- 1.5),0.98,1,0.26,0.7,0.87,0.94,1,1.1,1.5,Effective reproduction no.,Stable,0.54
+Estonia,0.97 (0.69 -- 1.4),0.97,0.99,0.21,0.69,0.85,0.93,1,1.1,1.4,Effective reproduction no.,Stable,0.55
+French Polynesia,0.97 (0.72 -- 1.4),0.97,1,0.22,0.72,0.87,0.93,1,1.1,1.4,Effective reproduction no.,Stable,0.57
+Mauritius,0.97 (0.79 -- 1.3),0.97,0.99,0.16,0.79,0.93,0.96,0.99,1,1.3,Effective reproduction no.,Likely decreasing,0.63
+Monaco,0.97 (0.55 -- 1.5),0.97,1,0.31,0.55,0.79,0.9,1,1.2,1.5,Effective reproduction no.,Stable,0.54
+Myanmar (Burma),0.97 (0.82 -- 1.2),0.97,0.99,0.12,0.82,0.91,0.95,1,1,1.2,Effective reproduction no.,Likely decreasing,0.61
+Oman,0.97 (0.9 -- 1.2),0.97,1,0.11,0.9,0.94,0.96,0.99,1,1.2,Effective reproduction no.,Likely decreasing,0.62
+Panama,0.97 (0.85 -- 1.1),0.97,0.97,0.067,0.85,0.93,0.96,0.98,1,1.1,Effective reproduction no.,Likely decreasing,0.69
+Central African Republic,0.96 (0.58 -- 1.2),0.96,0.93,0.18,0.58,0.88,0.94,0.98,1,1.2,Effective reproduction no.,Likely decreasing,0.71
+Luxembourg,0.96 (0.68 -- 1.5),0.96,1,0.25,0.68,0.84,0.91,1,1.1,1.5,Effective reproduction no.,Stable,0.59
+Malta,0.96 (0.62 -- 1.2),0.96,0.95,0.19,0.62,0.82,0.91,1,1.1,1.2,Effective reproduction no.,Stable,0.59
+Bahamas,0.95 (0.69 -- 1.2),0.95,0.96,0.17,0.69,0.87,0.92,0.99,1,1.2,Effective reproduction no.,Likely decreasing,0.64
+Burkina Faso,0.95 (0.58 -- 1.6),0.95,0.99,0.31,0.58,0.8,0.89,1,1.1,1.6,Effective reproduction no.,Stable,0.57
+Germany,0.95 (0.67 -- 1.2),0.95,0.94,0.16,0.67,0.84,0.91,0.98,1,1.2,Effective reproduction no.,Likely decreasing,0.65
+Norway,0.95 (0.61 -- 1.3),0.95,0.94,0.2,0.61,0.82,0.9,0.99,1.1,1.3,Effective reproduction no.,Likely decreasing,0.61
+Armenia,0.94 (0.64 -- 1.2),0.94,0.94,0.18,0.64,0.82,0.9,0.98,1,1.2,Effective reproduction no.,Likely decreasing,0.64
+Bangladesh,0.94 (0.82 -- 1.1),0.94,0.94,0.073,0.82,0.89,0.92,0.96,0.98,1.1,Effective reproduction no.,Likely decreasing,0.82
+Ethiopia,0.94 (0.81 -- 1.1),0.94,0.95,0.096,0.81,0.89,0.92,0.96,1,1.1,Effective reproduction no.,Likely decreasing,0.74
+Finland,0.94 (0.77 -- 1.2),0.94,0.96,0.15,0.77,0.87,0.91,0.96,1,1.2,Effective reproduction no.,Likely decreasing,0.71
+Japan,0.94 (0.62 -- 1.2),0.94,0.92,0.17,0.62,0.81,0.89,0.98,1,1.2,Effective reproduction no.,Likely decreasing,0.66
+Kuwait,0.94 (0.57 -- 1.3),0.94,0.94,0.22,0.57,0.79,0.88,1,1.1,1.3,Effective reproduction no.,Likely decreasing,0.6
+Poland,0.94 (0.71 -- 1.2),0.94,0.94,0.14,0.71,0.85,0.91,0.97,1,1.2,Effective reproduction no.,Likely decreasing,0.7
+Slovakia,0.94 (0.67 -- 1.3),0.94,0.95,0.19,0.67,0.83,0.9,0.98,1.1,1.3,Effective reproduction no.,Likely decreasing,0.65
+Réunion,0.93 (0.55 -- 1.5),0.93,0.97,0.31,0.55,0.81,0.89,0.99,1.1,1.5,Effective reproduction no.,Likely decreasing,0.63
+Bosnia & Herzegovina,0.92 (0.65 -- 1.2),0.92,0.93,0.18,0.65,0.8,0.87,0.96,1,1.2,Effective reproduction no.,Likely decreasing,0.68
+Greece,0.92 (0.65 -- 1.2),0.92,0.92,0.17,0.65,0.82,0.88,0.96,1,1.2,Effective reproduction no.,Likely decreasing,0.69
+India,0.92 (0.78 -- 1),0.92,0.91,0.071,0.78,0.87,0.9,0.93,0.95,1,Effective reproduction no.,Likely decreasing,0.94
+Qatar,0.92 (0.73 -- 1.1),0.92,0.92,0.12,0.73,0.84,0.89,0.94,0.99,1.1,Effective reproduction no.,Likely decreasing,0.78
+Saint Martin (French part),0.92 (0.62 -- 1.1),0.92,0.91,0.17,0.62,0.84,0.89,0.94,0.98,1.1,Effective reproduction no.,Likely decreasing,0.81
+San Marino,0.92 (0.57 -- 1.3),0.92,0.93,0.23,0.57,0.79,0.88,0.96,1,1.3,Effective reproduction no.,Likely decreasing,0.67
+Croatia,0.91 (0.66 -- 1.4),0.91,0.94,0.22,0.66,0.8,0.87,0.96,1.1,1.4,Effective reproduction no.,Likely decreasing,0.67
+Kazakhstan,0.91 (0.7 -- 1.1),0.91,0.91,0.13,0.7,0.83,0.88,0.94,0.98,1.1,Effective reproduction no.,Likely decreasing,0.79
+Nepal,0.91 (0.74 -- 1.1),0.91,0.91,0.11,0.74,0.84,0.88,0.93,0.98,1.1,Effective reproduction no.,Likely decreasing,0.81
+Somalia,0.91 (0.64 -- 1.3),0.91,0.92,0.23,0.64,0.83,0.88,0.93,0.97,1.3,Effective reproduction no.,Likely decreasing,0.81
+South Africa,0.91 (0.68 -- 1.1),0.91,0.9,0.12,0.68,0.83,0.88,0.94,0.98,1.1,Effective reproduction no.,Likely decreasing,0.82
+Mauritania,0.9 (0.43 -- 1.4),0.9,0.91,0.31,0.43,0.7,0.83,0.97,1.1,1.4,Effective reproduction no.,Likely decreasing,0.64
+Nicaragua,0.9 (0.19 -- 1.2),0.9,0.83,0.39,0.19,0.63,0.81,0.96,1,1.2,Effective reproduction no.,Likely decreasing,0.7
+Serbia,0.9 (0.66 -- 1.2),0.9,0.91,0.16,0.66,0.8,0.86,0.94,1,1.2,Effective reproduction no.,Likely decreasing,0.75
+Sweden,0.9 (0.69 -- 1.1),0.9,0.9,0.14,0.69,0.82,0.87,0.93,0.99,1.1,Effective reproduction no.,Likely decreasing,0.78
+Bulgaria,0.89 (0.67 -- 1.1),0.89,0.9,0.14,0.67,0.81,0.86,0.92,0.98,1.1,Effective reproduction no.,Likely decreasing,0.8
+Jordan,0.89 (0.73 -- 1.1),0.89,0.89,0.099,0.73,0.83,0.86,0.91,0.95,1.1,Effective reproduction no.,Likely decreasing,0.88
+Morocco,0.89 (0.78 -- 1),0.89,0.89,0.078,0.78,0.85,0.87,0.9,0.93,1,Effective reproduction no.,Likely decreasing,0.91
 Netherlands,0.88 (0.58 -- 1.4),0.88,0.91,0.25,0.58,0.75,0.83,0.93,1,1.4,Effective reproduction no.,,0.55
-San Marino,0.88 (0.48 -- 1.3),0.88,0.88,0.25,0.48,0.73,0.83,0.93,1,1.3,Effective reproduction no.,Likely decreasing,0.72
-Eswatini,0.87 (0.55 -- 1.3),0.87,0.89,0.23,0.55,0.73,0.82,0.92,1,1.3,Effective reproduction no.,Likely decreasing,0.73
-Austria,0.86 (0.62 -- 1.1),0.86,0.86,0.15,0.62,0.77,0.83,0.89,0.95,1.1,Effective reproduction no.,Likely decreasing,0.85
-Switzerland,0.86 (0.57 -- 1.2),0.86,0.88,0.21,0.57,0.73,0.81,0.91,1,1.2,Effective reproduction no.,Likely decreasing,0.75
-Morocco,0.85 (0.74 -- 0.98),0.85,0.85,0.073,0.74,0.81,0.83,0.87,0.89,0.98,Effective reproduction no.,Decreasing,0.97
+Eswatini,0.87 (0.55 -- 1.3),0.87,0.89,0.24,0.55,0.74,0.82,0.92,1,1.3,Effective reproduction no.,Likely decreasing,0.73
+Italy,0.87 (0.63 -- 1.1),0.87,0.86,0.13,0.63,0.78,0.84,0.9,0.95,1.1,Effective reproduction no.,Likely decreasing,0.87
+Hungary,0.86 (0.5 -- 1.2),0.86,0.85,0.2,0.5,0.73,0.81,0.91,0.99,1.2,Effective reproduction no.,Likely decreasing,0.76
+Mali,0.86 (0.57 -- 1.2),0.86,0.87,0.19,0.57,0.75,0.82,0.91,0.98,1.2,Effective reproduction no.,Likely decreasing,0.78
+Palestinian Territories,0.86 (0.66 -- 1.1),0.86,0.88,0.15,0.66,0.78,0.83,0.9,0.96,1.1,Effective reproduction no.,Likely decreasing,0.83
+Afghanistan,0.85 (0.68 -- 1.1),0.85,0.86,0.13,0.68,0.79,0.83,0.87,0.92,1.1,Effective reproduction no.,Likely decreasing,0.9
+Kenya,0.85 (0.68 -- 1.1),0.85,0.86,0.12,0.68,0.78,0.82,0.87,0.92,1.1,Effective reproduction no.,Likely decreasing,0.9
+Montenegro,0.85 (0.52 -- 1.2),0.85,0.85,0.2,0.52,0.72,0.8,0.9,0.97,1.2,Effective reproduction no.,Likely decreasing,0.79
+Switzerland,0.85 (0.57 -- 1.3),0.85,0.88,0.21,0.57,0.73,0.81,0.9,0.99,1.3,Effective reproduction no.,Likely decreasing,0.76
+Azerbaijan,0.84 (0.44 -- 1.3),0.84,0.86,0.27,0.44,0.67,0.78,0.91,1,1.3,Effective reproduction no.,Likely decreasing,0.72
 Denmark,0.84 (0.56 -- 1.2),0.84,0.86,0.21,0.56,0.71,0.79,0.88,0.98,1.2,Effective reproduction no.,Likely decreasing,0.78
-United States,0.84 (0.54 -- 1.1),0.84,0.83,0.17,0.54,0.71,0.79,0.89,0.96,1.1,Effective reproduction no.,Likely decreasing,0.82
-Kenya,0.83 (0.65 -- 1),0.83,0.83,0.12,0.65,0.76,0.8,0.85,0.9,1,Effective reproduction no.,Likely decreasing,0.93
-Mali,0.83 (0.5 -- 1.1),0.83,0.83,0.21,0.5,0.71,0.78,0.87,0.95,1.1,Effective reproduction no.,Likely decreasing,0.82
-Palestinian Territories,0.83 (0.62 -- 1.1),0.83,0.83,0.13,0.62,0.75,0.8,0.86,0.91,1.1,Effective reproduction no.,Likely decreasing,0.91
+Belize,0.83 (0.34 -- 1.6),0.83,0.87,0.39,0.34,0.62,0.75,0.91,1.1,1.6,Effective reproduction no.,Likely decreasing,0.7
 Iran,0.82 (0.64 -- 1.2),0.82,0.85,0.17,0.64,0.74,0.79,0.86,0.93,1.2,Effective reproduction no.,,0.41
-Australia,0.81 (0.49 -- 1.1),0.81,0.81,0.2,0.49,0.68,0.77,0.86,0.94,1.1,Effective reproduction no.,Likely decreasing,0.86
-Montenegro,0.81 (0.49 -- 1.1),0.81,0.81,0.2,0.49,0.68,0.76,0.86,0.93,1.1,Effective reproduction no.,Likely decreasing,0.85
+Austria,0.81 (0.57 -- 1),0.81,0.81,0.14,0.57,0.72,0.77,0.84,0.9,1,Effective reproduction no.,Likely decreasing,0.92
+United Kingdom,0.81 (0.59 -- 1.1),0.81,0.82,0.15,0.59,0.72,0.77,0.84,0.91,1.1,Effective reproduction no.,Likely decreasing,0.9
+Australia,0.8 (0.48 -- 1.1),0.8,0.8,0.2,0.48,0.67,0.75,0.84,0.92,1.1,Effective reproduction no.,Likely decreasing,0.87
 Russia,0.8 (0.7 -- 0.89),0.8,0.8,0.059,0.7,0.76,0.79,0.82,0.84,0.89,Effective reproduction no.,,0.36
-Bhutan,0.78 (0.21 -- 1.3),0.78,0.77,0.34,0.21,0.52,0.68,0.87,1,1.3,Effective reproduction no.,Likely decreasing,0.74
-Czechia,0.78 (0.49 -- 1.1),0.78,0.79,0.18,0.49,0.66,0.74,0.83,0.91,1.1,Effective reproduction no.,Likely decreasing,0.88
-Slovenia,0.77 (0.41 -- 1.2),0.77,0.78,0.23,0.41,0.62,0.71,0.83,0.93,1.2,Effective reproduction no.,Likely decreasing,0.83
-United Kingdom,0.77 (0.52 -- 1),0.77,0.77,0.15,0.52,0.67,0.73,0.8,0.86,1,Effective reproduction no.,Likely decreasing,0.94
-Afghanistan,0.76 (0.54 -- 0.96),0.76,0.76,0.13,0.54,0.68,0.73,0.79,0.83,0.96,Effective reproduction no.,Decreasing,0.97
-Algeria,0.75 (0.45 -- 1.1),0.75,0.76,0.2,0.45,0.63,0.71,0.8,0.88,1.1,Effective reproduction no.,Likely decreasing,0.89
-Thailand,0.75 (0.11 -- 1.2),0.75,0.75,0.31,0.11,0.57,0.68,0.82,0.94,1.2,Effective reproduction no.,Likely decreasing,0.81
-Jersey,0.74 (0.38 -- 1.3),0.74,0.78,0.31,0.38,0.59,0.68,0.8,0.92,1.3,Effective reproduction no.,Likely decreasing,0.83
-Lithuania,0.74 (0.54 -- 0.98),0.74,0.75,0.13,0.54,0.66,0.71,0.77,0.82,0.98,Effective reproduction no.,Decreasing,0.96
-South Korea,0.74 (0.56 -- 0.95),0.74,0.74,0.12,0.56,0.67,0.71,0.77,0.82,0.95,Effective reproduction no.,Decreasing,0.97
-Bermuda,0.73 (0.31 -- 1.4),0.73,0.77,0.36,0.31,0.55,0.66,0.8,0.92,1.4,Effective reproduction no.,Likely decreasing,0.83
-Cyprus,0.73 (0.35 -- 1.1),0.73,0.73,0.22,0.35,0.57,0.67,0.79,0.88,1.1,Effective reproduction no.,Likely decreasing,0.9
-Uganda,0.7 (0.46 -- 0.96),0.7,0.71,0.16,0.46,0.6,0.67,0.74,0.8,0.96,Effective reproduction no.,Decreasing,0.97
-Belgium,0.69 (0.3 -- 1.1),0.69,0.7,0.26,0.3,0.52,0.63,0.75,0.86,1.1,Effective reproduction no.,Likely decreasing,0.88
+South Korea,0.79 (0.62 -- 1),0.79,0.81,0.13,0.62,0.72,0.77,0.82,0.88,1,Effective reproduction no.,Likely decreasing,0.93
+United States,0.78 (0.5 -- 1.1),0.78,0.78,0.17,0.5,0.66,0.73,0.82,0.9,1.1,Effective reproduction no.,Likely decreasing,0.89
+Suriname,0.77 (0.32 -- 1.5),0.77,0.83,0.39,0.32,0.55,0.69,0.86,1,1.5,Effective reproduction no.,Likely decreasing,0.73
+Thailand,0.77 (0.39 -- 1.2),0.77,0.79,0.27,0.39,0.61,0.71,0.83,0.94,1.2,Effective reproduction no.,Likely decreasing,0.81
+Czechia,0.76 (0.47 -- 1.1),0.76,0.76,0.18,0.47,0.63,0.71,0.8,0.87,1.1,Effective reproduction no.,Likely decreasing,0.91
+Bermuda,0.73 (0.28 -- 1.4),0.73,0.78,0.42,0.28,0.54,0.66,0.8,0.93,1.4,Effective reproduction no.,Likely decreasing,0.81
+Lithuania,0.73 (0.53 -- 0.96),0.73,0.73,0.14,0.53,0.64,0.69,0.76,0.81,0.96,Effective reproduction no.,Decreasing,0.97
+Algeria,0.72 (0.45 -- 1),0.72,0.73,0.19,0.45,0.61,0.68,0.77,0.85,1,Effective reproduction no.,Likely decreasing,0.93
+Jersey,0.71 (0.33 -- 1.3),0.71,0.74,0.3,0.33,0.56,0.65,0.77,0.88,1.3,Effective reproduction no.,Likely decreasing,0.86
+Slovenia,0.71 (0.36 -- 1.1),0.71,0.72,0.22,0.36,0.56,0.66,0.77,0.86,1.1,Effective reproduction no.,Likely decreasing,0.9
+Curaçao,0.7 (0.23 -- 1.9),0.7,0.84,0.58,0.23,0.48,0.61,0.8,1,1.9,Effective reproduction no.,Likely decreasing,0.73
+Uganda,0.7 (0.44 -- 0.94),0.7,0.7,0.16,0.44,0.6,0.66,0.73,0.79,0.94,Effective reproduction no.,Decreasing,0.97
+Cyprus,0.69 (0.29 -- 1),0.69,0.69,0.23,0.29,0.53,0.63,0.75,0.84,1,Effective reproduction no.,Likely decreasing,0.92
 Saudi Arabia,0.69 (0.46 -- 1),0.69,0.71,0.18,0.46,0.58,0.65,0.72,0.8,1,Effective reproduction no.,Likely decreasing,0.78
-Grenada,0.68 (0.035 -- 2.3),0.68,0.85,0.91,0.035,0.35,0.55,0.81,1,2.3,Effective reproduction no.,Likely decreasing,0.73
-Curaçao,0.66 (0.19 -- 1.9),0.66,0.8,0.57,0.19,0.43,0.57,0.77,1,1.9,Effective reproduction no.,Likely decreasing,0.75
+Bhutan,0.66 (0.13 -- 1.2),0.66,0.67,0.34,0.13,0.41,0.56,0.75,0.91,1.2,Effective reproduction no.,Likely decreasing,0.83
 Turkey,0.66 (0.27 -- 1.3),0.66,0.7,0.31,0.27,0.48,0.59,0.73,0.85,1.3,Effective reproduction no.,,0.54
-Gibraltar,0.64 (0.25 -- 1.4),0.64,0.7,0.38,0.25,0.45,0.56,0.71,0.86,1.4,Effective reproduction no.,Likely decreasing,0.84
-Mongolia,0.59 (0.15 -- 1.5),0.59,0.69,0.48,0.15,0.36,0.5,0.69,0.89,1.5,Effective reproduction no.,Likely decreasing,0.81
-Liechtenstein,0.58 (0.15 -- 1.3),0.58,0.63,0.38,0.15,0.38,0.5,0.65,0.79,1.3,Effective reproduction no.,Likely decreasing,0.88
-Faroe Islands,0.48 (0.14 -- 0.98),0.48,0.51,0.27,0.14,0.31,0.41,0.55,0.66,0.98,Effective reproduction no.,Decreasing,0.96
+Belgium,0.62 (0.25 -- 1.1),0.62,0.64,0.25,0.25,0.46,0.56,0.69,0.8,1.1,Effective reproduction no.,Likely decreasing,0.92
+Gibraltar,0.62 (0.24 -- 1.4),0.62,0.69,0.39,0.24,0.43,0.55,0.7,0.85,1.4,Effective reproduction no.,Likely decreasing,0.85
+Mongolia,0.59 (0.15 -- 1.6),0.59,0.69,0.49,0.15,0.36,0.5,0.69,0.9,1.6,Effective reproduction no.,Likely decreasing,0.81
+Grenada,0.55 (0.02 -- 1.8),0.55,0.68,0.74,0.02,0.24,0.43,0.68,0.88,1.8,Effective reproduction no.,Likely decreasing,0.81
+Liechtenstein,0.52 (0.13 -- 1.3),0.52,0.58,0.38,0.13,0.33,0.44,0.6,0.74,1.3,Effective reproduction no.,Likely decreasing,0.89
+Faroe Islands,0.46 (0.12 -- 0.96),0.46,0.49,0.27,0.12,0.29,0.39,0.52,0.64,0.96,Effective reproduction no.,Decreasing,0.96
 Guinea-Bissau,0.43 (0.0065 -- 1.1),0.43,0.5,0.55,0.0065,0.17,0.33,0.53,0.69,1.1,Effective reproduction no.,Likely decreasing,0.93
-Sudan,0.24 (0.04 -- 0.62),0.24,0.27,0.2,0.04,0.14,0.2,0.28,0.36,0.62,Effective reproduction no.,Decreasing,0.99
-Martinique,0.1 (0.0026 -- 0.87),0.1,0.24,0.42,0.0026,0.031,0.069,0.15,0.28,0.87,Effective reproduction no.,Decreasing,0.96
+Sudan,0.22 (0.035 -- 0.6),0.22,0.26,0.19,0.035,0.12,0.18,0.26,0.35,0.6,Effective reproduction no.,Decreasing,0.99
+Martinique,0.092 (0.0021 -- 0.91),0.092,0.24,0.53,0.0021,0.026,0.058,0.14,0.26,0.91,Effective reproduction no.,Decreasing,0.96
 Tajikistan,0.031 (0.00062 -- 0.32),0.031,0.091,0.25,0.00062,0.0077,0.019,0.048,0.091,0.32,Effective reproduction no.,,0.71
-Central African Republic,0 (0 -- 3),0,1,4,0,0,0,1,1,3,New confirmed cases by infection date,Likely decreasing,0.67
+Central African Republic,0 (0 -- 2),0,1,1,0,0,0,0,1,2,New confirmed cases by infection date,Likely decreasing,0.71
 Faroe Islands,0 (0 -- 2),0,0,1,0,0,0,0,0,2,New confirmed cases by infection date,Decreasing,0.96
-Grenada,0 (0 -- 12),0,9,145,0,0,0,0,1,12,New confirmed cases by infection date,Likely decreasing,0.73
-Guernsey,0 (0 -- 7),0,2,5,0,0,0,1,2,7,New confirmed cases by infection date,Likely increasing,0.29
+Grenada,0 (0 -- 5),0,2,33,0,0,0,0,0,5,New confirmed cases by infection date,Likely decreasing,0.81
+Guernsey,0 (0 -- 4),0,1,5,0,0,0,0,1,4,New confirmed cases by infection date,Likely increasing,0.36
 Guinea-Bissau,0 (0 -- 0),0,0,0,0,0,0,0,0,0,New confirmed cases by infection date,Likely decreasing,0.93
-Martinique,0 (0 -- 11),0,6,83,0,0,0,0,0,11,New confirmed cases by infection date,Decreasing,0.96
-Mauritius,0 (0 -- 3),0,1,2,0,0,0,1,1,3,New confirmed cases by infection date,Likely decreasing,0.65
-Northern Mariana Islands,0 (0 -- 1),0,0,0,0,0,0,0,0,1,New confirmed cases by infection date,Stable,0.59
-Sudan,0 (0 -- 5),0,1,3,0,0,0,0,1,5,New confirmed cases by infection date,Decreasing,0.99
+Martinique,0 (0 -- 7),0,8,163,0,0,0,0,0,7,New confirmed cases by infection date,Decreasing,0.96
+Mauritius,0 (0 -- 3),0,1,3,0,0,0,1,1,3,New confirmed cases by infection date,Likely decreasing,0.63
+Northern Mariana Islands,0 (0 -- 1),0,0,1,0,0,0,0,0,1,New confirmed cases by infection date,Likely decreasing,0.6
+Sudan,0 (0 -- 3),0,0,2,0,0,0,0,0,3,New confirmed cases by infection date,Decreasing,0.99
 Tajikistan,0 (0 -- 0),0,0,0,0,0,0,0,0,0,New confirmed cases by infection date,,0.71
-Yemen,0 (0 -- 3),0,1,2,0,0,0,1,1,3,New confirmed cases by infection date,Stable,0.41
