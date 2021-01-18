@@ -86,7 +86,7 @@ DATASETS <- list(
                                              dataset_folder_name = "admissions",
                                              cases_subregion_source = "region_level_2",
                                              data = function() {
-                                               admissions <- covid19.england.hospitalisations::get_admissions(level = "utla")
+                                               admissions <- covid19.nhs.data::get_admissions(level = "utla")
                                                admissions <- data.table::setDT(admissions)
                                                admissions <- admissions[, .(region_level_2 = geo_name, date, cases_new = admissions)]
                                                admissions <- admissions[!is.na(region_level_2)]
