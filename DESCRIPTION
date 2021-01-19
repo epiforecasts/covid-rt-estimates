@@ -29,6 +29,7 @@ LazyData: true
 Imports:
   EpiNow2 (>= 1.3.3),
   covidregionaldata (>= 0.8.3),
+  covid19.nhs.data,
   data.table,
   dplyr (>= 1.0.0),
   futile.logger (>= 1.4),
