@@ -1,13 +1,13 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases,prob_control
-Global,433198 (276163 -- 625342),433198,439175,106852,276163,363875,405836,458713,505196,625342,New confirmed cases by infection date,Decreasing,0.97
-Americas,298548 (160372 -- 469021),298548,304857,96961,160372,231522,271957,325192,371376,469021,New confirmed cases by infection date,Likely decreasing,0.73
-Europe,85793 (46805 -- 139767),85793,88802,28700,46805,67910,78863,93201,106732,139767,New confirmed cases by infection date,Decreasing,1
+Global,181044 (95516 -- 313021),181044,189572,68493,95516,139886,164996,197533,228516,313021,New confirmed cases by infection date,Decreasing,1
+Americas,82019 (30078 -- 222911),82019,96570,60640,30078,55264,70793,93571,119467,222911,New confirmed cases by infection date,Decreasing,0.99
+Europe,77318 (44970 -- 122264),77318,79866,23749,44970,62779,71858,84362,94968,122264,New confirmed cases by infection date,Decreasing,1
 Asia,66688 (48779 -- 88595),66688,67456,12318,48779,58776,63671,69894,75297,88595,New confirmed cases by infection date,Likely decreasing,0.88
-Africa,38284 (28728 -- 47247),38284,38168,5645,28728,34703,36974,39568,41650,47247,New confirmed cases by infection date,Likely increasing,0.12
-Oceania,103 (50 -- 230),103,118,62,50,78,93,116,141,230,New confirmed cases by infection date,Stable,0.43
-Africa,1.1 (0.96 -- 1.1),1.1,1.1,0.049,0.96,1,1.1,1.1,1.1,1.1,Effective reproduction no.,Likely increasing,0.12
-Oceania,1 (0.83 -- 1.3),1,1,0.14,0.83,0.94,0.99,1,1.1,1.3,Effective reproduction no.,Stable,0.43
-Americas,0.91 (0.65 -- 1.1),0.91,0.9,0.14,0.65,0.8,0.87,0.95,1,1.1,Effective reproduction no.,Likely decreasing,0.73
+Africa,37162 (27291 -- 46349),37162,36996,5734,27291,33388,35711,38477,40653,46349,New confirmed cases by infection date,Likely increasing,0.17
+Oceania,85 (40 -- 182),85,95,49,40,64,76,96,115,182,New confirmed cases by infection date,Stable,0.56
+Africa,1.1 (0.95 -- 1.1),1.1,1,0.05,0.95,1,1,1.1,1.1,1.1,Effective reproduction no.,Likely increasing,0.17
+Oceania,0.98 (0.78 -- 1.2),0.98,0.99,0.14,0.78,0.91,0.96,1,1.1,1.2,Effective reproduction no.,Stable,0.56
 Asia,0.9 (0.75 -- 1),0.9,0.9,0.089,0.75,0.84,0.88,0.92,0.96,1,Effective reproduction no.,Likely decreasing,0.88
-Global,0.81 (0.63 -- 0.98),0.81,0.81,0.11,0.63,0.74,0.79,0.84,0.88,0.98,Effective reproduction no.,Decreasing,0.97
-Europe,0.68 (0.48 -- 0.86),0.68,0.68,0.12,0.48,0.59,0.65,0.71,0.76,0.86,Effective reproduction no.,Decreasing,1
+Europe,0.67 (0.49 -- 0.84),0.67,0.67,0.11,0.49,0.59,0.64,0.7,0.74,0.84,Effective reproduction no.,Decreasing,1
+Global,0.55 (0.36 -- 0.75),0.55,0.55,0.12,0.36,0.47,0.52,0.58,0.63,0.75,Effective reproduction no.,Decreasing,1
+Americas,0.52 (0.27 -- 0.86),0.52,0.53,0.17,0.27,0.41,0.48,0.56,0.64,0.86,Effective reproduction no.,Decreasing,0.99
