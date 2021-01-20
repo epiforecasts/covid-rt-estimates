@@ -1,25 +1,25 @@
 region,estimate,median,mean,sd,lower_90,lower_50,lower_20,upper_20,upper_50,upper_90,metric,Expected change in daily cases,prob_control
-Ontario,2060 (981 -- 4063),2060,2248,951,981,1509,1831,2319,2878,4063,New confirmed cases by infection date,Likely decreasing,0.81
-Quebec,913 (594 -- 1361),913,939,240,594,776,862,978,1078,1361,New confirmed cases by infection date,Decreasing,0.99
-Alberta,494 (255 -- 955),494,537,230,255,385,449,542,641,955,New confirmed cases by infection date,Likely decreasing,0.87
-British Columbia,447 (252 -- 789),447,477,174,252,360,411,487,560,789,New confirmed cases by infection date,Likely decreasing,0.64
-Saskatchewan,362 (152 -- 685),362,384,169,152,267,326,399,474,685,New confirmed cases by infection date,Stable,0.45
-Manitoba,146 (86 -- 256),146,156,57,86,118,134,158,181,256,New confirmed cases by infection date,Stable,0.57
-New Brunswick,24 (3 -- 207),24,64,198,3,10,18,33,56,207,New confirmed cases by infection date,Likely decreasing,0.62
-Nova Scotia,2 (0 -- 10),2,3,6,0,1,1,2,4,10,New confirmed cases by infection date,Likely decreasing,0.65
-Prince Edward Island,1.1 (0.8 -- 1.7),1.1,1.1,0.36,0.8,0.99,1,1.1,1.2,1.7,Effective reproduction no.,Likely increasing,0.27
-Prince Edward Island,1 (0 -- 6),1,2,11,0,0,0,1,2,6,New confirmed cases by infection date,Likely increasing,0.27
-Saskatchewan,1 (0.69 -- 1.3),1,1,0.18,0.69,0.9,0.98,1.1,1.1,1.3,Effective reproduction no.,Stable,0.45
-Manitoba,0.98 (0.82 -- 1.2),0.98,0.99,0.11,0.82,0.92,0.96,1,1,1.2,Effective reproduction no.,Stable,0.57
-British Columbia,0.97 (0.81 -- 1.1),0.97,0.97,0.1,0.81,0.91,0.95,0.99,1,1.1,Effective reproduction no.,Likely decreasing,0.64
-Alberta,0.89 (0.71 -- 1.1),0.89,0.89,0.11,0.71,0.82,0.86,0.91,0.95,1.1,Effective reproduction no.,Likely decreasing,0.87
-Nova Scotia,0.89 (0.4 -- 1.5),0.89,0.91,0.35,0.4,0.69,0.81,0.96,1.1,1.5,Effective reproduction no.,Likely decreasing,0.65
-Ontario,0.85 (0.6 -- 1.1),0.85,0.85,0.15,0.6,0.74,0.81,0.89,0.96,1.1,Effective reproduction no.,Likely decreasing,0.81
-New Brunswick,0.84 (0.27 -- 2.3),0.84,1,0.78,0.27,0.56,0.72,0.97,1.2,2.3,Effective reproduction no.,Likely decreasing,0.62
-Quebec,0.76 (0.62 -- 0.91),0.76,0.76,0.091,0.62,0.7,0.74,0.78,0.82,0.91,Effective reproduction no.,Decreasing,0.99
-Newfoundland and Labrador,0.71 (0.3 -- 1.4),0.71,0.75,0.36,0.3,0.54,0.64,0.77,0.89,1.4,Effective reproduction no.,Likely decreasing,0.83
-Yukon,0.44 (0.015 -- 1.4),0.44,0.55,0.61,0.015,0.14,0.31,0.58,0.79,1.4,Effective reproduction no.,Likely decreasing,0.88
-Nunavut,0.052 (2.1e-05 -- 1.8),0.052,0.36,0.92,2.1e-05,0.0047,0.023,0.1,0.28,1.8,Effective reproduction no.,Likely decreasing,0.91
+Ontario,1945 (919 -- 3840),1945,2089,858,919,1440,1744,2175,2602,3840,New confirmed cases by infection date,Likely decreasing,0.88
+Quebec,907 (579 -- 1339),907,930,237,579,768,855,970,1073,1339,New confirmed cases by infection date,Decreasing,0.99
+Alberta,503 (257 -- 955),503,543,230,257,391,459,551,645,955,New confirmed cases by infection date,Likely decreasing,0.86
+British Columbia,442 (255 -- 806),442,472,173,255,353,405,480,551,806,New confirmed cases by infection date,Likely decreasing,0.65
+Saskatchewan,365 (159 -- 682),365,385,163,159,272,328,404,470,682,New confirmed cases by infection date,Stable,0.45
+Manitoba,147 (87 -- 258),147,156,54,87,118,135,159,183,258,New confirmed cases by infection date,Stable,0.57
+New Brunswick,25 (3 -- 231),25,64,163,3,10,18,34,58,231,New confirmed cases by infection date,Likely decreasing,0.61
+Nova Scotia,2 (0 -- 10),2,3,6,0,1,1,2,4,10,New confirmed cases by infection date,Likely decreasing,0.66
+Prince Edward Island,1.1 (0.81 -- 1.7),1.1,1.1,0.34,0.81,1,1,1.1,1.2,1.7,Effective reproduction no.,Likely increasing,0.26
+Prince Edward Island,1 (0 -- 6),1,2,8,0,0,0,1,1,6,New confirmed cases by infection date,Likely increasing,0.26
+Saskatchewan,1 (0.7 -- 1.3),1,1,0.18,0.7,0.9,0.98,1.1,1.1,1.3,Effective reproduction no.,Stable,0.45
+Manitoba,0.98 (0.82 -- 1.2),0.98,0.99,0.11,0.82,0.92,0.96,1,1.1,1.2,Effective reproduction no.,Stable,0.57
+British Columbia,0.97 (0.82 -- 1.1),0.97,0.97,0.1,0.82,0.91,0.94,0.99,1,1.1,Effective reproduction no.,Likely decreasing,0.65
+Alberta,0.89 (0.71 -- 1.1),0.89,0.89,0.11,0.71,0.82,0.87,0.91,0.96,1.1,Effective reproduction no.,Likely decreasing,0.86
+Nova Scotia,0.88 (0.38 -- 1.5),0.88,0.9,0.36,0.38,0.67,0.8,0.95,1.1,1.5,Effective reproduction no.,Likely decreasing,0.66
+New Brunswick,0.86 (0.27 -- 2.4),0.86,1,0.76,0.27,0.56,0.73,0.99,1.3,2.4,Effective reproduction no.,Likely decreasing,0.61
+Ontario,0.83 (0.58 -- 1),0.83,0.82,0.14,0.58,0.73,0.79,0.87,0.93,1,Effective reproduction no.,Likely decreasing,0.88
+Quebec,0.76 (0.61 -- 0.91),0.76,0.76,0.091,0.61,0.7,0.74,0.78,0.82,0.91,Effective reproduction no.,Decreasing,0.99
+Newfoundland and Labrador,0.71 (0.31 -- 1.3),0.71,0.76,0.38,0.31,0.55,0.65,0.77,0.9,1.3,Effective reproduction no.,Likely decreasing,0.83
+Yukon,0.45 (0.0079 -- 1.4),0.45,0.55,0.6,0.0079,0.13,0.31,0.6,0.81,1.4,Effective reproduction no.,Likely decreasing,0.87
+Nunavut,0.057 (2.1e-05 -- 2.1),0.057,0.42,1.1,2.1e-05,0.0051,0.023,0.11,0.28,2.1,Effective reproduction no.,Likely decreasing,0.9
 Newfoundland and Labrador,0 (0 -- 0),0,0,1,0,0,0,0,0,0,New confirmed cases by infection date,Likely decreasing,0.83
-Nunavut,0 (0 -- 0),0,0,0,0,0,0,0,0,0,New confirmed cases by infection date,Likely decreasing,0.91
-Yukon,0 (0 -- 0),0,0,1,0,0,0,0,0,0,New confirmed cases by infection date,Likely decreasing,0.88
+Nunavut,0 (0 -- 0),0,0,0,0,0,0,0,0,0,New confirmed cases by infection date,Likely decreasing,0.9
+Yukon,0 (0 -- 0),0,0,1,0,0,0,0,0,0,New confirmed cases by infection date,Likely decreasing,0.87
