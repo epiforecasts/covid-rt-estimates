@@ -40,14 +40,15 @@ Imports:
   R6 (>= 2.4),
   rlang (>= 0.4.7)
 Suggests:
-    dataverse (>= 0.2.0),
+    dataverse (= 0.2.0),
     desc,
     testthat
 Remotes:
   joeHickson/futile.logger,
   epiforecasts/EpiNow2@v1.3.3,
   epiforecasts/covidregionaldata@v0.8.3,
-  epiforecasts/covid19.nhs.data
+  epiforecasts/covid19.nhs.data,
+  iqss/dataverse-client-r
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Biarch: true
