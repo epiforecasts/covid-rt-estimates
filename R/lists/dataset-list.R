@@ -217,3 +217,16 @@ DATASETS <- list(
                         description = "Null",
                         breakdown = "continent"))
 )
+
+for (location in DATASETS) {
+  location <- rlang::duplicate(location)
+  location$name <- paste0(location$name, '-full')
+  split_loc_path <- strsplit(location$target_folder, "/")
+  split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], '-full')
+  location$target_folder <- paste(split_loc_path[[1]], collapse = "/")
+  split_loc_path <- strsplit(location$summary_dir, "/")
+  split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], '-full')
+  location$summary_dir <- paste(split_loc_path[[1]], collapse = "/")
+  location$data_window <- Inf
+  DATASETS[location$name] <- location
+}
