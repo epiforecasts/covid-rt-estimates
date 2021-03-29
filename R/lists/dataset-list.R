@@ -50,12 +50,9 @@ DATASETS <- list(
                                            case_modifier = function(admissions) {
                                              admissions <- admissions[, cases_new := hosp_new_blend]
                                              england <- data.table::copy(admissions)[region_level_1 == "England"]
-                                             scotland <- admissions[region_level_1 == "Scotland",
-                                                                    .SD[date <= (max(date) - 4)], by = "region_level_1"]
-                                             wales <- admissions[region_level_1 == "Wales",
-                                                                 .SD[date <= (max(date) - 2)], by = "region_level_1"]
-                                             ni <- admissions[region_level_1 == "Northern Ireland",
-                                                              .SD[date <= (max(date) - 2)], by = "region_level_1"]
+                                             scotland <- admissions[region_level_1 == "Scotland"][date <= (max(date) - 4)]
+                                             wales <- admissions[region_level_1 == "Wales"][date <= (max(date) - 2)]
+                                             ni <- admissions[region_level_1 == "Northern Ireland"][date <= (max(date) - 2)]
                                              admissions <- data.table::rbindlist(list(england, scotland, wales, ni), 
                                                                                  use.names = TRUE)
                                              return(admissions) },
