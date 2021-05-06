@@ -49,7 +49,10 @@ DATASETS <- list(
                                            dataset_folder_name = "admissions",
                                            case_modifier = function(admissions) {
                                              admissions <- admissions[, cases_new := hosp_new_blend]
-                                             return(admissions) },
+                                             admissions <- add_uk(admissions)
+                                             admissions <- admissions[!is.na(cases_new)]
+                                             return(admissions) 
+                                           },
                                            data_args = list(nhsregions = TRUE)),
   "united-kingdom-local" = Region$new(name = "united-kingdom-local",
                                       publication_metadata = PublicationMetadata$new(

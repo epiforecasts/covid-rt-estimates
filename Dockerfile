@@ -1,4 +1,4 @@
-FROM  docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
+FROM docker.pkg.github.com/epiforecasts/epinow2/epinow2:latest
 
 ## Copy files to working directory of server
 ADD . covid-rt-estimates

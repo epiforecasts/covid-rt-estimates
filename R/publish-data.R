@@ -59,6 +59,8 @@ publish_data <- function(dataset, files = TRUE, production_date = NA) {
               futile.logger::flog.trace("uploading file %s", file_full_path)
               try(futile.logger::ftry(dataverse::add_dataset_file(file = file_full_path, dataset = dataset_id)), silent = TRUE)
             }
+            # test to see if sleeping resolves the issue on dataverse
+            Sys.sleep(60)
           }
         }
       }else {
