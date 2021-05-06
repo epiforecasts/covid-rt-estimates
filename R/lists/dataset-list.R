@@ -228,5 +228,5 @@ for (location in DATASETS) {
   split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], '-full')
   location$summary_dir <- paste(split_loc_path[[1]], collapse = "/")
   location$data_window <- Inf
-  DATASETS[location$name] <- location
+  DATASETS[[location$name]] <- location
 }
