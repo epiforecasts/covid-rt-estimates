@@ -35,7 +35,7 @@ Region <- R6::R6Class("Region",
                                                           dataset_folder_name = "cases") {
 
                                       super$initialize(..., region_scale)
-                                      self$covid_regional_data_identifier <- covid_regional_data_identifier
+                                      self$covid_regional_data_identifier <- ifelse(is.na(covid_regional_data_identifier), self$name, covid_regional_data_identifier)
                                       self$cases_subregion_source <- cases_subregion_source
                                       middle_folder <- ifelse(is.na(folder_name), self$name, folder_name)
                                       self$target_folder <- paste0("subnational/", middle_folder, "/", dataset_folder_name, "/national")
