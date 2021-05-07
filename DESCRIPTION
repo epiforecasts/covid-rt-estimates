@@ -28,7 +28,7 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   EpiNow2 (>= 1.3.3),
-  covidregionaldata (>= 0.8.3),
+  covidregionaldata (>= 0.9.0),
   covid19.nhs.data,
   data.table,
   dplyr (>= 1.0.0),
@@ -46,7 +46,6 @@ Suggests:
 Remotes:
   joeHickson/futile.logger,
   epiforecasts/EpiNow2@v1.3.3,
-  epiforecasts/covidregionaldata@v0.9.0,
   epiforecasts/covid19.nhs.data,
   iqss/dataverse-client-r
 Roxygen: list(markdown = TRUE)
