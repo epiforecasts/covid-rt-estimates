@@ -163,7 +163,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     out <- list()
   }
   if (cases[, .N] == 0) {
-    futile.logger::flog.warning("no cases left for region so not processing!")
+    futile.logger::flog.warn("no cases left for region so not processing!")
   }
   # add some stats
   futile.logger::flog.debug("add stats to output")
