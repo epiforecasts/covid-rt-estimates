@@ -5,7 +5,7 @@ if (!exists("AbstractDataset", mode = "function")) source(here::here("R/entities
 Region <- R6::R6Class("Region",
                       inherit = AbstractDataset,
                       public = list(covid_regional_data_identifier = NA,
-                                    cases_subregion_source = "region_level_1",
+                                    cases_subregion_source = "level_1_region",
                                     data_args = NULL,
                                                           #' @description
                                                           #' Initialise a new `Region` object
@@ -29,7 +29,7 @@ Region <- R6::R6Class("Region",
                                                           #' @return a new `Region` object
                                     initialize = function(...,
                                                           covid_regional_data_identifier = NA,
-                                                          cases_subregion_source = "region_level_1",
+                                                          cases_subregion_source = "level_1_region",
                                                           region_scale = "Region",
                                                           folder_name = NA,
                                                           dataset_folder_name = "cases") {

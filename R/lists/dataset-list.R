@@ -60,7 +60,7 @@ DATASETS <- list(
                                       description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting at the local authority level in the United Kingdom. These results are impacted by changes in testing effort, increases and decreases in testing effort will increase and decrease reproduction number estimates respectively.",
                                       breakdown = "authority",
                                       country = "United Kingdom"),
-                                      cases_subregion_source = "region_level_2",
+                                      cases_subregion_source = "level_2_region",
                                       covid_regional_data_identifier = "UK",
                                       reporting_delay = readRDS(here::here("data", "uk_onset_to_case.rds")),
                                       data_args = list(include_level_2_regions = TRUE),
@@ -71,7 +71,7 @@ DATASETS <- list(
                                         description = "Identifying changes in the reproduction number, rate of spread, and doubling time during the course of the COVID-19 outbreak whilst accounting for potential biases due to delays in case reporting at the local authority level in the United Kingdom.",
                                         breakdown = "authority",
                                         country = "United Kingdom"),
-                                      cases_subregion_source = "region_level_2",
+                                      cases_subregion_source = "level_2_region",
                                       covid_regional_data_identifier = "UK",
                                       data_args = list(include_level_2_regions = TRUE),
                                       folder_name = "united-kingdom-local",
@@ -89,12 +89,12 @@ DATASETS <- list(
                                                country = "United Kingdom"),
                                              folder_name = "united-kingdom-local",
                                              dataset_folder_name = "admissions",
-                                             cases_subregion_source = "region_level_2",
+                                             cases_subregion_source = "level_2_region",
                                              data = function() {
                                                admissions <- covid19.nhs.data::get_admissions(level = "utla")
                                                admissions <- data.table::setDT(admissions)
-                                               admissions <- admissions[, .(region_level_2 = geo_name, date, cases_new = admissions)]
-                                               admissions <- admissions[!is.na(region_level_2)]
+                                               admissions <- admissions[, .(level_2_region = geo_name, date, cases_new = admissions)]
+                                               admissions <- admissions[!is.na(level_2_region)]
                                                return(admissions)
                                              }),
   "united-states" = Region$new(name = "united-states",
@@ -192,7 +192,7 @@ DATASETS <- list(
                          breakdown = "state",
                          country = "India"),
                       case_modifier = function(cases) {
-                        cases <- cases[!(region_level_1 %in% "Unknown")]
+                        cases <- cases[!(level_1_region %in% "Unknown")]
                         return(cases)  
                       }),
   "italy" = Region$new(name = "italy",
@@ -208,7 +208,7 @@ DATASETS <- list(
                          breakdown = "state",
                          country = "South Africa"),
                          case_modifier = function(cases) {
-                                  cases <- cases[!is.na(region_level_1)]
+                                  cases <- cases[!is.na(level_1_region)]
                                   return(cases) }),
   "test" = Region$new(name = "test",
                       covid_regional_data_identifier = "belgium",

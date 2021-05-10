@@ -1,8 +1,8 @@
 #' Adds a UK case count to a dataset usng national level data
 add_uk <- function(cases, min_uk) {
-  national_cases <- cases[region_level_1 %in% c("England", "Scotland", "Wales", "Northern Ireland")]
+  national_cases <- cases[level_1_region %in% c("England", "Scotland", "Wales", "Northern Ireland")]
   uk_cases <- data.table::copy(national_cases)[, .(cases_new = sum(cases_new)), by = c("date")]
-  uk_cases <- uk_cases[, region_level_1 := "United Kingdom"]
+  uk_cases <- uk_cases[, level_1_region := "United Kingdom"]
   uk_cases <- uk_cases[!is.na(cases_new)]
 
   if (!missing(min_uk)) {
