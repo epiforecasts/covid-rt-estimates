@@ -222,7 +222,7 @@ DATASETS <- list(
 )
 
 for (location in DATASETS) {
-  location <- rlang::duplicate(location)
+  location <- location$clone()
   location$name <- paste0(location$name, '-full')
   split_loc_path <- strsplit(location$target_folder, "/")
   split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], '-full')
