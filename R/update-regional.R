@@ -50,12 +50,14 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       futile.logger::flog.info("Getting regional data")
       
       cases <- do.call(covidregionaldata::get_regional_data, c(list(country = location$covid_regional_data_identifier,
-                                                                    localise = FALSE), #suggest moving into list def
+                                                                    localise = FALSE,
+                                                                    verbose = FALSE), #suggest moving into list def
                                                                location$data_args))
       cases <- data.table::setDT(cases)
     }else if ("SuperRegion" %in% class(location)) {
       futile.logger::flog.info("Getting national data for %s", location$name)
-      cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier)) #suggest moving into list def
+      cases <- data.table::setDT(covidregionaldata::get_national_data(source = location$covid_national_data_identifier, 
+      verbose = FALSE)) #suggest moving into list def
     }
   }else{
     futile.logger::flog.info("Getting data")
@@ -107,10 +109,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
     futile.logger::flog.trace("Filtering out not included regions")
     cases <- cases[region %in_ci% include_subregions]
   }
-
   cases <- clean_regional_data(cases, truncation = location$truncation,
                                data_window = location$data_window)
-
   # Check to see if there is data and if the data has been updated  ------------------------------
   if (cases[, .N] > 0 && (force || check_for_update(cases, last_run = here::here("last-update", paste0(location$name, ".rds"))))) {
     # Set up cores -----------------------------------------------------
