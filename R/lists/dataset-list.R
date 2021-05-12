@@ -63,7 +63,7 @@ DATASETS <- list(
                                       cases_subregion_source = "level_2_region",
                                       covid_regional_data_identifier = "UK",
                                       reporting_delay = readRDS(here::here("data", "uk_onset_to_case.rds")),
-                                      data_args = list(include_level_2_regions = TRUE),
+                                      data_args = list(level = "2"),
                                       truncation = 4),
   "united-kingdom-local-deaths" = Region$new(name = "united-kingdom-local-deaths",
                                       publication_metadata = PublicationMetadata$new(
@@ -73,7 +73,7 @@ DATASETS <- list(
                                         country = "United Kingdom"),
                                       cases_subregion_source = "level_2_region",
                                       covid_regional_data_identifier = "UK",
-                                      data_args = list(include_level_2_regions = TRUE),
+                                      data_args = list(level = "2"),
                                       folder_name = "united-kingdom-local",
                                       dataset_folder_name = "deaths",
                                       reporting_delay = readRDS(here::here("data", "cocin_onset_to_death_delay.rds")),
