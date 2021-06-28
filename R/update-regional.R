@@ -134,7 +134,7 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                                  generation_time = location$generation_time,
                                  delays = delay_opts(location$incubation_period, location$reporting_delay),
                                  target_folder = location$target_folder,
-                                 summary_args = list(max_plot = 2)),
+                                 summary_args = list(max_plot = 2, c("Estimate", "Estimate based on partial data"))),
                                  location$regional_epinow_opts)), silent = TRUE)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
@@ -147,7 +147,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
       region_scale = location$region_scale,
       all_regions = "Region" %in% class(location),
       return_output = FALSE,
-      max_plot = 2), silent = TRUE)
+      max_plot = 2,
+      estimate_type = c("Estimate", "Estimate based on partial data")), silent = TRUE)
     out <- list()
     futile.logger::flog.trace("reading runtimes.csv")
     timings <- data.table::fread(paste0(location$target_folder, "/runtimes.csv"))
