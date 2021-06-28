@@ -69,6 +69,7 @@ AbstractDataset <- R6::R6Class("AbstractDataset",
                                                                chains = 4, control = list(adapt_delta = 0.95),
                                                                future = FALSE),
                                                                output = c("plots", "latest"),
+                                                               plot_args = list(estimate_type = c("Estimate", "Estimate based on partial data"),
                                                                non_zero_points = 14, horizon = 14, logs = NULL)
                                  ) {
 
