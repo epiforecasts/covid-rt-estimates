@@ -134,7 +134,8 @@ update_regional <- function(location, excludes, includes, force, max_execution_t
                                  generation_time = location$generation_time,
                                  delays = delay_opts(location$incubation_period, location$reporting_delay),
                                  target_folder = location$target_folder,
-                                 summary_args = list(max_plot = 2, c("Estimate", "Estimate based on partial data"))),
+                                 summary_args = list(max_plot = 2, 
+                                                     estimate_type = c("Estimate", "Estimate based on partial data"))),
                                  location$regional_epinow_opts)), silent = TRUE)
     futile.logger::flog.debug("resetting future plan to sequential")
     future::plan("sequential")
