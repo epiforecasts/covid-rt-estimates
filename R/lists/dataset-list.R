@@ -242,15 +242,25 @@ DATASETS <- list(
                         description = "Null",
                         breakdown = "continent"))
 )
-
+full_file_suffix <- '-all-time'
 for (location in DATASETS) {
   location <- location$clone()
   location$name <- paste0(location$name, '-full')
+  # explode the target folder path into parts to add the suffix
   split_loc_path <- strsplit(location$target_folder, "/")
-  split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], '-full')
+  if (is(location, SuperRegion$classname)){
+    split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], full_file_suffix)
+  }else{
+    split_loc_path[[1]][3] <- paste0(split_loc_path[[1]][3], full_file_suffix)
+  }
   location$target_folder <- paste(split_loc_path[[1]], collapse = "/")
+  # repeat for summary dir
   split_loc_path <- strsplit(location$summary_dir, "/")
-  split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], '-full')
+  if (is(location, SuperRegion$classname)){
+    split_loc_path[[1]][2] <- paste0(split_loc_path[[1]][2], full_file_suffix)
+  }else{
+    split_loc_path[[1]][3] <- paste0(split_loc_path[[1]][3], full_file_suffix)
+  }
   location$summary_dir <- paste(split_loc_path[[1]], collapse = "/")
   location$data_window <- Inf
   DATASETS[[location$name]] <- location
