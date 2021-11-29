@@ -243,8 +243,8 @@ DATASETS <- list(
                         breakdown = "continent"))
 )
 full_file_suffix <- '-all-time'
-for (location in DATASETS) {
-  location <- location$clone()
+for (original_location in DATASETS) {
+  location <- original_location$clone()
   location$name <- paste0(location$name, '-full')
   # explode the target folder path into parts to add the suffix
   split_loc_path <- strsplit(location$target_folder, "/")
