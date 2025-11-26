@@ -9,6 +9,32 @@ Summarised estimates as csv's can be found in the `**/summary` folders. National
 
 All regions have Rt estimates based on case counts. In some regions, we also separately estimate Rt using counts of hospital admissions or deaths. The differences between each of these estimates might suggest uneven or changing transmission by age and/or severity in the general population. For more on the influence and different uses of data source on Rt, see [here](https://github.com/epiforecasts/rt-comparison-uk-public).
 
+## Reconstructing historical forecasts
+
+This repository only stores the most recent forecasts (a rolling 14-day window). To reconstruct a complete historical time series of all forecasts (e.g., for retrospective forecast evaluation), you can use the R function in [this gist](https://gist.github.com/sbfnk/d2900c745312219e3e48e08adde47cde) which:
+
+1. Queries the git history for all commits that modified a given forecast CSV file
+2. Downloads the data from each historical commit
+3. Combines overlapping estimates by taking medians
+
+Example usage:
+
+```r
+# Install required packages
+# install.packages(c("gh", "readr", "dplyr", "tidyr"))
+
+source("https://gist.githubusercontent.com/sbfnk/d2900c745312219e3e48e08adde47cde/raw/get_covid19_nowcasts.R")
+
+# Get historical Rt estimates for a country
+estimates <- get_covid19_nowcasts(
+  dataset = "national/cases",
+  variable = "rt",
+  earliest_date = "2020-08-30"
+)
+```
+
+If you have any questions about reconstructing historical data, please [open an issue](https://github.com/epiforecasts/covid-rt-estimates/issues).
+
 ## Latest results
 Estimates are generated using [`{EpiNow2}`](https://epiforecasts.io/EpiNow2/) and presented on [epiforecasts.io/covid](https://epiforecasts.io/covid) (which also outlines the method used). If using these estimates please consider citing our associated [paper](https://wellcomeopenresearch.org/articles/5-112).
 
