@@ -11,7 +11,8 @@ All regions have Rt estimates based on case counts. In some regions, we also sep
 
 ## Reconstructing historical forecasts
 
-This repository only stores the most recent forecasts (a rolling 14-day window). To reconstruct a complete historical time series of all forecasts (e.g., for retrospective forecast evaluation), you can use the R function in [this gist](https://gist.github.com/sbfnk/d2900c745312219e3e48e08adde47cde) which:
+This repository only stored the most recent forecasts (a rolling 14-day window).
+To reconstruct a complete historical time series of all forecasts (e.g., for retrospective forecast evaluation), you can use the R function in [this gist](https://gist.github.com/sbfnk/d2900c745312219e3e48e08adde47cde) which:
 
 1. Queries the git history for all commits that modified a given forecast CSV file
 2. Downloads the data from each historical commit
@@ -35,7 +36,8 @@ estimates <- get_covid19_nowcasts(
 
 If you have any questions about reconstructing historical data, please [open an issue](https://github.com/epiforecasts/covid-rt-estimates/issues).
 
-## Latest results
+## Latest results (as of 31 March 2022)
+
 Estimates are generated using [`{EpiNow2}`](https://epiforecasts.io/EpiNow2/) and presented on [epiforecasts.io/covid](https://epiforecasts.io/covid) (which also outlines the method used). If using these estimates please consider citing our associated [paper](https://wellcomeopenresearch.org/articles/5-112).
 
 To confirm the latest version check the production date in the metadata tab on the relevant github link. Alternatively check the Version tab to see how recently it was produced (Note EST timezone).
