@@ -9,7 +9,7 @@ Summarised estimates as csv's can be found in the `**/summary` folders. National
 
 All regions have Rt estimates based on case counts. In some regions, we also separately estimate Rt using counts of hospital admissions or deaths. The differences between each of these estimates might suggest uneven or changing transmission by age and/or severity in the general population. For more on the influence and different uses of data source on Rt, see [here](https://github.com/epiforecasts/rt-comparison-uk-public).
 
-## Reconstructing historical forecasts
+## Reconstructing historical estimates and forecasts
 
 This repository only stored the most recent forecasts (a rolling 14-day window).
 To reconstruct a complete historical time series of all forecasts (e.g., for retrospective forecast evaluation), you can use the R function in [this gist](https://gist.github.com/sbfnk/d2900c745312219e3e48e08adde47cde) which:
